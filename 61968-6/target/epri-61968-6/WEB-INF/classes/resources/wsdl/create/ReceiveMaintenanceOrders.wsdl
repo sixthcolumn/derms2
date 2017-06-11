@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:tns="http://iec.ch/TC57/2015/ReceiveMaintenanceOrders" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2015/MaintenanceOrdersMessage" name="ReceiveMaintenanceOrders" targetNamespace="http://iec.ch/TC57/2015/ReceiveMaintenanceOrders">
+	<wsdl:types>
+		<xs:schema targetNamespace="http://iec.ch/TC57/2015/ReceiveMaintenanceOrders" elementFormDefault="qualified">
+			<xs:import namespace="http://iec.ch/TC57/2015/MaintenanceOrdersMessage" schemaLocation="xsd/MaintenanceOrdersMessage.xsd"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="CreatedMaintenanceOrdersEventMessage">
+		<wsdl:part name="CreatedMaintenanceOrdersEventMessage" element="infoMessage:CreatedMaintenanceOrders"/>
+	</wsdl:message>
+	<wsdl:message name="ResponseMessage">
+		<wsdl:part name="ResponseMessage" element="infoMessage:MaintenanceOrdersResponseMessage"/>
+	</wsdl:message>
+	<wsdl:message name="FaultMessage">
+		<wsdl:part name="FaultMessage" element="infoMessage:MaintenanceOrdersFaultMessage"/>
+	</wsdl:message>
+	<wsdl:portType name="MaintenanceOrders_Port">
+		<wsdl:operation name="CreatedMaintenanceOrders">
+			<wsdl:input name="CreatedMaintenanceOrdersEvent" message="tns:CreatedMaintenanceOrdersEventMessage"/>
+			<wsdl:output name="CreatedMaintenanceOrdersResponse" message="tns:ResponseMessage"/>
+			<wsdl:fault name="CreatedMaintenanceOrdersFault" message="tns:FaultMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="MaintenanceOrders_Binding" type="tns:MaintenanceOrders_Port">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="CreatedMaintenanceOrders">
+			<soap:operation soapAction="http://iec.ch/TC57/2015/MaintenanceOrders/CreatedMaintenanceOrders" style="document"/>
+			<wsdl:input name="CreatedMaintenanceOrdersEvent">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="CreatedMaintenanceOrdersResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="CreatedMaintenanceOrdersFault">
+				<soap:fault name="CreatedMaintenanceOrdersFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="ReceiveMaintenanceOrders">
+		<wsdl:port name="MaintenanceOrders_Port" binding="tns:MaintenanceOrders_Binding">
+			<soap:address location="http://iec.ch/TC57/2015/ReceiveMaintenanceOrders"/>
+		</wsdl:port>
+	</wsdl:service>
+	<!-- Message Definitions -->
+	<!-- Port Definitions -->
+</wsdl:definitions>

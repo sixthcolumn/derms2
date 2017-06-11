@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:tns="http://iec.ch/TC57/2015/GetWorkRequests" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2015/GetWorkRequestsMessage" xmlns:ns="http://iec.ch/TC57/2011/schema/message" xmlns:ns1="http://iec.ch/TC57/2015/GetWorkRequests#" xmlns:ns2="http://iec.ch/TC57/2015/WorkRequests#" name="GetWorkRequests" targetNamespace="http://iec.ch/TC57/2015/GetWorkRequests">
+	<wsdl:types>
+		<xs:schema targetNamespace="http://iec.ch/TC57/2015/GetWorkRequests" elementFormDefault="qualified">
+			<xs:import namespace="http://iec.ch/TC57/2015/GetWorkRequestsMessage" schemaLocation="xsd/GetWorkRequestsMessage.xsd"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="GetWorkRequestsRequestMessage">
+		<wsdl:part name="GetWorkRequestsRequestMessage" element="infoMessage:GetWorkRequestsRequestMessage"/>
+	</wsdl:message>
+	<wsdl:message name="GetWorkRequestsResponseMessage">
+		<wsdl:part name="GetWorkRequestsResponseMessage" element="infoMessage:GetWorkRequestsResponseMessage"/>
+	</wsdl:message>
+	<wsdl:message name="GetWorkRequestsFaultMessage">
+		<wsdl:part name="GetWorkRequestsFaultMessage" element="infoMessage:GetWorkRequestsFaultMessage"/>
+	</wsdl:message>
+	<wsdl:portType name="GetWorkRequests_Port">
+		<wsdl:operation name="GetWorkRequests">
+			<wsdl:input name="GetWorkRequestsRequest" message="tns:GetWorkRequestsRequestMessage"/>
+			<wsdl:output name="GetWorkRequestsResponse" message="tns:GetWorkRequestsResponseMessage"/>
+			<wsdl:fault name="GetWorkRequestsFault" message="tns:GetWorkRequestsFaultMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="GetWorkRequests_Binding" type="tns:GetWorkRequests_Port">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="GetWorkRequests">
+			<soap:operation soapAction="http://iec.ch/TC57/2015/GetWorkRequests/GetWorkRequests" style="document"/>
+			<wsdl:input name="GetWorkRequestsRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="GetWorkRequestsResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="GetWorkRequestsFault">
+				<soap:fault name="GetWorkRequestsFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="GetWorkRequests">
+		<wsdl:port name="GetWorkRequests_Port" binding="tns:GetWorkRequests_Binding">
+			<soap:address location="http://iec.ch/TC57/2015/GetWorkRequests"/>
+		</wsdl:port>
+	</wsdl:service>
+	<xs:schema targetNamespace="http://iec.ch/TC57/2015/GetWorkRequestsMessage" elementFormDefault="qualified">
+		<xs:import namespace="http://iec.ch/TC57/2015/GetWorkRequestsMessage" schemaLocation="xsd/MaintenanceOrdersMessage.xsd"/>
+		<!--<xs:include schemaLocation="xsd/GetyWorkRequestsMessage.xsd"/>-->
+	</xs:schema>
+
+
+
+	<!-- Message Definitions -->
+	<!-- Port Definitions -->
+</wsdl:definitions>

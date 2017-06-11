@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:tns="http://iec.ch/TC57/2015/ExecuteMaintenanceOrders" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2015/MaintenanceOrdersMessage" name="ExecuteMaintenanceOrders" targetNamespace="http://iec.ch/TC57/2015/ExecuteMaintenanceOrders">
+	<wsdl:types>
+		<xs:schema targetNamespace="http://iec.ch/TC57/2015/ExecuteMaintenanceOrders" elementFormDefault="qualified">
+			<xs:import namespace="http://iec.ch/TC57/2015/MaintenanceOrdersMessage" schemaLocation="xsd/MaintenanceOrdersMessage.xsd"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="ChangeMaintenanceOrdersRequestMessage">
+		<wsdl:part name="ChangeMaintenanceOrdersRequestMessage" element="infoMessage:ChangeMaintenanceOrders"/>
+	</wsdl:message>
+	<wsdl:message name="DeleteMaintenanceOrdersRequestMessage">
+		<wsdl:part name="DeleteMaintenanceOrdersRequestMessage" element="infoMessage:DeleteMaintenanceOrders"/>
+	</wsdl:message>
+	<wsdl:message name="ResponseMessage">
+		<wsdl:part name="ResponseMessage" element="infoMessage:MaintenanceOrdersResponseMessage"/>
+	</wsdl:message>
+	<wsdl:message name="FaultMessage">
+		<wsdl:part name="FaultMessage" element="infoMessage:MaintenanceOrdersFaultMessage"/>
+	</wsdl:message>
+	<wsdl:portType name="MaintenanceOrders_Port">
+		<wsdl:operation name="ChangeMaintenanceOrders">
+			<wsdl:input name="ChangeMaintenanceOrdersRequest" message="tns:ChangeMaintenanceOrdersRequestMessage"/>
+			<wsdl:output name="ChangeMaintenanceOrdersResponse" message="tns:ResponseMessage"/>
+			<wsdl:fault name="ChangeMaintenanceOrdersFault" message="tns:FaultMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="DeleteMaintenanceOrders">
+			<wsdl:input name="DeleteMaintenanceOrdersRequest" message="tns:DeleteMaintenanceOrdersRequestMessage"/>
+			<wsdl:output name="DeleteMaintenanceOrdersResponse" message="tns:ResponseMessage"/>
+			<wsdl:fault name="DeleteMaintenanceOrdersFault" message="tns:FaultMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="MaintenanceOrders_Binding" type="tns:MaintenanceOrders_Port">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="ChangeMaintenanceOrders">
+			<soap:operation soapAction="http://iec.ch/TC57/2015/MaintenanceOrders/ChangeMaintenanceOrders" style="document"/>
+			<wsdl:input name="ChangeMaintenanceOrdersRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="ChangeMaintenanceOrdersResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ChangeMaintenanceOrdersFault">
+				<soap:fault name="ChangeMaintenanceOrdersFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="DeleteMaintenanceOrders">
+			<soap:operation soapAction="http://iec.ch/TC57/2015/MaintenanceOrders/DeleteMaintenanceOrders" style="document"/>
+			<wsdl:input name="DeleteMaintenanceOrdersRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="DeleteMaintenanceOrdersResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DeleteMaintenanceOrdersFault">
+				<soap:fault name="DeleteMaintenanceOrdersFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="ExecuteMaintenanceOrders">
+		<wsdl:port name="MaintenanceOrders_Port" binding="tns:MaintenanceOrders_Binding">
+			<soap:address location="http://iec.ch/TC57/2015/ExecuteMaintenanceOrders"/>
+		</wsdl:port>
+	</wsdl:service>
+	<xs:schema targetNamespace="http://iec.ch/TC57/2015/ExecuteMaintenanceOrdersMessage" elementFormDefault="qualified">
+		<xs:import namespace="http://iec.ch/TC57/2015/MaintenanceOrdersMessage" schemaLocation="xsd/MaintenanceOrdersMessage.xsd"/>
+		<!--<xs:include schemaLocation="xsd/MaintenanceOrdersMessage.xsd"/>-->
+	</xs:schema>
+	<!-- Message Definitions -->
+	<!-- Port Definitions -->
+</wsdl:definitions>

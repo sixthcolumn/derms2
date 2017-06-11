@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:tns="http://iec.ch/TC57/2015/GetServiceOrders" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2015/GetServiceOrdersMessage" xmlns:ns="http://iec.ch/TC57/2011/schema/message" xmlns:ns1="http://iec.ch/TC57/2015/GetServiceOrders#" xmlns:ns2="http://iec.ch/TC57/2015/ServiceOrders#" name="GetServiceOrders" targetNamespace="http://iec.ch/TC57/2015/GetServiceOrders">
+	<wsdl:types>
+		<xs:schema targetNamespace="http://iec.ch/TC57/2015/GetServiceOrders" elementFormDefault="qualified">
+			<xs:import namespace="http://iec.ch/TC57/2015/GetServiceOrdersMessage" schemaLocation="xsd/GetServiceOrdersMessage.xsd"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="GetServiceOrdersRequestMessage">
+		<wsdl:part name="GetServiceOrdersRequestMessage" element="infoMessage:GetServiceOrdersRequestMessage"/>
+	</wsdl:message>
+	<wsdl:message name="GetServiceOrdersResponseMessage">
+		<wsdl:part name="GetServiceOrdersResponseMessage" element="infoMessage:GetServiceOrdersResponseMessage"/>
+	</wsdl:message>
+	<wsdl:message name="GetServiceOrdersFaultMessage">
+		<wsdl:part name="GetServiceOrdersFaultMessage" element="infoMessage:GetServiceOrdersFaultMessage"/>
+	</wsdl:message>
+	<wsdl:portType name="GetServiceOrders_Port">
+		<wsdl:operation name="GetServiceOrders">
+			<wsdl:input name="GetServiceOrdersRequest" message="tns:GetServiceOrdersRequestMessage"/>
+			<wsdl:output name="GetServiceOrdersResponse" message="tns:GetServiceOrdersResponseMessage"/>
+			<wsdl:fault name="GetServiceOrdersFault" message="tns:GetServiceOrdersFaultMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="GetServiceOrders_Binding" type="tns:GetServiceOrders_Port">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="GetServiceOrders">
+			<soap:operation soapAction="http://iec.ch/TC57/2015/GetServiceOrders/GetServiceOrders" style="document"/>
+			<wsdl:input name="GetServiceOrdersRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="GetServiceOrdersResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="GetServiceOrdersFault">
+				<soap:fault name="GetServiceOrdersFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="GetServiceOrders">
+		<wsdl:port name="GetServiceOrders_Port" binding="tns:GetServiceOrders_Binding">
+			<soap:address location="http://iec.ch/TC57/2015/GetServiceOrders"/>
+		</wsdl:port>
+	</wsdl:service>
+	<xs:schema targetNamespace="http://iec.ch/TC57/2015/GetServiceOrdersMessage" elementFormDefault="qualified">
+		<xs:import namespace="http://iec.ch/TC57/2015/GetServiceOrdersMessage" schemaLocation="xsd/MaintenanceOrdersMessage.xsd"/>
+		<!--<xs:include schemaLocation="xsd/GetyServiceOrdersMessage.xsd"/>-->
+	</xs:schema>
+
+
+
+	<!-- Message Definitions -->
+	<!-- Port Definitions -->
+</wsdl:definitions>

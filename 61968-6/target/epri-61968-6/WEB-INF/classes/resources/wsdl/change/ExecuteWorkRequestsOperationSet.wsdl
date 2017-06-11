@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:tns="http://iec.ch/TC57/2015/ExecuteWorkRequestsOperationSet" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2015/WorkRequestsOperationSetMessage" xmlns:ns="http://iec.ch/TC57/2011/schema/message" xmlns:ns1="http://iec.ch/TC57/2015/WorkRequests#" name="ExecuteWorkRequestsOperationSet" targetNamespace="http://iec.ch/TC57/2015/ExecuteWorkRequestsOperationSet">
+	<wsdl:types>
+		<xs:schema targetNamespace="http://iec.ch/TC57/2015/ExecuteWorkRequestsOperationSet" elementFormDefault="qualified">
+			<xs:import namespace="http://iec.ch/TC57/2015/WorkRequestsOperationSetMessage" schemaLocation="xsd/WorkRequestsOperationSetMessage.xsd"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="ExecuteWorkRequestsOperationSetRequestMessage">
+		<wsdl:part name="ExecuteWorkRequestsOperationSetRequestMessage" element="infoMessage:ExecuteWorkRequestsOperationSet"/>
+	</wsdl:message>
+	<wsdl:message name="ResponseMessage">
+		<wsdl:part name="ResponseMessage" element="infoMessage:WorkRequestsOperationSetResponseMessage"/>
+	</wsdl:message>
+	<wsdl:message name="FaultMessage">
+		<wsdl:part name="FaultMessage" element="infoMessage:WorkRequestsOperationSetFaultMessage"/>
+	</wsdl:message>
+	<wsdl:portType name="WorkRequestsOperationSet_Port">
+		<wsdl:operation name="ExecuteWorkRequestsOperationSet">
+			<wsdl:input name="ExecuteWorkRequestsOperationSetRequest" message="tns:ExecuteWorkRequestsOperationSetRequestMessage"/>
+			<wsdl:output name="ExecuteWorkRequestsOperationSetResponse" message="tns:ResponseMessage"/>
+			<wsdl:fault name="ExecuteWorkRequestsOperationSetFault" message="tns:FaultMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="WorkRequestsOperationSet_Binding" type="tns:WorkRequestsOperationSet_Port">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="ExecuteWorkRequestsOperationSet">
+			<soap:operation soapAction="http://iec.ch/TC57/2015/WorkRequestsOperationSet/ExecuteWorkRequestsOperationSet" style="document"/>
+			<wsdl:input name="ExecuteWorkRequestsOperationSetRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="ExecuteWorkRequestsOperationSetResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ExecuteWorkRequestsOperationSetFault">
+				<soap:fault name="ExecuteWorkRequestsOperationSetFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="ExecuteWorkRequestsOperationSet">
+		<wsdl:port name="WorkRequestsOperationSet_Port" binding="tns:WorkRequestsOperationSet_Binding">
+			<soap:address location="http://iec.ch/TC57/2015/ExecuteWorkRequestsOperationSet"/>
+		</wsdl:port>
+	</wsdl:service>
+	<xs:schema targetNamespace="http://iec.ch/TC57/2015/ExecuteWorkRequestsOperationSetMessage" elementFormDefault="qualified">
+		<xs:import namespace="http://iec.ch/TC57/2015/WorkRequestsOperationSetMessage" schemaLocation="xsd/WorkRequestsOperationSetMessage.xsd"/>
+		<!--<xs:include schemaLocation="xsd/WorkRequestsMessage.xsd"/>-->
+	</xs:schema>
+	<!-- Message Definitions -->
+	<!-- Port Definitions -->
+</wsdl:definitions>

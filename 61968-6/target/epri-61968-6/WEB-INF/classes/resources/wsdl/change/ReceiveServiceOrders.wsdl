@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:tns="http://iec.ch/TC57/2015/ReceiveServiceOrders" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2015/ServiceOrdersMessage" name="ReceiveServiceOrders" targetNamespace="http://iec.ch/TC57/2015/ReceiveServiceOrders">
+	<wsdl:types>
+		<xs:schema targetNamespace="http://iec.ch/TC57/2015/ReceiveServiceOrders" elementFormDefault="qualified">
+			<xs:import namespace="http://iec.ch/TC57/2015/ServiceOrdersMessage" schemaLocation="xsd/ServiceOrdersMessage.xsd"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="ChangedServiceOrdersEventMessage">
+		<wsdl:part name="ChangedServiceOrdersEventMessage" element="infoMessage:ChangedServiceOrders"/>
+	</wsdl:message>
+	<wsdl:message name="DeletedServiceOrdersEventMessage">
+		<wsdl:part name="DeletedServiceOrdersEventMessage" element="infoMessage:DeletedServiceOrders"/>
+	</wsdl:message>
+	<wsdl:message name="ResponseMessage">
+		<wsdl:part name="ResponseMessage" element="infoMessage:ServiceOrdersResponseMessage"/>
+	</wsdl:message>
+	<wsdl:message name="FaultMessage">
+		<wsdl:part name="FaultMessage" element="infoMessage:ServiceOrdersFaultMessage"/>
+	</wsdl:message>
+	<wsdl:portType name="ServiceOrders_Port">
+		<wsdl:operation name="ChangedServiceOrders">
+			<wsdl:input name="ChangedServiceOrdersEvent" message="tns:ChangedServiceOrdersEventMessage"/>
+			<wsdl:output name="ChangedServiceOrdersResponse" message="tns:ResponseMessage"/>
+			<wsdl:fault name="ChangedServiceOrdersFault" message="tns:FaultMessage"/>
+		</wsdl:operation>
+		<wsdl:operation name="DeletedServiceOrders">
+			<wsdl:input name="DeletedServiceOrdersEvent" message="tns:DeletedServiceOrdersEventMessage"/>
+			<wsdl:output name="DeletedServiceOrdersResponse" message="tns:ResponseMessage"/>
+			<wsdl:fault name="DeletedServiceOrdersFault" message="tns:FaultMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="ServiceOrders_Binding" type="tns:ServiceOrders_Port">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="ChangedServiceOrders">
+			<soap:operation soapAction="http://iec.ch/TC57/2015/ServiceOrders/ChangedServiceOrders" style="document"/>
+			<wsdl:input name="ChangedServiceOrdersEvent">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="ChangedServiceOrdersResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ChangedServiceOrdersFault">
+				<soap:fault name="ChangedServiceOrdersFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="DeletedServiceOrders">
+			<soap:operation soapAction="http://iec.ch/TC57/2015/ServiceOrders/DeletedServiceOrders" style="document"/>
+			<wsdl:input name="DeletedServiceOrdersEvent">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="DeletedServiceOrdersResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="DeletedServiceOrdersFault">
+				<soap:fault name="DeletedServiceOrdersFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="ReceiveServiceOrders">
+		<wsdl:port name="ServiceOrders_Port" binding="tns:ServiceOrders_Binding">
+			<soap:address location="http://iec.ch/TC57/2015/ReceiveServiceOrders"/>
+		</wsdl:port>
+	</wsdl:service>
+	<!-- Message Definitions -->
+	<!-- Port Definitions -->
+</wsdl:definitions>

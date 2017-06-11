@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:tns="http://iec.ch/TC57/2015/ReceiveMaintenanceOrdersOperationSet" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2015/MaintenanceOrdersOperationSetMessage" xmlns:ns="http://iec.ch/TC57/2011/schema/message" xmlns:ns1="http://iec.ch/TC57/2015/MaintenanceOrders#" name="ReceiveMaintenanceOrdersOperationSet" targetNamespace="http://iec.ch/TC57/2015/ReceiveMaintenanceOrdersOperationSet">
+	<wsdl:types>
+		<xs:schema targetNamespace="http://iec.ch/TC57/2015/ReceiveMaintenanceOrdersOperationSet" elementFormDefault="qualified">
+			<xs:import namespace="http://iec.ch/TC57/2015/MaintenanceOrdersOperationSetMessage" schemaLocation="xsd/MaintenanceOrdersOperationSetMessage.xsd"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="ExecutedMaintenanceOrdersOperationSetEventMessage">
+		<wsdl:part name="ExecutedMaintenanceOrdersOperationSetEventMessage" element="infoMessage:ExecutedMaintenanceOrdersOperationSet"/>
+	</wsdl:message>
+	<wsdl:message name="ResponseMessage">
+		<wsdl:part name="ResponseMessage" element="infoMessage:MaintenanceOrdersOperationSetResponseMessage"/>
+	</wsdl:message>
+	<wsdl:message name="FaultMessage">
+		<wsdl:part name="FaultMessage" element="infoMessage:MaintenanceOrdersOperationSetFaultMessage"/>
+	</wsdl:message>
+	<wsdl:portType name="MaintenanceOrdersOperationSet_Port">
+		<wsdl:operation name="ExecutedMaintenanceOrdersOperationSet">
+			<wsdl:input name="ExecutedMaintenanceOrdersOperationSetEvent" message="tns:ExecutedMaintenanceOrdersOperationSetEventMessage"/>
+			<wsdl:output name="ExecutedMaintenanceOrdersOperationSetResponse" message="tns:ResponseMessage"/>
+			<wsdl:fault name="ExecutedMaintenanceOrdersOperationSetFault" message="tns:FaultMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="MaintenanceOrdersOperationSet_Binding" type="tns:MaintenanceOrdersOperationSet_Port">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="ExecutedMaintenanceOrdersOperationSet">
+			<soap:operation soapAction="http://iec.ch/TC57/2015/MaintenanceOrdersOperationSet/ExecutedMaintenanceOrdersOperationSet" style="document"/>
+			<wsdl:input name="ExecutedMaintenanceOrdersOperationSetEvent">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="ExecutedMaintenanceOrdersOperationSetResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ExecutedMaintenanceOrdersOperationSetFault">
+				<soap:fault name="ExeutedMaintenanceOrdersOperationSetFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="ReceiveMaintenanceOrdersOperationSet">
+		<wsdl:port name="MaintenanceOrdersOperationSet_Port" binding="tns:MaintenanceOrdersOperationSet_Binding">
+			<soap:address location="http://iec.ch/TC57/2015/ReceiveMaintenanceOrdersOperationSet"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

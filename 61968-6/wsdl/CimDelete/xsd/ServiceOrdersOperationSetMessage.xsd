@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2015 rel. 4 (x64) (http://www.altova.com) by Chris Kardos (C.P. Kardos, Inc.) -->
+<xs:schema xmlns:tns="http://iec.ch/TC57/2015/ServiceOrdersOperationSetMessage" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:obj="http://iec.ch/TC57/2015/ServiceOrdersOperationSet#" xmlns:ns1="http://iec.ch/TC57/2015/ServiceOrders#" targetNamespace="http://iec.ch/TC57/2015/ServiceOrdersOperationSetMessage" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.0">
+	<!-- Base Message Definitions -->
+	<xs:import namespace="http://iec.ch/TC57/2011/schema/message" schemaLocation="Message.xsd"/>
+	<!-- CIM Information Object Definition -->
+	<xs:import namespace="http://iec.ch/TC57/2015/ServiceOrders#" schemaLocation="ServiceOrders.xsd"/>
+	<!-- PayloadType Definition -->
+	<xs:complexType name="ServiceOrdersPayloadType">
+		<xs:sequence>
+			<xs:element name="OperationSet" type="msg:OperationSet" minOccurs="0"/>
+			<xs:element name="Compressed" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>For compressed and/or binary, uuencoded payloads</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Format" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Hint as to format of payload, e.g. XML, RDF, SVF, BINARY, PDF, ...</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Message Types -->
+	<!-- RequestMessageType -->
+	<xs:complexType name="ServiceOrdersOperationSetRequestMessageType">
+		<xs:sequence>
+			<xs:element name="Header" type="msg:HeaderType"/>
+			<xs:element name="Request" type="msg:RequestType" minOccurs="0"/>
+			<xs:element name="Payload" type="tns:ServiceOrdersPayloadType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ResponseMessageType -->
+	<xs:complexType name="ServiceOrdersOperationSetResponseMessageType">
+		<xs:sequence>
+			<xs:element name="Header" type="msg:HeaderType"/>
+			<xs:element name="Reply" type="msg:ReplyType"/>
+			<xs:element name="Payload" type="tns:ServiceOrdersPayloadType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- EventMessageType -->
+	<xs:complexType name="ServiceOrdersOperationSetEventMessageType">
+		<xs:sequence>
+			<xs:element name="Header" type="msg:HeaderType"/>
+			<xs:element name="Payload" type="tns:ServiceOrdersPayloadType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- FaultMessageType -->
+	<xs:complexType name="ServiceOrdersOperationSetFaultMessageType">
+		<xs:sequence>
+			<xs:element name="Reply" type="msg:ReplyType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ExecuteServiceOrdersOperationSet" type="tns:ServiceOrdersOperationSetRequestMessageType"/>
+	<xs:element name="ExecutedServiceOrdersOperationSet" type="tns:ServiceOrdersOperationSetEventMessageType"/>
+	<xs:element name="ServiceOrdersOperationSetResponseMessage" type="tns:ServiceOrdersOperationSetResponseMessageType"/>
+	<xs:element name="ServiceOrdersOperationSetFaultMessage" type="tns:ServiceOrdersOperationSetFaultMessageType"/>
+</xs:schema>

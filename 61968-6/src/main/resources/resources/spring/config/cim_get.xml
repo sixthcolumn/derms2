@@ -1,0 +1,69 @@
+<jaxb:bindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.0">
+	<jaxb:bindings schemaLocation="../../../wsdl/CimGet/xsd/MaintenanceOrders.xsd"
+		node="/xsd:schema">
+		<jaxb:bindings node="//xsd:simpleType[@name='WorkKind']">
+			<jaxb:typesafeEnumClass name="WorkKind1" />
+		</jaxb:bindings>
+		<jaxb:bindings node="//xsd:simpleType[@name='WorkTimeScheduleKind']">
+			<jaxb:typesafeEnumClass name="WorkTimeScheduleKind2" />
+		</jaxb:bindings>
+		<jaxb:bindings node="//xsd:simpleType[@name='WorkStatusKind']">
+			<jaxb:typesafeEnumClass name="WorkStatusKind2" />
+		</jaxb:bindings>
+		<jaxb:bindings node="//xsd:complexType[@name='WorkLocation']">
+			<jaxb:class name="WorkLocation2" />
+		</jaxb:bindings>
+		<jaxb:bindings node="//xsd:complexType[@name='WorkTimeSchedule']">
+			<jaxb:class name="WorkTimeSchedule2" />
+		</jaxb:bindings>
+		<jaxb:bindings node="//xsd:complexType[@name='Work']">
+			<jaxb:class name="Work2" />
+		</jaxb:bindings>
+		<jaxb:bindings node="//xsd:complexType[@name='NameType']">
+			<jaxb:class name="NameType2" />
+		</jaxb:bindings>
+		<jaxb:bindings node="//xsd:complexType[@name='Name']">
+			<jaxb:class name="Name2" />
+		</jaxb:bindings>
+		<jaxb:bindings node="//xsd:complexType[@name='NameTypeAuthority']">
+			<jaxb:class name="NameTypeAuthority2" />
+		</jaxb:bindings>
+		<jaxb:bindings node="//xsd:complexType[@name='ActivityRecord']">
+			<jaxb:class name="ActivityRecord2" />
+		</jaxb:bindings>
+		<jaxb:bindings node="//xsd:complexType[@name='Crew']">
+			<jaxb:class name="Crew2" />
+		</jaxb:bindings>
+		<jaxb:bindings node="//xsd:complexType[@name='Organisation']">
+			<jaxb:class name="Organisation2" />
+		</jaxb:bindings>
+		<jaxb:bindings node="//xsd:complexType[@name='AssetLocationHazard']">
+			<jaxb:class name="AssetLocationHazard2" />
+		</jaxb:bindings>
+		<jaxb:bindings node="//xsd:complexType[@name='Asset']">
+			<jaxb:class name="Asset2" />
+		</jaxb:bindings>
+		<jaxb:bindings node="//xsd:complexType[@name='InternalLocation']">
+			<jaxb:class name="InternalLocation2" />
+		</jaxb:bindings>
+		<jaxb:bindings node="//xsd:complexType[@name='MaintenanceOrders']">
+			<jaxb:class name="MaintenanceOrders2" />
+		</jaxb:bindings>
+		<jaxb:bindings node="//xsd:complexType[@name='MaintenanceOrder']">
+			<jaxb:class name="MaintenanceOrder2" />
+		</jaxb:bindings>
+	</jaxb:bindings>
+	<jaxb:bindings schemaLocation="../../../wsdl/CimGet/xsd/Message.xsd"
+		node="/xsd:schema">
+		<jaxb:bindings node="//xsd:complexType[@name='NameType']">
+			<jaxb:class name="NameType3" />
+		</jaxb:bindings>
+		<jaxb:bindings node="//xsd:complexType[@name='Name']">
+			<jaxb:class name="Name3" />
+		</jaxb:bindings>
+		<jaxb:bindings node="//xsd:complexType[@name='NameTypeAuthority']">
+			<jaxb:class name="NameTypeAuthority3" />
+		</jaxb:bindings>
+	</jaxb:bindings>
+</jaxb:bindings>

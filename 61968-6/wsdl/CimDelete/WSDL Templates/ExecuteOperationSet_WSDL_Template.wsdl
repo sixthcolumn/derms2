@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:tns="http://iec.ch/TC57/2015/Execute{Information_Object_Name}OperationSet" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2015/{Information_Object_Name}OperationSetMessage" xmlns:ns="http://iec.ch/TC57/2011/schema/message" xmlns:ns1="http://iec.ch/TC57/2015/{Information_Object_Name}#" name="Execute{Information_Object_Name}OperationSet" targetNamespace="http://iec.ch/TC57/2015/Execute{Information_Object_Name}OperationSet">
+	<wsdl:types>
+		<xs:schema targetNamespace="http://iec.ch/TC57/2015/Execute{Information_Object_Name}OperationSet" elementFormDefault="qualified">
+			<xs:import namespace="http://iec.ch/TC57/2015/{Information_Object_Name}OperationSetMessage" schemaLocation="xsd/{Information_Object_Name}OperationSetMessage.xsd"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="Execute{Information_Object_Name}OperationSetRequestMessage">
+		<wsdl:part name="Execute{Information_Object_Name}OperationSetRequestMessage" element="infoMessage:Execute{Information_Object_Name}OperationSet"/>
+	</wsdl:message>
+	<wsdl:message name="ResponseMessage">
+		<wsdl:part name="ResponseMessage" element="infoMessage:{Information_Object_Name}OperationSetResponseMessage"/>
+	</wsdl:message>
+	<wsdl:message name="FaultMessage">
+		<wsdl:part name="FaultMessage" element="infoMessage:{Information_Object_Name}OperationSetFaultMessage"/>
+	</wsdl:message>
+	<wsdl:portType name="{Information_Object_Name}OperationSet_Port">
+		<wsdl:operation name="Execute{Information_Object_Name}OperationSet">
+			<wsdl:input name="Execute{Information_Object_Name}OperationSetRequest" message="tns:Execute{Information_Object_Name}OperationSetRequestMessage"/>
+			<wsdl:output name="Execute{Information_Object_Name}OperationSetResponse" message="tns:ResponseMessage"/>
+			<wsdl:fault name="Execute{Information_Object_Name}OperationSetFault" message="tns:FaultMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="{Information_Object_Name}OperationSet_Binding" type="tns:{Information_Object_Name}OperationSet_Port">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="Execute{Information_Object_Name}OperationSet">
+			<soap:operation soapAction="http://iec.ch/TC57/2015/{Information_Object_Name}OperationSet/Execute{Information_Object_Name}OperationSet" style="document"/>
+			<wsdl:input name="Execute{Information_Object_Name}OperationSetRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="Execute{Information_Object_Name}OperationSetResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="Execute{Information_Object_Name}OperationSetFault">
+				<soap:fault name="Execute{Information_Object_Name}OperationSetFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="Execute{Information_Object_Name}OperationSet">
+		<wsdl:port name="{Information_Object_Name}OperationSet_Port" binding="tns:{Information_Object_Name}OperationSet_Binding">
+			<soap:address location="http://iec.ch/TC57/2015/Execute{Information_Object_Name}OperationSet"/>
+		</wsdl:port>
+	</wsdl:service>
+	<xs:schema targetNamespace="http://iec.ch/TC57/2015/Execute{Information_Object_Name}OperationSetMessage" elementFormDefault="qualified">
+		<xs:import namespace="http://iec.ch/TC57/2015/{Information_Object_Name}OperationSetMessage" schemaLocation="xsd/{Information_Object_Name}OperationSetMessage.xsd"/>
+		<!--<xs:include schemaLocation="xsd/{Information_Object_Name}Message.xsd"/>-->
+	</xs:schema>
+	<!-- Message Definitions -->
+	<!-- Port Definitions -->
+</wsdl:definitions>

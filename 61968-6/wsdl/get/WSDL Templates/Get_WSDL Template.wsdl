@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:tns="http://iec.ch/TC57/2015/Get{Information_Object_Name}" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2015/Get{Information_Object_Name}Message" xmlns:ns="http://iec.ch/TC57/2011/schema/message" xmlns:ns1="http://iec.ch/TC57/2015/Get{Information_Object_Name}#" xmlns:ns2="http://iec.ch/TC57/2015/{Information_Object_Name}#" name="Get{Information_Object_Name}" targetNamespace="http://iec.ch/TC57/2015/Get{Information_Object_Name}">
+	<wsdl:types>
+		<xs:schema targetNamespace="http://iec.ch/TC57/2015/Get{Information_Object_Name}" elementFormDefault="qualified">
+			<xs:import namespace="http://iec.ch/TC57/2015/Get{Information_Object_Name}Message" schemaLocation="xsd/Get{Information_Object_Name}Message.xsd"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="Get{Information_Object_Name}RequestMessage">
+		<wsdl:part name="Get{Information_Object_Name}RequestMessage" element="infoMessage:Get{Information_Object_Name}RequestMessage"/>
+	</wsdl:message>
+	<wsdl:message name="Get{Information_Object_Name}ResponseMessage">
+		<wsdl:part name="Get{Information_Object_Name}ResponseMessage" element="infoMessage:Get{Information_Object_Name}ResponseMessage"/>
+	</wsdl:message>
+	<wsdl:message name="Get{Information_Object_Name}FaultMessage">
+		<wsdl:part name="Get{Information_Object_Name}FaultMessage" element="infoMessage:Get{Information_Object_Name}FaultMessage"/>
+	</wsdl:message>
+	<wsdl:portType name="Get{Information_Object_Name}_Port">
+		<wsdl:operation name="Get{Information_Object_Name}">
+			<wsdl:input name="Get{Information_Object_Name}Request" message="tns:Get{Information_Object_Name}RequestMessage"/>
+			<wsdl:output name="Get{Information_Object_Name}Response" message="tns:Get{Information_Object_Name}ResponseMessage"/>
+			<wsdl:fault name="Get{Information_Object_Name}Fault" message="tns:Get{Information_Object_Name}FaultMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="Get{Information_Object_Name}_Binding" type="tns:Get{Information_Object_Name}_Port">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="Get{Information_Object_Name}">
+			<soap:operation soapAction="http://iec.ch/TC57/2015/Get{Information_Object_Name}/Get{Information_Object_Name}" style="document"/>
+			<wsdl:input name="Get{Information_Object_Name}Request">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="Get{Information_Object_Name}Response">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="Get{Information_Object_Name}Fault">
+				<soap:fault name="Get{Information_Object_Name}Fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="Get{Information_Object_Name}">
+		<wsdl:port name="Get{Information_Object_Name}_Port" binding="tns:Get{Information_Object_Name}_Binding">
+			<soap:address location="http://iec.ch/TC57/2015/Get{Information_Object_Name}"/>
+		</wsdl:port>
+	</wsdl:service>
+	<xs:schema targetNamespace="http://iec.ch/TC57/2015/Get{Information_Object_Name}Message" elementFormDefault="qualified">
+		<xs:import namespace="http://iec.ch/TC57/2015/Get{Information_Object_Name}Message" schemaLocation="xsd/MaintenanceOrdersMessage.xsd"/>
+		<!--<xs:include schemaLocation="xsd/Gety{Information_Object_Name}Message.xsd"/>-->
+	</xs:schema>
+
+
+
+	<!-- Message Definitions -->
+	<!-- Port Definitions -->
+</wsdl:definitions>
