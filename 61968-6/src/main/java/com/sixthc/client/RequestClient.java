@@ -1,6 +1,7 @@
 package com.sixthc.client;
 
-import com.sixthc.cim.createMaintenanceOrders.ReplyType;
+import ch.iec.tc57._2011.schema.message.ReplyType;
+
 import com.sixthc.interceptor.LoggingInInterceptor;
 import com.sixthc.interceptor.LoggingOutInterceptor;
 

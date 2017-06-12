@@ -9,8 +9,6 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 import org.apache.log4j.Logger;
 
-import com.sixthc.server.ws.ExecuteMaintOrderCreate;
-
 public class DateUtil {
 	static Logger log = Logger.getLogger(DateUtil.class);
 

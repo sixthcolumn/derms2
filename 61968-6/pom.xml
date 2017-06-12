@@ -4,7 +4,7 @@
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<artifactId>epri</artifactId>
+		<artifactId>derms2</artifactId>
 		<groupId>com.sixthc</groupId>
 		<relativePath>../</relativePath>
 		<version>1.0-SNAPSHOT</version>
@@ -21,7 +21,7 @@
 
 	<!-- Plugin configuration -->
 	<build>
-		<finalName>epri-61968-6</finalName>
+		<finalName>61968-6</finalName>
 		<!-- Feel free to change maven-compiler-plugin configuration -->
 		<plugins>
 			<plugin>
@@ -95,69 +95,27 @@
 						<configuration>
 							<wsdlOptions>
 								<wsdlOption>
-									<wsdl>${basedir}/wsdl/create/ExecuteMaintenanceOrders.wsdl</wsdl>
-									<bindingFiles>
-										<bindingFile>${basedir}/src/main/resources/create_maint_order_binding.xml</bindingFile>
-									</bindingFiles>
+									<wsdl>${basedir}/wsdl/ExecuteDERGroupDispatches.wsdl</wsdl>
 									<extraargs>
 										<extraarg>-client</extraarg>
-										<extraarg>-p</extraarg>
-										<extraarg>com.sixthc.cim.createMaintenanceOrders.cxf</extraarg>
 									</extraargs>
 								</wsdlOption>
 								<wsdlOption>
-									<wsdl>${basedir}/wsdl/create/ExecuteServiceOrders.wsdl</wsdl>
-									<bindingFiles>
-										<bindingFile>${basedir}/src/main/resources/create_service_order_binding.xml</bindingFile>
-									</bindingFiles>
+									<wsdl>${basedir}/wsdl/ExecuteDERGroupForecasts.wsdl</wsdl>
 									<extraargs>
 										<extraarg>-client</extraarg>
-										<extraarg>-p</extraarg>
-										<extraarg>com.sixthc.cim.createServiceOrders.cxf</extraarg>
 									</extraargs>
 								</wsdlOption>
 								<wsdlOption>
-									<wsdl>${basedir}/wsdl/change/ExecuteMaintenanceOrders.wsdl</wsdl>
-									<bindingFiles>
-										<bindingFile>${basedir}/src/main/resources/change_maint_order_binding.xml</bindingFile>
-									</bindingFiles>
+									<wsdl>${basedir}/wsdl/ExecuteDERGroups.wsdl</wsdl>
 									<extraargs>
 										<extraarg>-client</extraarg>
-										<extraarg>-p</extraarg>
-										<extraarg>com.sixthc.cim.deleteMaintenanceOrders.cxf</extraarg>
-									</extraargs>
-								</wsdlOption>
-							<!--  <wsdlOption>
-									<wsdl>${basedir}/wsdl/change/ExecuteServiceOrders.wsdl</wsdl>
-									<bindingFiles>
-										<bindingFile>${basedir}/src/main/resources/change_service_order_binding.xml</bindingFile>
-									</bindingFiles>
-									<extraargs>
-										<extraarg>-client</extraarg>
-										<extraarg>-p</extraarg>
-										<extraarg>com.sixthc.cim.deleteServiceOrders.cxf</extraarg>
-									</extraargs>
-								</wsdlOption> -->
-								<wsdlOption>
-									<wsdl>${basedir}/wsdl/get/GetMaintenanceOrders.wsdl</wsdl>
-									<bindingFiles>
-										<bindingFile>${basedir}/src/main/resources/get_maint_orders_binding.xml</bindingFile>
-									</bindingFiles>
-									<extraargs>
-										<extraarg>-client</extraarg>
-										<extraarg>-p</extraarg>
-										<extraarg>com.sixthc.cim.getMaintenanceOrders.cxf</extraarg>
 									</extraargs>
 								</wsdlOption>
 								<wsdlOption>
-									<wsdl>${basedir}/wsdl/get/GetServiceOrders.wsdl</wsdl>
-									<bindingFiles>
-										<bindingFile>${basedir}/src/main/resources/get_service_orders_binding.xml</bindingFile>
-									</bindingFiles>
+									<wsdl>${basedir}/wsdl/GetDERGroupStatuses.wsdl</wsdl>
 									<extraargs>
 										<extraarg>-client</extraarg>
-										<extraarg>-p</extraarg>
-										<extraarg>com.sixthc.cim.getServiceOrders.cxf</extraarg>
 									</extraargs>
 								</wsdlOption>
 							</wsdlOptions>

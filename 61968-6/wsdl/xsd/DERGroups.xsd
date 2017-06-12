@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2015 rel. 4 sp1 (x64) (http://www.altova.com) by Gerald Gray (Electric Power Research Institute) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:a="http://langdale.com.au/2005/Message#" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns="http://langdale.com.au/2005/Message#" xmlns:m="http://www.epri.com/2013/DERGroups#" targetNamespace="http://www.epri.com/2013/DERGroups#" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation/>
+	</xs:annotation>
+	<xs:element name="DERGroups" type="m:DERGroups"/>
+	<xs:complexType name="DERGroups">
+		<xs:sequence>
+			<xs:element name="EndDeviceGroup" type="m:EndDeviceGroup" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EndDeviceGroup">
+		<xs:annotation>
+			<xs:documentation>DERGroup is a convention for a Distributed Energy Resource Management System (DERMS) to group DER devices to ease communication with other utility systems. Groups could be created with any organizing principle, by device type, by location, by nameplate characteristics, etc.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="mRID" type="m:mRID" minOccurs="0" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#IdentifiedObject.mRID">
+				<xs:annotation>
+					<xs:documentation>A Model Authority issues mRIDs. Given that each Model Authority has a unique id and this id is part of the mRID, then the mRID is globally unique. Global uniqeness is easily achived by using a UUID for the mRID. It is strongly recommended to do this. For CIMXML data files the mRID is mapped to rdf:ID or rdf:about attributes that identifies CIM object elements. For DERGroup purposes, this has been restricted further to be a GUID. See the simpleType definition.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Names" type="m:Name" minOccurs="0" maxOccurs="unbounded" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#IdentifiedObject.Names">
+				<xs:annotation>
+					<xs:documentation>All names of this identified object. If there are alternative names or sources of names, and a need to tie to another source beyond the supplied name and mRID, this is another way to document that information.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CapabilityList" type="m:CapabilityList" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>While each of these elements individually is optional (and also optional if this XSD is used only to pass status) when adding or updating a DERGroup one of these elements must be populated. The capability, when used here, is for the DERGroup (the aggregate value of all DERMembers), whereas when used for a particular DER, is the capability for that resource. </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Version">
+				<xs:annotation>
+					<xs:documentation>The use of version allows not only a DERGroup to be retrieved, but to also ascertain changes in group membership over time based on the specific version number and the date of the version. </xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="major" type="xs:integer">
+							<xs:annotation>
+								<xs:documentation> version is to use the x.x.x.x format</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="minor" type="xs:integer"/>
+						<xs:element name="revision" type="xs:integer"/>
+						<xs:element name="versionDate" type="xs:dateTime">
+							<xs:annotation>
+								<xs:documentation>Date/Time associated with this version.</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Status" type="m:Status" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Used to pass on the status of the DERGroup. Some examples include using this to pass error codes to send notification of changes to availability.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>While the name element is optional for most interactions, when a DERGroup is created it MUST be populated.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EndDevice" type="m:DERMember" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>For the purposes of this profile, this is a container for the information for any specific DER that is a member of a DERGroup.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="extensionsList" type="m:extensionsList" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Used to extend the XSD for new requirements ahead of them being ratified in a standard.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="description"/>
+		<xs:attribute name="comment"/>
+	</xs:complexType>
+	<xs:complexType name="Name" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#Name">
+		<xs:annotation>
+			<xs:documentation>The Name class provides the means to define any number of human readable  names for an object. A name is &lt;b&gt;not&lt;/b&gt; to be used for defining inter-object relationships. For inter-object relationships instead use the object identification 'mRID'.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#Name.name">
+				<xs:annotation>
+					<xs:documentation>Any free text that name the object.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NameType" type="m:NameType" minOccurs="0" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#Name.NameType">
+				<xs:annotation>
+					<xs:documentation>Type of this name.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="NameType" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#NameType">
+		<xs:annotation>
+			<xs:documentation>Type of name. Possible values for attribute 'name' are implementation dependent but standard profiles may specify types. An enterprise may have multiple IT systems each having its own local name for the same object, e.g. a planning system may have different names from an EMS. An object may also have different names within the same IT system, e.g. localName and aliasName as defined in CIM version 14. Their definitions from CIM14 are</xs:documentation>
+			<xs:documentation>The localName is a human readable name of the object. It is only used with objects organized in a naming hierarchy. localName: A free text name local to a node in a naming hierarchy similar to a file directory structure. A power system related naming hierarchy may be: Substation, VoltageLevel, Equipment etc. Children of the same parent in such a hierarchy have names that typically are unique among them.</xs:documentation>
+			<xs:documentation>aliasName: A free text alternate name typically used in tabular reports where the column width is limited.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#NameType.description">
+				<xs:annotation>
+					<xs:documentation>Description of the name type.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#NameType.name">
+				<xs:annotation>
+					<xs:documentation>Name of the name type.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NameTypeAuthority" type="m:NameTypeAuthority" minOccurs="0" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#NameType.NameTypeAuthority">
+				<xs:annotation>
+					<xs:documentation>Authority responsible for managing names of this type.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="NameTypeAuthority" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#NameTypeAuthority">
+		<xs:annotation>
+			<xs:documentation>Authority responsible for creation and management of names of a given type; typically an organization or an enterprise system.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#NameTypeAuthority.description">
+				<xs:annotation>
+					<xs:documentation>Description of the name type authority.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#NameTypeAuthority.name">
+				<xs:annotation>
+					<xs:documentation>Name of the name type authority.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DERMember">
+		<xs:sequence>
+			<xs:element name="mRID" type="m:mRID" minOccurs="0" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#IdentifiedObject.mRID">
+				<xs:annotation>
+					<xs:documentation>A Model Authority issues mRIDs. Given that each Model Authority has a unique id and this id is part of the mRID, then the mRID is globally unique. Global uniqeness is easily achived by using a UUID for the mRID. It is strongly recommended to do this. For CIMXML data files the mRID is mapped to rdf:ID or rdf:about attributes that identifies CIM object elements. For DERGroup purposes, this has been restricted further to be a GUID. See the simpleType definition.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>While the name element is optional for most interactions, when a DERMember (EndDevice) is added to a DERGroup, it MUST be populated.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Names" type="m:Name" minOccurs="0"/>
+			<xs:element name="CapabilityList" type="m:CapabilityList" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="extensionsList">
+		<xs:annotation>
+			<xs:documentation>This is an optional, self-describing means to extend any MultiSpeak object.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="extensionsItem" type="m:extensionsItem" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="extensionsItem">
+		<xs:annotation>
+			<xs:documentation>This is an optional means to add self-describing extensions to any class that inherits from the mspObject.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="extName" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="extValue" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="extType" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="extValue">
+		<xs:annotation>
+			<xs:documentation>This is the value of the extensionsItem.  The units of this extensionsItem are included in the Units attrbute on extValue.</xs:documentation>
+		</xs:annotation>
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="units" type="xs:string" use="optional">
+					<xs:annotation>
+						<xs:documentation>If used, this attribute carries the units in which the extValue is expressed. </xs:documentation>
+					</xs:annotation>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="Status" sawsdl:modelReference="http://iec.ch/TC57/2009#Status">
+		<xs:sequence>
+			<xs:element name="dateTime" type="xs:dateTime" minOccurs="1" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2009#Status.dateTime"/>
+			<xs:element name="reason" type="xs:string" minOccurs="0" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2009#Status.reason"/>
+			<xs:element name="remark" type="xs:string" minOccurs="0" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2009#Status.remark"/>
+			<xs:element name="value" type="xs:string" minOccurs="1" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2009#Status.value"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CapabilityList">
+		<xs:sequence>
+			<xs:element name="currentActivePower" type="m:ActivePower" minOccurs="0"/>
+			<xs:element name="currentApparentPower" type="m:ApparentPower" minOccurs="0"/>
+			<xs:element name="currentReactivePower" type="m:ReactivePower" minOccurs="0"/>
+			<xs:element name="minActivePower" type="m:ActivePower" minOccurs="0"/>
+			<xs:element name="minApparentPower" type="m:ApparentPower" minOccurs="0"/>
+			<xs:element name="minReactivePower" type="m:ReactivePower" minOccurs="0"/>
+			<xs:element name="maxActivePower" type="m:ActivePower" minOccurs="0"/>
+			<xs:element name="maxApparentPower" type="m:ApparentPower" minOccurs="0"/>
+			<xs:element name="maxReactivePower" type="m:ReactivePower" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="version">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9].[0-9].[0-9].[0-9]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="mRID">
+		<xs:annotation>
+			<xs:documentation>This is intended to be a universally unique identifier (UUID) for an instance of an object.  It is intended that this identifier is compliant with the IETF RFC 4122 ("A Universally Unique IDentifier URN Namespace") definition of a UUID. Furthermore, the pattern used to restrict the xs:string should support any of the RFC 4122 UUID variants, including the Microsoft Globally Unique Identifier (GUID) variant of the UUID, without being restricted to supporting ONLY the Microsoft GUID definition.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="UnitSymbol">
+		<xs:annotation>
+			<xs:documentation>For DER the three primary unit symbols in use are W, VA, and VAr. This is for Active Power, Apparent Power, and Reactiev Power, respectively.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="W"/>
+			<xs:enumeration value="VA"/>
+			<xs:enumeration value="VAr"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ActivePower">
+		<xs:annotation>
+			<xs:documentation>Expressed in Watts, with a symbol of W.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="multiplier" type="m:UnitMultiplier"/>
+			<xs:element name="unit" type="xs:string" default="W"/>
+			<xs:element name="value" type="xs:float"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ApparentPower">
+		<xs:annotation>
+			<xs:documentation>Expressed in Volt-Ampere, with a symbol of VA.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="multiplier" type="m:UnitMultiplier"/>
+			<xs:element name="unit" type="xs:string" default="VA"/>
+			<xs:element name="value" type="xs:float"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ReactivePower">
+		<xs:annotation>
+			<xs:documentation>Expressed in Vars, with a symbol of VAr.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="multiplier" type="m:UnitMultiplier"/>
+			<xs:element name="unit" type="xs:string" default="VAr"/>
+			<xs:element name="value" type="xs:float"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="UnitMultiplier" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#UnitMultiplier">
+		<xs:annotation>
+			<xs:documentation>The unit multipliers defined for the CIM.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="G">
+				<xs:annotation>
+					<xs:documentation>Giga 10**9</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="M">
+				<xs:annotation>
+					<xs:documentation>Mega 10**6</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="T">
+				<xs:annotation>
+					<xs:documentation>Tera 10**12</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="c">
+				<xs:annotation>
+					<xs:documentation>Centi 10**-2</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="d">
+				<xs:annotation>
+					<xs:documentation>Deci 10**-1</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="k">
+				<xs:annotation>
+					<xs:documentation>Kilo 10**3</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="m">
+				<xs:annotation>
+					<xs:documentation>Milli 10**-3</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="micro">
+				<xs:annotation>
+					<xs:documentation>Micro 10**-6</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="n">
+				<xs:annotation>
+					<xs:documentation>Nano 10**-9</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="none">
+				<xs:annotation/>
+			</xs:enumeration>
+			<xs:enumeration value="p">
+				<xs:annotation>
+					<xs:documentation>Pico 10**-12</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

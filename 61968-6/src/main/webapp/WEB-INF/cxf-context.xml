@@ -15,11 +15,7 @@
 	<import resource="spring/DataSource.xml" />
 	<import resource="spring/Hibernate.xml" />
 
-	<import resource="spring/create_maint_order.xml" />
-	<import resource="spring/create_service_order.xml" />
-	<import resource="spring/change_maint_order.xml" />
-	<import resource="spring/get_maint_orders.xml" />
-	<import resource="spring/get_service_orders.xml" />
-	<import resource="spring/create_service_order.xml" />
+	<import resource="spring/cim-der.xml" />
+	<import resource="spring/dataBeans.xml" />
 
 </beans>

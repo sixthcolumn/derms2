@@ -1,0 +1,105 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:cxf="http://cxf.apache.org/core"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://cxf.apache.org/core
+	http://cxf.apache.org/schemas/core.xsd
+	http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+
+	<bean id="dateFormat" class="java.text.SimpleDateFormat">
+		<constructor-arg value="yyyy-MM-dd'T'HH:mm:ss" />
+	</bean>
+
+
+	<bean id="dateEditor"
+		class="org.springframework.beans.propertyeditors.CustomDateEditor">
+
+		<constructor-arg>
+			<bean class="java.text.SimpleDateFormat">
+				<constructor-arg value="yyyy-MM-dd HH:mm" />
+			</bean>
+		</constructor-arg>
+		<constructor-arg value="true" />
+
+	</bean>
+
+	<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<property name="customEditors">
+			<map>
+				<entry key="java.util.Date">
+					<ref bean="dateEditor" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	
+	<bean id="now" class="com.sixthc.util.DateFormatter">
+<!-- 		<property name="date" value="2017-06-12 02:33" /> -->
+	</bean>
+
+
+	<bean id="CIMDERGroupForecast" name="CIMDERGroupForecast"
+		class="com.epri._2013.dergroupforecasts.DERGroupForecast">
+		<property name="EndDeviceGroup">
+			<bean name="DERGroup" class="com.epri._2013.dergroupforecasts.DERGroup">
+				<property name="name" value="dg2" />
+				<property name="mRID" value="099" />
+			</bean>
+
+		</property>
+		<property name="PredictionStartDate" value="#{now.XMLGregorianDate}" />
+		<property name="PredictionCreationDate" value="#{now.XMLGregorianDate}" />
+		<property name="PredictionIntervalKind">
+			<bean name="PredictionInterval" class="com.epri._2013.dergroupforecasts.PredictionIntervalKind">
+				<property name="value" value="11"/>
+				<property name="timeUnit" value="hh"/>
+			</bean>
+		</property>
+		<property name="requestedCapability">
+			<value type="com.epri._2013.dergroupforecasts.RequestedCapability">APPARENT_POWER</value>
+		</property>
+
+
+		<!-- <property name="timeInterval"> -->
+		<!-- <bean name="timeInterval" class="com.epri._2013.dergroupforecast.TimeInterval"> -->
+		<!-- <property name="value" value="24" /> -->
+		<!-- <property name="timeUnit" value="hh" /> -->
+		<!-- </bean> -->
+		<!-- </property> -->
+		<!-- <property name="forecastBegin" value="2002-05-30T09:00:00" /> <property 
+			name="forecastEnd" value="2002-05-30T09:00:00" /> -->
+	</bean>
+
+	<!-- <bean id="CMIDERGroupPower" name="CMIDERGroupPower" -->
+	<!-- class="com.epri._2013.dergroup.EndDeviceGroup"> -->
+	<!-- <property name="comment" value="epri cim test" /> -->
+	<!-- <property name="name" value="testing123" /> -->
+	<!-- </bean> -->
+
+	<!-- <bean id="CMIDERGroup" name="CMIDERGroup" class="com.epri._2013.dergroup.DERGroups.DERGroup"> 
+		<property name="comment" value="epri cim test" /> <property name="name" value="testing123" 
+		/> </bean> -->
+	<!-- <bean id="CMIDERGroup2" name="CMIDERGroup2" -->
+	<!-- class="com.epri._2013.dergroupdispatches.DERGroup"> -->
+	<!-- <property name="name" value="testing123" /> -->
+	<!-- </bean> -->
+
+
+	<!-- <bean id="CMIDERGroupDispatch" name="CMIDERGroupDispatch" -->
+	<!-- class="com.epri._2013.dergroupdispatches.DERGroupDispatch"> -->
+	<!-- <property name="MRID" value="1122" /> -->
+
+	<!-- </bean> -->
+
+	<bean id="ReplyTypeBean" name="ReplyTypeBean"
+		class="ch.iec.tc57._2011.schema.message.ReplyType">
+		<property name="result" value="OK" />
+		<property name="operationId" value="102799" />
+	</bean>
+
+</beans>

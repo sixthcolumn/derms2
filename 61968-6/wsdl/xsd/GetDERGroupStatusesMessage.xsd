@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2015 rel. 4 (x64) (http://www.altova.com) by Gerald R. Gray (EPRI) -->
+<xs:schema xmlns:tns="http://www.epri.com/GetDERGroupStatusesMessage" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msg="http://www.iec.ch/TC57/2011/schema/message" xmlns:obj1="http://www.epri.com/DERGroupStatuses" xmlns:obj2="http://www.epri.com/GetDERGroupStatuses" targetNamespace="http://www.epri.com/GetDERGroupStatusesMessage" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.0">
+	<xs:annotation>
+		<xs:documentation>
+	// Copyright (c) 2016, Electric Power Research Institute
+// All rights reserved
+// Redistribution and use in source and bunary forms, with or without modification, are permitted provided that the following conditions are met:
+// 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// 2. Redistributions in binary form must reproduce the aboev copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// 3. Neither the name of the copyright holder nor the name of its contributors may be used to endorse or promote products derived from this software without specific prior written permission
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRENTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRENTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THISE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+	</xs:documentation>
+	</xs:annotation>
+	<!-- Base Message Definitions -->
+	<xs:import namespace="http://www.iec.ch/TC57/2011/schema/message" schemaLocation="Message.xsd"/>
+	<!-- CIM Information Object Definition -->
+	<xs:import namespace="http://www.epri.com/DERGroupStatuses" schemaLocation="DERGroupStatuses.xsd"/>
+	<!-- Remove this Import if there is no "Get" Profile associated with this Object. -->
+	<xs:import namespace="http://www.epri.com/GetDERGroupStatuses" schemaLocation="GetDERGroupStatuses.xsd"/>
+	<!-- RequestType Definition -->
+	<xs:element name="GetDERGroupStatusesRequestMessage" type="tns:GetDERGroupStatusesRequestMessageType"/>
+	<xs:element name="GetDERGroupStatusesResponseMessage" type="tns:GetDERGroupStatusesResponseMessageType"/>
+	<xs:element name="GetDERGroupStatusesFaultMessage" type="tns:GetDERGroupStatusesFaultMessageType"/>
+	<xs:complexType name="GetDERGroupStatusesRequestMessageType">
+		<xs:sequence>
+			<xs:element name="Header" type="msg:HeaderType"/>
+			<xs:element name="Request" type="tns:GetDERGroupStatusesRequestType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GetDERGroupStatusesResponseMessageType">
+		<xs:sequence>
+			<!-- Remove this Element if there is no "Get" Profile associated with this Object. -->
+			<xs:element name="Header" type="msg:HeaderType"/>
+			<xs:element name="Reply" type="msg:ReplyType"/>
+			<xs:element name="Payload" type="tns:DERGroupStatusesPayloadType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GetDERGroupStatusesFaultMessageType">
+		<xs:sequence>
+			<xs:element name="Reply" type="msg:ReplyType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GetDERGroupStatusesRequestType">
+		<xs:sequence>
+			<xs:element name="StartTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Start time of interest</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EndTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>End time of interest</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Option" type="msg:OptionType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Request type specialization</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ID" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Object ID for request</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<!-- Remove this Element if there is no "Get" Profile associated with this Object. -->
+			<xs:element ref="obj2:GetDERGroupStatuses"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>This can be a CIM profile defined as an XSD with a CIM-specific namespace</xs:documentation>
+				</xs:annotation>
+			</xs:any>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GetDERGroupStatusesResponseType">
+		<xs:sequence>
+			<xs:element name="Header" type="msg:HeaderType"/>
+			<xs:element name="Reply" type="msg:ReplyType"/>
+			<xs:element name="Payload" type="tns:DERGroupStatusesPayloadType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DERGroupStatusesPayloadType">
+		<xs:sequence>
+			<xs:element ref="obj1:DERGroupStatuses" minOccurs="0"/>
+			<xs:element name="OperationSet" type="msg:OperationSet" minOccurs="0"/>
+			<xs:element name="Compressed" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>For compressed and/or binary, uuencoded payloads</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Format" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Hint as to format of payload, e.g. XML, RDF, SVF, BINARY, PDF, ...</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

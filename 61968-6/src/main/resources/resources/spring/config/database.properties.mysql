@@ -1,4 +1,4 @@
 jdbc.driverClassName=com.mysql.jdbc.Driver
-jdbc.url=jdbc:mysql://localhost/interop_dev
-jdbc.username=interop_dev
-jdbc.password=interop_dev
+jdbc.url=jdbc:mysql://localhost/opendms
+jdbc.username=derms2
+jdbc.password=derms2

@@ -10,7 +10,7 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 @Entity
-@Table(name="message_log")
+@Table(name = "message_log")
 public class MessageLog {
 
 	@Id
@@ -19,15 +19,15 @@ public class MessageLog {
 	private int id;
 	@Column(name = "address", length = 4000)
 	private String address;
-	private String contentType;	
+	private String contentType;
 	@Column(name = "create_date")
 	private java.sql.Timestamp createDate;
-	private String data;	
+	private String data;
 	private String encoding;
 	@Column(name = "faultCode", length = 4000)
 	private String faultCode;
 	@Column(name = "header", length = 4000)
-	private String header;	
+	private String header;
 	@Column(name = "httpMethod", length = 4000)
 	private String httpMethod;
 	@Column(name = "message")
@@ -41,14 +41,13 @@ public class MessageLog {
 	private String payload;
 	@Column(name = "responseCode", length = 4000)
 	private String responseCode;
-	private String resultCode;	
+	private String resultCode;
 	@ManyToOne
-	@JoinColumn(name="message_id", referencedColumnName = "message_id")
+	@JoinColumn(name = "message_id", referencedColumnName = "message_id")
 	private Message message;
-	
-	
+
 	@ManyToOne
-	@JoinColumn(name="vendor_id", referencedColumnName = "vendor_id")
+	@JoinColumn(name = "vendor_id", referencedColumnName = "vendor_id")
 	private Vendor vendor;
 
 	private String stage;
@@ -59,8 +58,6 @@ public class MessageLog {
 	private String packageGroupName;
 	@Transient
 	private String messageName;
-
-
 
 	public int getId() {
 		return id;
@@ -158,11 +155,12 @@ public class MessageLog {
 		this.faultCode = faultCode;
 	}
 
-/*	public String toString() {
-		return "Id = " + id + ", Message = " + message + ", Timestamp = "
-				+ createDate + ", data = " + data;
-	}
-*/
+	/*
+	 * public String toString() {
+	 * return "Id = " + id + ", Message = " + message + ", Timestamp = "
+	 * + createDate + ", data = " + data;
+	 * }
+	 */
 	public String getResultCode() {
 		return resultCode;
 	}
@@ -177,14 +175,6 @@ public class MessageLog {
 
 	public void setOperation(String operation) {
 		this.operation = operation;
-	}
-	
-	public String getMessageId() {
-		return messageId;
-	}
-	
-	public void setMessageId(String messageId) {
-		this.messageId = messageId;
 	}
 
 	public String getCorrelationID() {
@@ -210,15 +200,16 @@ public class MessageLog {
 	public void setStage(String stage) {
 		this.stage = stage;
 	}
-/*
-	public Message getMessage() {
-		return message;
-	}
 
-	public void setMessage(Message message) {
-		this.message = message;
-	}
-*/
+	/*
+	 * public Message getMessage() {
+	 * return message;
+	 * }
+	 * 
+	 * public void setMessage(Message message) {
+	 * this.message = message;
+	 * }
+	 */
 	public String getPackageGroupName() {
 		return packageGroupName;
 	}
@@ -234,9 +225,17 @@ public class MessageLog {
 	public void setMessageName(String messageName) {
 		this.messageName = messageName;
 	}
-	
+
 	public Message getMessage() {
 		return message;
+	}
+
+	public String getMessageId() {
+		return messageId;
+	}
+
+	public void setMessageId(String messageId) {
+		this.messageId = messageId;
 	}
 
 	public void setMessage(Message message) {
@@ -250,7 +249,5 @@ public class MessageLog {
 	public void setVendor(Vendor vendor) {
 		this.vendor = vendor;
 	}
-	
-	
-	
+
 }
