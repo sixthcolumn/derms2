@@ -1,11 +1,5 @@
 package com.sixthc.server.ws;
 
-import java.util.GregorianCalendar;
-
-import javax.xml.datatype.DatatypeConfigurationException;
-import javax.xml.datatype.DatatypeFactory;
-import javax.xml.datatype.XMLGregorianCalendar;
-
 import org.apache.log4j.Logger;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
@@ -14,13 +8,9 @@ import org.springframework.context.ApplicationContextAware;
 import ch.iec.tc57._2011.schema.message.HeaderType;
 import ch.iec.tc57._2011.schema.message.ReplyType;
 
-import com.epri.dercommon.ActivePower;
-import com.epri.dercommon.ApparentPower;
-import com.epri.dercommon.ReactivePower;
 import com.epri.dergroupstatuses.DERGroupStatus;
 import com.epri.dergroupstatuses.DERGroupStatuses;
 import com.epri.dergroupstatuses.EndDeviceGroup;
-import com.epri.dergroupstatuses.Status;
 import com.epri.getdergroupstatuses.GetDERGroupStatusesFaultMessage;
 import com.epri.getdergroupstatuses.GetDERGroupStatusesPort;
 import com.epri.getdergroupstatusesmessage.DERGroupStatusesPayloadType;
@@ -44,61 +34,33 @@ public class GetDERGroupStatusImpl implements GetDERGroupStatusesPort,
 	public GetDERGroupStatusesResponseMessageType getDERGroupStatuses(
 			GetDERGroupStatusesRequestMessageType getDERGroupStatusesRequestMessage)
 			throws GetDERGroupStatusesFaultMessage {
-
-		//	DERGroups e = appContext.getBean("CIMDERGroupStatus", DERGroups.class);
-
+		
+		// response message
 		GetDERGroupStatusesResponseMessageType response = new GetDERGroupStatusesResponseMessageType();
+		
+		// set reply values
 		ReplyType reply = new ReplyType();
+		reply.setResult("OK");
 		response.setReply(reply);
-		DERGroupStatusesPayloadType payload = new DERGroupStatusesPayloadType();
-		response.setPayload(payload);
+		
+		// get all the status data from a bean (we only get one for now)
+		DERGroupStatus status = appContext.getBean("CIMDERGroupStatus", DERGroupStatus.class);
+		
+		
+		// add the status to the array of statuses
 		DERGroupStatuses statuses = new DERGroupStatuses();
-		payload.setDERGroupStatuses(statuses);
-		DERGroupStatus status = new DERGroupStatus();
 		statuses.getDERGroupStatuses().add(status);
+		
+		// add the statuses to the payload... sheesh!
+		DERGroupStatusesPayloadType payload = new DERGroupStatusesPayloadType();
+		payload.setDERGroupStatuses(statuses);
 
+		// add our payload to the response
+		response.setPayload(payload);
+
+		// send them back their own header in our response
 		HeaderType header = getDERGroupStatusesRequestMessage.getHeader();
 		response.setHeader(header);
-
-		status.setMRID("1234");
-		status.setName("der1");
-		status.setEndDeviceGroup(new EndDeviceGroup());
-		EndDeviceGroup group = status.getEndDeviceGroup();
-
-		Status gstatus = new Status();
-		group.setStatus(gstatus);
-		gstatus.setValue("14.2");
-
-		GregorianCalendar c = new GregorianCalendar();
-		c.setTimeInMillis(System.currentTimeMillis());
-		XMLGregorianCalendar date2;
-		try {
-			date2 = DatatypeFactory.newInstance().newXMLGregorianCalendar(c);
-			gstatus.setDateTime(date2);
-		} catch (DatatypeConfigurationException ex) {
-			// TODO Auto-generated catch block
-			ex.printStackTrace();
-		}
-
-		ActivePower ap = new ActivePower();
-		ap.setMultiplier("k");
-		ap.setValue((float) 12.5);
-		ap.setUnit("W");
-		group.setPresentActivePower(ap);
-
-		ApparentPower app = new ApparentPower();
-		app.setMultiplier("k");
-		app.setValue((float) 10.5);
-		app.setUnit("VA");
-		group.setPresentApparentPower(app);
-
-		ReactivePower rp = new ReactivePower();
-		rp.setMultiplier("k");
-		rp.setValue((float) 11.0);
-		rp.setUnit("VAr");
-		group.setPresentReactivePower(rp);
-
-		reply.setResult("OK");
 
 		return response;
 	}

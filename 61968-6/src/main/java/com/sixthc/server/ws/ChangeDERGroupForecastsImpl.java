@@ -45,6 +45,7 @@ public class ChangeDERGroupForecastsImpl implements DERGroupForecastsPort,
 
 		DERGroupForecast forecast = appContext.getBean("CIMDERGroupForecast",
 				DERGroupForecast.class);
+		
 
 		// TODO : Create factory in spring so I can move this to databeans.xml
 		GregorianCalendar gcal = (GregorianCalendar) GregorianCalendar

@@ -37,10 +37,34 @@
 			</map>
 		</property>
 	</bean>
-	
+
 	<bean id="now" class="com.sixthc.util.DateFormatter">
-<!-- 		<property name="date" value="2017-06-12 02:33" /> -->
+		<!-- <property name="date" value="2017-06-12 02:33" /> -->
 	</bean>
+
+	<bean id="CIMDERGroupStatus" name="CIMDERGroupStatus"
+		class="com.epri.dergroupstatuses.DERGroupStatus">
+		<property name="EndDeviceGroup">
+			<bean name="EndDeviceGroup" class="com.epri.dergroupstatuses.EndDeviceGroup">
+				<property name="status">
+					<bean name="Status" class="com.epri.dergroupstatuses.Status">
+						<property name="dateTime" value="#{now.XMLGregorianDate}" />
+						<property name="value" value="test remark" />
+					</bean>
+
+				</property>
+				<property name="presentActivePower">
+					<bean name="presentActivePower" class="com.epri.dercommon.ActivePower ">
+						<property name="multiplier" value="1" />
+						<property name="unit" value="kW" />
+						<property name="value" value="1.1" />
+					</bean>
+				</property>
+				<property name="mRID" value="2277" />
+			</bean>
+		</property>
+	</bean>
+
 
 
 	<bean id="CIMDERGroupForecast" name="CIMDERGroupForecast"
@@ -50,14 +74,14 @@
 				<property name="name" value="dg2" />
 				<property name="mRID" value="099" />
 			</bean>
-
 		</property>
 		<property name="PredictionStartDate" value="#{now.XMLGregorianDate}" />
 		<property name="PredictionCreationDate" value="#{now.XMLGregorianDate}" />
 		<property name="PredictionIntervalKind">
-			<bean name="PredictionInterval" class="com.epri._2013.dergroupforecasts.PredictionIntervalKind">
-				<property name="value" value="11"/>
-				<property name="timeUnit" value="hh"/>
+			<bean name="PredictionInterval"
+				class="com.epri._2013.dergroupforecasts.PredictionIntervalKind">
+				<property name="value" value="11" />
+				<property name="timeUnit" value="hh" />
 			</bean>
 		</property>
 		<property name="requestedCapability">
