@@ -1,57 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default" name="DERMS2-GetDERGroupStatuses" resourceRoot="${projectDir}" soapui-version="4.5.2" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="GetDERGroupStatuses_Binding" type="wsdl" bindingName="{http://www.epri.com/GetDERGroupStatuses}GetDERGroupStatuses_Binding" soapVersion="1_1" anonymous="optional" definition="../wsdl/GetDERGroupStatuses.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/git/derms2/61968-6/wsdl/GetDERGroupStatuses.wsdl"><con:part><con:url>file:/Users/BenGoodwin/git/derms2/61968-6/wsdl/GetDERGroupStatuses.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="GetDERGroupStatuses" targetNamespace="http://www.epri.com/GetDERGroupStatuses" xmlns:tns="http://www.epri.com/GetDERGroupStatuses" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://www.epri.com/GetDERGroupStatusesMessage" xmlns:ns="http://www.iec.ch/TC57/2011/schema/message" xmlns:ns1="http://www.epri.com/GetDERGroupStatuses#" xmlns:ns2="http://www.epri.com/DERGroupStatuses#">
+<con:soapui-project activeEnvironment="Default" name="DERMS2-DERGroupDispatch" resourceRoot="${projectDir}" soapui-version="4.5.2" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="DERGroupDispatches_Binding" type="wsdl" bindingName="{http://www.epri.com/ExecuteDERGroupDispatches}DERGroupDispatches_Binding" soapVersion="1_1" anonymous="optional" definition="../wsdl/ExecuteDERGroupDispatches.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/git/derms2/61968-6/wsdl/ExecuteDERGroupDispatches.wsdl"><con:part><con:url>file:/Users/BenGoodwin/git/derms2/61968-6/wsdl/ExecuteDERGroupDispatches.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ExecuteDERGroupDispatches" targetNamespace="http://www.epri.com/ExecuteDERGroupDispatches" xmlns:tns="http://www.epri.com/ExecuteDERGroupDispatches" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://www.epri.com/DERGroupDispatchesMessage">
   <wsdl:types>
-    <xs:schema targetNamespace="http://www.epri.com/GetDERGroupStatuses" elementFormDefault="qualified">
-      <xs:import namespace="http://www.epri.com/GetDERGroupStatusesMessage" schemaLocation="xsd/GetDERGroupStatusesMessage.xsd"/>
+    <xs:schema targetNamespace="http://www.epri.com/ExecuteDERGroupDispatches" elementFormDefault="qualified">
+      <xs:import namespace="http://www.epri.com/DERGroupDispatchesMessage" schemaLocation="xsd/DERGroupDispatchesMessage.xsd"/>
     </xs:schema>
   </wsdl:types>
-  <wsdl:message name="GetDERGroupStatusesRequestMessage">
-    <wsdl:part name="GetDERGroupStatusesRequestMessage" element="infoMessage:GetDERGroupStatusesRequestMessage"/>
+  <wsdl:message name="CreateDERGroupDispatchesRequestMessage">
+    <wsdl:part name="CreateDERGroupDispatchesRequestMessage" element="infoMessage:CreateDERGroupDispatches"/>
   </wsdl:message>
-  <wsdl:message name="GetDERGroupStatusesResponseMessage">
-    <wsdl:part name="GetDERGroupStatusesResponseMessage" element="infoMessage:GetDERGroupStatusesResponseMessage"/>
+  <wsdl:message name="ResponseMessage">
+    <wsdl:part name="ResponseMessage" element="infoMessage:DERGroupDispatchesResponseMessage"/>
   </wsdl:message>
-  <wsdl:message name="GetDERGroupStatusesFaultMessage">
-    <wsdl:part name="GetDERGroupStatusesFaultMessage" element="infoMessage:GetDERGroupStatusesFaultMessage"/>
+  <wsdl:message name="FaultMessage">
+    <wsdl:part name="FaultMessage" element="infoMessage:DERGroupDispatchesFaultMessage"/>
   </wsdl:message>
-  <wsdl:portType name="GetDERGroupStatuses_Port">
-    <wsdl:operation name="GetDERGroupStatuses">
-      <wsdl:input name="GetDERGroupStatusesRequest" message="tns:GetDERGroupStatusesRequestMessage"/>
-      <wsdl:output name="GetDERGroupStatusesResponse" message="tns:GetDERGroupStatusesResponseMessage"/>
-      <wsdl:fault name="GetDERGroupStatusesFault" message="tns:GetDERGroupStatusesFaultMessage"/>
+  <wsdl:portType name="DERGroupDispatches_Port">
+    <wsdl:operation name="CreateDERGroupDispatches">
+      <wsdl:input name="CreateDERGroupDispatchesRequest" message="tns:CreateDERGroupDispatchesRequestMessage"/>
+      <wsdl:output name="CreateDERGroupDispatchesResponse" message="tns:ResponseMessage"/>
+      <wsdl:fault name="CreateDERGroupDispatchesFault" message="tns:FaultMessage"/>
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="GetDERGroupStatuses_Binding" type="tns:GetDERGroupStatuses_Port">
+  <wsdl:binding name="DERGroupDispatches_Binding" type="tns:DERGroupDispatches_Port">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
-    <wsdl:operation name="GetDERGroupStatuses">
-      <soap:operation soapAction="http://www.epri.com/GetDERGroupStatuses" style="document"/>
-      <wsdl:input name="GetDERGroupStatusesRequest">
+    <wsdl:operation name="CreateDERGroupDispatches">
+      <soap:operation soapAction="http://www.epri.com/DERGroupDispatches/CreateDERGroupDispatches" style="document"/>
+      <wsdl:input name="CreateDERGroupDispatchesRequest">
         <soap:body use="literal"/>
       </wsdl:input>
-      <wsdl:output name="GetDERGroupStatusesResponse">
+      <wsdl:output name="CreateDERGroupDispatchesResponse">
         <soap:body use="literal"/>
       </wsdl:output>
-      <wsdl:fault name="GetDERGroupStatusesFault">
-        <soap:fault name="GetDERGroupStatusesFault" use="literal"/>
+      <wsdl:fault name="CreateDERGroupDispatchesFault">
+        <soap:fault name="CreateDERGroupDispatchesFault" use="literal"/>
       </wsdl:fault>
     </wsdl:operation>
   </wsdl:binding>
-  <wsdl:service name="GetDERGroupStatuses">
-    <wsdl:port name="GetDERGroupStatuses_Port" binding="tns:GetDERGroupStatuses_Binding">
-      <soap:address location="http://www.epri.com/GetDERGroupStatuses"/>
+  <wsdl:service name="ExecuteDERGroupDispatches">
+    <wsdl:port name="DERGroupDispatches_Port" binding="tns:DERGroupDispatches_Binding">
+      <soap:address location="http://www.epri.com/ExecuteDERGroupDispatches"/>
     </wsdl:port>
   </wsdl:service>
-  // Copyright (c) 2016, Electric Power Research Institute
+  <xs:annotation>
+    <xs:documentation>// Copyright (c) 2016, Electric Power Research Institute
 // All rights reserved
 // Redistribution and use in source and bunary forms, with or without modification, are permitted provided that the following conditions are met:
 // 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
 // 2. Redistributions in binary form must reproduce the aboev copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
 // 3. Neither the name of the copyright holder nor the name of its contributors may be used to endorse or promote products derived from this software without specific prior written permission
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRENTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRENTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THISE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRENTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRENTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THISE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</xs:documentation>
+  </xs:annotation>
+  <xs:schema targetNamespace="http://www.epri.com/ExecuteDERGroupDispatchesMessage" elementFormDefault="qualified">
+    <xs:import namespace="http://www.epri.com/DERGroupDispatchesMessage" schemaLocation="xsd/DERGroupDispatchesMessage.xsd"/>
+    <!--<xs:include schemaLocation="xsd/MaintenanceOrdersMessage.xsd"/>-->
+  </xs:schema>
   <!--Message Definitions-->
   <!--Port Definitions-->
-</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:/Users/BenGoodwin/git/derms2/61968-6/wsdl/xsd/GetDERGroupStatusesMessage.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2015 rel. 4 (x64) (http://www.altova.com) by Gerald R. Gray (EPRI)-->
-<xs:schema targetNamespace="http://www.epri.com/GetDERGroupStatusesMessage" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.0" xmlns:tns="http://www.epri.com/GetDERGroupStatusesMessage" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msg="http://www.iec.ch/TC57/2011/schema/message" xmlns:obj1="http://www.epri.com/DERGroupStatuses" xmlns:obj2="http://www.epri.com/GetDERGroupStatuses">
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:/Users/BenGoodwin/git/derms2/61968-6/wsdl/xsd/DERGroupDispatchesMessage.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2015 rel. 4 sp1 (x64) (http://www.altova.com) by Gerald Gray (Electric Power Research Institute)-->
+<xs:schema targetNamespace="http://www.epri.com/DERGroupDispatchesMessage" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.0" xmlns:tns="http://www.epri.com/DERGroupDispatchesMessage" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msg="http://www.iec.ch/TC57/2011/schema/message" xmlns:obj="http://www.epri.com/DERGroupDispatches">
   <xs:annotation>
     <xs:documentation>// Copyright (c) 2016, Electric Power Research Institute
 // All rights reserved
@@ -63,74 +69,12 @@
   </xs:annotation>
   <!--Base Message Definitions-->
   <xs:import namespace="http://www.iec.ch/TC57/2011/schema/message" schemaLocation="Message.xsd"/>
-  <!--CIM Information Object Definition-->
-  <xs:import namespace="http://www.epri.com/DERGroupStatuses" schemaLocation="DERGroupStatuses.xsd"/>
-  <!--Remove this Import if there is no "Get" Profile associated with this Object.-->
-  <xs:import namespace="http://www.epri.com/GetDERGroupStatuses" schemaLocation="GetDERGroupStatuses.xsd"/>
-  <!--RequestType Definition-->
-  <xs:element name="GetDERGroupStatusesRequestMessage" type="tns:GetDERGroupStatusesRequestMessageType"/>
-  <xs:element name="GetDERGroupStatusesResponseMessage" type="tns:GetDERGroupStatusesResponseMessageType"/>
-  <xs:element name="GetDERGroupStatusesFaultMessage" type="tns:GetDERGroupStatusesFaultMessageType"/>
-  <xs:complexType name="GetDERGroupStatusesRequestMessageType">
+  <!--DER Enterprise Integration  Object Definition-->
+  <xs:import namespace="http://www.epri.com/DERGroupDispatches" schemaLocation="DERGroupDispatches.xsd"/>
+  <!--PayloadType Definition-->
+  <xs:complexType name="DERGroupDispatchesPayloadType">
     <xs:sequence>
-      <xs:element name="Header" type="msg:HeaderType"/>
-      <xs:element name="Request" type="tns:GetDERGroupStatusesRequestType" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="GetDERGroupStatusesResponseMessageType">
-    <xs:sequence>
-      <!--Remove this Element if there is no "Get" Profile associated with this Object.-->
-      <xs:element name="Header" type="msg:HeaderType"/>
-      <xs:element name="Reply" type="msg:ReplyType"/>
-      <xs:element name="Payload" type="tns:DERGroupStatusesPayloadType" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="GetDERGroupStatusesFaultMessageType">
-    <xs:sequence>
-      <xs:element name="Reply" type="msg:ReplyType"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="GetDERGroupStatusesRequestType">
-    <xs:sequence>
-      <xs:element name="StartTime" type="xs:dateTime" minOccurs="0">
-        <xs:annotation>
-          <xs:documentation>Start time of interest</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="EndTime" type="xs:dateTime" minOccurs="0">
-        <xs:annotation>
-          <xs:documentation>End time of interest</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="Option" type="msg:OptionType" minOccurs="0" maxOccurs="unbounded">
-        <xs:annotation>
-          <xs:documentation>Request type specialization</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="ID" type="xs:string" minOccurs="0" maxOccurs="unbounded">
-        <xs:annotation>
-          <xs:documentation>Object ID for request</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <!--Remove this Element if there is no "Get" Profile associated with this Object.-->
-      <xs:element ref="obj2:GetDERGroupStatuses"/>
-      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded">
-        <xs:annotation>
-          <xs:documentation>This can be a CIM profile defined as an XSD with a CIM-specific namespace</xs:documentation>
-        </xs:annotation>
-      </xs:any>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="GetDERGroupStatusesResponseType">
-    <xs:sequence>
-      <xs:element name="Header" type="msg:HeaderType"/>
-      <xs:element name="Reply" type="msg:ReplyType"/>
-      <xs:element name="Payload" type="tns:DERGroupStatusesPayloadType" minOccurs="0"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="DERGroupStatusesPayloadType">
-    <xs:sequence>
-      <xs:element ref="obj1:DERGroupStatuses" minOccurs="0"/>
+      <xs:element ref="obj:DERGroupDispatches"/>
       <xs:element name="OperationSet" type="msg:OperationSet" minOccurs="0"/>
       <xs:element name="Compressed" type="xs:string" minOccurs="0">
         <xs:annotation>
@@ -144,6 +88,48 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
+  <!--Message Types-->
+  <!--RequestMessageType-->
+  <xs:complexType name="DERGroupDispatchesRequestMessageType">
+    <xs:sequence>
+      <xs:element name="Header" type="msg:HeaderType"/>
+      <xs:element name="Request" type="msg:RequestType" minOccurs="0"/>
+      <xs:element name="Payload" type="tns:DERGroupDispatchesPayloadType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--ResponseMessageType-->
+  <xs:complexType name="DERGroupDispatchesResponseMessageType">
+    <xs:sequence>
+      <xs:element name="Header" type="msg:HeaderType"/>
+      <xs:element name="Reply" type="msg:ReplyType"/>
+      <xs:element name="Payload" type="tns:DERGroupDispatchesPayloadType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--EventMessageType-->
+  <xs:complexType name="DERGroupDispatchesEventMessageType">
+    <xs:sequence>
+      <xs:element name="Header" type="msg:HeaderType"/>
+      <xs:element name="Payload" type="tns:DERGroupDispatchesPayloadType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <!--FaultMessageType-->
+  <xs:complexType name="DERGroupDispatchesFaultMessageType">
+    <xs:sequence>
+      <xs:element name="Reply" type="msg:ReplyType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CreateDERGroupDispatches" type="tns:DERGroupDispatchesRequestMessageType"/>
+  <xs:element name="ChangeDERGroupDispatches" type="tns:DERGroupDispatchesRequestMessageType"/>
+  <xs:element name="CancelDERGroupDispatches" type="tns:DERGroupDispatchesRequestMessageType"/>
+  <xs:element name="CloseDERGroupDispatches" type="tns:DERGroupDispatchesRequestMessageType"/>
+  <xs:element name="DeleteDERGroupDispatches" type="tns:DERGroupDispatchesRequestMessageType"/>
+  <xs:element name="CreatedDERGroupDispatches" type="tns:DERGroupDispatchesEventMessageType"/>
+  <xs:element name="ChangedDERGroupDispatches" type="tns:DERGroupDispatchesEventMessageType"/>
+  <xs:element name="CanceledDERGroupDispatches" type="tns:DERGroupDispatchesEventMessageType"/>
+  <xs:element name="ClosedDERGroupDispatches" type="tns:DERGroupDispatchesEventMessageType"/>
+  <xs:element name="DeletedDERGroupDispatches" type="tns:DERGroupDispatchesEventMessageType"/>
+  <xs:element name="DERGroupDispatchesResponseMessage" type="tns:DERGroupDispatchesResponseMessageType"/>
+  <xs:element name="DERGroupDispatchesFaultMessage" type="tns:DERGroupDispatchesFaultMessageType"/>
 </xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:/Users/BenGoodwin/git/derms2/61968-6/wsdl/xsd/Message.xsd</con:url><con:content><![CDATA[<!--Common Message Specification for IEC 61968-->
 <!--Change Log-->
 <!--2010/12/15 Added OperationSet to Payload-->
@@ -754,47 +740,62 @@
     <xs:attribute name="kind" type="IDKindType"/>
     <xs:attribute name="objectType" type="xs:string"/>
   </xs:attributeGroup>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:/Users/BenGoodwin/git/derms2/61968-6/wsdl/xsd/DERGroupStatuses.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2015 rel. 4 sp1 (x64) (http://www.altova.com) by Gerald Gray (Electric Power Research Institute)-->
-<xs:schema targetNamespace="http://www.epri.com/DERGroupStatuses" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:common="http://www.epri.com/DERCommon" xmlns="http://www.epri.com/DERGroupStatuses">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:/Users/BenGoodwin/git/derms2/61968-6/wsdl/xsd/DERGroupDispatches.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2015 rel. 4 sp1 (x64) (http://www.altova.com) by Gerald Gray (Electric Power Research Institute)-->
+<xs:schema targetNamespace="http://www.epri.com/DERGroupDispatches" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:common="http://www.epri.com/DERCommon" xmlns="http://www.epri.com/DERGroupDispatches">
   <xs:annotation>
-    <xs:documentation>Draft of DERGroupStatus - This is what is returned on a request for status, assumed to be asked by DERGroup. The group
-will be optionally identified either by mRID or Names.name. There will also be an identifier for this status, again, using mRID or the
-Names.name class. The status will return "what can you give me" in terms of power or (?).</xs:documentation>
+    <xs:documentation/>
   </xs:annotation>
   <xs:import namespace="http://www.epri.com/DERCommon" schemaLocation="DERCommon.xsd"/>
-  <xs:element name="DERGroupStatuses" type="DERGroupStatuses"/>
-  <xs:element name="DERGroupCapabilities" type="DERGroupStatuses"/>
-  <xs:complexType name="DERGroupStatuses">
+  <xs:element name="DERGroupDispatches" type="DERGroupDispatches"/>
+  <xs:complexType name="DERGroupDispatches">
     <xs:sequence>
-      <xs:element name="DERGroupStatuses" type="DERGroupStatus" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="DERGroupDispatch" type="DERGroupDispatch" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="DERGroupStatus">
+  <xs:complexType name="DERGroupDispatch">
     <xs:sequence>
-      <xs:element name="mRID" type="common:mRID" minOccurs="0" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema- cim15#IdentifiedObject.mRID">
+      <xs:element name="DERGroup" type="DERGroup">
+        <xs:annotation>
+          <xs:documentation>The DERGroup that the forecast is requested for</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RequestedCapability" type="RequestedCapability">
+        <xs:annotation>
+          <xs:documentation>An enumeration for the capability types, watts, real or aparent power</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="extensionsList" type="extensionsList" minOccurs="0"/>
+      <xs:element name="Names" type="Name" minOccurs="0" maxOccurs="unbounded" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#IdentifiedObject.Names">
+        <xs:annotation>
+          <xs:documentation>All names of this identified object.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="mRID" type="mRID" minOccurs="0" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#IdentifiedObject.mRID">
         <xs:annotation>
           <xs:documentation>A Model Authority issues mRIDs. Given that each Model Authority has a unique id and this id is part of the mRID, then the mRID is globally unique.</xs:documentation>
           <xs:documentation>Global uniqeness is easily achived by using a UUID for the mRID. It is strongly recommended to do this.</xs:documentation>
           <xs:documentation>For CIMXML data files the mRID is mapped to rdf:ID or rdf:about attributes that identifies CIM object elements.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="otherCapability" type="otherCapability" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Other capabilities not originally foreseen for this request</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DERGroup">
+    <xs:annotation>
+      <xs:documentation>DERGroup is a convention for a Distributed Energy Resource Management System (DERMS) to group DER devices to ease communication with other utility systems. Groups could be created with any organizing principle, by device type, by location, by nameplate characteristics, etc.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="mRID" type="common:mRID" minOccurs="0"/>
       <xs:element name="Names" type="Name" minOccurs="0" maxOccurs="unbounded" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#IdentifiedObject.Names">
         <xs:annotation>
           <xs:documentation>All names of this identified object.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="extensionsList" type="extensionsList" minOccurs="0"/>
-      <xs:element name="EndDeviceGroup" type="EndDeviceGroup" minOccurs="1"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="otherCapability" type="common:otherCapability"/>
-  <xs:complexType name="extensionsList">
-    <xs:annotation>
-      <xs:documentation>This is an optional, self-describing means to extend any MultiSpeak object.</xs:documentation>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element name="extensionsItem" type="extensionsItem" minOccurs="1" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="extensionsItem">
@@ -802,14 +803,22 @@ Names.name class. The status will return "what can you give me" in terms of powe
       <xs:documentation>This is an optional means to add self-describing extensions to any class that inherits from the mspObject.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="extName" type="xs:string" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="extValue" type="xs:string" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="extType" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="extName" type="xs:string"/>
+      <xs:element name="extValue" type="xs:string"/>
+      <xs:element name="extType" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="extensionsList">
+    <xs:annotation>
+      <xs:documentation>This is an optional, self-describing means to extend any MultiSpeak object.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="extensionsItem" type="extensionsItem" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="extValue">
     <xs:annotation>
-      <xs:documentation>This is the value of the extensionsItem. The units of this extensionsItem are included in the Units attrbute on extValue.</xs:documentation>
+      <xs:documentation>This is the value of the extensionsItem.  The units of this extensionsItem are included in the Units attrbute on extValue.</xs:documentation>
     </xs:annotation>
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -821,17 +830,25 @@ Names.name class. The status will return "what can you give me" in terms of powe
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
+  <xs:simpleType name="mRID">
+    <xs:annotation>
+      <xs:documentation>This is intended to be a universally unique identifier (UUID) for an instance of an object.  It is intended that this identifier is compliant with the IETF RFC 4122 ("A Universally Unique IDentifier URN Namespace") definition of a UUID. Furthermore, the pattern used to restrict the xs:string should support any of the RFC 4122 UUID variants, including the Microsoft Globally Unique Identifier (GUID) variant of the UUID, without being restricted to supporting ONLY the Microsoft GUID definition.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"/>
+    </xs:restriction>
+  </xs:simpleType>
   <xs:complexType name="Name" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#Name">
     <xs:annotation>
-      <xs:documentation>The Name class provides the means to define any number of human readable names for an object. A name is &lt;b>not&lt;/b> to be used for defining inter-object relationships. For inter-object relationships instead use the object identification ‘mRID.’</xs:documentation>
+      <xs:documentation>The Name class provides the means to define any number of human readable  names for an object. A name is &lt;b>not&lt;/b> to be used for defining inter-object relationships. For inter-object relationships instead use the object identification 'mRID'.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema- cim15#Name.name">
+      <xs:element name="name" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#Name.name">
         <xs:annotation>
           <xs:documentation>Any free text that name the object.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="NameType" type="NameType" minOccurs="0" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM- schema-cim15#Name.NameType">
+      <xs:element name="NameType" type="NameType" minOccurs="0" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#Name.NameType">
         <xs:annotation>
           <xs:documentation>Type of this name.</xs:documentation>
         </xs:annotation>
@@ -840,22 +857,22 @@ Names.name class. The status will return "what can you give me" in terms of powe
   </xs:complexType>
   <xs:complexType name="NameType" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#NameType">
     <xs:annotation>
-      <xs:documentation>Type of name. Possible values for attribute ‘name’ are implementation dependent but standard profiles may specify types. An enterprise may have multiple IT systems each having its own local name for the same object, e.g. a planning system may have different names from an EMS. An object may also have different names within the same IT system, e.g. localName and aliasName as defined in CIM version 14. Their definitions from CIM14 are</xs:documentation>
+      <xs:documentation>Type of name. Possible values for attribute 'name' are implementation dependent but standard profiles may specify types. An enterprise may have multiple IT systems each having its own local name for the same object, e.g. a planning system may have different names from an EMS. An object may also have different names within the same IT system, e.g. localName and aliasName as defined in CIM version 14. Their definitions from CIM14 are</xs:documentation>
       <xs:documentation>The localName is a human readable name of the object. It is only used with objects organized in a naming hierarchy. localName: A free text name local to a node in a naming hierarchy similar to a file directory structure. A power system related naming hierarchy may be: Substation, VoltageLevel, Equipment etc. Children of the same parent in such a hierarchy have names that typically are unique among them.</xs:documentation>
       <xs:documentation>aliasName: A free text alternate name typically used in tabular reports where the column width is limited.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM- schema-cim15#NameType.description">
+      <xs:element name="description" type="xs:string" minOccurs="0" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#NameType.description">
         <xs:annotation>
           <xs:documentation>Description of the name type.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema- cim15#NameType.name">
+      <xs:element name="name" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#NameType.name">
         <xs:annotation>
           <xs:documentation>Name of the name type.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="NameTypeAuthority" type="NameTypeAuthority" minOccurs="0" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#NameType.NameTypeAuthority">
+      <xs:element name="NameTypeAuthority" type="NameTypeAuthority" minOccurs="0" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#NameType.NameTypeAuthority">
         <xs:annotation>
           <xs:documentation>Authority responsible for managing names of this type.</xs:documentation>
         </xs:annotation>
@@ -867,55 +884,48 @@ Names.name class. The status will return "what can you give me" in terms of powe
       <xs:documentation>Authority responsible for creation and management of names of a given type; typically an organization or an enterprise system.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM- schema-cim15#NameTypeAuthority.description">
+      <xs:element name="description" type="xs:string" minOccurs="0" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#NameTypeAuthority.description">
         <xs:annotation>
           <xs:documentation>Description of the name type authority.</xs:documentation>
         </xs:annotation>
       </xs:element>
-      <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema- cim15#NameTypeAuthority.name">
+      <xs:element name="name" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#NameTypeAuthority.name">
         <xs:annotation>
           <xs:documentation>Name of the name type authority.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="Status" sawsdl:modelReference="http://iec.ch/TC57/2009#Status">
+  <xs:complexType name="otherCapability">
     <xs:sequence>
-      <xs:element name="dateTime" type="xs:dateTime" minOccurs="1" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2009#Status.dateTime"/>
-      <xs:element name="reason" type="xs:string" minOccurs="0" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2009#Status.reason"/>
-      <xs:element name="remark" type="xs:string" minOccurs="0" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2009#Status.remark"/>
-      <xs:element name="value" type="xs:string" minOccurs="1" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2009#Status.value"/>
+      <xs:element name="otherCapabilityType" type="xs:string"/>
+      <xs:element name="otherCapabilitySubType" type="xs:string" minOccurs="0"/>
+      <xs:element name="otherCapabilityValue" type="xs:float" minOccurs="0"/>
+      <xs:element name="otherCapabilityUnits" type="xs:string" minOccurs="0"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="EndDeviceGroup">
+  <xs:simpleType name="Percentage">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="RequestedCapability">
     <xs:sequence>
-      <xs:element name="Status" type="Status"/>
-      <xs:element name="presentActivePower" type="common:ActivePower" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="presentApparentPower" type="common:ApparentPower" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="presentReactivePower" type="common:ReactivePower" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="maxActivePower" type="common:ActivePower" minOccurs="0"/>
-      <xs:element name="maxApparentPower" type="common:ApparentPower" minOccurs="0"/>
-      <xs:element name="maxReactivePower" type="common:ReactivePower" minOccurs="0"/>
-      <xs:element name="minActivePower" type="common:ActivePower" minOccurs="0"/>
-      <xs:element name="minApparentPower" type="common:ApparentPower" minOccurs="0"/>
-      <xs:element name="minReactivePower" type="common:ReactivePower" minOccurs="0"/>
-      <xs:element name="mRID" type="common:mRID" minOccurs="0" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#IdentifiedObject.mRID">
-        <xs:annotation>
-          <xs:documentation>A Model Authority issues mRIDs. Given that each Model Authority has a unique id and this id is part of the mRID, then the mRID is globally unique. Global uniqeness is easily achived by using a UUID for the mRID. It is strongly recommended to do this. For CIMXML data files the mRID is mapped to rdf:ID or rdf:about attributes that identifies CIM object elements. For DERGroup purposes, this has been restricted further to be a GUID. See the simpleType definition.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="Names" type="Name" minOccurs="0" maxOccurs="unbounded" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#IdentifiedObject.Names">
-        <xs:annotation>
-          <xs:documentation>All names of this identified object. If there are alternative names or sources of names, and a need to tie to another source beyond the supplied name and mRID, this is another way to document that information.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="otherCapabilities" type="common:otherCapability" minOccurs="0">
-        <xs:annotation>
-          <xs:documentation>Allow the provision for other capabilities beyond power that have not been foreseen</xs:documentation>
-        </xs:annotation>
-      </xs:element>
+      <xs:element name="capabilityType" type="capabilityType"/>
+      <xs:element name="value" type="xs:float"/>
+      <xs:element name="capabilityUnits" type="xs:string"/>
+      <xs:element name="capabilityMultiplier" type="common:UnitMultiplier"/>
     </xs:sequence>
   </xs:complexType>
+  <xs:simpleType name="capabilityType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RealPower"/>
+      <xs:enumeration value="ApparentPower"/>
+      <xs:enumeration value="ReactivePower"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UnitMultiplier" type="common:UnitMultiplier"/>
 </xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:/Users/BenGoodwin/git/derms2/61968-6/wsdl/xsd/DERCommon.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2015 rel. 4 sp1 (x64) (http://www.altova.com) by Gerald Gray (Electric Power Research Institute)-->
 <xs:schema targetNamespace="http://www.epri.com/DERCommon" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns="http://www.epri.com/DERCommon">
   <xs:complexType name="ActivePower">
@@ -1024,275 +1034,11 @@ Names.name class. The status will return "what can you give me" in terms of powe
       <xs:pattern value="[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"/>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:/Users/BenGoodwin/git/derms2/61968-6/wsdl/xsd/GetDERGroupStatuses.xsd</con:url><con:content><![CDATA[<!--edited with XMLSpy v2015 rel. 4 sp1 (x64) (http://www.altova.com) by Gerald Gray (Electric Power Research Institute)-->
-<xs:schema targetNamespace="http://www.epri.com/GetDERGroupStatuses" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns:common="http://www.epri.com/DERCommon" xmlns="http://www.epri.com/GetDERGroupStatuses">
-  <xs:annotation>
-    <xs:documentation>Draft of DERGroupStatus - This is what is returned on a request for status, assumed to be asked by DERGroup. The group
-will be optionally identified either by mRID or Names.name. There will also be an identifier for this status, again, using mRID or the
-Names.name class. The status will return "what can you give me" in terms of power or (?).</xs:documentation>
-  </xs:annotation>
-  <xs:import namespace="http://www.epri.com/DERCommon" schemaLocation="DERCommon.xsd"/>
-  <xs:element name="GetDERGroupStatuses" type="DERGroupStatuses"/>
-  <xs:complexType name="DERGroupStatuses">
-    <xs:sequence>
-      <xs:element name="DERGroupStatus" type="DERGroupStatus" minOccurs="1" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="DERGroupStatus">
-    <xs:sequence>
-      <xs:element name="mRID" type="common:mRID" minOccurs="0" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema- cim15#IdentifiedObject.mRID">
-        <xs:annotation>
-          <xs:documentation>A Model Authority issues mRIDs. Given that each Model Authority has a unique id and this id is part of the mRID, then the mRID is globally unique.</xs:documentation>
-          <xs:documentation>Global uniqeness is easily achived by using a UUID for the mRID. It is strongly recommended to do this.</xs:documentation>
-          <xs:documentation>For CIMXML data files the mRID is mapped to rdf:ID or rdf:about attributes that identifies CIM object elements.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="Names" type="Name" minOccurs="0" maxOccurs="unbounded" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#IdentifiedObject.Names">
-        <xs:annotation>
-          <xs:documentation>All names of this identified object.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="extensionsList" type="extensionsList" minOccurs="0"/>
-      <xs:element name="EndDeviceGroup" type="EndDeviceGroup" minOccurs="1"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="extensionsList">
-    <xs:annotation>
-      <xs:documentation>This is an optional, self-describing means to extend any MultiSpeak object.</xs:documentation>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element name="extensionsItem" type="extensionsItem" minOccurs="1" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="extensionsItem">
-    <xs:annotation>
-      <xs:documentation>This is an optional means to add self-describing extensions to any class that inherits from the mspObject.</xs:documentation>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element name="extName" type="xs:string" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="extValue" type="xs:string" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="extType" type="xs:string" minOccurs="0" maxOccurs="1"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="extValue">
-    <xs:annotation>
-      <xs:documentation>This is the value of the extensionsItem. The units of this extensionsItem are included in the Units attrbute on extValue.</xs:documentation>
-    </xs:annotation>
-    <xs:simpleContent>
-      <xs:extension base="xs:string">
-        <xs:attribute name="units" type="xs:string" use="optional">
-          <xs:annotation>
-            <xs:documentation>If used, this attribute carries the units in which the extValue is expressed.</xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-  <xs:complexType name="Name" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#Name">
-    <xs:annotation>
-      <xs:documentation>The Name class provides the means to define any number of human readable names for an object. A name is &lt;b>not&lt;/b> to be used for defining inter-object relationships. For inter-object relationships instead use the object identification ‘mRID.’</xs:documentation>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema- cim15#Name.name">
-        <xs:annotation>
-          <xs:documentation>Any free text that name the object.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="NameType" type="NameType" minOccurs="0" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM- schema-cim15#Name.NameType">
-        <xs:annotation>
-          <xs:documentation>Type of this name.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="NameType" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#NameType">
-    <xs:annotation>
-      <xs:documentation>Type of name. Possible values for attribute ‘name’ are implementation dependent but standard profiles may specify types. An enterprise may have multiple IT systems each having its own local name for the same object, e.g. a planning system may have different names from an EMS. An object may also have different names within the same IT system, e.g. localName and aliasName as defined in CIM version 14. Their definitions from CIM14 are</xs:documentation>
-      <xs:documentation>The localName is a human readable name of the object. It is only used with objects organized in a naming hierarchy. localName: A free text name local to a node in a naming hierarchy similar to a file directory structure. A power system related naming hierarchy may be: Substation, VoltageLevel, Equipment etc. Children of the same parent in such a hierarchy have names that typically are unique among them.</xs:documentation>
-      <xs:documentation>aliasName: A free text alternate name typically used in tabular reports where the column width is limited.</xs:documentation>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM- schema-cim15#NameType.description">
-        <xs:annotation>
-          <xs:documentation>Description of the name type.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema- cim15#NameType.name">
-        <xs:annotation>
-          <xs:documentation>Name of the name type.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="NameTypeAuthority" type="NameTypeAuthority" minOccurs="0" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#NameType.NameTypeAuthority">
-        <xs:annotation>
-          <xs:documentation>Authority responsible for managing names of this type.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="NameTypeAuthority" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#NameTypeAuthority">
-    <xs:annotation>
-      <xs:documentation>Authority responsible for creation and management of names of a given type; typically an organization or an enterprise system.</xs:documentation>
-    </xs:annotation>
-    <xs:sequence>
-      <xs:element name="description" type="xs:string" minOccurs="0" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM- schema-cim15#NameTypeAuthority.description">
-        <xs:annotation>
-          <xs:documentation>Description of the name type authority.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema- cim15#NameTypeAuthority.name">
-        <xs:annotation>
-          <xs:documentation>Name of the name type authority.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="Status" sawsdl:modelReference="http://iec.ch/TC57/2009#Status">
-    <xs:sequence>
-      <xs:element name="dateTime" type="xs:dateTime" minOccurs="1" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2009#Status.dateTime"/>
-      <xs:element name="reason" type="xs:string" minOccurs="0" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2009#Status.reason"/>
-      <xs:element name="remark" type="xs:string" minOccurs="0" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2009#Status.remark"/>
-      <xs:element name="value" type="xs:string" minOccurs="1" maxOccurs="1" sawsdl:modelReference="http://iec.ch/TC57/2009#Status.value"/>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="EndDeviceGroup">
-    <xs:sequence>
-      <xs:element name="mRID" type="common:mRID" minOccurs="0" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#IdentifiedObject.mRID">
-        <xs:annotation>
-          <xs:documentation>A Model Authority issues mRIDs. Given that each Model Authority has a unique id and this id is part of the mRID, then the mRID is globally unique. Global uniqeness is easily achived by using a UUID for the mRID. It is strongly recommended to do this. For CIMXML data files the mRID is mapped to rdf:ID or rdf:about attributes that identifies CIM object elements. For DERGroup purposes, this has been restricted further to be a GUID. See the simpleType definition.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-      <xs:element name="Names" type="Name" minOccurs="0" maxOccurs="unbounded" sawsdl:modelReference="http://iec.ch/TC57/2010/CIM-schema-cim15#IdentifiedObject.Names">
-        <xs:annotation>
-          <xs:documentation>All names of this identified object. If there are alternative names or sources of names, and a need to tie to another source beyond the supplied name and mRID, this is another way to document that information.</xs:documentation>
-        </xs:annotation>
-      </xs:element>
-    </xs:sequence>
-  </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://www.epri.com/GetDERGroupStatuses</con:endpoint><con:endpoint>http://localhost:8075/61968-6/cim/getDERGroupStatus</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://www.epri.com/GetDERGroupStatuses" name="GetDERGroupStatuses" bindingOperationName="GetDERGroupStatuses" type="Request-Response" outputName="GetDERGroupStatusesResponse" inputName="GetDERGroupStatusesRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.epri.com/GetDERGroupStatuses</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://www.epri.com/GetDERGroupStatusesMessage" xmlns:mes="http://www.iec.ch/TC57/2011/schema/message" xmlns:get1="http://www.epri.com/GetDERGroupStatuses">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://www.epri.com/ExecuteDERGroupDispatches</con:endpoint><con:endpoint>http://localhost:8075/61968-6/cim/changeDERGroupDispatch</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://www.epri.com/DERGroupDispatches/CreateDERGroupDispatches" name="CreateDERGroupDispatches" bindingOperationName="CreateDERGroupDispatches" type="Request-Response" outputName="CreateDERGroupDispatchesResponse" inputName="CreateDERGroupDispatchesRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8075/61968-6/cim/changeDERGroupDispatch</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://www.epri.com/DERGroupDispatchesMessage" xmlns:mes="http://www.iec.ch/TC57/2011/schema/message" xmlns:der1="http://www.epri.com/DERGroupDispatches">
    <soapenv:Header/>
    <soapenv:Body>
-      <get:GetDERGroupStatusesRequestMessage>
-         <get:Header>
-            <mes:Verb>?</mes:Verb>
-            <mes:Noun>?</mes:Noun>
-            <!--Optional:-->
-            <mes:Revision>?</mes:Revision>
-            <!--Optional:-->
-            <mes:ReplayDetection>
-               <mes:Nonce>?</mes:Nonce>
-               <mes:Created>?</mes:Created>
-            </mes:ReplayDetection>
-            <!--Optional:-->
-            <mes:Context>?</mes:Context>
-            <!--Optional:-->
-            <mes:Timestamp>?</mes:Timestamp>
-            <!--Optional:-->
-            <mes:Source>?</mes:Source>
-            <!--Optional:-->
-            <mes:AsyncReplyFlag>?</mes:AsyncReplyFlag>
-            <!--Optional:-->
-            <mes:ReplyAddress>?</mes:ReplyAddress>
-            <!--Optional:-->
-            <mes:AckRequired>?</mes:AckRequired>
-            <!--Optional:-->
-            <mes:User>
-               <mes:UserID>?</mes:UserID>
-               <!--Optional:-->
-               <mes:Organization>?</mes:Organization>
-            </mes:User>
-            <!--Optional:-->
-            <mes:MessageID>?</mes:MessageID>
-            <!--Optional:-->
-            <mes:CorrelationID>?</mes:CorrelationID>
-            <!--Optional:-->
-            <mes:Comment>?</mes:Comment>
-            <!--Zero or more repetitions:-->
-            <mes:Property>
-               <mes:Name>?</mes:Name>
-               <!--Optional:-->
-               <mes:Value>?</mes:Value>
-            </mes:Property>
-            <!--You may enter ANY elements at this point-->
-         </get:Header>
-         <!--Optional:-->
-         <get:Request>
-            <!--Optional:-->
-            <get:StartTime>?</get:StartTime>
-            <!--Optional:-->
-            <get:EndTime>?</get:EndTime>
-            <!--Zero or more repetitions:-->
-            <get:Option>
-               <mes:name>?</mes:name>
-               <!--Optional:-->
-               <mes:value>?</mes:value>
-            </get:Option>
-            <!--Zero or more repetitions:-->
-            <get:ID>?</get:ID>
-            <get1:GetDERGroupStatuses>
-               <!--1 or more repetitions:-->
-               <get1:DERGroupStatus>
-                  <!--Optional:-->
-                  <get1:mRID>?</get1:mRID>
-                  <!--Optional:-->
-                  <get1:name>?</get1:name>
-                  <!--Zero or more repetitions:-->
-                  <get1:Names>
-                     <get1:name>?</get1:name>
-                     <!--Optional:-->
-                     <get1:NameType>
-                        <!--Optional:-->
-                        <get1:description>?</get1:description>
-                        <get1:name>?</get1:name>
-                        <!--Optional:-->
-                        <get1:NameTypeAuthority>
-                           <!--Optional:-->
-                           <get1:description>?</get1:description>
-                           <get1:name>?</get1:name>
-                        </get1:NameTypeAuthority>
-                     </get1:NameType>
-                  </get1:Names>
-                  <!--Optional:-->
-                  <get1:extensionsList>
-                     <!--1 or more repetitions:-->
-                     <get1:extensionsItem>
-                        <get1:extName>?</get1:extName>
-                        <get1:extValue>?</get1:extValue>
-                        <!--Optional:-->
-                        <get1:extType>?</get1:extType>
-                     </get1:extensionsItem>
-                  </get1:extensionsList>
-                  <get1:EndDeviceGroup>
-                     <!--Optional:-->
-                     <get1:mRID>?</get1:mRID>
-                     <!--Zero or more repetitions:-->
-                     <get1:Names>
-                        <get1:name>?</get1:name>
-                        <!--Optional:-->
-                        <get1:NameType>
-                           <!--Optional:-->
-                           <get1:description>?</get1:description>
-                           <get1:name>?</get1:name>
-                           <!--Optional:-->
-                           <get1:NameTypeAuthority>
-                              <!--Optional:-->
-                              <get1:description>?</get1:description>
-                              <get1:name>?</get1:name>
-                           </get1:NameTypeAuthority>
-                        </get1:NameType>
-                     </get1:Names>
-                  </get1:EndDeviceGroup>
-               </get1:DERGroupStatus>
-            </get1:GetDERGroupStatuses>
-            <!--You may enter ANY elements at this point-->
-         </get:Request>
-      </get:GetDERGroupStatusesRequestMessage>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.epri.com/GetDERGroupStatuses"/></con:call></con:operation></con:interface><con:testSuite name="GetDERGroupStatuses_Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetDERGroupStatuses TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="GetDERGroupStatuses"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetDERGroupStatuses_Binding</con:interface><con:operation>GetDERGroupStatuses</con:operation><con:request name="GetDERGroupStatuses"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8075/61968-6/cim/getDERGroupStatus</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://www.epri.com/GetDERGroupStatusesMessage" xmlns:mes="http://www.iec.ch/TC57/2011/schema/message" xmlns:get1="http://www.epri.com/GetDERGroupStatuses">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <get:GetDERGroupStatusesRequestMessage>
-         <get:Header>
+      <der:CreateDERGroupDispatches>
+         <der:Header>
             <mes:Verb>Create</mes:Verb>
             <mes:Noun>Dispatch</mes:Noun>
             <mes:Revision>0.1</mes:Revision>
@@ -1317,28 +1063,34 @@ Names.name class. The status will return "what can you give me" in terms of powe
                <mes:Name>forecast</mes:Name>
                <mes:Value>0.1</mes:Value>
             </mes:Property>
-         </get:Header>
-         <get:Request>
-            <get:StartTime>2015-06-12T12:00:00.00-05:00</get:StartTime>
-            <get:EndTime>2015-06-12T12:00:00.00-05:00</get:EndTime>
-            <get:ID>1234</get:ID>
-            <get1:GetDERGroupStatuses>
-               <get1:DERGroupStatus>
-                  <get1:mRID>8822</get1:mRID>
-                  <get1:name>test1</get1:name>
-                  <get1:EndDeviceGroup>
-                     <get1:mRID>1233</get1:mRID>
-                  </get1:EndDeviceGroup>
-               </get1:DERGroupStatus>
-            </get1:GetDERGroupStatuses>
-         </get:Request>
-      </get:GetDERGroupStatusesRequestMessage>
+         </der:Header>
+         <der:Request>
+            <mes:StartTime>2015-06-12T12:00:00.00-05:00</mes:StartTime>
+            <mes:EndTime>2015-06-12T12:00:00.00-05:00</mes:EndTime>
+         </der:Request>
+         <der:Payload>
+            <der1:DERGroupDispatches>
+               <der1:DERGroupDispatch>
+                  <der1:DERGroup>
+                     <der1:name>dergroup1</der1:name>
+                     <der1:mRID>1234</der1:mRID>
+                  </der1:DERGroup>
+                  <der1:RequestedCapability>
+                     <der1:capabilityType>ApparentPower</der1:capabilityType>
+                     <der1:value>1.77</der1:value>
+                     <der1:capabilityUnits>kW</der1:capabilityUnits>
+                     <der1:capabilityMultiplier>1.1</der1:capabilityMultiplier>
+                  </der1:RequestedCapability>
+               </der1:DERGroupDispatch>
+            </der1:DERGroupDispatches>
+         </der:Payload>
+      </der:CreateDERGroupDispatches>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.epri.com/GetDERGroupStatuses" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService port="8080" path="/" host="benjamins-Mac-mini-3.local" name="MockService 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:mockOperation name="GetDERGroupStatuses" interface="GetDERGroupStatuses_Binding" operation="GetDERGroupStatuses"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://www.epri.com/GetDERGroupStatusesMessage" xmlns:mes="http://www.iec.ch/TC57/2011/schema/message" xmlns:der="http://www.epri.com/DERGroupStatuses" xmlns:der1="http://www.epri.com/DERCommon">
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.epri.com/DERGroupDispatches/CreateDERGroupDispatches"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite name="DERGroupDispatches_Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CreateDERGroupDispatches TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="CreateDERGroupDispatches"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroupDispatches_Binding</con:interface><con:operation>CreateDERGroupDispatches</con:operation><con:request name="CreateDERGroupDispatches"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.epri.com/ExecuteDERGroupDispatches</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://www.epri.com/DERGroupDispatchesMessage" xmlns:mes="http://www.iec.ch/TC57/2011/schema/message" xmlns:der1="http://www.epri.com/DERGroupDispatches">
    <soapenv:Header/>
    <soapenv:Body>
-      <get:GetDERGroupStatusesResponseMessage>
-         <get:Header>
+      <der:CreateDERGroupDispatches>
+         <der:Header>
             <mes:Verb>?</mes:Verb>
             <mes:Noun>?</mes:Noun>
             <!--Optional:-->
@@ -1379,8 +1131,167 @@ Names.name class. The status will return "what can you give me" in terms of powe
                <mes:Value>?</mes:Value>
             </mes:Property>
             <!--You may enter ANY elements at this point-->
-         </get:Header>
-         <get:Reply>
+         </der:Header>
+         <!--Optional:-->
+         <der:Request>
+            <!--Optional:-->
+            <mes:StartTime>?</mes:StartTime>
+            <!--Optional:-->
+            <mes:EndTime>?</mes:EndTime>
+            <!--Zero or more repetitions:-->
+            <mes:Option>
+               <mes:name>?</mes:name>
+               <!--Optional:-->
+               <mes:value>?</mes:value>
+            </mes:Option>
+            <!--Zero or more repetitions:-->
+            <mes:ID idType="?" idAuthority="?" kind="?" objectType="?">?</mes:ID>
+            <!--You may enter ANY elements at this point-->
+         </der:Request>
+         <!--Optional:-->
+         <der:Payload>
+            <der1:DERGroupDispatches>
+               <!--1 or more repetitions:-->
+               <der1:DERGroupDispatch>
+                  <der1:DERGroup>
+                     <der1:name>?</der1:name>
+                     <!--Optional:-->
+                     <der1:mRID>?</der1:mRID>
+                     <!--Zero or more repetitions:-->
+                     <der1:Names>
+                        <der1:name>?</der1:name>
+                        <!--Optional:-->
+                        <der1:NameType>
+                           <!--Optional:-->
+                           <der1:description>?</der1:description>
+                           <der1:name>?</der1:name>
+                           <!--Optional:-->
+                           <der1:NameTypeAuthority>
+                              <!--Optional:-->
+                              <der1:description>?</der1:description>
+                              <der1:name>?</der1:name>
+                           </der1:NameTypeAuthority>
+                        </der1:NameType>
+                     </der1:Names>
+                  </der1:DERGroup>
+                  <der1:RequestedCapability>
+                     <der1:capabilityType>?</der1:capabilityType>
+                     <der1:value>?</der1:value>
+                     <der1:capabilityUnits>?</der1:capabilityUnits>
+                     <der1:capabilityMultiplier>?</der1:capabilityMultiplier>
+                  </der1:RequestedCapability>
+                  <!--Optional:-->
+                  <der1:extensionsList>
+                     <!--1 or more repetitions:-->
+                     <der1:extensionsItem>
+                        <der1:extName>?</der1:extName>
+                        <der1:extValue>?</der1:extValue>
+                        <!--Optional:-->
+                        <der1:extType>?</der1:extType>
+                     </der1:extensionsItem>
+                  </der1:extensionsList>
+                  <!--Zero or more repetitions:-->
+                  <der1:Names>
+                     <der1:name>?</der1:name>
+                     <!--Optional:-->
+                     <der1:NameType>
+                        <!--Optional:-->
+                        <der1:description>?</der1:description>
+                        <der1:name>?</der1:name>
+                        <!--Optional:-->
+                        <der1:NameTypeAuthority>
+                           <!--Optional:-->
+                           <der1:description>?</der1:description>
+                           <der1:name>?</der1:name>
+                        </der1:NameTypeAuthority>
+                     </der1:NameType>
+                  </der1:Names>
+                  <!--Optional:-->
+                  <der1:mRID>?</der1:mRID>
+                  <!--Optional:-->
+                  <der1:otherCapability>
+                     <der1:otherCapabilityType>?</der1:otherCapabilityType>
+                     <!--Optional:-->
+                     <der1:otherCapabilitySubType>?</der1:otherCapabilitySubType>
+                     <!--Optional:-->
+                     <der1:otherCapabilityValue>?</der1:otherCapabilityValue>
+                     <!--Optional:-->
+                     <der1:otherCapabilityUnits>?</der1:otherCapabilityUnits>
+                  </der1:otherCapability>
+               </der1:DERGroupDispatch>
+            </der1:DERGroupDispatches>
+            <!--Optional:-->
+            <der:OperationSet>
+               <!--Optional:-->
+               <mes:enforceMsgSequence>?</mes:enforceMsgSequence>
+               <!--Optional:-->
+               <mes:enforceTransactionalIntegrity>?</mes:enforceTransactionalIntegrity>
+               <!--Zero or more repetitions:-->
+               <mes:Operation>
+                  <mes:operationId>?</mes:operationId>
+                  <!--Optional:-->
+                  <mes:noun>?</mes:noun>
+                  <!--Optional:-->
+                  <mes:verb>?</mes:verb>
+                  <!--Optional:-->
+                  <mes:elementOperation>false</mes:elementOperation>
+                  <!--You may enter ANY elements at this point-->
+               </mes:Operation>
+            </der:OperationSet>
+            <!--Optional:-->
+            <der:Compressed>?</der:Compressed>
+            <!--Optional:-->
+            <der:Format>?</der:Format>
+         </der:Payload>
+      </der:CreateDERGroupDispatches>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://www.epri.com/DERGroupDispatches/CreateDERGroupDispatches"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService port="8080" path="/" host="benjamins-Mac-mini-3.local" name="MockService 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:mockOperation name="CreateDERGroupDispatches" interface="DERGroupDispatches_Binding" operation="CreateDERGroupDispatches"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://www.epri.com/DERGroupDispatchesMessage" xmlns:mes="http://www.iec.ch/TC57/2011/schema/message" xmlns:der1="http://www.epri.com/DERGroupDispatches">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <der:DERGroupDispatchesResponseMessage>
+         <der:Header>
+            <mes:Verb>?</mes:Verb>
+            <mes:Noun>?</mes:Noun>
+            <!--Optional:-->
+            <mes:Revision>?</mes:Revision>
+            <!--Optional:-->
+            <mes:ReplayDetection>
+               <mes:Nonce>?</mes:Nonce>
+               <mes:Created>?</mes:Created>
+            </mes:ReplayDetection>
+            <!--Optional:-->
+            <mes:Context>?</mes:Context>
+            <!--Optional:-->
+            <mes:Timestamp>?</mes:Timestamp>
+            <!--Optional:-->
+            <mes:Source>?</mes:Source>
+            <!--Optional:-->
+            <mes:AsyncReplyFlag>?</mes:AsyncReplyFlag>
+            <!--Optional:-->
+            <mes:ReplyAddress>?</mes:ReplyAddress>
+            <!--Optional:-->
+            <mes:AckRequired>?</mes:AckRequired>
+            <!--Optional:-->
+            <mes:User>
+               <mes:UserID>?</mes:UserID>
+               <!--Optional:-->
+               <mes:Organization>?</mes:Organization>
+            </mes:User>
+            <!--Optional:-->
+            <mes:MessageID>?</mes:MessageID>
+            <!--Optional:-->
+            <mes:CorrelationID>?</mes:CorrelationID>
+            <!--Optional:-->
+            <mes:Comment>?</mes:Comment>
+            <!--Zero or more repetitions:-->
+            <mes:Property>
+               <mes:Name>?</mes:Name>
+               <!--Optional:-->
+               <mes:Value>?</mes:Value>
+            </mes:Property>
+            <!--You may enter ANY elements at this point-->
+         </der:Header>
+         <der:Reply>
             <mes:Result>?</mes:Result>
             <!--Zero or more repetitions:-->
             <mes:Error>
@@ -1439,139 +1350,81 @@ Names.name class. The status will return "what can you give me" in terms of powe
             <!--You may enter ANY elements at this point-->
             <!--Optional:-->
             <mes:operationId>?</mes:operationId>
-         </get:Reply>
+         </der:Reply>
          <!--Optional:-->
-         <get:Payload>
-            <!--Optional:-->
-            <der:DERGroupStatuses>
+         <der:Payload>
+            <der1:DERGroupDispatches>
                <!--1 or more repetitions:-->
-               <der:DERGroupStatuses>
-                  <!--Optional:-->
-                  <der:mRID>?</der:mRID>
-                  <!--Optional:-->
-                  <der:name>?</der:name>
-                  <!--Zero or more repetitions:-->
-                  <der:Names>
-                     <der:name>?</der:name>
+               <der1:DERGroupDispatch>
+                  <der1:DERGroup>
+                     <der1:name>?</der1:name>
                      <!--Optional:-->
-                     <der:NameType>
-                        <!--Optional:-->
-                        <der:description>?</der:description>
-                        <der:name>?</der:name>
-                        <!--Optional:-->
-                        <der:NameTypeAuthority>
-                           <!--Optional:-->
-                           <der:description>?</der:description>
-                           <der:name>?</der:name>
-                        </der:NameTypeAuthority>
-                     </der:NameType>
-                  </der:Names>
-                  <!--Optional:-->
-                  <der:extensionsList>
-                     <!--1 or more repetitions:-->
-                     <der:extensionsItem>
-                        <der:extName>?</der:extName>
-                        <der:extValue>?</der:extValue>
-                        <!--Optional:-->
-                        <der:extType>?</der:extType>
-                     </der:extensionsItem>
-                  </der:extensionsList>
-                  <der:EndDeviceGroup>
-                     <der:Status>
-                        <der:dateTime>?</der:dateTime>
-                        <!--Optional:-->
-                        <der:reason>?</der:reason>
-                        <!--Optional:-->
-                        <der:remark>?</der:remark>
-                        <der:value>?</der:value>
-                     </der:Status>
-                     <!--Optional:-->
-                     <der:presentActivePower>
-                        <der1:multiplier>?</der1:multiplier>
-                        <der1:unit>W</der1:unit>
-                        <der1:value>?</der1:value>
-                     </der:presentActivePower>
-                     <!--Optional:-->
-                     <der:presentApparentPower>
-                        <der1:multiplier>?</der1:multiplier>
-                        <der1:unit>VA</der1:unit>
-                        <der1:value>?</der1:value>
-                     </der:presentApparentPower>
-                     <!--Optional:-->
-                     <der:presentReactivePower>
-                        <der1:multiplier>?</der1:multiplier>
-                        <der1:unit>VAr</der1:unit>
-                        <der1:value>?</der1:value>
-                     </der:presentReactivePower>
-                     <!--Optional:-->
-                     <der:maxActivePower>
-                        <der1:multiplier>?</der1:multiplier>
-                        <der1:unit>W</der1:unit>
-                        <der1:value>?</der1:value>
-                     </der:maxActivePower>
-                     <!--Optional:-->
-                     <der:maxApparentPower>
-                        <der1:multiplier>?</der1:multiplier>
-                        <der1:unit>VA</der1:unit>
-                        <der1:value>?</der1:value>
-                     </der:maxApparentPower>
-                     <!--Optional:-->
-                     <der:maxReactivePower>
-                        <der1:multiplier>?</der1:multiplier>
-                        <der1:unit>VAr</der1:unit>
-                        <der1:value>?</der1:value>
-                     </der:maxReactivePower>
-                     <!--Optional:-->
-                     <der:minActivePower>
-                        <der1:multiplier>?</der1:multiplier>
-                        <der1:unit>W</der1:unit>
-                        <der1:value>?</der1:value>
-                     </der:minActivePower>
-                     <!--Optional:-->
-                     <der:minApparentPower>
-                        <der1:multiplier>?</der1:multiplier>
-                        <der1:unit>VA</der1:unit>
-                        <der1:value>?</der1:value>
-                     </der:minApparentPower>
-                     <!--Optional:-->
-                     <der:minReactivePower>
-                        <der1:multiplier>?</der1:multiplier>
-                        <der1:unit>VAr</der1:unit>
-                        <der1:value>?</der1:value>
-                     </der:minReactivePower>
-                     <!--Optional:-->
-                     <der:mRID>?</der:mRID>
+                     <der1:mRID>?</der1:mRID>
                      <!--Zero or more repetitions:-->
-                     <der:Names>
-                        <der:name>?</der:name>
+                     <der1:Names>
+                        <der1:name>?</der1:name>
                         <!--Optional:-->
-                        <der:NameType>
+                        <der1:NameType>
                            <!--Optional:-->
-                           <der:description>?</der:description>
-                           <der:name>?</der:name>
+                           <der1:description>?</der1:description>
+                           <der1:name>?</der1:name>
                            <!--Optional:-->
-                           <der:NameTypeAuthority>
+                           <der1:NameTypeAuthority>
                               <!--Optional:-->
-                              <der:description>?</der:description>
-                              <der:name>?</der:name>
-                           </der:NameTypeAuthority>
-                        </der:NameType>
-                     </der:Names>
+                              <der1:description>?</der1:description>
+                              <der1:name>?</der1:name>
+                           </der1:NameTypeAuthority>
+                        </der1:NameType>
+                     </der1:Names>
+                  </der1:DERGroup>
+                  <der1:RequestedCapability>
+                     <der1:capabilityType>?</der1:capabilityType>
+                     <der1:value>?</der1:value>
+                     <der1:capabilityUnits>?</der1:capabilityUnits>
+                     <der1:capabilityMultiplier>?</der1:capabilityMultiplier>
+                  </der1:RequestedCapability>
+                  <!--Optional:-->
+                  <der1:extensionsList>
+                     <!--1 or more repetitions:-->
+                     <der1:extensionsItem>
+                        <der1:extName>?</der1:extName>
+                        <der1:extValue>?</der1:extValue>
+                        <!--Optional:-->
+                        <der1:extType>?</der1:extType>
+                     </der1:extensionsItem>
+                  </der1:extensionsList>
+                  <!--Zero or more repetitions:-->
+                  <der1:Names>
+                     <der1:name>?</der1:name>
                      <!--Optional:-->
-                     <der:otherCapabilities>
-                        <der1:capabilityType>?</der1:capabilityType>
+                     <der1:NameType>
                         <!--Optional:-->
-                        <der1:capabilitySubType>?</der1:capabilitySubType>
+                        <der1:description>?</der1:description>
+                        <der1:name>?</der1:name>
                         <!--Optional:-->
-                        <der1:capabilityValue>?</der1:capabilityValue>
-                        <!--Optional:-->
-                        <der1:capabilityUnits>?</der1:capabilityUnits>
-                     </der:otherCapabilities>
-                  </der:EndDeviceGroup>
-               </der:DERGroupStatuses>
-            </der:DERGroupStatuses>
+                        <der1:NameTypeAuthority>
+                           <!--Optional:-->
+                           <der1:description>?</der1:description>
+                           <der1:name>?</der1:name>
+                        </der1:NameTypeAuthority>
+                     </der1:NameType>
+                  </der1:Names>
+                  <!--Optional:-->
+                  <der1:mRID>?</der1:mRID>
+                  <!--Optional:-->
+                  <der1:otherCapability>
+                     <der1:otherCapabilityType>?</der1:otherCapabilityType>
+                     <!--Optional:-->
+                     <der1:otherCapabilitySubType>?</der1:otherCapabilitySubType>
+                     <!--Optional:-->
+                     <der1:otherCapabilityValue>?</der1:otherCapabilityValue>
+                     <!--Optional:-->
+                     <der1:otherCapabilityUnits>?</der1:otherCapabilityUnits>
+                  </der1:otherCapability>
+               </der1:DERGroupDispatch>
+            </der1:DERGroupDispatches>
             <!--Optional:-->
-            <get:OperationSet>
+            <der:OperationSet>
                <!--Optional:-->
                <mes:enforceMsgSequence>?</mes:enforceMsgSequence>
                <!--Optional:-->
@@ -1587,12 +1440,12 @@ Names.name class. The status will return "what can you give me" in terms of powe
                   <mes:elementOperation>false</mes:elementOperation>
                   <!--You may enter ANY elements at this point-->
                </mes:Operation>
-            </get:OperationSet>
+            </der:OperationSet>
             <!--Optional:-->
-            <get:Compressed>?</get:Compressed>
+            <der:Compressed>?</der:Compressed>
             <!--Optional:-->
-            <get:Format>?</get:Format>
-         </get:Payload>
-      </get:GetDERGroupStatusesResponseMessage>
+            <der:Format>?</der:Format>
+         </der:Payload>
+      </der:DERGroupDispatchesResponseMessage>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.epri.com/GetDERGroupStatuses"/></con:response><con:dispatchConfig/></con:mockOperation><con:properties/></con:mockService><con:properties/><con:wssContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.epri.com/DERGroupDispatches/CreateDERGroupDispatches"/></con:response><con:dispatchConfig/></con:mockOperation><con:properties/></con:mockService><con:properties/><con:wssContainer/></con:soapui-project>

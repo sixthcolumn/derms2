@@ -42,6 +42,28 @@
 		<!-- <property name="date" value="2017-06-12 02:33" /> -->
 	</bean>
 
+	<bean id="CIMDERGroupDispatch" name="CIMDERGroupDispatch"
+		class="com.epri.dergroupdispatches.DERGroupDispatch">
+		<property name="DERGroup">
+			<bean name="DERGroup" class="com.epri.dergroupdispatches.DERGroup">
+				<property name="name" value="testDispatch" />
+				<property name="mRID" value="099" />
+			</bean>
+		</property>
+		<property name="RequestedCapability">
+			<bean name="RequestedCapability" class="com.epri.dergroupdispatches.RequestedCapability">
+				<property name="capabilityType">
+					<value type="com.epri.dergroupdispatches.CapabilityType">APPARENT_POWER</value>
+				</property>
+				<property name="value" value="1.7"/>
+				<property name="capabilityUnits" value="kW"/>
+				<property name="capabilityMultiplier" value="1.1"/>
+			</bean>
+		</property>
+
+	</bean>
+
+
 	<bean id="CIMDERGroupStatus" name="CIMDERGroupStatus"
 		class="com.epri.dergroupstatuses.DERGroupStatus">
 		<property name="EndDeviceGroup">
@@ -49,7 +71,7 @@
 				<property name="status">
 					<bean name="Status" class="com.epri.dergroupstatuses.Status">
 						<property name="dateTime" value="#{now.XMLGregorianDate}" />
-						<property name="value" value="test remark" />0
+						<property name="value" value="test remark" />
 					</bean>
 
 				</property>

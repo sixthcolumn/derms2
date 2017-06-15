@@ -17,7 +17,6 @@ import ch.iec.tc57._2011.schema.message.ReplyType;
 import ch.iec.tc57._2011.schema.message.RequestType;
 
 import com.epri._2013.dergroupforecasts.DERGroupForecast;
-import com.epri._2013.dergroupforecasts.PredictionIntervalKind;
 import com.epri._2016.dergroupforecastsmessage.DERGroupForecastsPayloadType;
 import com.epri._2016.executedergroupforecasts.DERGroupForecastsPort;
 import com.epri._2016.executedergroupforecasts.FaultMessage;
