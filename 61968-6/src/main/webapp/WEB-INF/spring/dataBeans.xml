@@ -49,7 +49,7 @@
 				<property name="status">
 					<bean name="Status" class="com.epri.dergroupstatuses.Status">
 						<property name="dateTime" value="#{now.XMLGregorianDate}" />
-						<property name="value" value="test remark" />
+						<property name="value" value="test remark" />0
 					</bean>
 
 				</property>
