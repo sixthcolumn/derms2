@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://iec.ch/TC57/2017/DERGroupStatusQueriesMessage" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:obj1="http://iec.ch/TC57/2017/DERGroupStatuses#" xmlns:obj2="http://iec.ch/TC57/2017/DERGroupStatusQueries#" targetNamespace="http://iec.ch/TC57/2017/DERGroupStatusQueriesMessage" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.0">
+	<!-- Base Message Definitions -->
+	<xs:import namespace="http://iec.ch/TC57/2011/schema/message" schemaLocation="Message.xsd"/>
+	<!-- CIM Information Object Definition -->
+	<xs:import namespace="http://iec.ch/TC57/2017/DERGroupStatuses#" schemaLocation="DERGroupStatuses.xsd"/>
+	<!-- Remove this Import if there is no "Get" Profile associated with this Object. -->
+	<xs:import namespace="http://iec.ch/TC57/2017/DERGroupStatusQueries#" schemaLocation="DERGroupStatusQueries.xsd"/>
+	<!-- RequestType Definition -->
+	<xs:element name="DERGroupStatusQueriesRequestMessage" type="tns:DERGroupStatusQueriesRequestMessageType"/>
+	<xs:element name="DERGroupStatusQueriesResponseMessage" type="tns:DERGroupStatusQueriesResponseMessageType"/>
+	<xs:element name="DERGroupStatusQueriesFaultMessage" type="tns:DERGroupStatusQueriesFaultMessageType"/>
+	<xs:complexType name="DERGroupStatusQueriesRequestMessageType">
+		<xs:sequence>
+			<xs:element name="Header" type="msg:HeaderType"/>
+			<xs:element name="Request" type="tns:DERGroupStatusQueriesRequestType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DERGroupStatusQueriesResponseMessageType">
+		<xs:sequence>
+			<!-- Remove this Element if there is no "Queries" Profile associated with this Object. -->
+			<xs:element name="Header" type="msg:HeaderType"/>
+			<xs:element name="Reply" type="msg:ReplyType"/>
+			<xs:element name="Payload" type="tns:DERGroupStatusQueriesPayloadType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DERGroupStatusQueriesFaultMessageType">
+		<xs:sequence>
+			<xs:element name="Reply" type="msg:ReplyType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DERGroupStatusQueriesRequestType">
+		<xs:sequence>
+			<xs:element name="StartTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Start time of interest</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EndTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>End time of interest</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Option" type="msg:OptionType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Request type specialization</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ID" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Object ID for request</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<!-- Remove this Element if there is no "Queries" Profile associated with this Object. -->
+			<xs:element ref="obj2:DERGroupStatusQueries"/>
+			<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>This can be a CIM profile defined as an XSD with a CIM-specific namespace</xs:documentation>
+				</xs:annotation>
+			</xs:any>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DERGroupStatusQueriesResponseType">
+		<xs:sequence>
+			<xs:element name="Header" type="msg:HeaderType"/>
+			<xs:element name="Reply" type="msg:ReplyType"/>
+			<xs:element name="Payload" type="tns:DERGroupStatusQueriesPayloadType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DERGroupStatusQueriesPayloadType">
+		<xs:sequence>
+			<xs:element ref="obj1:DERGroupStatuses" minOccurs="0"/>
+			<xs:element name="OperationSet" type="msg:OperationSet" minOccurs="0"/>
+			<xs:element name="Compressed" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>For compressed and/or binary, uuencoded payloads</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Format" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Hint as to format of payload, e.g. XML, RDF, SVF, BINARY, PDF, ...</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:tns="http://iec.ch/TC57/2017/ReceiveDERGroupStatuses" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupStatusesMessage" name="ReceiveDERGroupStatuses" targetNamespace="http://iec.ch/TC57/2017/ReceiveDERGroupStatuses">
+	<wsdl:types>
+		<xs:schema targetNamespace="http://iec.ch/TC57/2017/ReceiveDERGroupStatuses" elementFormDefault="qualified">
+			<xs:import namespace="http://iec.ch/TC57/2017/DERGroupStatusesMessage" schemaLocation="xsd/DERGroupStatusesMessage.xsd"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="ChangedDERGroupStatusesEventMessage">
+		<wsdl:part name="ChangedDERGroupStatusesEventMessage" element="infoMessage:ChangedDERGroupStatuses"/>
+	</wsdl:message>
+	<wsdl:message name="ResponseMessage">
+		<wsdl:part name="ResponseMessage" element="infoMessage:DERGroupStatusesResponseMessage"/>
+	</wsdl:message>
+	<wsdl:message name="FaultMessage">
+		<wsdl:part name="FaultMessage" element="infoMessage:DERGroupStatusesFaultMessage"/>
+	</wsdl:message>
+	<wsdl:portType name="DERGroupStatuses_Port">
+		<wsdl:operation name="ChangedDERGroupStatuses">
+			<wsdl:input name="ChangedDERGroupStatusesEvent" message="tns:ChangedDERGroupStatusesEventMessage"/>
+			<wsdl:output name="ChangedDERGroupStatusesResponse" message="tns:ResponseMessage"/>
+			<wsdl:fault name="ChangedDERGroupStatusesFault" message="tns:FaultMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="DERGroupStatuses_Binding" type="tns:DERGroupStatuses_Port">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="ChangedDERGroupStatuses">
+			<soap:operation soapAction="http://iec.ch/TC57/2017/DERGroupStatuses/ChangedDERGroupStatuses" style="document"/>
+			<wsdl:input name="ChangedDERGroupStatusesEvent">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="ChangedDERGroupStatusesResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ChangedDERGroupStatusesFault">
+				<soap:fault name="ChangedDERGroupStatusesFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="ReceiveDERGroupStatuses">
+		<wsdl:port name="DERGroupStatuses_Port" binding="tns:DERGroupStatuses_Binding">
+			<soap:address location="http://iec.ch/TC57/2017/ReceiveDERGroupStatuses"/>
+		</wsdl:port>
+	</wsdl:service>
+	<!-- Message Definitions -->
+	<!-- Port Definitions -->
+</wsdl:definitions>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:tns="http://iec.ch/TC57/2017/QueryDERGroupForecasts" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" xmlns:ns="http://iec.ch/TC57/2011/schema/message" xmlns:ns1="http://iec.ch/TC57/2017/DERGroupForecastQueries#" xmlns:ns2="http://iec.ch/TC57/2017/DERGroupForecastQueries#" xmlns:ns3="http://iec.ch/TC57/2017/DERGroupForecastQueries" name="QueryDERGroupForecasts" targetNamespace="http://iec.ch/TC57/2017/QueryDERGroupForecasts">
+	<wsdl:types>
+		<xs:schema targetNamespace="http://iec.ch/TC57/2017/QueryDERGroupForecasts" elementFormDefault="qualified">
+			<xs:import namespace="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" schemaLocation="xsd/DERGroupForecastQueriesMessage.xsd"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="QueryDERGroupForecastsRequestMessage">
+		<wsdl:part name="QueryDERGroupForecastsRequestMessage" element="infoMessage:DERGroupForecastQueriesRequestMessage"/>
+	</wsdl:message>
+	<wsdl:message name="QueryDERGroupForecastsResponseMessage">
+		<wsdl:part name="QueryDERGroupForecastsResponseMessage" element="infoMessage:DERGroupForecastQueriesResponseMessage"/>
+	</wsdl:message>
+	<wsdl:message name="QueryDERGroupForecastsFaultMessage">
+		<wsdl:part name="QueryDERGroupForecastsFaultMessage" element="infoMessage:DERGroupForecastQueriesFaultMessage"/>
+	</wsdl:message>
+	<wsdl:portType name="QueryDERGroupForecasts_Port">
+		<wsdl:operation name="QueryDERGroupForecasts">
+			<wsdl:input name="QueryDERGroupForecastsRequest" message="tns:QueryDERGroupForecastsRequestMessage"/>
+			<wsdl:output name="QueryDERGroupForecastsResponse" message="tns:QueryDERGroupForecastsResponseMessage"/>
+			<wsdl:fault name="QueryDERGroupForecastsFault" message="tns:QueryDERGroupForecastsFaultMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="QueryDERGroupForecasts_Binding" type="tns:QueryDERGroupForecasts_Port">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="QueryDERGroupForecasts">
+			<soap:operation soapAction="http://iec.ch/TC57/2017/DERGroupForecasts/QueryDERGroupForecasts" style="document"/>
+			<wsdl:input name="QueryDERGroupForecastsRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="QueryDERGroupForecastsResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="QueryDERGroupForecastsFault">
+				<soap:fault name="QueryDERGroupForecastsFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="QueryDERGroupForecasts">
+		<wsdl:port name="QueryDERGroupForecasts_Port" binding="tns:QueryDERGroupForecasts_Binding">
+			<soap:address location="http://iec.ch/TC57/2017/QueryDERGroupForecasts"/>
+		</wsdl:port>
+	</wsdl:service>
+	<xs:schema targetNamespace="http://iec.ch/TC57/2017/QueryDERGroupForecastsMessage" elementFormDefault="qualified">
+		<xs:import namespace="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" schemaLocation="xsd/DERGroupForecastQueries.xsd"/>
+		<!--<xs:include schemaLocation="xsd/DERGroupForecastQueriesMessage.xsd"/>-->
+	</xs:schema>
+</wsdl:definitions>

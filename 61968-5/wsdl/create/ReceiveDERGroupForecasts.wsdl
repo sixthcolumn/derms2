@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:tns="http://iec.ch/TC57/2017/ReceiveDERGroupForecasts" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupForecastsMessage" name="ReceiveDERGroupForecasts" targetNamespace="http://iec.ch/TC57/2017/ReceiveDERGroupForecasts">
+	<wsdl:types>
+		<xs:schema targetNamespace="http://iec.ch/TC57/2017/ReceiveDERGroupForecasts" elementFormDefault="qualified">
+			<xs:import namespace="http://iec.ch/TC57/2017/DERGroupForecastsMessage" schemaLocation="xsd/DERGroupForecastsMessage.xsd"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="CreatedDERGroupForecastsEventMessage">
+		<wsdl:part name="CreatedDERGroupForecastsEventMessage" element="infoMessage:CreatedDERGroupForecasts"/>
+	</wsdl:message>
+	<wsdl:message name="ResponseMessage">
+		<wsdl:part name="ResponseMessage" element="infoMessage:DERGroupForecastsResponseMessage"/>
+	</wsdl:message>
+	<wsdl:message name="FaultMessage">
+		<wsdl:part name="FaultMessage" element="infoMessage:DERGroupForecastsFaultMessage"/>
+	</wsdl:message>
+	<wsdl:portType name="DERGroupForecasts_Port">
+		<wsdl:operation name="CreatedDERGroupForecasts">
+			<wsdl:input name="CreatedDERGroupForecastsEvent" message="tns:CreatedDERGroupForecastsEventMessage"/>
+			<wsdl:output name="CreatedDERGroupForecastsResponse" message="tns:ResponseMessage"/>
+			<wsdl:fault name="CreatedDERGroupForecastsFault" message="tns:FaultMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="DERGroupForecasts_Binding" type="tns:DERGroupForecasts_Port">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="CreatedDERGroupForecasts">
+			<soap:operation soapAction="http://iec.ch/TC57/2017/DERGroupForecasts/CreatedDERGroupForecasts" style="document"/>
+			<wsdl:input name="CreatedDERGroupForecastsEvent">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="CreatedDERGroupForecastsResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="CreatedDERGroupForecastsFault">
+				<soap:fault name="CreatedDERGroupForecastsFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="ReceiveDERGroupForecasts">
+		<wsdl:port name="DERGroupForecasts_Port" binding="tns:DERGroupForecasts_Binding">
+			<soap:address location="http://iec.ch/TC57/2017/ReceiveDERGroupForecasts"/>
+		</wsdl:port>
+	</wsdl:service>
+	<!-- Message Definitions -->
+	<!-- Port Definitions -->
+</wsdl:definitions>

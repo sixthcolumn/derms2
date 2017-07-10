@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:tns="http://iec.ch/TC57/2017/QueryDERGroups" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupQueriesMessage" xmlns:ns="http://iec.ch/TC57/2011/schema/message" xmlns:ns1="http://iec.ch/TC57/2017/DERGroupQueries#" xmlns:ns2="http://iec.ch/TC57/2017/DERGroupQueries#" xmlns:ns3="http://iec.ch/TC57/2017/DERGroupQueries" name="QueryDERGroups" targetNamespace="http://iec.ch/TC57/2017/QueryDERGroups">
+	<wsdl:types>
+		<xs:schema targetNamespace="http://iec.ch/TC57/2017/QueryDERGroups" elementFormDefault="qualified">
+			<xs:import namespace="http://iec.ch/TC57/2017/DERGroupQueriesMessage" schemaLocation="xsd/DERGroupQueriesMessage.xsd"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="QueryDERGroupsRequestMessage">
+		<wsdl:part name="QueryDERGroupsRequestMessage" element="infoMessage:DERGroupQueriesRequestMessage"/>
+	</wsdl:message>
+	<wsdl:message name="QueryDERGroupsResponseMessage">
+		<wsdl:part name="QueryDERGroupsResponseMessage" element="infoMessage:DERGroupQueriesResponseMessage"/>
+	</wsdl:message>
+	<wsdl:message name="QueryDERGroupsFaultMessage">
+		<wsdl:part name="QueryDERGroupsFaultMessage" element="infoMessage:DERGroupQueriesFaultMessage"/>
+	</wsdl:message>
+	<wsdl:portType name="QueryDERGroups_Port">
+		<wsdl:operation name="QueryDERGroups">
+			<wsdl:input name="QueryDERGroupsRequest" message="tns:QueryDERGroupsRequestMessage"/>
+			<wsdl:output name="QueryDERGroupsResponse" message="tns:QueryDERGroupsResponseMessage"/>
+			<wsdl:fault name="QueryDERGroupsFault" message="tns:QueryDERGroupsFaultMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="QueryDERGroups_Binding" type="tns:QueryDERGroups_Port">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="QueryDERGroups">
+			<soap:operation soapAction="http://iec.ch/TC57/2017/DERGroups/QueryDERGroups" style="document"/>
+			<wsdl:input name="QueryDERGroupsRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="QueryDERGroupsResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="QueryDERGroupsFault">
+				<soap:fault name="QueryDERGroupsFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="QueryDERGroups">
+		<wsdl:port name="QueryDERGroups_Port" binding="tns:QueryDERGroups_Binding">
+			<soap:address location="http://iec.ch/TC57/2017/QueryDERGroups"/>
+		</wsdl:port>
+	</wsdl:service>
+	<xs:schema targetNamespace="http://iec.ch/TC57/2017/QueryDERGroupsMessage" elementFormDefault="qualified">
+		<xs:import namespace="http://iec.ch/TC57/2017/DERGroupQueriesMessage" schemaLocation="xsd/DERGroupQueries.xsd"/>
+		<!--<xs:include schemaLocation="xsd/DERGroupQueriesMessage.xsd"/>-->
+	</xs:schema>
+</wsdl:definitions>

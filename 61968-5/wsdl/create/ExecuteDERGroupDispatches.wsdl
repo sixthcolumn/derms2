@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:tns="http://iec.ch/TC57/2017/ExecuteDERGroupDispatches" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupDispatchesMessage" name="ExecuteDERGroupDispatches" targetNamespace="http://iec.ch/TC57/2017/ExecuteDERGroupDispatches">
+	<wsdl:types>
+		<xs:schema targetNamespace="http://iec.ch/TC57/2017/ExecuteDERGroupDispatches" elementFormDefault="qualified">
+			<xs:import namespace="http://iec.ch/TC57/2017/DERGroupDispatchesMessage" schemaLocation="xsd/DERGroupDispatchesMessage.xsd"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="CreateDERGroupDispatchesRequestMessage">
+		<wsdl:part name="CreateDERGroupDispatchesRequestMessage" element="infoMessage:CreateDERGroupDispatches"/>
+	</wsdl:message>
+	<wsdl:message name="ResponseMessage">
+		<wsdl:part name="ResponseMessage" element="infoMessage:DERGroupDispatchesResponseMessage"/>
+	</wsdl:message>
+	<wsdl:message name="FaultMessage">
+		<wsdl:part name="FaultMessage" element="infoMessage:DERGroupDispatchesFaultMessage"/>
+	</wsdl:message>
+	<wsdl:portType name="DERGroupDispatches_Port">
+		<wsdl:operation name="CreateDERGroupDispatches">
+			<wsdl:input name="CreateDERGroupDispatchesRequest" message="tns:CreateDERGroupDispatchesRequestMessage"/>
+			<wsdl:output name="CreateDERGroupDispatchesResponse" message="tns:ResponseMessage"/>
+			<wsdl:fault name="CreateDERGroupDispatchesFault" message="tns:FaultMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="DERGroupDispatches_Binding" type="tns:DERGroupDispatches_Port">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="CreateDERGroupDispatches">
+			<soap:operation soapAction="http://iec.ch/TC57/2017/DERGroupDispatches/CreateDERGroupDispatches" style="document"/>
+			<wsdl:input name="CreateDERGroupDispatchesRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="CreateDERGroupDispatchesResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="CreateDERGroupDispatchesFault">
+				<soap:fault name="CreateDERGroupDispatchesFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="ExecuteDERGroupDispatches">
+		<wsdl:port name="DERGroupDispatches_Port" binding="tns:DERGroupDispatches_Binding">
+			<soap:address location="http://iec.ch/TC57/2017/ExecuteDERGroupDispatches"/>
+		</wsdl:port>
+	</wsdl:service>
+	<xs:schema targetNamespace="http://iec.ch/TC57/2017/ExecuteDERGroupDispatchesMessage" elementFormDefault="qualified">
+		<xs:import namespace="http://iec.ch/TC57/2017/DERGroupDispatchesMessage" schemaLocation="xsd/DERGroupDispatchesMessage.xsd"/>
+		<!--<xs:include schemaLocation="xsd/DERGroupDispatchesMessage.xsd"/>-->
+	</xs:schema>
+	<!-- Message Definitions -->
+	<!-- Port Definitions -->
+</wsdl:definitions>

@@ -1,0 +1,1974 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="61968-5/get/QueryDERGroupForecasts" resourceRoot="${projectDir}" soapui-version="4.5.2" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="QueryDERGroupForecasts_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/QueryDERGroupForecasts}QueryDERGroupForecasts_Binding" soapVersion="1_1" anonymous="optional" definition="QueryDERGroupForecasts.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'get'/QueryDERGroupForecasts.wsdl"><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'get'/QueryDERGroupForecasts.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="QueryDERGroupForecasts" targetNamespace="http://iec.ch/TC57/2017/QueryDERGroupForecasts" xmlns:tns="http://iec.ch/TC57/2017/QueryDERGroupForecasts" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" xmlns:ns="http://iec.ch/TC57/2011/schema/message" xmlns:ns1="http://iec.ch/TC57/2017/DERGroupForecastQueries#" xmlns:ns2="http://iec.ch/TC57/2017/DERGroupForecastQueries#" xmlns:ns3="http://iec.ch/TC57/2017/DERGroupForecastQueries">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://iec.ch/TC57/2017/QueryDERGroupForecasts" elementFormDefault="qualified">
+      <xs:import namespace="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" schemaLocation="xsd/DERGroupForecastQueriesMessage.xsd"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="QueryDERGroupForecastsRequestMessage">
+    <wsdl:part name="QueryDERGroupForecastsRequestMessage" element="infoMessage:DERGroupForecastQueriesRequestMessage"/>
+  </wsdl:message>
+  <wsdl:message name="QueryDERGroupForecastsResponseMessage">
+    <wsdl:part name="QueryDERGroupForecastsResponseMessage" element="infoMessage:DERGroupForecastQueriesResponseMessage"/>
+  </wsdl:message>
+  <wsdl:message name="QueryDERGroupForecastsFaultMessage">
+    <wsdl:part name="QueryDERGroupForecastsFaultMessage" element="infoMessage:DERGroupForecastQueriesFaultMessage"/>
+  </wsdl:message>
+  <wsdl:portType name="QueryDERGroupForecasts_Port">
+    <wsdl:operation name="QueryDERGroupForecasts">
+      <wsdl:input name="QueryDERGroupForecastsRequest" message="tns:QueryDERGroupForecastsRequestMessage"/>
+      <wsdl:output name="QueryDERGroupForecastsResponse" message="tns:QueryDERGroupForecastsResponseMessage"/>
+      <wsdl:fault name="QueryDERGroupForecastsFault" message="tns:QueryDERGroupForecastsFaultMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="QueryDERGroupForecasts_Binding" type="tns:QueryDERGroupForecasts_Port">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="QueryDERGroupForecasts">
+      <soap:operation soapAction="http://iec.ch/TC57/2017/DERGroupForecasts/QueryDERGroupForecasts" style="document"/>
+      <wsdl:input name="QueryDERGroupForecastsRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="QueryDERGroupForecastsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="QueryDERGroupForecastsFault">
+        <soap:fault name="QueryDERGroupForecastsFault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QueryDERGroupForecasts">
+    <wsdl:port name="QueryDERGroupForecasts_Port" binding="tns:QueryDERGroupForecasts_Binding">
+      <soap:address location="http://iec.ch/TC57/2017/QueryDERGroupForecasts"/>
+    </wsdl:port>
+  </wsdl:service>
+  <xs:schema targetNamespace="http://iec.ch/TC57/2017/QueryDERGroupForecastsMessage" elementFormDefault="qualified">
+    <xs:import namespace="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" schemaLocation="xsd/DERGroupForecastQueries.xsd"/>
+    <!--<xs:include schemaLocation="xsd/DERGroupForecastQueriesMessage.xsd"/>-->
+  </xs:schema>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'get'/xsd/DERGroupForecastQueriesMessage.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.0" xmlns:tns="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:obj1="http://iec.ch/TC57/2017/DERGroupForecasts#" xmlns:obj2="http://iec.ch/TC57/2017/DERGroupForecastQueries#">
+  <!--Base Message Definitions-->
+  <xs:import namespace="http://iec.ch/TC57/2011/schema/message" schemaLocation="Message.xsd"/>
+  <!--CIM Information Object Definition-->
+  <xs:import namespace="http://iec.ch/TC57/2017/DERGroupForecasts#" schemaLocation="DERGroupForecasts.xsd"/>
+  <!--Remove this Import if there is no "Get" Profile associated with this Object.-->
+  <xs:import namespace="http://iec.ch/TC57/2017/DERGroupForecastQueries#" schemaLocation="DERGroupForecastQueries.xsd"/>
+  <!--RequestType Definition-->
+  <xs:element name="DERGroupForecastQueriesRequestMessage" type="tns:DERGroupForecastQueriesRequestMessageType"/>
+  <xs:element name="DERGroupForecastQueriesResponseMessage" type="tns:DERGroupForecastQueriesResponseMessageType"/>
+  <xs:element name="DERGroupForecastQueriesFaultMessage" type="tns:DERGroupForecastQueriesFaultMessageType"/>
+  <xs:complexType name="DERGroupForecastQueriesRequestMessageType">
+    <xs:sequence>
+      <xs:element name="Header" type="msg:HeaderType"/>
+      <xs:element name="Request" type="tns:DERGroupForecastQueriesRequestType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DERGroupForecastQueriesResponseMessageType">
+    <xs:sequence>
+      <!--Remove this Element if there is no "Queries" Profile associated with this Object.-->
+      <xs:element name="Header" type="msg:HeaderType"/>
+      <xs:element name="Reply" type="msg:ReplyType"/>
+      <xs:element name="Payload" type="tns:DERGroupForecastQueriesPayloadType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DERGroupForecastQueriesFaultMessageType">
+    <xs:sequence>
+      <xs:element name="Reply" type="msg:ReplyType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DERGroupForecastQueriesRequestType">
+    <xs:sequence>
+      <xs:element name="StartTime" type="xs:dateTime" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Start time of interest</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EndTime" type="xs:dateTime" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>End time of interest</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Option" type="msg:OptionType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Request type specialization</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ID" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Object ID for request</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <!--Remove this Element if there is no "Queries" Profile associated with this Object.-->
+      <xs:element ref="obj2:DERGroupForecastQueries"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>This can be a CIM profile defined as an XSD with a CIM-specific namespace</xs:documentation>
+        </xs:annotation>
+      </xs:any>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DERGroupForecastQueriesResponseType">
+    <xs:sequence>
+      <xs:element name="Header" type="msg:HeaderType"/>
+      <xs:element name="Reply" type="msg:ReplyType"/>
+      <xs:element name="Payload" type="tns:DERGroupForecastQueriesPayloadType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DERGroupForecastQueriesPayloadType">
+    <xs:sequence>
+      <xs:element ref="obj1:DERGroupForecasts" minOccurs="0"/>
+      <xs:element name="OperationSet" type="msg:OperationSet" minOccurs="0"/>
+      <xs:element name="Compressed" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>For compressed and/or binary, uuencoded payloads</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Format" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Hint as to format of payload, e.g. XML, RDF, SVF, BINARY, PDF, ...</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'get'/xsd/Message.xsd</con:url><con:content><![CDATA[<!--Common Message Specification for IEC 61968-->
+<!--Change Log-->
+<!--2010/12/15 Added OperationSet to Payload-->
+<!--2011/03/09 Corrected FaultMessageType-->
+<!--2011/03/09 Baseline for version control-->
+<!--2011/03/10 Created type definitions for OperationSet and Operation to improve compatibility with SoapUI-->
+<!--2011/05/06 Removed deprecated verbs, added 'executed'-->
+<!--2011/05/06 Changed base namespace to follow WG14 convention of 'iec.ch'-->
+<!--2012/02/10 Added relatedObject to Error element-->
+<!--2012/02/11 Created a new ObjectType for use in Error element-->
+<!--2012/02/11 Removed enumeration for Header.Context-->
+<!--2012/02/12 Added note that Error.object.Name elements are deprecated-->
+<!--2012/02/12 Added more comments to message elements-->
+<!--2012/02/16 Corrected comment for Reply.Error.level-->
+<!--2012/02/16 Revised comment for Reply.Error.code-->
+<!--2012/02/22 Added ID to Payload for optional use by close/cancel/delete-->
+<!--2012/02/22 Extended ID elements to have attributes for idType, idAuthority, iSmRID-->
+<!--2012/02/22 Extended ErrorType elements to use ID and relatedID elements, with deprecation of object-->
+<!--2012/02/24 Added kind attribute to ID elements in place of iSmRID-->
+<!--2012/03/19 Corrected ID and relatedID definitions in ErrorType-->
+<!--2012/03/20 Revised ID elements to use an attribute group-->
+<!--2012/03/21 Corrected Payload.ID elements-->
+<!--2012/04/03 Corrected Reply.Error.object.Name-->
+<!--2012/04/03 Corrected Header.User.Organization made optional-->
+<!--2012/06/08 Updated IDatts attribute group to include objectType attribute as string-->
+<!--2012/10/14 corrections and revisions to annotations for FDIS-->
+<xs:schema targetNamespace="http://iec.ch/TC57/2011/schema/message" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.0" xmlns="http://iec.ch/TC57/2011/schema/message" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="RequestType">
+    <xs:annotation>
+      <xs:documentation>Request type definition</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:annotation>
+        <xs:documentation>Request package is typically used to supply parameters for 'get' requests</xs:documentation>
+      </xs:annotation>
+      <xs:element name="StartTime" type="xs:dateTime" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Start time of interest</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EndTime" type="xs:dateTime" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>End time of interest</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Option" type="OptionType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Request type specialization</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ID" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Object ID for request</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attributeGroup ref="IDatts"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>This can be a CIM profile defined as an XSD with a CIM-specific namespace This may also be used for custom extensions.</xs:documentation>
+        </xs:annotation>
+      </xs:any>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReplyType">
+    <xs:annotation>
+      <xs:documentation>Reply type definition</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:annotation>
+        <xs:documentation>Reply package is used to confirm success or report errors</xs:documentation>
+      </xs:annotation>
+      <xs:element name="Result">
+        <xs:annotation>
+          <xs:documentation>Reply code: OK, PARTIAL or FAILED</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="OK"/>
+            <xs:enumeration value="PARTIAL"/>
+            <xs:enumeration value="FAILED"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Error" type="ErrorType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Reply details describing one or more errors</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ID" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Resulting transaction ID (usually consequence of create)</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attributeGroup ref="IDatts"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Used for custom extensions</xs:documentation>
+        </xs:annotation>
+      </xs:any>
+      <xs:element name="operationId" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>The reply.operationId provides the unique identifier of the Operation for which this reply.result is relevant. Thus, it is  assumed that this is a partial reply in direct response to one of the operations contained in an OperationSet request.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PayloadType">
+    <xs:annotation>
+      <xs:documentation>Payload container</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice>
+        <xs:any namespace="##other" processContents="skip" minOccurs="0" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:documentation>For XML payloads, usually CIM profiles defined using an XSD in a profile-specific namespace. May also be used for custom extensions.</xs:documentation>
+          </xs:annotation>
+        </xs:any>
+        <xs:element name="OperationSet" type="OperationSet" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>Each operation set is a collection of operations that may require operational-integrity and/or sequence control.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="Compressed" type="xs:string" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>For compressed and/or binary, uuencoded payloads If compressed, Gzip compression is used.</xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="ID" minOccurs="0" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:documentation>Used to supply object IDs for cancel/close/delete operations in cases where they are not otherwise specified using a type-specific payload</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attributeGroup ref="IDatts"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+      <xs:element name="Format" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Hint as to format of payload, e.g. XML, RDF, SVF, BINARY, PDF, ...</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OperationType">
+    <xs:annotation>
+      <xs:documentation>For master data set synchronization XML payloads.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="operationId" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>The payload.operation.operationId provides the unique identifier (within the OperationSet) of the Operation for the purpose of reference in subsequent messages (e.g. OperationSet reply).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="noun" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>The payload.operation.##other also identifies the noun, this element is optionally supplied to simplify processing.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="verb" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>"create", "delete", "change", etc.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="elementOperation" type="xs:boolean" default="false" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>TRUE if the verb is operating at the element level. In such a case, the verb is to be applied to the elements populated in the payload.operation.##other below. If omitted, assume FALSE.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:any namespace="##other" processContents="skip" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>An XML payload which carries a CIM profile defined using an XSD in a profile-specific namespace. Individual payloads are used collectively to create a series of related operations. See the "enforce" boolean flags in the header for instructions on how to process these messages.</xs:documentation>
+        </xs:annotation>
+      </xs:any>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OperationSet">
+    <xs:annotation>
+      <xs:documentation>Each operation set is a collection of operations that may require operational-integrity and/or sequence control.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="enforceMsgSequence" type="xs:boolean" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>If set to TRUE, the Operation.##other messages must be processed in the sequence presented. If omitted, assume FALSE.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="enforceTransactionalIntegrity" type="xs:boolean" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Set to TRUE when all of the Operation.##other messages must be processed successfully or else the entire message set must be rolled back. If omitted, assume FALSE.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Operation" type="OperationType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ReplayDetectionType">
+    <xs:annotation>
+      <xs:documentation>Used to detect and prevent replay attacks</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Nonce" type="xs:string"/>
+      <xs:element name="Created" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UserType">
+    <xs:annotation>
+      <xs:documentation>User type definition</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="UserID" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>User identifier</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Organization" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>User parent organization identifier</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HeaderType">
+    <xs:annotation>
+      <xs:documentation>Message header type definition</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:annotation>
+        <xs:documentation>Message header contains control and descriptive information about the message.</xs:documentation>
+      </xs:annotation>
+      <xs:element name="Verb">
+        <xs:annotation>
+          <xs:documentation>This enumerated list of verbs that can be used to form message types in compliance with the IEC 61968 standard.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="cancel"/>
+            <xs:enumeration value="canceled"/>
+            <xs:enumeration value="change"/>
+            <xs:enumeration value="changed"/>
+            <xs:enumeration value="create"/>
+            <xs:enumeration value="created"/>
+            <xs:enumeration value="close"/>
+            <xs:enumeration value="closed"/>
+            <xs:enumeration value="delete"/>
+            <xs:enumeration value="deleted"/>
+            <xs:enumeration value="get"/>
+            <xs:enumeration value="reply"/>
+            <xs:enumeration value="execute"/>
+            <xs:enumeration value="executed"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="Noun" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>The Noun of the Control Area identifies the main subject of the message type, typically a real world object defined in the CIM.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Revision" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Revision level of the message type.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ReplayDetection" type="ReplayDetectionType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Use to introduce randomness in the message to enhance effectiveness of encryption</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Context" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Intended context for information usage, e.g. PRODUCTION, TESTING, TRAINING, ...</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Timestamp" type="xs:dateTime" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Application level relevant time and date for when this  instance of the message type was produced.  This is not intended to be used by middleware for message management.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Source" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Source system or application that sends the message</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AsyncReplyFlag" type="xs:boolean" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Indicates whether or not reply should be asynchronous</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ReplyAddress" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Address to be used for asynchronous replies, typically a URL/topic/queue.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AckRequired" type="xs:boolean" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Indicates whether or not an acknowledgement is required</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="User" type="UserType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>User information of the sender</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MessageID" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Unique message ID to be used for tracking messages</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CorrelationID" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>ID to be used by applications for correlating replies</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Comment" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Optional comment</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Property" type="MessageProperty" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Message properties can be used to identify information needed for extended routing and filtering capabilities</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Used to allow custom extensions</xs:documentation>
+        </xs:annotation>
+      </xs:any>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Message" type="MessageType">
+    <xs:annotation>
+      <xs:documentation>Common IEC 61968 Message Definition</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="MessageProperty">
+    <xs:annotation>
+      <xs:documentation>Message properties can be used for extended routing and filtering</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string"/>
+      <xs:element name="Value" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RequestMessage" type="RequestMessageType">
+    <xs:annotation>
+      <xs:documentation>Request message structure</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="ResponseMessage" type="ResponseMessageType">
+    <xs:annotation>
+      <xs:documentation>Response message structure</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:element name="EventMessage" type="EventMessageType">
+    <xs:annotation>
+      <xs:documentation>Event message structure.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="MessageType">
+    <xs:annotation>
+      <xs:documentation>Generic Message Type</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Header" type="HeaderType"/>
+      <xs:element name="Request" type="RequestType" minOccurs="0"/>
+      <xs:element name="Reply" type="ReplyType" minOccurs="0"/>
+      <xs:element name="Payload" type="PayloadType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RequestMessageType">
+    <xs:annotation>
+      <xs:documentation>Request Message Type, which will typically result in a ResponseMessage to be returned. This is typically used to initiate a transaction or a query request.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Header" type="HeaderType"/>
+      <xs:element name="Request" type="RequestType" minOccurs="0"/>
+      <xs:element name="Payload" type="PayloadType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ResponseMessageType">
+    <xs:annotation>
+      <xs:documentation>Response MessageType, typically used to reply to a RequestMessage</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Header" type="HeaderType"/>
+      <xs:element name="Reply" type="ReplyType"/>
+      <xs:element name="Payload" type="PayloadType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FaultMessageType">
+    <xs:annotation>
+      <xs:documentation>Fault Message Type, which is used in cases where the incoming message (including the header) cannot be parsed</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Reply" type="ReplyType"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EventMessageType">
+    <xs:annotation>
+      <xs:documentation>Event Message Type, which is used to indicate a condition of potential interest. Note that the Payload may be required in the future.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Header" type="HeaderType"/>
+      <xs:element name="Payload" type="PayloadType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ErrorType">
+    <xs:annotation>
+      <xs:documentation>Error Structure</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="code" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Defined error code, as defined by IEC 61968-100, related standards or local implementation</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="level" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Severity level, e.g. INFORM, WARNING, FATAL, CATASTROPHIC</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="INFORM"/>
+            <xs:enumeration value="WARNING"/>
+            <xs:enumeration value="FATAL"/>
+            <xs:enumeration value="CATASTROPHIC"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="reason" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Description of the error</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="details" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Free form detailed text description of error</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="xpath" type="xs:QName" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>XPath expression to identify specific XML element</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="stackTrace" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Stack trace as generated by software upon exception</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Location" type="LocationType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Location of exception within software</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ID" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>ID of object</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attributeGroup ref="IDatts"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="relatedID" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>ID of related object, used in cases where there is an error between the relationship of two objects</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attributeGroup ref="IDatts"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="object" type="ObjectType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Deprecated</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="operationId" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>The reply.operationId provides the unique identifier of the Operation for which this reply.result.error is relevant. Thus, it is  assumed that this is an error from one of the operations contained in an OperationSet request.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="OptionType">
+    <xs:annotation>
+      <xs:documentation>Request options</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="value" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LocationType">
+    <xs:annotation>
+      <xs:documentation>Process location where error was encountered</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="node" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Name of the pipeline/branch/route node where error occurred</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="pipeline" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Name of the pipeline where error occurred (if applicable)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="stage" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Name of the stage where error occurred (if applicable)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObjectType">
+    <xs:annotation>
+      <xs:documentation>Used to identify an object of interest</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="mRID" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>A UUID-based name for the object</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Name" type="Name" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>The Name structure is deprecated. It will be completely removed in the next edition</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="objectType" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Type of object</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NameType">
+    <xs:annotation>
+      <xs:documentation>From CIM</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="NameTypeAuthority" type="NameTypeAuthority" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Name">
+    <xs:annotation>
+      <xs:documentation>From CIM</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="NameType" type="NameType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NameTypeAuthority">
+    <xs:annotation>
+      <xs:documentation>From CIM</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FaultMessage" type="FaultMessageType">
+    <xs:annotation>
+      <xs:documentation>Fault message structure</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:simpleType name="IDKindType">
+    <xs:annotation>
+      <xs:documentation>ID Kind Type</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="name"/>
+      <xs:enumeration value="uuid"/>
+      <xs:enumeration value="transaction"/>
+      <xs:enumeration value="other"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:attributeGroup name="IDatts">
+    <xs:annotation>
+      <xs:documentation>ID attribute group</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="idType" type="xs:string"/>
+    <xs:attribute name="idAuthority" type="xs:string"/>
+    <xs:attribute name="kind" type="IDKindType"/>
+    <xs:attribute name="objectType" type="xs:string"/>
+  </xs:attributeGroup>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'get'/xsd/DERGroupForecasts.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://iec.ch/TC57/2017/DERGroupForecasts#" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:a="http://langdale.com.au/2005/Message#" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns="http://langdale.com.au/2005/Message#" xmlns:m="http://iec.ch/TC57/2017/DERGroupForecasts#">
+  <xs:annotation>
+    <xs:documentation/>
+  </xs:annotation>
+  <xs:element name="DERGroupForecasts" type="m:DERGroupForecasts"/>
+  <xs:complexType name="DERGroupForecasts">
+    <xs:sequence>
+      <xs:element name="DERGroupForecast" type="m:DERGroupForecast" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CurveStyle" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#CurveStyle">
+    <xs:annotation>
+      <xs:documentation>Style or shape of curve.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="constantYValue">
+        <xs:annotation>
+          <xs:documentation>The Y-axis values are assumed constant until the next curve point and prior to the first curve point.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="straightLineYValues">
+        <xs:annotation>
+          <xs:documentation>The Y-axis values are assumed to be a straight line between values.  Also known as linear interpolation.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="DERCurveData" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERCurveData">
+    <xs:annotation/>
+    <xs:sequence>
+      <xs:element name="intervalNumber" minOccurs="1" maxOccurs="1" type="xs:integer" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERCurveData.intervalNumber">
+        <xs:annotation/>
+      </xs:element>
+      <xs:element name="maxYValue" minOccurs="0" maxOccurs="1" type="xs:float" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERCurveData.maxYValue">
+        <xs:annotation/>
+      </xs:element>
+      <xs:element name="minYValue" minOccurs="0" maxOccurs="1" type="xs:float" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERCurveData.minYValue">
+        <xs:annotation/>
+      </xs:element>
+      <xs:element name="nominalYValue" minOccurs="0" maxOccurs="1" type="xs:float" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERCurveData.nominalYValue">
+        <xs:annotation/>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DERGroupForecast" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERGroupForecast">
+    <xs:annotation/>
+    <xs:sequence>
+      <xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.mRID">
+        <xs:annotation>
+          <xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID,  as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+          <xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552 Edition 1, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="predictionCreationDate" minOccurs="1" maxOccurs="1" type="xs:dateTime" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERGroupForecast.predictionCreationDate">
+        <xs:annotation/>
+      </xs:element>
+      <xs:element name="EndDeviceGroup" minOccurs="1" maxOccurs="1" type="m:EndDeviceGroup" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERGroupForecast.EndDeviceGroup">
+        <xs:annotation/>
+      </xs:element>
+      <xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.Names">
+        <xs:annotation>
+          <xs:documentation>All names of this identified object.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DERMonitorableParameter" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERMonitorableParameter">
+    <xs:annotation/>
+    <xs:sequence>
+      <xs:element name="DERParameter" minOccurs="1" maxOccurs="1" type="m:DERParameterKind" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERMonitorableParameter.DERParameter">
+        <xs:annotation/>
+      </xs:element>
+      <xs:element name="flowDirection" minOccurs="0" maxOccurs="1" type="m:FlowDirectionKind" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERMonitorableParameter.flowDirection">
+        <xs:annotation/>
+      </xs:element>
+      <xs:element name="yMultiplier" minOccurs="1" maxOccurs="1" type="m:UnitMultiplier" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERMonitorableParameter.yMultiplier">
+        <xs:annotation/>
+      </xs:element>
+      <xs:element name="yUnit" minOccurs="1" maxOccurs="1" type="m:DERUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERMonitorableParameter.yUnit">
+        <xs:annotation/>
+      </xs:element>
+      <xs:element name="yUnitInstalledMax" minOccurs="0" maxOccurs="1" type="xs:float" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERMonitorableParameter.yUnitInstalledMax">
+        <xs:annotation/>
+      </xs:element>
+      <xs:element name="yUnitInstalledMin" minOccurs="0" maxOccurs="1" type="xs:float" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERMonitorableParameter.yUnitInstalledMin">
+        <xs:annotation/>
+      </xs:element>
+      <xs:element name="DispatchSchedule" minOccurs="1" maxOccurs="unbounded" type="m:DispatchSchedule" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERMonitorableParameter.DispatchSchedule">
+        <xs:annotation/>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="DERParameterKind" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERParameterKind">
+    <xs:annotation/>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="activePower">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="apparentPower">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="decreasingRampRate">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="highFilterBiDirectionalRegulation">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="highFilterDownRegulation">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="highFilterUpRegulation">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="increasingRampRate">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="lowFilterBiDirectionalRegulation">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="lowFilterDownRegulation">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="lowFilterUpRegulation">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="reactivePower">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="voltage">
+        <xs:annotation/>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="DERUnitSymbol" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERUnitSymbol">
+    <xs:annotation>
+      <xs:documentation>The units defined for usage in the CIM.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="A">
+        <xs:annotation>
+          <xs:documentation>Current in Ampere.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Ah">
+        <xs:annotation>
+          <xs:documentation>Ampere-hours, Ampere-hours.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="As">
+        <xs:annotation>
+          <xs:documentation>Ampere seconds (A·s).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Btu">
+        <xs:annotation>
+          <xs:documentation>Energy, British Thermal Unit.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Hz">
+        <xs:annotation>
+          <xs:documentation>Frequency in Hertz (1/s).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Q">
+        <xs:annotation>
+          <xs:documentation>Quantity power, Q.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Qh">
+        <xs:annotation>
+          <xs:documentation>Quantity energy, Qh.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="V">
+        <xs:annotation>
+          <xs:documentation>Electric potential in Volt (W/A).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VA">
+        <xs:annotation>
+          <xs:documentation>Apparent power in Volt Ampere (See also real power and reactive power.)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VAh">
+        <xs:annotation>
+          <xs:documentation>Apparent energy in Volt Ampere hours.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VAr">
+        <xs:annotation>
+          <xs:documentation>Reactive power in Volt Ampere reactive. The “reactive” or “imaginary” component of electrical power (VIsin(phi)). (See also real power and apparent power).</xs:documentation>
+          <xs:documentation>Note: Different meter designs use different methods to arrive at their results. Some meters may compute reactive power as an arithmetic value, while others compute the value vectorially. The data consumer should determine the method in use and the suitability of the measurement for the intended purpose.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VArh">
+        <xs:annotation>
+          <xs:documentation>Reactive energy in Volt Ampere reactive hours.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPerVA">
+        <xs:annotation>
+          <xs:documentation>Power factor, PF, the ratio of the active power to the apparent power. Note: The sign convention used for power factor will differ between IEC meters and EEI (ANSI) meters. It is assumed that the data consumers understand the type of meter being used and agree on the sign convention in use at any given utility.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPerVAr">
+        <xs:annotation>
+          <xs:documentation>Power factor, PF, the ratio of the active power to the apparent power. Note: The sign convention used for power factor will differ between IEC meters and EEI (ANSI) meters. It is assumed that the data consumers understand the type of meter being used and agree on the sign convention in use at any given utility.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Vh">
+        <xs:annotation>
+          <xs:documentation>Volt-hour, Volt hours.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Vs">
+        <xs:annotation>
+          <xs:documentation>Volt second (Ws/A).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="W">
+        <xs:annotation>
+          <xs:documentation>Real power in Watt (J/s). Electrical power may have real and reactive components. The real portion of electrical power (I²R or VIcos(phi)), is expressed in Watts. (See also apparent power and reactive power.)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="WPerA">
+        <xs:annotation>
+          <xs:documentation>Active power per current flow, watt per Ampere.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="WPers">
+        <xs:annotation>
+          <xs:documentation>Ramp rate in Watt per second.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Wh">
+        <xs:annotation>
+          <xs:documentation>Real energy in Watt hours.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="deg">
+        <xs:annotation>
+          <xs:documentation>Plane angle in degrees.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="degC">
+        <xs:annotation>
+          <xs:documentation>Relative temperature in degrees Celsius.</xs:documentation>
+          <xs:documentation>In the SI unit system the symbol is ºC. Electric charge is measured in coulomb that has the unit symbol C. To distinguish degree Celsius form coulomb the symbol used in the UML is degC. Reason for not using ºC is the special character º is difficult to manage in software.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="h">
+        <xs:annotation>
+          <xs:documentation>Time, hour = 60 min = 3600 s.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="min">
+        <xs:annotation>
+          <xs:documentation>Time, minute  = 60 s.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ohm">
+        <xs:annotation>
+          <xs:documentation>Electric resistance in ohm (V/A).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ohmPerm">
+        <xs:annotation>
+          <xs:documentation>Electric resistance per length in ohm per metre ((V/A)/m).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ohmm">
+        <xs:annotation>
+          <xs:documentation>resistivity, Ohm metre, (rho).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="onePerHz">
+        <xs:annotation>
+          <xs:documentation>Reciprocal of frequency (1/Hz).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="s">
+        <xs:annotation>
+          <xs:documentation>Time in seconds.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="therm">
+        <xs:annotation>
+          <xs:documentation>Energy, Therm.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="DateTimeInterval" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DateTimeInterval">
+    <xs:annotation>
+      <xs:documentation>Interval between two date and time points.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="end" minOccurs="1" maxOccurs="1" type="xs:dateTime" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DateTimeInterval.end">
+        <xs:annotation>
+          <xs:documentation>End date and time of this interval.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="start" minOccurs="1" maxOccurs="1" type="xs:dateTime" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DateTimeInterval.start">
+        <xs:annotation>
+          <xs:documentation>Start date and time of this interval.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DispatchSchedule" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DispatchSchedule">
+    <xs:annotation/>
+    <xs:sequence>
+      <xs:element name="confidence" minOccurs="0" maxOccurs="1" type="m:PerCent" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DispatchSchedule.confidence">
+        <xs:annotation/>
+      </xs:element>
+      <xs:element name="curveStyleKind" minOccurs="1" maxOccurs="1" type="m:CurveStyle" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DispatchSchedule.curveStyleKind">
+        <xs:annotation>
+          <xs:documentation>Used to specify whether the values over an interval are constant (constantYValue) or linearly interpolated (straightLineYValues)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="startTime" minOccurs="1" maxOccurs="1" type="xs:dateTime" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DispatchSchedule.startTime">
+        <xs:annotation>
+          <xs:documentation>The start time of the first interval in the dispatch schedule</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="timeIntervalDuration" minOccurs="1" maxOccurs="1" type="xs:integer" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DispatchSchedule.timeIntervalDuration">
+        <xs:annotation>
+          <xs:documentation>The length of time for each interval in the dispatch schedule.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="timeIntervalUnit" minOccurs="1" maxOccurs="1" type="m:TimeIntervalKind" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DispatchSchedule.timeIntervalUnit">
+        <xs:annotation>
+          <xs:documentation>The unit of measure for the time axis of the dispatch schedule.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DERCurveData" minOccurs="1" maxOccurs="unbounded" type="m:DERCurveData" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DispatchSchedule.DERCurveData">
+        <xs:annotation/>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EndDeviceGroup" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#EndDeviceGroup">
+    <xs:annotation>
+      <xs:documentation>Abstraction for management of group communications within a two-way AMR system or the data for a group of related end devices. Commands can be issued to all of the end devices that belong to the group using a defined group address and the underlying AMR communication infrastructure. A DERGroup and a PANDeviceGroup is an EndDeviceGroup.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.mRID">
+        <xs:annotation>
+          <xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID,  as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+          <xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552 Edition 1, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DERMonitorableParameter" minOccurs="1" maxOccurs="unbounded" type="m:DERMonitorableParameter" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#EndDeviceGroup.DERMonitorableParameter">
+        <xs:annotation/>
+      </xs:element>
+      <xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.Names">
+        <xs:annotation>
+          <xs:documentation>All names of this identified object.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="FlowDirectionKind" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#FlowDirectionKind">
+    <xs:annotation>
+      <xs:documentation>Kind of flow direction for reading/measured  values proper to some commodities such as, for example, energy, power, demand.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="forward">
+        <xs:annotation>
+          <xs:documentation>"Delivered," or "Imported" as defined 61968-2.</xs:documentation>
+          <xs:documentation>Forward Active Energy is a positive kWh value as one would naturally expect to find as energy is supplied by the utility and consumed at the service.</xs:documentation>
+          <xs:documentation>Forward Reactive Energy is a positive VArh value as one would naturally expect to find in the presence of inductive loading.</xs:documentation>
+          <xs:documentation>In polyphase metering, the forward energy register is incremented when the sum of the phase energies is greater than zero:</xs:documentation>
+          <xs:documentation>&amp;lt;img src="HTS_1.PNG" width="209" height="16" border="0" alt="graphic"/&amp;gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="lagging">
+        <xs:annotation>
+          <xs:documentation>Typically used to describe that a power factor is lagging the reference value.</xs:documentation>
+          <xs:documentation>Note 1: When used to describe VA, “lagging” describes a form of measurement where reactive power is considered in all four quadrants, but real power is considered only in quadrants I and IV.</xs:documentation>
+          <xs:documentation>Note 2: When used to describe power factor, the term “Lagging” implies that the PF is negative. The term “lagging” in this case takes the place of the negative sign. If a signed PF value is to be passed by the data producer, then the direction of flow enumeration zero (none) should be used in order to avoid the possibility of creating an expression that employs a double negative. The data consumer should be able to tell from the sign of the data if the PF is leading or lagging. This principle is analogous to the concept that “Reverse” energy is an implied negative value, and to publish a negative reverse value would be ambiguous.</xs:documentation>
+          <xs:documentation>Note 3: Lagging power factors typically indicate inductive loading.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="leading">
+        <xs:annotation>
+          <xs:documentation>Typically used to describe that a power factor is leading the reference value.</xs:documentation>
+          <xs:documentation>Note: Leading power factors typically indicate capacitive loading.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="net">
+        <xs:annotation>
+          <xs:documentation>|Forward| - |Reverse|, See 61968-2.</xs:documentation>
+          <xs:documentation>Note: In some systems, the value passed as a “net” value could become negative. In other systems the value passed as a “net” value is always a positive number, and rolls-over and rolls-under as needed.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="none">
+        <xs:annotation>
+          <xs:documentation>Not Applicable (N/A)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="q1minusQ4">
+        <xs:annotation>
+          <xs:documentation>Q1 minus Q4</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="q1plusQ2">
+        <xs:annotation>
+          <xs:documentation>Reactive positive quadrants. (The term “lagging” is preferred.)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="q1plusQ3">
+        <xs:annotation>
+          <xs:documentation>Quadrants 1 and 3</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="q1plusQ4">
+        <xs:annotation>
+          <xs:documentation>Quadrants 1 and 4 usually represent forward active energy</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="q2minusQ3">
+        <xs:annotation>
+          <xs:documentation>Q2 minus Q3</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="q2plusQ3">
+        <xs:annotation>
+          <xs:documentation>Quadrants 2 and 3 usually represent reverse active energy</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="q2plusQ4">
+        <xs:annotation>
+          <xs:documentation>Quadrants 2 and 4</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="q3minusQ2">
+        <xs:annotation>
+          <xs:documentation>Q3 minus Q2</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="q3plusQ4">
+        <xs:annotation>
+          <xs:documentation>Reactive negative quadrants. (The term “leading” is preferred.)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="quadrant1">
+        <xs:annotation>
+          <xs:documentation>Q1 only</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="quadrant2">
+        <xs:annotation>
+          <xs:documentation>Q2 only</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="quadrant3">
+        <xs:annotation>
+          <xs:documentation>Q3 only</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="quadrant4">
+        <xs:annotation>
+          <xs:documentation>Q4 only</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="reverse">
+        <xs:annotation>
+          <xs:documentation>Reverse Active Energy is equivalent to "Received," or "Exported" as defined in 61968-2.</xs:documentation>
+          <xs:documentation>Reverse Active Energy is a positive kWh value as one would expect to find when energy is backfed by the service onto the utility network.</xs:documentation>
+          <xs:documentation>Reverse Reactive Energy is a positive VArh value as one would expect to find in the presence of capacitive loading and a leading Power Factor.</xs:documentation>
+          <xs:documentation>In polyphase metering, the reverse energy register is incremented when the sum of the phase energies is less than zero:</xs:documentation>
+          <xs:documentation>&amp;lt;img src="HTS_1.PNG" width="209" height="16" border="0" alt="graphic"/&amp;gt;</xs:documentation>
+          <xs:documentation>Note: The value passed as a reverse value is always a positive value. It is understood by the label “reverse” that it represents negative flow.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="total">
+        <xs:annotation>
+          <xs:documentation>|Forward| + |Reverse|, See 61968-2.</xs:documentation>
+          <xs:documentation>The sum of the commodity in all quadrants Q1+Q2+Q3+Q4.</xs:documentation>
+          <xs:documentation>In polyphase metering, the total energy register is incremented when the absolute value of the sum of the phase energies is greater than zero:</xs:documentation>
+          <xs:documentation>&amp;lt;img src="HTS_1.PNG" width="217" height="16" border="0" alt="graphic"/&amp;gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="totalByPhase">
+        <xs:annotation>
+          <xs:documentation>In polyphase metering, the total by phase energy register is incremented when the sum of the absolute values of the phase energies is greater than zero:</xs:documentation>
+          <xs:documentation>&amp;lt;img src="HTS_1.PNG" width="234" height="16" border="0" alt="graphic"/&amp;gt;</xs:documentation>
+          <xs:documentation>In single phase metering, the formulas for “Total” and “Total by phase” collapse to the same expression. For communication purposes however, the “Total” enumeration should be used with single phase meter data.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Name">
+    <xs:annotation>
+      <xs:documentation>The Name class provides the means to define any number of human readable  names for an object. A name is &lt;b>not&lt;/b> to be used for defining inter-object relationships. For inter-object relationships instead use the object identification 'mRID'.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Name.name">
+        <xs:annotation>
+          <xs:documentation>Any free text that name the object.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NameType" minOccurs="0" maxOccurs="1" type="m:NameType" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Name.NameType">
+        <xs:annotation>
+          <xs:documentation>Type of this name.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NameType" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameType">
+    <xs:annotation>
+      <xs:documentation>Type of name. Possible values for attribute 'name' are implementation dependent but standard profiles may specify types. An enterprise may have multiple IT systems each having its own local name for the same object, e.g. a planning system may have different names from an EMS. An object may also have different names within the same IT system, e.g. localName as defined in CIM version 14. The definition from CIM14 is:</xs:documentation>
+      <xs:documentation>The localName is a human readable name of the object. It is a free text name local to a node in a naming hierarchy similar to a file directory structure. A power system related naming hierarchy may be: Substation, VoltageLevel, Equipment etc. Children of the same parent in such a hierarchy have names that typically are unique among them.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameType.description">
+        <xs:annotation>
+          <xs:documentation>Description of the name type.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameType.name">
+        <xs:annotation>
+          <xs:documentation>Name of the name type.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NameTypeAuthority" minOccurs="0" maxOccurs="1" type="m:NameTypeAuthority" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameType.NameTypeAuthority">
+        <xs:annotation>
+          <xs:documentation>Authority responsible for managing names of this type.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NameTypeAuthority" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameTypeAuthority">
+    <xs:annotation>
+      <xs:documentation>Authority responsible for creation and management of names of a given type; typically an organization or an enterprise system.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameTypeAuthority.description">
+        <xs:annotation>
+          <xs:documentation>Description of the name type authority.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameTypeAuthority.name">
+        <xs:annotation>
+          <xs:documentation>Name of the name type authority.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="TimeIntervalKind" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#TimeIntervalKind">
+    <xs:annotation/>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="D">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="M">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="Y">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="h">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="m">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="s">
+        <xs:annotation/>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="UnitMultiplier" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#UnitMultiplier">
+    <xs:annotation>
+      <xs:documentation>The unit multipliers defined for the CIM.  When applied to unit symbols that already contain a multiplier, both multipliers are used. For example, to exchange kilograms using unit symbol of kg, one uses the "none" multiplier, to exchange metric ton (Mg), one uses the "k" multiplier.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="E">
+        <xs:annotation>
+          <xs:documentation>Exa 10**18.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="G">
+        <xs:annotation>
+          <xs:documentation>Giga 10**9.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="M">
+        <xs:annotation>
+          <xs:documentation>Mega 10**6.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="P">
+        <xs:annotation>
+          <xs:documentation>Peta 10**15</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="T">
+        <xs:annotation>
+          <xs:documentation>Tera 10**12.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Y">
+        <xs:annotation>
+          <xs:documentation>Yotta 10**24</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Z">
+        <xs:annotation>
+          <xs:documentation>Zetta 10**21</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="a">
+        <xs:annotation>
+          <xs:documentation>atto 10**-18.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="c">
+        <xs:annotation>
+          <xs:documentation>Centi 10**-2.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="d">
+        <xs:annotation>
+          <xs:documentation>Deci 10**-1.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="da">
+        <xs:annotation>
+          <xs:documentation>deca 10**1.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="f">
+        <xs:annotation>
+          <xs:documentation>femto 10**-15.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="h">
+        <xs:annotation>
+          <xs:documentation>hecto 10**2.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="k">
+        <xs:annotation>
+          <xs:documentation>Kilo 10**3.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="m">
+        <xs:annotation>
+          <xs:documentation>Milli 10**-3.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="micro">
+        <xs:annotation>
+          <xs:documentation>Micro 10**-6.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="n">
+        <xs:annotation>
+          <xs:documentation>Nano 10**-9.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="none">
+        <xs:annotation>
+          <xs:documentation>No multiplier or equivalently multiply by 1.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="p">
+        <xs:annotation>
+          <xs:documentation>Pico 10**-12.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="y">
+        <xs:annotation>
+          <xs:documentation>yocto 10**-24.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="z">
+        <xs:annotation>
+          <xs:documentation>zepto 10**-21.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PerCent" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#PerCent">
+    <xs:annotation>
+      <xs:documentation>Percentage on a defined base.   For example, specify as 100 to indicate at the defined base.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:float"/>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'get'/xsd/DERGroupForecastQueries.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://iec.ch/TC57/2017/DERGroupForecastQueries#" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:a="http://langdale.com.au/2005/Message#" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns="http://langdale.com.au/2005/Message#" xmlns:m="http://iec.ch/TC57/2017/DERGroupForecastQueries#">
+  <xs:annotation>
+    <xs:documentation/>
+  </xs:annotation>
+  <xs:element name="DERGroupForecastQueries" type="m:DERGroupForecastQueries"/>
+  <xs:complexType name="DERGroupForecastQueries">
+    <xs:sequence>
+      <xs:element name="DERMonitorableParameter" type="m:DERMonitorableParameter" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="DispatchSchedule" type="m:DispatchSchedule" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="EndDeviceGroup" type="m:EndDeviceGroup" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CurveStyle" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#CurveStyle">
+    <xs:annotation>
+      <xs:documentation>Style or shape of curve.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="constantYValue">
+        <xs:annotation>
+          <xs:documentation>The Y-axis values are assumed constant until the next curve point and prior to the first curve point.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="straightLineYValues">
+        <xs:annotation>
+          <xs:documentation>The Y-axis values are assumed to be a straight line between values.  Also known as linear interpolation.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="DERMonitorableParameter" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERMonitorableParameter">
+    <xs:annotation/>
+    <xs:sequence>
+      <xs:element name="DERParameter" minOccurs="1" maxOccurs="1" type="m:DERParameterKind" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERMonitorableParameter.DERParameter">
+        <xs:annotation/>
+      </xs:element>
+      <xs:element name="flowDirection" minOccurs="0" maxOccurs="1" type="m:FlowDirectionKind" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERMonitorableParameter.flowDirection">
+        <xs:annotation/>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="DERParameterKind" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERParameterKind">
+    <xs:annotation/>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="activePower">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="apparentPower">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="decreasingRampRate">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="highFilterBiDirectionalRegulation">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="highFilterDownRegulation">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="highFilterUpRegulation">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="increasingRampRate">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="lowFilterBiDirectionalRegulation">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="lowFilterDownRegulation">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="lowFilterUpRegulation">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="reactivePower">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="voltage">
+        <xs:annotation/>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="DispatchSchedule" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DispatchSchedule">
+    <xs:annotation/>
+    <xs:sequence>
+      <xs:element name="curveStyleKind" minOccurs="1" maxOccurs="1" type="m:CurveStyle" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DispatchSchedule.curveStyleKind">
+        <xs:annotation>
+          <xs:documentation>Used to specify whether the values over an interval are constant (constantYValue) or linearly interpolated (straightLineYValues)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="numberOfIntervals" minOccurs="1" maxOccurs="1" type="xs:integer" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DispatchSchedule.numberOfIntervals">
+        <xs:annotation>
+          <xs:documentation>Used to specify the number of intervals when requesting a forecast or a dispatch.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="startTime" minOccurs="1" maxOccurs="1" type="xs:dateTime" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DispatchSchedule.startTime">
+        <xs:annotation>
+          <xs:documentation>The start time of the first interval in the dispatch schedule</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="timeIntervalDuration" minOccurs="1" maxOccurs="1" type="xs:integer" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DispatchSchedule.timeIntervalDuration">
+        <xs:annotation>
+          <xs:documentation>The length of time for each interval in the dispatch schedule.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="timeIntervalUnit" minOccurs="1" maxOccurs="1" type="m:TimeIntervalKind" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DispatchSchedule.timeIntervalUnit">
+        <xs:annotation>
+          <xs:documentation>The unit of measure for the time axis of the dispatch schedule.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EndDeviceGroup" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#EndDeviceGroup">
+    <xs:annotation>
+      <xs:documentation>Abstraction for management of group communications within a two-way AMR system or the data for a group of related end devices. Commands can be issued to all of the end devices that belong to the group using a defined group address and the underlying AMR communication infrastructure. A DERGroup and a PANDeviceGroup is an EndDeviceGroup.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.mRID">
+        <xs:annotation>
+          <xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID,  as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+          <xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552 Edition 1, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.Names">
+        <xs:annotation>
+          <xs:documentation>All names of this identified object.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="FlowDirectionKind" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#FlowDirectionKind">
+    <xs:annotation>
+      <xs:documentation>Kind of flow direction for reading/measured  values proper to some commodities such as, for example, energy, power, demand.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="forward">
+        <xs:annotation>
+          <xs:documentation>"Delivered," or "Imported" as defined 61968-2.</xs:documentation>
+          <xs:documentation>Forward Active Energy is a positive kWh value as one would naturally expect to find as energy is supplied by the utility and consumed at the service.</xs:documentation>
+          <xs:documentation>Forward Reactive Energy is a positive VArh value as one would naturally expect to find in the presence of inductive loading.</xs:documentation>
+          <xs:documentation>In polyphase metering, the forward energy register is incremented when the sum of the phase energies is greater than zero:</xs:documentation>
+          <xs:documentation>&amp;lt;img src="HTS_1.PNG" width="209" height="16" border="0" alt="graphic"/&amp;gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="lagging">
+        <xs:annotation>
+          <xs:documentation>Typically used to describe that a power factor is lagging the reference value.</xs:documentation>
+          <xs:documentation>Note 1: When used to describe VA, “lagging” describes a form of measurement where reactive power is considered in all four quadrants, but real power is considered only in quadrants I and IV.</xs:documentation>
+          <xs:documentation>Note 2: When used to describe power factor, the term “Lagging” implies that the PF is negative. The term “lagging” in this case takes the place of the negative sign. If a signed PF value is to be passed by the data producer, then the direction of flow enumeration zero (none) should be used in order to avoid the possibility of creating an expression that employs a double negative. The data consumer should be able to tell from the sign of the data if the PF is leading or lagging. This principle is analogous to the concept that “Reverse” energy is an implied negative value, and to publish a negative reverse value would be ambiguous.</xs:documentation>
+          <xs:documentation>Note 3: Lagging power factors typically indicate inductive loading.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="leading">
+        <xs:annotation>
+          <xs:documentation>Typically used to describe that a power factor is leading the reference value.</xs:documentation>
+          <xs:documentation>Note: Leading power factors typically indicate capacitive loading.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="net">
+        <xs:annotation>
+          <xs:documentation>|Forward| - |Reverse|, See 61968-2.</xs:documentation>
+          <xs:documentation>Note: In some systems, the value passed as a “net” value could become negative. In other systems the value passed as a “net” value is always a positive number, and rolls-over and rolls-under as needed.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="none">
+        <xs:annotation>
+          <xs:documentation>Not Applicable (N/A)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="q1minusQ4">
+        <xs:annotation>
+          <xs:documentation>Q1 minus Q4</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="q1plusQ2">
+        <xs:annotation>
+          <xs:documentation>Reactive positive quadrants. (The term “lagging” is preferred.)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="q1plusQ3">
+        <xs:annotation>
+          <xs:documentation>Quadrants 1 and 3</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="q1plusQ4">
+        <xs:annotation>
+          <xs:documentation>Quadrants 1 and 4 usually represent forward active energy</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="q2minusQ3">
+        <xs:annotation>
+          <xs:documentation>Q2 minus Q3</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="q2plusQ3">
+        <xs:annotation>
+          <xs:documentation>Quadrants 2 and 3 usually represent reverse active energy</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="q2plusQ4">
+        <xs:annotation>
+          <xs:documentation>Quadrants 2 and 4</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="q3minusQ2">
+        <xs:annotation>
+          <xs:documentation>Q3 minus Q2</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="q3plusQ4">
+        <xs:annotation>
+          <xs:documentation>Reactive negative quadrants. (The term “leading” is preferred.)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="quadrant1">
+        <xs:annotation>
+          <xs:documentation>Q1 only</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="quadrant2">
+        <xs:annotation>
+          <xs:documentation>Q2 only</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="quadrant3">
+        <xs:annotation>
+          <xs:documentation>Q3 only</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="quadrant4">
+        <xs:annotation>
+          <xs:documentation>Q4 only</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="reverse">
+        <xs:annotation>
+          <xs:documentation>Reverse Active Energy is equivalent to "Received," or "Exported" as defined in 61968-2.</xs:documentation>
+          <xs:documentation>Reverse Active Energy is a positive kWh value as one would expect to find when energy is backfed by the service onto the utility network.</xs:documentation>
+          <xs:documentation>Reverse Reactive Energy is a positive VArh value as one would expect to find in the presence of capacitive loading and a leading Power Factor.</xs:documentation>
+          <xs:documentation>In polyphase metering, the reverse energy register is incremented when the sum of the phase energies is less than zero:</xs:documentation>
+          <xs:documentation>&amp;lt;img src="HTS_1.PNG" width="209" height="16" border="0" alt="graphic"/&amp;gt;</xs:documentation>
+          <xs:documentation>Note: The value passed as a reverse value is always a positive value. It is understood by the label “reverse” that it represents negative flow.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="total">
+        <xs:annotation>
+          <xs:documentation>|Forward| + |Reverse|, See 61968-2.</xs:documentation>
+          <xs:documentation>The sum of the commodity in all quadrants Q1+Q2+Q3+Q4.</xs:documentation>
+          <xs:documentation>In polyphase metering, the total energy register is incremented when the absolute value of the sum of the phase energies is greater than zero:</xs:documentation>
+          <xs:documentation>&amp;lt;img src="HTS_1.PNG" width="217" height="16" border="0" alt="graphic"/&amp;gt;</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="totalByPhase">
+        <xs:annotation>
+          <xs:documentation>In polyphase metering, the total by phase energy register is incremented when the sum of the absolute values of the phase energies is greater than zero:</xs:documentation>
+          <xs:documentation>&amp;lt;img src="HTS_1.PNG" width="234" height="16" border="0" alt="graphic"/&amp;gt;</xs:documentation>
+          <xs:documentation>In single phase metering, the formulas for “Total” and “Total by phase” collapse to the same expression. For communication purposes however, the “Total” enumeration should be used with single phase meter data.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Name">
+    <xs:annotation>
+      <xs:documentation>The Name class provides the means to define any number of human readable  names for an object. A name is &lt;b>not&lt;/b> to be used for defining inter-object relationships. For inter-object relationships instead use the object identification 'mRID'.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Name.name">
+        <xs:annotation>
+          <xs:documentation>Any free text that name the object.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NameType" minOccurs="0" maxOccurs="1" type="m:NameType" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Name.NameType">
+        <xs:annotation>
+          <xs:documentation>Type of this name.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NameType" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameType">
+    <xs:annotation>
+      <xs:documentation>Type of name. Possible values for attribute 'name' are implementation dependent but standard profiles may specify types. An enterprise may have multiple IT systems each having its own local name for the same object, e.g. a planning system may have different names from an EMS. An object may also have different names within the same IT system, e.g. localName as defined in CIM version 14. The definition from CIM14 is:</xs:documentation>
+      <xs:documentation>The localName is a human readable name of the object. It is a free text name local to a node in a naming hierarchy similar to a file directory structure. A power system related naming hierarchy may be: Substation, VoltageLevel, Equipment etc. Children of the same parent in such a hierarchy have names that typically are unique among them.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameType.description">
+        <xs:annotation>
+          <xs:documentation>Description of the name type.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameType.name">
+        <xs:annotation>
+          <xs:documentation>Name of the name type.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NameTypeAuthority" minOccurs="0" maxOccurs="1" type="m:NameTypeAuthority" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameType.NameTypeAuthority">
+        <xs:annotation>
+          <xs:documentation>Authority responsible for managing names of this type.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="NameTypeAuthority" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameTypeAuthority">
+    <xs:annotation>
+      <xs:documentation>Authority responsible for creation and management of names of a given type; typically an organization or an enterprise system.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameTypeAuthority.description">
+        <xs:annotation>
+          <xs:documentation>Description of the name type authority.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameTypeAuthority.name">
+        <xs:annotation>
+          <xs:documentation>Name of the name type authority.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="TimeIntervalKind" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#TimeIntervalKind">
+    <xs:annotation/>
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="D">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="M">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="Y">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="h">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="m">
+        <xs:annotation/>
+      </xs:enumeration>
+      <xs:enumeration value="s">
+        <xs:annotation/>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/QueryDERGroupForecasts</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroupForecasts/QueryDERGroupForecasts" name="QueryDERGroupForecasts" bindingOperationName="QueryDERGroupForecasts" type="Request-Response" outputName="QueryDERGroupForecastsResponse" inputName="QueryDERGroupForecastsRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/QueryDERGroupForecasts</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupForecastQueries#">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <der:DERGroupForecastQueriesRequestMessage>
+         <der:Header>
+            <mes:Verb>?</mes:Verb>
+            <mes:Noun>?</mes:Noun>
+            <!--Optional:-->
+            <mes:Revision>?</mes:Revision>
+            <!--Optional:-->
+            <mes:ReplayDetection>
+               <mes:Nonce>?</mes:Nonce>
+               <mes:Created>?</mes:Created>
+            </mes:ReplayDetection>
+            <!--Optional:-->
+            <mes:Context>?</mes:Context>
+            <!--Optional:-->
+            <mes:Timestamp>?</mes:Timestamp>
+            <!--Optional:-->
+            <mes:Source>?</mes:Source>
+            <!--Optional:-->
+            <mes:AsyncReplyFlag>?</mes:AsyncReplyFlag>
+            <!--Optional:-->
+            <mes:ReplyAddress>?</mes:ReplyAddress>
+            <!--Optional:-->
+            <mes:AckRequired>?</mes:AckRequired>
+            <!--Optional:-->
+            <mes:User>
+               <mes:UserID>?</mes:UserID>
+               <!--Optional:-->
+               <mes:Organization>?</mes:Organization>
+            </mes:User>
+            <!--Optional:-->
+            <mes:MessageID>?</mes:MessageID>
+            <!--Optional:-->
+            <mes:CorrelationID>?</mes:CorrelationID>
+            <!--Optional:-->
+            <mes:Comment>?</mes:Comment>
+            <!--Zero or more repetitions:-->
+            <mes:Property>
+               <mes:Name>?</mes:Name>
+               <!--Optional:-->
+               <mes:Value>?</mes:Value>
+            </mes:Property>
+            <!--You may enter ANY elements at this point-->
+         </der:Header>
+         <!--Optional:-->
+         <der:Request>
+            <!--Optional:-->
+            <der:StartTime>?</der:StartTime>
+            <!--Optional:-->
+            <der:EndTime>?</der:EndTime>
+            <!--Zero or more repetitions:-->
+            <der:Option>
+               <mes:name>?</mes:name>
+               <!--Optional:-->
+               <mes:value>?</mes:value>
+            </der:Option>
+            <!--Zero or more repetitions:-->
+            <der:ID>?</der:ID>
+            <der1:DERGroupForecastQueries>
+               <!--1 or more repetitions:-->
+               <der1:DERMonitorableParameter>
+                  <der1:DERParameter>?</der1:DERParameter>
+                  <!--Optional:-->
+                  <der1:flowDirection>?</der1:flowDirection>
+               </der1:DERMonitorableParameter>
+               <!--1 or more repetitions:-->
+               <der1:DispatchSchedule>
+                  <der1:curveStyleKind>?</der1:curveStyleKind>
+                  <der1:numberOfIntervals>?</der1:numberOfIntervals>
+                  <der1:startTime>?</der1:startTime>
+                  <der1:timeIntervalDuration>?</der1:timeIntervalDuration>
+                  <der1:timeIntervalUnit>?</der1:timeIntervalUnit>
+               </der1:DispatchSchedule>
+               <!--1 or more repetitions:-->
+               <der1:EndDeviceGroup>
+                  <!--Optional:-->
+                  <der1:mRID>?</der1:mRID>
+                  <!--Zero or more repetitions:-->
+                  <der1:Names>
+                     <der1:name>?</der1:name>
+                     <!--Optional:-->
+                     <der1:NameType>
+                        <!--Optional:-->
+                        <der1:description>?</der1:description>
+                        <der1:name>?</der1:name>
+                        <!--Optional:-->
+                        <der1:NameTypeAuthority>
+                           <!--Optional:-->
+                           <der1:description>?</der1:description>
+                           <der1:name>?</der1:name>
+                        </der1:NameTypeAuthority>
+                     </der1:NameType>
+                  </der1:Names>
+               </der1:EndDeviceGroup>
+            </der1:DERGroupForecastQueries>
+            <!--You may enter ANY elements at this point-->
+         </der:Request>
+      </der:DERGroupForecastQueriesRequestMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroupForecasts/QueryDERGroupForecasts"/></con:call></con:operation></con:interface><con:testSuite name="QueryDERGroupForecasts_Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="QueryDERGroupForecasts TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="QueryDERGroupForecasts"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>QueryDERGroupForecasts_Binding</con:interface><con:operation>QueryDERGroupForecasts</con:operation><con:request name="QueryDERGroupForecasts"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/QueryDERGroupForecasts</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupForecastQueries#">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <der:DERGroupForecastQueriesRequestMessage>
+         <der:Header>
+            <mes:Verb>?</mes:Verb>
+            <mes:Noun>?</mes:Noun>
+            <!--Optional:-->
+            <mes:Revision>?</mes:Revision>
+            <!--Optional:-->
+            <mes:ReplayDetection>
+               <mes:Nonce>?</mes:Nonce>
+               <mes:Created>?</mes:Created>
+            </mes:ReplayDetection>
+            <!--Optional:-->
+            <mes:Context>?</mes:Context>
+            <!--Optional:-->
+            <mes:Timestamp>?</mes:Timestamp>
+            <!--Optional:-->
+            <mes:Source>?</mes:Source>
+            <!--Optional:-->
+            <mes:AsyncReplyFlag>?</mes:AsyncReplyFlag>
+            <!--Optional:-->
+            <mes:ReplyAddress>?</mes:ReplyAddress>
+            <!--Optional:-->
+            <mes:AckRequired>?</mes:AckRequired>
+            <!--Optional:-->
+            <mes:User>
+               <mes:UserID>?</mes:UserID>
+               <!--Optional:-->
+               <mes:Organization>?</mes:Organization>
+            </mes:User>
+            <!--Optional:-->
+            <mes:MessageID>?</mes:MessageID>
+            <!--Optional:-->
+            <mes:CorrelationID>?</mes:CorrelationID>
+            <!--Optional:-->
+            <mes:Comment>?</mes:Comment>
+            <!--Zero or more repetitions:-->
+            <mes:Property>
+               <mes:Name>?</mes:Name>
+               <!--Optional:-->
+               <mes:Value>?</mes:Value>
+            </mes:Property>
+            <!--You may enter ANY elements at this point-->
+         </der:Header>
+         <!--Optional:-->
+         <der:Request>
+            <!--Optional:-->
+            <der:StartTime>?</der:StartTime>
+            <!--Optional:-->
+            <der:EndTime>?</der:EndTime>
+            <!--Zero or more repetitions:-->
+            <der:Option>
+               <mes:name>?</mes:name>
+               <!--Optional:-->
+               <mes:value>?</mes:value>
+            </der:Option>
+            <!--Zero or more repetitions:-->
+            <der:ID>?</der:ID>
+            <der1:DERGroupForecastQueries>
+               <!--1 or more repetitions:-->
+               <der1:DERMonitorableParameter>
+                  <der1:DERParameter>?</der1:DERParameter>
+                  <!--Optional:-->
+                  <der1:flowDirection>?</der1:flowDirection>
+               </der1:DERMonitorableParameter>
+               <!--1 or more repetitions:-->
+               <der1:DispatchSchedule>
+                  <der1:curveStyleKind>?</der1:curveStyleKind>
+                  <der1:numberOfIntervals>?</der1:numberOfIntervals>
+                  <der1:startTime>?</der1:startTime>
+                  <der1:timeIntervalDuration>?</der1:timeIntervalDuration>
+                  <der1:timeIntervalUnit>?</der1:timeIntervalUnit>
+               </der1:DispatchSchedule>
+               <!--1 or more repetitions:-->
+               <der1:EndDeviceGroup>
+                  <!--Optional:-->
+                  <der1:mRID>?</der1:mRID>
+                  <!--Zero or more repetitions:-->
+                  <der1:Names>
+                     <der1:name>?</der1:name>
+                     <!--Optional:-->
+                     <der1:NameType>
+                        <!--Optional:-->
+                        <der1:description>?</der1:description>
+                        <der1:name>?</der1:name>
+                        <!--Optional:-->
+                        <der1:NameTypeAuthority>
+                           <!--Optional:-->
+                           <der1:description>?</der1:description>
+                           <der1:name>?</der1:name>
+                        </der1:NameTypeAuthority>
+                     </der1:NameType>
+                  </der1:Names>
+               </der1:EndDeviceGroup>
+            </der1:DERGroupForecastQueries>
+            <!--You may enter ANY elements at this point-->
+         </der:Request>
+      </der:DERGroupForecastQueriesRequestMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupForecasts/QueryDERGroupForecasts"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/></con:soapui-project>

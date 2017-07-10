@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:a="http://langdale.com.au/2005/Message#" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" targetNamespace="http://iec.ch/TC57/2017/DERGroupForecastQueries#" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="http://langdale.com.au/2005/Message#" xmlns:m="http://iec.ch/TC57/2017/DERGroupForecastQueries#">
+<xs:annotation>
+<xs:documentation/>
+</xs:annotation>
+<xs:element name="DERGroupForecastQueries" type="m:DERGroupForecastQueries"/>
+<xs:complexType name="DERGroupForecastQueries">
+<xs:sequence>
+<xs:element name="DERMonitorableParameter" type="m:DERMonitorableParameter" minOccurs="1" maxOccurs="unbounded"/>
+<xs:element name="DispatchSchedule" type="m:DispatchSchedule" minOccurs="1" maxOccurs="unbounded"/>
+<xs:element name="EndDeviceGroup" type="m:EndDeviceGroup" minOccurs="1" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:simpleType name="CurveStyle" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#CurveStyle">
+<xs:annotation>
+<xs:documentation>Style or shape of curve.</xs:documentation>
+</xs:annotation>
+<xs:restriction base="xs:string">
+<xs:enumeration value="constantYValue">
+<xs:annotation>
+<xs:documentation>The Y-axis values are assumed constant until the next curve point and prior to the first curve point.</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="straightLineYValues">
+<xs:annotation>
+<xs:documentation>The Y-axis values are assumed to be a straight line between values.  Also known as linear interpolation.</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+<xs:complexType name="DERMonitorableParameter" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERMonitorableParameter">
+<xs:annotation/>
+<xs:sequence>
+<xs:element name="DERParameter" minOccurs="1" maxOccurs="1" type="m:DERParameterKind" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERMonitorableParameter.DERParameter">
+<xs:annotation/>
+</xs:element>
+<xs:element name="flowDirection" minOccurs="0" maxOccurs="1" type="m:FlowDirectionKind" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERMonitorableParameter.flowDirection">
+<xs:annotation/>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:simpleType name="DERParameterKind" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DERParameterKind">
+<xs:annotation/>
+<xs:restriction base="xs:string">
+<xs:enumeration value="activePower">
+<xs:annotation/>
+</xs:enumeration>
+<xs:enumeration value="apparentPower">
+<xs:annotation/>
+</xs:enumeration>
+<xs:enumeration value="decreasingRampRate">
+<xs:annotation/>
+</xs:enumeration>
+<xs:enumeration value="highFilterBiDirectionalRegulation">
+<xs:annotation/>
+</xs:enumeration>
+<xs:enumeration value="highFilterDownRegulation">
+<xs:annotation/>
+</xs:enumeration>
+<xs:enumeration value="highFilterUpRegulation">
+<xs:annotation/>
+</xs:enumeration>
+<xs:enumeration value="increasingRampRate">
+<xs:annotation/>
+</xs:enumeration>
+<xs:enumeration value="lowFilterBiDirectionalRegulation">
+<xs:annotation/>
+</xs:enumeration>
+<xs:enumeration value="lowFilterDownRegulation">
+<xs:annotation/>
+</xs:enumeration>
+<xs:enumeration value="lowFilterUpRegulation">
+<xs:annotation/>
+</xs:enumeration>
+<xs:enumeration value="reactivePower">
+<xs:annotation/>
+</xs:enumeration>
+<xs:enumeration value="voltage">
+<xs:annotation/>
+</xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+<xs:complexType name="DispatchSchedule" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DispatchSchedule">
+<xs:annotation/>
+<xs:sequence>
+<xs:element name="curveStyleKind" minOccurs="1" maxOccurs="1" type="m:CurveStyle" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DispatchSchedule.curveStyleKind">
+<xs:annotation>
+<xs:documentation>Used to specify whether the values over an interval are constant (constantYValue) or linearly interpolated (straightLineYValues)</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="numberOfIntervals" minOccurs="1" maxOccurs="1" type="xs:integer" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DispatchSchedule.numberOfIntervals">
+<xs:annotation>
+<xs:documentation>Used to specify the number of intervals when requesting a forecast or a dispatch.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="startTime" minOccurs="1" maxOccurs="1" type="xs:dateTime" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DispatchSchedule.startTime">
+<xs:annotation>
+<xs:documentation>The start time of the first interval in the dispatch schedule</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="timeIntervalDuration" minOccurs="1" maxOccurs="1" type="xs:integer" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DispatchSchedule.timeIntervalDuration">
+<xs:annotation>
+<xs:documentation>The length of time for each interval in the dispatch schedule.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="timeIntervalUnit" minOccurs="1" maxOccurs="1" type="m:TimeIntervalKind" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#DispatchSchedule.timeIntervalUnit">
+<xs:annotation>
+<xs:documentation>The unit of measure for the time axis of the dispatch schedule.</xs:documentation>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="EndDeviceGroup" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#EndDeviceGroup">
+<xs:annotation>
+<xs:documentation>Abstraction for management of group communications within a two-way AMR system or the data for a group of related end devices. Commands can be issued to all of the end devices that belong to the group using a defined group address and the underlying AMR communication infrastructure. A DERGroup and a PANDeviceGroup is an EndDeviceGroup.</xs:documentation>
+</xs:annotation>
+<xs:sequence>
+<xs:element name="mRID" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.mRID">
+<xs:annotation>
+<xs:documentation>Master resource identifier issued by a model authority. The mRID is unique within an exchange context. Global uniqueness is easily achieved by using a UUID,  as specified in RFC 4122, for the mRID. The use of UUID is strongly recommended.</xs:documentation>
+<xs:documentation>For CIMXML data files in RDF syntax conforming to IEC 61970-552 Edition 1, the mRID is mapped to rdf:ID or rdf:about attributes that identify CIM object elements.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="Names" minOccurs="0" maxOccurs="unbounded" type="m:Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#IdentifiedObject.Names">
+<xs:annotation>
+<xs:documentation>All names of this identified object.</xs:documentation>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:simpleType name="FlowDirectionKind" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#FlowDirectionKind">
+<xs:annotation>
+<xs:documentation>Kind of flow direction for reading/measured  values proper to some commodities such as, for example, energy, power, demand.</xs:documentation>
+</xs:annotation>
+<xs:restriction base="xs:string">
+<xs:enumeration value="forward">
+<xs:annotation>
+<xs:documentation>"Delivered," or "Imported" as defined 61968-2.</xs:documentation>
+<xs:documentation>Forward Active Energy is a positive kWh value as one would naturally expect to find as energy is supplied by the utility and consumed at the service.</xs:documentation>
+<xs:documentation>Forward Reactive Energy is a positive VArh value as one would naturally expect to find in the presence of inductive loading.</xs:documentation>
+<xs:documentation>In polyphase metering, the forward energy register is incremented when the sum of the phase energies is greater than zero:</xs:documentation>
+<xs:documentation>&amp;lt;img src="HTS_1.PNG" width="209" height="16" border="0" alt="graphic"/&amp;gt;</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="lagging">
+<xs:annotation>
+<xs:documentation>Typically used to describe that a power factor is lagging the reference value.</xs:documentation>
+<xs:documentation>Note 1: When used to describe VA, “lagging” describes a form of measurement where reactive power is considered in all four quadrants, but real power is considered only in quadrants I and IV.</xs:documentation>
+<xs:documentation>Note 2: When used to describe power factor, the term “Lagging” implies that the PF is negative. The term “lagging” in this case takes the place of the negative sign. If a signed PF value is to be passed by the data producer, then the direction of flow enumeration zero (none) should be used in order to avoid the possibility of creating an expression that employs a double negative. The data consumer should be able to tell from the sign of the data if the PF is leading or lagging. This principle is analogous to the concept that “Reverse” energy is an implied negative value, and to publish a negative reverse value would be ambiguous.</xs:documentation>
+<xs:documentation>Note 3: Lagging power factors typically indicate inductive loading.</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="leading">
+<xs:annotation>
+<xs:documentation>Typically used to describe that a power factor is leading the reference value.</xs:documentation>
+<xs:documentation>Note: Leading power factors typically indicate capacitive loading.</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="net">
+<xs:annotation>
+<xs:documentation>|Forward| - |Reverse|, See 61968-2.</xs:documentation>
+<xs:documentation>Note: In some systems, the value passed as a “net” value could become negative. In other systems the value passed as a “net” value is always a positive number, and rolls-over and rolls-under as needed.</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="none">
+<xs:annotation>
+<xs:documentation>Not Applicable (N/A)</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="q1minusQ4">
+<xs:annotation>
+<xs:documentation>Q1 minus Q4</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="q1plusQ2">
+<xs:annotation>
+<xs:documentation>Reactive positive quadrants. (The term “lagging” is preferred.)</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="q1plusQ3">
+<xs:annotation>
+<xs:documentation>Quadrants 1 and 3</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="q1plusQ4">
+<xs:annotation>
+<xs:documentation>Quadrants 1 and 4 usually represent forward active energy</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="q2minusQ3">
+<xs:annotation>
+<xs:documentation>Q2 minus Q3</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="q2plusQ3">
+<xs:annotation>
+<xs:documentation>Quadrants 2 and 3 usually represent reverse active energy</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="q2plusQ4">
+<xs:annotation>
+<xs:documentation>Quadrants 2 and 4</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="q3minusQ2">
+<xs:annotation>
+<xs:documentation>Q3 minus Q2</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="q3plusQ4">
+<xs:annotation>
+<xs:documentation>Reactive negative quadrants. (The term “leading” is preferred.)</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="quadrant1">
+<xs:annotation>
+<xs:documentation>Q1 only</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="quadrant2">
+<xs:annotation>
+<xs:documentation>Q2 only</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="quadrant3">
+<xs:annotation>
+<xs:documentation>Q3 only</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="quadrant4">
+<xs:annotation>
+<xs:documentation>Q4 only</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="reverse">
+<xs:annotation>
+<xs:documentation>Reverse Active Energy is equivalent to "Received," or "Exported" as defined in 61968-2.</xs:documentation>
+<xs:documentation>Reverse Active Energy is a positive kWh value as one would expect to find when energy is backfed by the service onto the utility network.</xs:documentation>
+<xs:documentation>Reverse Reactive Energy is a positive VArh value as one would expect to find in the presence of capacitive loading and a leading Power Factor.</xs:documentation>
+<xs:documentation>In polyphase metering, the reverse energy register is incremented when the sum of the phase energies is less than zero:</xs:documentation>
+<xs:documentation>&amp;lt;img src="HTS_1.PNG" width="209" height="16" border="0" alt="graphic"/&amp;gt;</xs:documentation>
+<xs:documentation>Note: The value passed as a reverse value is always a positive value. It is understood by the label “reverse” that it represents negative flow.</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="total">
+<xs:annotation>
+<xs:documentation>|Forward| + |Reverse|, See 61968-2.</xs:documentation>
+<xs:documentation>The sum of the commodity in all quadrants Q1+Q2+Q3+Q4.</xs:documentation>
+<xs:documentation>In polyphase metering, the total energy register is incremented when the absolute value of the sum of the phase energies is greater than zero:</xs:documentation>
+<xs:documentation>&amp;lt;img src="HTS_1.PNG" width="217" height="16" border="0" alt="graphic"/&amp;gt;</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+<xs:enumeration value="totalByPhase">
+<xs:annotation>
+<xs:documentation>In polyphase metering, the total by phase energy register is incremented when the sum of the absolute values of the phase energies is greater than zero:</xs:documentation>
+<xs:documentation>&amp;lt;img src="HTS_1.PNG" width="234" height="16" border="0" alt="graphic"/&amp;gt;</xs:documentation>
+<xs:documentation>In single phase metering, the formulas for “Total” and “Total by phase” collapse to the same expression. For communication purposes however, the “Total” enumeration should be used with single phase meter data.</xs:documentation>
+</xs:annotation>
+</xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+<xs:complexType name="Name" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Name">
+<xs:annotation>
+<xs:documentation>The Name class provides the means to define any number of human readable  names for an object. A name is &lt;b&gt;not&lt;/b&gt; to be used for defining inter-object relationships. For inter-object relationships instead use the object identification 'mRID'.</xs:documentation>
+</xs:annotation>
+<xs:sequence>
+<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Name.name">
+<xs:annotation>
+<xs:documentation>Any free text that name the object.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="NameType" minOccurs="0" maxOccurs="1" type="m:NameType" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#Name.NameType">
+<xs:annotation>
+<xs:documentation>Type of this name.</xs:documentation>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="NameType" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameType">
+<xs:annotation>
+<xs:documentation>Type of name. Possible values for attribute 'name' are implementation dependent but standard profiles may specify types. An enterprise may have multiple IT systems each having its own local name for the same object, e.g. a planning system may have different names from an EMS. An object may also have different names within the same IT system, e.g. localName as defined in CIM version 14. The definition from CIM14 is:</xs:documentation>
+<xs:documentation>The localName is a human readable name of the object. It is a free text name local to a node in a naming hierarchy similar to a file directory structure. A power system related naming hierarchy may be: Substation, VoltageLevel, Equipment etc. Children of the same parent in such a hierarchy have names that typically are unique among them.</xs:documentation>
+</xs:annotation>
+<xs:sequence>
+<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameType.description">
+<xs:annotation>
+<xs:documentation>Description of the name type.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameType.name">
+<xs:annotation>
+<xs:documentation>Name of the name type.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="NameTypeAuthority" minOccurs="0" maxOccurs="1" type="m:NameTypeAuthority" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameType.NameTypeAuthority">
+<xs:annotation>
+<xs:documentation>Authority responsible for managing names of this type.</xs:documentation>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="NameTypeAuthority" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameTypeAuthority">
+<xs:annotation>
+<xs:documentation>Authority responsible for creation and management of names of a given type; typically an organization or an enterprise system.</xs:documentation>
+</xs:annotation>
+<xs:sequence>
+<xs:element name="description" minOccurs="0" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameTypeAuthority.description">
+<xs:annotation>
+<xs:documentation>Description of the name type authority.</xs:documentation>
+</xs:annotation>
+</xs:element>
+<xs:element name="name" minOccurs="1" maxOccurs="1" type="xs:string" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#NameTypeAuthority.name">
+<xs:annotation>
+<xs:documentation>Name of the name type authority.</xs:documentation>
+</xs:annotation>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+<xs:simpleType name="TimeIntervalKind" sawsdl:modelReference="http://iec.ch/TC57/CIM-generic#TimeIntervalKind">
+<xs:annotation/>
+<xs:restriction base="xs:string">
+<xs:enumeration value="D">
+<xs:annotation/>
+</xs:enumeration>
+<xs:enumeration value="M">
+<xs:annotation/>
+</xs:enumeration>
+<xs:enumeration value="Y">
+<xs:annotation/>
+</xs:enumeration>
+<xs:enumeration value="h">
+<xs:annotation/>
+</xs:enumeration>
+<xs:enumeration value="m">
+<xs:annotation/>
+</xs:enumeration>
+<xs:enumeration value="s">
+<xs:annotation/>
+</xs:enumeration>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>

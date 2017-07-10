@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:tns="http://iec.ch/TC57/2017/ExecuteDERGroupsOperationSet" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupsOperationSetMessage" xmlns:ns="http://iec.ch/TC57/2011/schema/message" xmlns:ns1="http://iec.ch/TC57/2017/DERGroups#" name="ExecuteDERGroupsOperationSet" targetNamespace="http://iec.ch/TC57/2017/ExecuteDERGroupsOperationSet">
+	<wsdl:types>
+		<xs:schema targetNamespace="http://iec.ch/TC57/2017/ExecuteDERGroupsOperationSet" elementFormDefault="qualified">
+			<xs:import namespace="http://iec.ch/TC57/2017/DERGroupsOperationSetMessage" schemaLocation="xsd/DERGroupsOperationSetMessage.xsd"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="ExecuteDERGroupsOperationSetRequestMessage">
+		<wsdl:part name="ExecuteDERGroupsOperationSetRequestMessage" element="infoMessage:ExecuteDERGroupsOperationSet"/>
+	</wsdl:message>
+	<wsdl:message name="ResponseMessage">
+		<wsdl:part name="ResponseMessage" element="infoMessage:DERGroupsOperationSetResponseMessage"/>
+	</wsdl:message>
+	<wsdl:message name="FaultMessage">
+		<wsdl:part name="FaultMessage" element="infoMessage:DERGroupsOperationSetFaultMessage"/>
+	</wsdl:message>
+	<wsdl:portType name="DERGroupsOperationSet_Port">
+		<wsdl:operation name="ExecuteDERGroupsOperationSet">
+			<wsdl:input name="ExecuteDERGroupsOperationSetRequest" message="tns:ExecuteDERGroupsOperationSetRequestMessage"/>
+			<wsdl:output name="ExecuteDERGroupsOperationSetResponse" message="tns:ResponseMessage"/>
+			<wsdl:fault name="ExecuteDERGroupsOperationSetFault" message="tns:FaultMessage"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="DERGroupsOperationSet_Binding" type="tns:DERGroupsOperationSet_Port">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="ExecuteDERGroupsOperationSet">
+			<soap:operation soapAction="http://iec.ch/TC57/2017/DERGroupsOperationSet/ExecuteDERGroupsOperationSet" style="document"/>
+			<wsdl:input name="ExecuteDERGroupsOperationSetRequest">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="ExecuteDERGroupsOperationSetResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ExecuteDERGroupsOperationSetFault">
+				<soap:fault name="ExecuteDERGroupsOperationSetFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="ExecuteDERGroupsOperationSet">
+		<wsdl:port name="DERGroupsOperationSet_Port" binding="tns:DERGroupsOperationSet_Binding">
+			<soap:address location="http://iec.ch/TC57/2017/ExecuteDERGroupsOperationSet"/>
+		</wsdl:port>
+	</wsdl:service>
+	<xs:schema targetNamespace="http://iec.ch/TC57/2017/ExecuteDERGroupsOperationSetMessage" elementFormDefault="qualified">
+		<xs:import namespace="http://iec.ch/TC57/2017/DERGroupsOperationSetMessage" schemaLocation="xsd/DERGroupsOperationSetMessage.xsd"/>
+		<!--<xs:include schemaLocation="xsd/DERGroupsMessage.xsd"/>-->
+	</xs:schema>
+	<!-- Message Definitions -->
+	<!-- Port Definitions -->
+</wsdl:definitions>
