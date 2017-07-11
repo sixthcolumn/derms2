@@ -1,0 +1,71 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:cxf="http://cxf.apache.org/core"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://cxf.apache.org/core
+	http://cxf.apache.org/schemas/core.xsd
+	http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+
+	<bean id="dateFormat" class="java.text.SimpleDateFormat">
+		<constructor-arg value="yyyy-MM-dd'T'HH:mm:ss" />
+	</bean>
+
+
+	<bean id="dateEditor"
+		class="org.springframework.beans.propertyeditors.CustomDateEditor">
+
+		<constructor-arg>
+			<bean class="java.text.SimpleDateFormat">
+				<constructor-arg value="yyyy-MM-dd HH:mm" />
+			</bean>
+		</constructor-arg>
+		<constructor-arg value="true" />
+
+	</bean>
+
+	<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<property name="customEditors">
+			<map>
+				<entry key="java.util.Date">
+					<ref bean="dateEditor" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="now" class="com.sixthc.util.DateFormatter">
+		<!-- <property name="date" value="2017-06-12 02:33" /> -->
+	</bean>
+
+	<bean id="ChangeExecuteDERGroupsHeader" name="ChangeExecuteDERGroupsHeader"
+		class="com.sixthc.part5.change.ExecuteDERGroups.HeaderType">
+		<property name="verb" value="change" />
+		<property name="noun" value="DERGroups" />
+		<property name="Timestamp" value="#{now.XMLGregorianDate}" />
+		<property name="MessageID" value="#message_id#" />
+		<property name="CorrelationID" value="#correlation_id#" />
+	</bean>
+
+	<!-- This should be part of ChangeExecuteDERGroupsReply, when I figure out 
+		how to do an array -->
+	<bean id="ChangeErrorBean" name="ChangeErrorBean"
+		class="com.sixthc.part5.change.ExecuteDERGroups.ErrorType">
+		<property name="code" value="0.0" />
+	</bean>
+
+	<bean id="ChangeExecuteDERGroupsReply" name="ChangeExecuteDERGroupsReply"
+		class="com.sixthc.part5.change.ExecuteDERGroups.ReplyType">
+		<property name="result" value="OK" />
+	</bean>
+
+	<bean id="ChangeExecuteEndDeviceGroup" name="ChangeExecuteEndDeviceGroup"
+		class="com.sixthc.part5.change.ExecuteDERGroups.EndDeviceGroup">
+		<property name="description" value="default message" />
+	</bean>
+
+</beans>

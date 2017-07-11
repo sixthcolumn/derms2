@@ -42,6 +42,38 @@
 		<!-- <property name="date" value="2017-06-12 02:33" /> -->
 	</bean>
 
+	<bean id="ChangeExecuteDERGroupsHeader" name="ChangeExecuteDERGroupsHeader"
+		class="com.sixthc.part5.change.ExecuteDERGroups.HeaderType">
+		<property name="verb" value="change" />
+		<property name="noun" value="DERGroups" />
+		<property name="Timestamp" value="#{now.XMLGregorianDate}" />
+		<property name="MessageID" value="#message_id#" />
+		<property name="CorrelationID" value="#correlation_id#" />
+	</bean>
+
+	<bean id="ChangeErrorBean" name="ChangeErrorBean"
+		class="com.sixthc.part5.change.ExecuteDERGroups.ErrorType">
+		<property name="code" value="0.0" />
+	</bean>
+
+	<bean id="ChangeExecuteDERGroupsReply" name="ChangeExecuteDERGroupsReply"
+		class="com.sixthc.part5.change.ExecuteDERGroups.ReplyType">
+		<property name="result" value="OK" />
+		<property name="error">
+			<list>
+				<ref bean="ChangeErrorBean" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="ChangeExecuteEndDeviceGroup" name="ChangeExecuteEndDeviceGroup"
+		class="com.sixthc.part5.change.ExecuteDERGroups.EndDeviceGroup">
+		<property name="description" value="default message" />
+	</bean>
+
+
+	com.sixthc.part5.change.ExecuteDERGroups.ReplyType
+
 	<bean id="CIMDERGroupDispatch" name="CIMDERGroupDispatch"
 		class="com.epri.dergroupdispatches.DERGroupDispatch">
 		<property name="DERGroup">
@@ -55,9 +87,9 @@
 				<property name="capabilityType">
 					<value type="com.epri.dergroupdispatches.CapabilityType">APPARENT_POWER</value>
 				</property>
-				<property name="value" value="1.7"/>
-				<property name="capabilityUnits" value="kW"/>
-				<property name="capabilityMultiplier" value="1.1"/>
+				<property name="value" value="1.7" />
+				<property name="capabilityUnits" value="kW" />
+				<property name="capabilityMultiplier" value="1.1" />
 			</bean>
 		</property>
 
