@@ -67,6 +67,7 @@ public class CIMLoggingOutInterceptor extends LoggingOutInterceptor {
 		try {
 			messageID = payload.getTagValue(
 					"http://www.iec.ch/TC57/2011/schema/message", "MessageID");
+			
 		} catch (Exception e) {
 			Fault fault = new Fault(e);
 			throw fault;

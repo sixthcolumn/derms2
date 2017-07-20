@@ -50,6 +50,7 @@
 				<property name="resultCode" value="success" />
 				<property name="stage" value="serviceIn" />
 			</bean>
+			<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor" />
 		</jaxws:inInterceptors>
 		<jaxws:outInterceptors>
 			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
@@ -58,6 +59,7 @@
 				<property name="resultCode" value="success" />
 				<property name="stage" value="serviceOut" />
 			</bean>
+			<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor" />
 		</jaxws:outInterceptors>
 		<jaxws:outFaultInterceptors>
 			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
