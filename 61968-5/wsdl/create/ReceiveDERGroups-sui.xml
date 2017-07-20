@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default" name="61968-5/create/ReceiveDERGroups" resourceRoot="${projectDir}" soapui-version="4.5.2" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="DERGroups_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/ReceiveDERGroups}DERGroups_Binding" soapVersion="1_1" anonymous="optional" definition="ReceiveDERGroups.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'create'/ReceiveDERGroups.wsdl"><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'create'/ReceiveDERGroups.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ReceiveDERGroups" targetNamespace="http://iec.ch/TC57/2017/ReceiveDERGroups" xmlns:tns="http://iec.ch/TC57/2017/ReceiveDERGroups" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupsMessage">
+<con:soapui-project activeEnvironment="Default" name="61968-5/create/ReceiveDERGroups" resourceRoot="${projectDir}" soapui-version="4.5.2" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="DERGroups_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/ReceiveDERGroups}DERGroups_Binding" soapVersion="1_1" anonymous="optional" definition="ReceiveDERGroups.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'create'/ReceiveDERGroups.wsdl"><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'create'/ReceiveDERGroups.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ReceiveDERGroups" targetNamespace="http://iec.ch/TC57/2017/ReceiveDERGroups" xmlns:tns="http://iec.ch/TC57/2017/ReceiveDERGroups" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupsMessage">
   <wsdl:types>
     <xs:schema targetNamespace="http://iec.ch/TC57/2017/ReceiveDERGroups" elementFormDefault="qualified">
       <xs:import namespace="http://iec.ch/TC57/2017/DERGroupsMessage" schemaLocation="xsd/DERGroupsMessage.xsd"/>
@@ -897,7 +897,7 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroups</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroups/CreatedDERGroups" name="CreatedDERGroups" bindingOperationName="CreatedDERGroups" type="Request-Response" outputName="CreatedDERGroupsResponse" inputName="CreatedDERGroupsEvent" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroups</con:endpoint><con:endpoint>http://localhost:8080/61968-5/61968-5/create/receiveDERGroups</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroups/CreatedDERGroups" name="CreatedDERGroups" bindingOperationName="CreatedDERGroups" type="Request-Response" outputName="CreatedDERGroupsResponse" inputName="CreatedDERGroupsEvent" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
    <soapenv:Header/>
    <soapenv:Body>
       <der:CreatedDERGroups>
@@ -1038,7 +1038,38 @@
          </der:Payload>
       </der:CreatedDERGroups>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroups/CreatedDERGroups"/></con:call></con:operation></con:interface><con:testSuite name="DERGroups_Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CreatedDERGroups TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="CreatedDERGroups"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroups_Binding</con:interface><con:operation>CreatedDERGroups</con:operation><con:request name="CreatedDERGroups"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroups/CreatedDERGroups"/></con:call></con:operation></con:interface><con:testSuite name="DERGroups_Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CreatedDERGroups TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="CreatedDERGroups"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroups_Binding</con:interface><con:operation>CreatedDERGroups</con:operation><con:request name="CreatedDERGroups"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/61968-5/61968-5/create/receiveDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <der:CreatedDERGroups>
+        <der:Header>
+            <mes:Verb>create</mes:Verb>
+            <mes:Noun>ReceiveDERGroups</mes:Noun>
+            <mes:Timestamp>2017-07-18T10:28:27-06:00</mes:Timestamp>
+            <mes:MessageID>64cc945c-7a23-437e-89af-34c31cfded8c</mes:MessageID>
+         </der:Header>
+         <der:Payload>
+            <der1:DERGroups>
+               <der1:EndDeviceGroup>
+                 <der1:mRID>1234</der1:mRID>
+                 <der1:description>sixc test</der1:description>
+                 <der1:DERFunction>
+                     <der1:connectDisconnect>true</der1:connectDisconnect>
+                     <der1:frequencyWattCurveFunction>false</der1:frequencyWattCurveFunction>
+                     <der1:maxRealPowerLimiting>false</der1:maxRealPowerLimiting>
+                     <der1:rampRateControl>false</der1:rampRateControl>
+                     <der1:reactivePowerDispatch>true</der1:reactivePowerDispatch>
+                     <der1:realPowerDispatch>true</der1:realPowerDispatch>
+                     <der1:voltageRegulation>false</der1:voltageRegulation>
+                     <der1:voltVarCurveFunction>false</der1:voltVarCurveFunction>
+                     <der1:voltWattCurveFunction>false</der1:voltWattCurveFunction>
+                  </der1:DERFunction>
+               </der1:EndDeviceGroup>
+            </der1:DERGroups>
+         </der:Payload>
+      </der:CreatedDERGroups>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroups/CreatedDERGroups" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Default Test Request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroups_Binding</con:interface><con:operation>CreatedDERGroups</con:operation><con:request name="Default Test Request"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
    <soapenv:Header/>
    <soapenv:Body>
       <der:CreatedDERGroups>
@@ -1179,4 +1210,4 @@
          </der:Payload>
       </der:CreatedDERGroups>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroups/CreatedDERGroups"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/></con:soapui-project>

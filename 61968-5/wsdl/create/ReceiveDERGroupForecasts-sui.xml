@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default" name="61968-5/create/ReceiveDERGroupForecasts" resourceRoot="${projectDir}" soapui-version="4.5.2" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="DERGroupForecasts_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/ReceiveDERGroupForecasts}DERGroupForecasts_Binding" soapVersion="1_1" anonymous="optional" definition="ReceiveDERGroupForecasts.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'create'/ReceiveDERGroupForecasts.wsdl"><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'create'/ReceiveDERGroupForecasts.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ReceiveDERGroupForecasts" targetNamespace="http://iec.ch/TC57/2017/ReceiveDERGroupForecasts" xmlns:tns="http://iec.ch/TC57/2017/ReceiveDERGroupForecasts" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupForecastsMessage">
+<con:soapui-project activeEnvironment="Default" name="61968-5/create/ReceiveDERGroupForecasts" resourceRoot="${projectDir}" soapui-version="4.5.2" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="DERGroupForecasts_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/ReceiveDERGroupForecasts}DERGroupForecasts_Binding" soapVersion="1_1" anonymous="optional" definition="ReceiveDERGroupForecasts.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'create'/ReceiveDERGroupForecasts.wsdl"><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'create'/ReceiveDERGroupForecasts.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ReceiveDERGroupForecasts" targetNamespace="http://iec.ch/TC57/2017/ReceiveDERGroupForecasts" xmlns:tns="http://iec.ch/TC57/2017/ReceiveDERGroupForecasts" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupForecastsMessage">
   <wsdl:types>
     <xs:schema targetNamespace="http://iec.ch/TC57/2017/ReceiveDERGroupForecasts" elementFormDefault="qualified">
       <xs:import namespace="http://iec.ch/TC57/2017/DERGroupForecastsMessage" schemaLocation="xsd/DERGroupForecastsMessage.xsd"/>
@@ -1407,7 +1407,7 @@
     </xs:annotation>
     <xs:restriction base="xs:float"/>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroupForecasts</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroupForecasts/CreatedDERGroupForecasts" name="CreatedDERGroupForecasts" bindingOperationName="CreatedDERGroupForecasts" type="Request-Response" outputName="CreatedDERGroupForecastsResponse" inputName="CreatedDERGroupForecastsEvent" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroupForecasts</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupForecastsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupForecasts#">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroupForecasts</con:endpoint><con:endpoint>http://localhost:8080/61968-5/61968-5/create/receiveDERGroupForecasts</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroupForecasts/CreatedDERGroupForecasts" name="CreatedDERGroupForecasts" bindingOperationName="CreatedDERGroupForecasts" type="Request-Response" outputName="CreatedDERGroupForecastsResponse" inputName="CreatedDERGroupForecastsEvent" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroupForecasts</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupForecastsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupForecasts#">
    <soapenv:Header/>
    <soapenv:Body>
       <der:CreatedDERGroupForecasts>
@@ -1555,7 +1555,42 @@
          </der:Payload>
       </der:CreatedDERGroupForecasts>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroupForecasts/CreatedDERGroupForecasts"/></con:call></con:operation></con:interface><con:testSuite name="DERGroupForecasts_Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CreatedDERGroupForecasts TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="CreatedDERGroupForecasts"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroupForecasts_Binding</con:interface><con:operation>CreatedDERGroupForecasts</con:operation><con:request name="CreatedDERGroupForecasts"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroupForecasts</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupForecastsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupForecasts#">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroupForecasts/CreatedDERGroupForecasts"/></con:call></con:operation></con:interface><con:testSuite name="DERGroupForecasts_Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CreatedDERGroupForecasts TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="CreatedDERGroupForecasts"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroupForecasts_Binding</con:interface><con:operation>CreatedDERGroupForecasts</con:operation><con:request name="CreatedDERGroupForecasts"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/61968-5/61968-5/create/receiveDERGroupForecasts</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupForecastsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupForecasts#">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <der:CreatedDERGroupForecasts>
+         <der:Header>
+            <mes:Verb>create</mes:Verb>
+            <mes:Noun>DERGroupForecasts</mes:Noun>
+            <mes:Timestamp>2017-07-18T10:28:27-06:00</mes:Timestamp>
+            <mes:MessageID>64cc945c-7a23-437e-89af-34c31cfded8c</mes:MessageID>
+         </der:Header>
+         <der:Payload>
+            <der1:DERGroupForecasts>
+               <der1:DERGroupForecast>
+                  <der1:predictionCreationDate>2017-07-18T10:28:27-06:00</der1:predictionCreationDate>
+                  <der1:EndDeviceGroup>
+                     <der1:DERMonitorableParameter>
+                        <der1:DERParameter>activePower</der1:DERParameter>
+                        <der1:yMultiplier>1.1</der1:yMultiplier>
+                        <der1:yUnit>A</der1:yUnit>
+                        <der1:DispatchSchedule>
+                           <der1:curveStyleKind>constantYValue</der1:curveStyleKind>
+                           <der1:startTime>2017-07-18T10:28:27-06:00</der1:startTime>
+                           <der1:timeIntervalDuration>10</der1:timeIntervalDuration>
+                           <der1:timeIntervalUnit>D</der1:timeIntervalUnit>
+                           <der1:DERCurveData>
+                              <der1:intervalNumber>7</der1:intervalNumber>
+                           </der1:DERCurveData>
+                        </der1:DispatchSchedule>
+                     </der1:DERMonitorableParameter>
+                  </der1:EndDeviceGroup>
+               </der1:DERGroupForecast>
+            </der1:DERGroupForecasts>
+         </der:Payload>
+      </der:CreatedDERGroupForecasts>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupForecasts/CreatedDERGroupForecasts" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Default Test Request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroupForecasts_Binding</con:interface><con:operation>CreatedDERGroupForecasts</con:operation><con:request name="Default Test Request"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroupForecasts</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupForecastsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupForecasts#">
    <soapenv:Header/>
    <soapenv:Body>
       <der:CreatedDERGroupForecasts>
@@ -1703,4 +1738,4 @@
          </der:Payload>
       </der:CreatedDERGroupForecasts>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupForecasts/CreatedDERGroupForecasts"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/></con:soapui-project>

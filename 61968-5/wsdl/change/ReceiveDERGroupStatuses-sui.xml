@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default" name="61968-5/change/ReceiveDERGroupStatuses" resourceRoot="${projectDir}" soapui-version="4.5.2" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="DERGroupStatuses_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/ReceiveDERGroupStatuses}DERGroupStatuses_Binding" soapVersion="1_1" anonymous="optional" definition="ReceiveDERGroupStatuses.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'change%20or%20delete'/ReceiveDERGroupStatuses.wsdl"><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'change%20or%20delete'/ReceiveDERGroupStatuses.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ReceiveDERGroupStatuses" targetNamespace="http://iec.ch/TC57/2017/ReceiveDERGroupStatuses" xmlns:tns="http://iec.ch/TC57/2017/ReceiveDERGroupStatuses" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupStatusesMessage">
+<con:soapui-project activeEnvironment="Default" name="61968-5/change/ReceiveDERGroupStatuses" resourceRoot="${projectDir}" soapui-version="4.5.2" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="DERGroupStatuses_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/ReceiveDERGroupStatuses}DERGroupStatuses_Binding" soapVersion="1_1" anonymous="optional" definition="ReceiveDERGroupStatuses.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'change%20or%20delete'/ReceiveDERGroupStatuses.wsdl"><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'change%20or%20delete'/ReceiveDERGroupStatuses.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ReceiveDERGroupStatuses" targetNamespace="http://iec.ch/TC57/2017/ReceiveDERGroupStatuses" xmlns:tns="http://iec.ch/TC57/2017/ReceiveDERGroupStatuses" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupStatusesMessage">
   <wsdl:types>
     <xs:schema targetNamespace="http://iec.ch/TC57/2017/ReceiveDERGroupStatuses" elementFormDefault="qualified">
       <xs:import namespace="http://iec.ch/TC57/2017/DERGroupStatusesMessage" schemaLocation="xsd/DERGroupStatusesMessage.xsd"/>
@@ -1321,7 +1321,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroupStatuses</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroupStatuses/ChangedDERGroupStatuses" name="ChangedDERGroupStatuses" bindingOperationName="ChangedDERGroupStatuses" type="Request-Response" outputName="ChangedDERGroupStatusesResponse" inputName="ChangedDERGroupStatusesEvent" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroupStatuses</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupStatusesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupStatuses#">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroupStatuses</con:endpoint><con:endpoint>http://localhost:8080/61968-5/61968-5/change/receiveDERGroupStatuses</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroupStatuses/ChangedDERGroupStatuses" name="ChangedDERGroupStatuses" bindingOperationName="ChangedDERGroupStatuses" type="Request-Response" outputName="ChangedDERGroupStatusesResponse" inputName="ChangedDERGroupStatusesEvent" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroupStatuses</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupStatusesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupStatuses#">
    <soapenv:Header/>
    <soapenv:Body>
       <der:ChangedDERGroupStatuses>
@@ -1449,7 +1449,40 @@
          </der:Payload>
       </der:ChangedDERGroupStatuses>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroupStatuses/ChangedDERGroupStatuses"/></con:call></con:operation></con:interface><con:testSuite name="DERGroupStatuses_Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ChangedDERGroupStatuses TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="ChangedDERGroupStatuses"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroupStatuses_Binding</con:interface><con:operation>ChangedDERGroupStatuses</con:operation><con:request name="ChangedDERGroupStatuses"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroupStatuses</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupStatusesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupStatuses#">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroupStatuses/ChangedDERGroupStatuses"/></con:call></con:operation></con:interface><con:testSuite name="DERGroupStatuses_Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ChangedDERGroupStatuses TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="ChangedDERGroupStatuses"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroupStatuses_Binding</con:interface><con:operation>ChangedDERGroupStatuses</con:operation><con:request name="ChangedDERGroupStatuses"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/61968-5/61968-5/change/receiveDERGroupStatuses</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupStatusesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupStatuses#">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <der:ChangedDERGroupStatuses>
+         <der:Header>
+            <mes:Verb>change</mes:Verb>
+            <mes:Noun>DERGroupStatuses</mes:Noun>
+            <mes:Timestamp>2017-05-26T10:54:03-06:00</mes:Timestamp>
+            <mes:MessageID>93b32316-c752-4092-9969-69ece85105b8</mes:MessageID>
+         </der:Header>
+         <!--Optional: -->
+         <der:Payload>
+            <der1:DERGroupStatuses>
+               <der1:EndDeviceGroup>
+                  <der1:DERMonitorableParameter>
+                     <der1:DERParameter>activePower</der1:DERParameter>
+                     <der1:flowDirection>forward</der1:flowDirection>
+                     <der1:yMultiplier>1.1</der1:yMultiplier>
+                     <der1:yUnit>A</der1:yUnit>
+                     <der1:yUnitInstalledMax>7.4</der1:yUnitInstalledMax>
+                     <der1:yUnitInstalledMin>3.5</der1:yUnitInstalledMin>
+                     <der1:DERCurveData>
+                       <der1:maxYValue>78</der1:maxYValue>
+                        <der1:minYValue>4</der1:minYValue>
+                        <der1:nominalYValue>3</der1:nominalYValue>
+                        <der1:timeStamp>2017-05-26T10:54:03-06:00</der1:timeStamp> 
+                     </der1:DERCurveData> 
+                  </der1:DERMonitorableParameter>               
+               </der1:EndDeviceGroup>
+            </der1:DERGroupStatuses>            
+         </der:Payload>
+      </der:ChangedDERGroupStatuses>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupStatuses/ChangedDERGroupStatuses" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="Test Request"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroupStatuses_Binding</con:interface><con:operation>ChangedDERGroupStatuses</con:operation><con:request name="Test Request"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroupStatuses</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupStatusesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupStatuses#">
    <soapenv:Header/>
    <soapenv:Body>
       <der:ChangedDERGroupStatuses>
@@ -1577,4 +1610,4 @@
          </der:Payload>
       </der:ChangedDERGroupStatuses>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupStatuses/ChangedDERGroupStatuses"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/></con:soapui-project>

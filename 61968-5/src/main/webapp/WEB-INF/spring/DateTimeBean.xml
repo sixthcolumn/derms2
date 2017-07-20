@@ -39,33 +39,7 @@
 	</bean>
 
 	<bean id="now" class="com.sixthc.util.DateFormatter">
-		<!-- <property name="date" value="2017-06-12 02:33" /> -->
-	</bean>
-
-	<bean id="ChangeExecuteDERGroupsHeader" name="ChangeExecuteDERGroupsHeader"
-		class="com.sixthc.part5.change.ExecuteDERGroups.HeaderType">
-		<property name="verb" value="change" />
-		<property name="noun" value="DERGroups" />
-		<property name="Timestamp" value="#{now.XMLGregorianDate}" />
-		<property name="MessageID" value="#message_id#" />
-		<property name="CorrelationID" value="#correlation_id#" />
-	</bean>
-
-	<!-- This should be part of ChangeExecuteDERGroupsReply, when I figure out 
-		how to do an array -->
-	<bean id="ChangeErrorBean" name="ChangeErrorBean"
-		class="com.sixthc.part5.change.ExecuteDERGroups.ErrorType">
-		<property name="code" value="0.0" />
-	</bean>
-
-	<bean id="ChangeExecuteDERGroupsReply" name="ChangeExecuteDERGroupsReply"
-		class="com.sixthc.part5.change.ExecuteDERGroups.ReplyType">
-		<property name="result" value="OK" />
-	</bean>
-
-	<bean id="ChangeExecuteEndDeviceGroup" name="ChangeExecuteEndDeviceGroup"
-		class="com.sixthc.part5.change.ExecuteDERGroups.EndDeviceGroup">
-		<property name="description" value="default message" />
+	<!-- <property name="date" value="2017-06-12 02:33" /> -->
 	</bean>
 
 </beans>

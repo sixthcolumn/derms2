@@ -1,0 +1,10 @@
+Issue 1 :
+
+61968-5/change/ExecuteDERGroupsOperationSet
+
+In Message.xsd there is a type any:namespace="##other", even though it has minOccurs=0,
+it is breaking cxf, in that when any mess:Operation message is used in the request or response
+it breaks, stating that ##other is 'required'.
+
+I have commented out the any type in Message.xsd for now
+

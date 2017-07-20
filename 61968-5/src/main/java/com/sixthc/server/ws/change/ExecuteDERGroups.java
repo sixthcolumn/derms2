@@ -31,21 +31,17 @@ public class ExecuteDERGroups implements DERGroupsPort, ApplicationContextAware 
 			throws FaultMessage {
 
 		// default header, will be replaced (probably) during out intercept handler final phase
-		header.value = appContext.getBean("ChangeExecuteDERGroupsHeader",
+		header.value = appContext.getBean("change_executeDERGroups_header",
 				HeaderType.class);
 
 		// default reply, also replaced
-		ErrorType et = appContext.getBean("ChangeErrorBean", ErrorType.class);
-		reply.value = appContext.getBean("ChangeExecuteDERGroupsReply",
+		ErrorType et = appContext.getBean("change_executeDERGroups_error",
+				ErrorType.class);
+		reply.value = appContext.getBean("change_executeDERGroups_reply",
 				ReplyType.class);
 		reply.value.getError().add(et);
 
-
-
-		// cxf requires a single (in this case empty) EndDevicegroup
-		EndDeviceGroup group = appContext.getBean(
-				"ChangeExecuteEndDeviceGroup", EndDeviceGroup.class);
-		payload.value.getDERGroups().getEndDeviceGroup().add(group);
+		payload.value = null;
 
 	}
 
@@ -54,8 +50,22 @@ public class ExecuteDERGroups implements DERGroupsPort, ApplicationContextAware 
 			Holder<DERGroupsPayloadType> payload, Holder<ReplyType> reply)
 			throws FaultMessage {
 
-		header.value = appContext.getBean("ChangeExecuteDERGroupsHeader",
+		// default header, will be replaced (probably) during out intercept handler final phase
+		header.value = appContext.getBean("change_executeDERGroups_header",
 				HeaderType.class);
+
+		// default reply, also replaced
+		ErrorType et = appContext.getBean("change_executeDERGroups_error",
+				ErrorType.class);
+		reply.value = appContext.getBean("change_executeDERGroups_reply",
+				ReplyType.class);
+
+		reply.value.getError().add(et);
+
+		// cxf requires a single (in this case empty) EndDevicegroup
+		EndDeviceGroup group = appContext.getBean(
+				"change_executeDERGroups_endDeviceGroup", EndDeviceGroup.class);
+		payload.value.getDERGroups().getEndDeviceGroup().add(group);
 
 	}
 

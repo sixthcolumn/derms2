@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default" name="61968-5/get/QueryDERGroups" resourceRoot="${projectDir}" soapui-version="4.5.2" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="QueryDERGroups_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/QueryDERGroups}QueryDERGroups_Binding" soapVersion="1_1" anonymous="optional" definition="QueryDERGroups.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'get'/QueryDERGroups.wsdl"><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'get'/QueryDERGroups.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="QueryDERGroups" targetNamespace="http://iec.ch/TC57/2017/QueryDERGroups" xmlns:tns="http://iec.ch/TC57/2017/QueryDERGroups" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupQueriesMessage" xmlns:ns="http://iec.ch/TC57/2011/schema/message" xmlns:ns1="http://iec.ch/TC57/2017/DERGroupQueries#" xmlns:ns2="http://iec.ch/TC57/2017/DERGroupQueries#" xmlns:ns3="http://iec.ch/TC57/2017/DERGroupQueries">
+<con:soapui-project activeEnvironment="Default" name="61968-5/get/QueryDERGroups" resourceRoot="${projectDir}" soapui-version="4.5.2" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="QueryDERGroups_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/QueryDERGroups}QueryDERGroups_Binding" soapVersion="1_1" anonymous="optional" definition="QueryDERGroups.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'get'/QueryDERGroups.wsdl"><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'get'/QueryDERGroups.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="QueryDERGroups" targetNamespace="http://iec.ch/TC57/2017/QueryDERGroups" xmlns:tns="http://iec.ch/TC57/2017/QueryDERGroups" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupQueriesMessage" xmlns:ns="http://iec.ch/TC57/2011/schema/message" xmlns:ns1="http://iec.ch/TC57/2017/DERGroupQueries#" xmlns:ns2="http://iec.ch/TC57/2017/DERGroupQueries#" xmlns:ns3="http://iec.ch/TC57/2017/DERGroupQueries">
   <wsdl:types>
     <xs:schema targetNamespace="http://iec.ch/TC57/2017/QueryDERGroups" elementFormDefault="qualified">
       <xs:import namespace="http://iec.ch/TC57/2017/DERGroupQueriesMessage" schemaLocation="xsd/DERGroupQueriesMessage.xsd"/>
@@ -1002,7 +1002,7 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/QueryDERGroups</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroups/QueryDERGroups" name="QueryDERGroups" bindingOperationName="QueryDERGroups" type="Request-Response" outputName="QueryDERGroupsResponse" inputName="QueryDERGroupsRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/QueryDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupQueriesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupQueries#">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/QueryDERGroups</con:endpoint><con:endpoint>http://localhost:8080/61968-5/get/queryDERGroups</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroups/QueryDERGroups" name="QueryDERGroups" bindingOperationName="QueryDERGroups" type="Request-Response" outputName="QueryDERGroupsResponse" inputName="QueryDERGroupsRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/QueryDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupQueriesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupQueries#">
    <soapenv:Header/>
    <soapenv:Body>
       <der:DERGroupQueriesRequestMessage>
@@ -1089,91 +1089,23 @@
          </der:Request>
       </der:DERGroupQueriesRequestMessage>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroups/QueryDERGroups"/></con:call></con:operation></con:interface><con:testSuite name="QueryDERGroups_Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="QueryDERGroups TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="QueryDERGroups"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>QueryDERGroups_Binding</con:interface><con:operation>QueryDERGroups</con:operation><con:request name="QueryDERGroups"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/QueryDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupQueriesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupQueries#">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroups/QueryDERGroups"/></con:call></con:operation></con:interface><con:testSuite name="QueryDERGroups_Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="QueryDERGroups TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="QueryDERGroups"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>QueryDERGroups_Binding</con:interface><con:operation>QueryDERGroups</con:operation><con:request name="QueryDERGroups"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/61968-5/get/queryDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupQueriesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupQueries#">
    <soapenv:Header/>
    <soapenv:Body>
       <der:DERGroupQueriesRequestMessage>
          <der:Header>
-            <mes:Verb>?</mes:Verb>
-            <mes:Noun>?</mes:Noun>
-            <!--Optional:-->
-            <mes:Revision>?</mes:Revision>
-            <!--Optional:-->
-            <mes:ReplayDetection>
-               <mes:Nonce>?</mes:Nonce>
-               <mes:Created>?</mes:Created>
-            </mes:ReplayDetection>
-            <!--Optional:-->
-            <mes:Context>?</mes:Context>
-            <!--Optional:-->
-            <mes:Timestamp>?</mes:Timestamp>
-            <!--Optional:-->
-            <mes:Source>?</mes:Source>
-            <!--Optional:-->
-            <mes:AsyncReplyFlag>?</mes:AsyncReplyFlag>
-            <!--Optional:-->
-            <mes:ReplyAddress>?</mes:ReplyAddress>
-            <!--Optional:-->
-            <mes:AckRequired>?</mes:AckRequired>
-            <!--Optional:-->
-            <mes:User>
-               <mes:UserID>?</mes:UserID>
-               <!--Optional:-->
-               <mes:Organization>?</mes:Organization>
-            </mes:User>
-            <!--Optional:-->
-            <mes:MessageID>?</mes:MessageID>
-            <!--Optional:-->
-            <mes:CorrelationID>?</mes:CorrelationID>
-            <!--Optional:-->
-            <mes:Comment>?</mes:Comment>
-            <!--Zero or more repetitions:-->
-            <mes:Property>
-               <mes:Name>?</mes:Name>
-               <!--Optional:-->
-               <mes:Value>?</mes:Value>
-            </mes:Property>
-            <!--You may enter ANY elements at this point-->
+            <mes:Verb>get</mes:Verb>
+            <mes:Noun>DERGroups</mes:Noun>
+            <mes:Timestamp>2017-05-26T10:54:03-06:00</mes:Timestamp>
+            <mes:MessageID>93b32316-c752-4092-9969-69ece85105b8</mes:MessageID>
          </der:Header>
-         <!--Optional:-->
          <der:Request>
-            <!--Optional:-->
-            <der:StartTime>?</der:StartTime>
-            <!--Optional:-->
-            <der:EndTime>?</der:EndTime>
-            <!--Zero or more repetitions:-->
-            <der:Option>
-               <mes:name>?</mes:name>
-               <!--Optional:-->
-               <mes:value>?</mes:value>
-            </der:Option>
-            <!--Zero or more repetitions:-->
-            <der:ID>?</der:ID>
             <der1:DERGroupQueries>
-               <!--1 or more repetitions:-->
                <der1:EndDeviceGroup>
-                  <!--Optional:-->
-                  <der1:mRID>?</der1:mRID>
-                  <!--Zero or more repetitions:-->
-                  <der1:Names>
-                     <der1:name>?</der1:name>
-                     <!--Optional:-->
-                     <der1:NameType>
-                        <!--Optional:-->
-                        <der1:description>?</der1:description>
-                        <der1:name>?</der1:name>
-                        <!--Optional:-->
-                        <der1:NameTypeAuthority>
-                           <!--Optional:-->
-                           <der1:description>?</der1:description>
-                           <der1:name>?</der1:name>
-                        </der1:NameTypeAuthority>
-                     </der1:NameType>
-                  </der1:Names>
+                  <der1:mRID>1234</der1:mRID>                  
                </der1:EndDeviceGroup>
             </der1:DERGroupQueries>
-            <!--You may enter ANY elements at this point-->
          </der:Request>
       </der:DERGroupQueriesRequestMessage>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroups/QueryDERGroups"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:sensitiveInformation/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroups/QueryDERGroups" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:sensitiveInformation/></con:soapui-project>

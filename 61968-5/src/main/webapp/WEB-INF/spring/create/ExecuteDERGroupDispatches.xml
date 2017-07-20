@@ -1,0 +1,117 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:cxf="http://cxf.apache.org/core"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://cxf.apache.org/core
+	http://cxf.apache.org/schemas/core.xsd
+	http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+
+	<bean id="create_executeDERGroupDispatches_header" name="create_executeDERGroupDispatches_header"
+		class="com.sixthc.part5.create.executeDERGroupDispatches.HeaderType">
+		<property name="verb" value="create" />
+		<property name="noun" value="DERGroups" />
+		<property name="Timestamp" value="#{now.XMLGregorianDate}" />
+		<property name="MessageID" value="#message_id#" />
+		<property name="CorrelationID" value="#correlation_id#" />
+	</bean>
+
+	<!-- This should be part of create_executeDERGroupDispatches_Reply, when 
+		I figure out how to do an array -->
+	<bean id="create_executeDERGroupDispatches_error" name="create_executeDERGroupDispatches_error"
+		class="com.sixthc.part5.create.executeDERGroupDispatches.ErrorType">
+		<property name="code" value="0.0" />
+	</bean>
+
+	<bean id="create_executeDERGroupDispatches_reply" name="create_executeDERGroupDispatches_reply"
+		class="com.sixthc.part5.create.executeDERGroupDispatches.ReplyType">
+		<property name="result" value="OK" />
+	</bean>
+
+	<bean id="create_executeDERGroupDispatch" name="create_executeDERGroupDispatch"
+		class="com.sixthc.part5.create.executeDERGroupDispatches.DERGroupDispatch">
+		<property name="MRID" value="1111-2222" />
+		<property name="EndDeviceGroup">
+			<bean name="EndDeviceGroup"
+				class="com.sixthc.part5.create.executeDERGroupDispatches.EndDeviceGroup">
+				<property name="DERMonitorableParameter">
+					<bean name="DERMonitorableParamater"
+						class="com.sixthc.part5.create.executeDERGroupDispatches.DERMonitorableParameter">
+						<property name="DERParameter" value="ACTIVE_POWER" />
+						<property name="yMultiplier" value="1.1" />
+						<property name="yUnit" value="A"/>
+					</bean>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean name="dispatchSchedule"
+		class="com.sixthc.part5.create.executeDERGroupDispatches.DispatchSchedule">
+		<property name="curveStyleKind" value="CONSTANT_Y_VALUE" />
+		<property name="startTime" value="#{now.XMLGregorianDate}" />
+		<property name="timeIntervalDuration" value="10" />
+		<property name="timeIntervalUnit" value="D"/>
+	</bean>
+
+	<bean name="DERCurveData"
+		class="com.sixthc.part5.create.executeDERGroupDispatches.DERCurveData">
+		<property name="intervalNumber" value="1" />
+		<property name="nominalYValue" value="7" />
+	</bean>
+
+	<bean id="create_executeDERGroupDispatches_endDeviceGroup" name="create_executeDERGroupDispatches_endDeviceGroup"
+		class="com.sixthc.part5.create.executeDERGroupDispatches.EndDeviceGroup">
+		<property name="MRID" value="1111-2222" />
+	</bean>
+
+	<bean id="createExecuteDERGroupDispatchesBean" class="com.sixthc.server.ws.create.ExecuteDERGroupDispatches" />
+
+	<jaxws:endpoint id="create_executeDERGroupDispatchesBean"
+		implementor="#createExecuteDERGroupDispatchesBean" address="/61968-5/create/executeDERGroupDispatches">
+		<jaxws:inInterceptors>
+			<bean class="com.sixthc.interceptor.CIMLoggingInInterceptor">
+				<property name="packageName" value="CIM DER" />
+				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="resultCode" value="success" />
+				<property name="stage" value="serviceIn" />
+			</bean>
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
+				<property name="packageName" value="CIM DER" />
+				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="resultCode" value="success" />
+				<property name="stage" value="serviceOut" />
+			</bean>
+		</jaxws:outInterceptors>
+		<jaxws:outFaultInterceptors>
+			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
+				<property name="packageName" value="CIM DER" />
+				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="resultCode" value="fail" />
+				<property name="stage" value="serviceOutFault" />
+			</bean>
+		</jaxws:outFaultInterceptors>
+		<jaxws:inFaultInterceptors>
+			<bean class="com.sixthc.interceptor.CIMLoggingInInterceptor">
+				<property name="packageName" value="CIM DER" />
+				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="resultCode" value="fail" />
+				<property name="stage" value="serviceInFault" />
+			</bean>
+		</jaxws:inFaultInterceptors>
+		<jaxws:properties>
+			<entry key="schema-validation-enabled" value="true" />
+			<entry key="jaxb-validation-event-handler">
+				<bean class="com.sixthc.interceptor.DetailValidationHandler" />
+			</entry>
+		</jaxws:properties>
+	</jaxws:endpoint>
+
+
+</beans>

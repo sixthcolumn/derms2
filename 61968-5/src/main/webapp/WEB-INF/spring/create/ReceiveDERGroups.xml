@@ -1,0 +1,80 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:cxf="http://cxf.apache.org/core"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://cxf.apache.org/core
+	http://cxf.apache.org/schemas/core.xsd
+	http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+
+	<bean id="create_receiveDERGroups_header" name="create_receiveDERGroups_header"
+		class="com.sixthc.part5.create.ReceiveDERGroups.HeaderType">
+		<property name="verb" value="create" />
+		<property name="noun" value="DERGroups" />
+		<property name="Timestamp" value="#{now.XMLGregorianDate}" />
+		<property name="MessageID" value="#message_id#" />
+		<property name="CorrelationID" value="#correlation_id#" />
+	</bean>
+
+	<!-- This should be part of create_receiveDERGroups_Reply, when I figure 
+		out how to do an array -->
+	<bean id="create_receiveDERGroups_error" name="create_receiveDERGroups_error"
+		class="com.sixthc.part5.create.ReceiveDERGroups.ErrorType">
+		<property name="code" value="0.0" />
+	</bean>
+
+	<bean id="create_receiveDERGroups_reply" name="create_receiveDERGroups_reply"
+		class="com.sixthc.part5.create.ReceiveDERGroups.ReplyType">
+		<property name="result" value="OK" />
+	</bean>
+
+	<bean id="createreceiveDERGroupsBean" class="com.sixthc.server.ws.create.ReceiveDERGroups" />
+
+	<jaxws:endpoint id="create_receiveDERGroupsBean"
+		implementor="#createreceiveDERGroupsBean" address="/61968-5/create/receiveDERGroups">
+		<jaxws:inInterceptors>
+			<bean class="com.sixthc.interceptor.CIMLoggingInInterceptor">
+				<property name="packageName" value="CIM DER" />
+				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="resultCode" value="success" />
+				<property name="stage" value="serviceIn" />
+			</bean>
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
+				<property name="packageName" value="CIM DER" />
+				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="resultCode" value="success" />
+				<property name="stage" value="serviceOut" />
+			</bean>
+		</jaxws:outInterceptors>
+		<jaxws:outFaultInterceptors>
+			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
+				<property name="packageName" value="CIM DER" />
+				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="resultCode" value="fail" />
+				<property name="stage" value="serviceOutFault" />
+			</bean>
+		</jaxws:outFaultInterceptors>
+		<jaxws:inFaultInterceptors>
+			<bean class="com.sixthc.interceptor.CIMLoggingInInterceptor">
+				<property name="packageName" value="CIM DER" />
+				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="resultCode" value="fail" />
+				<property name="stage" value="serviceInFault" />
+			</bean>
+		</jaxws:inFaultInterceptors>
+		<jaxws:properties>
+			<entry key="schema-validation-enabled" value="true" />
+			<entry key="jaxb-validation-event-handler">
+				<bean class="com.sixthc.interceptor.DetailValidationHandler" />
+			</entry>
+		</jaxws:properties>
+	</jaxws:endpoint>
+
+
+</beans>

@@ -15,7 +15,22 @@
 	<import resource="spring/DataSource.xml" />
 	<import resource="spring/Hibernate.xml" />
 
-	<import resource="spring/cim-der.xml" />
-	<import resource="spring/ChangeExecuteDERGroups_data.xml" />
+	<import resource="spring/DateTimeBean.xml" />
+	
+	<import resource="spring/change/ExecuteDERGroups.xml" />
+	<import resource="spring/change/ExecuteDERGroupsOperationSet.xml" />
+	<import resource="spring/change/ReceiveDERGroups.xml" />
+	<import resource="spring/change/ReceiveDERGroupsOperationSet.xml" />
+	<import resource="spring/change/ReceiveDERGroupStatuses.xml" />
+
+	<import resource="spring/create/ExecuteDERGroups.xml" />
+	<import resource="spring/create/ExecuteDERGroupDispatches.xml" />
+	<import resource="spring/create/ReceiveDERGroupForecasts.xml" />
+	<import resource="spring/create/ReceiveDERGroups.xml" />
+	
+	<import resource="spring/get/QueryDERGroupForecasts.xml" />
+	<import resource="spring/get/QueryDERGroups.xml" />
+	<import resource="spring/get/QueryDERGroupStatuses.xml" />
+
 
 </beans>
