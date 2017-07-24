@@ -1,0 +1,34 @@
+<h1>New Test Sequence</h1>
+<%= form_for :test_sequence, url: test_sequence_index_path do |f| %>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label :name %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.text_field :name%>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label :description%>
+    </div>
+    <div class="field-unit__field">
+      <%= f.text_field :description%>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label "Type" %><br>
+    </div>
+    <div class="field-unit__field">
+      <%= f.select(:type) do %>
+        <% [['standalone', 'standalone'], ['proxy', 'proxy']].each do |c| -%>
+          <%= content_tag(:option, c.first, value: c.last) %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="form-actions">
+    <%= f.submit %>
+  </div>
+<% end %>

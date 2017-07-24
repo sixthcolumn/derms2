@@ -1,0 +1,38 @@
+<h1>Edit Test Sequence Step</h1>
+<%= form_for @step do |f| %>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label :message %>
+    </div>
+    <div class="field-unit__field test_seq_step_field-unit__field">
+      <input id="msg_read_only" name="msg_ro", type="text" value=<%= Message.find(@step.in_message_id).name %> disabled>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label :esb_url %>
+    </div>
+    <div class="field-unit__field test_seq_step_field-unit__field">
+      <%= f.text_field :esb_url %>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label :harness_url %>
+    </div>
+    <div class="field-unit__field test_seq_step_field-unit__field">
+      <%= f.text_field :harness_url %>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label :next_step_id%>
+    </div>
+    <div class="field-unit__field test_seq_step_field-unit__field">
+      <%= f.select :next_step_id, TestSeqStep.where(test_sequence_id: @step.test_sequence_id).collect {|x| [ x.id, x.id]} %>
+    </div>
+  </div>
+  <div class="form-actions">
+    <%= f.submit %>
+  </div>
+<% end %>

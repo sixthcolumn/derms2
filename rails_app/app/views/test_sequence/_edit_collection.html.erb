@@ -1,0 +1,42 @@
+<hr>
+<h2>Steps</h2>
+<header class="header">
+  <h1 class="header__heading" id="page-title"><%= content_for(:title) %></h1>
+  <div class="header__actions">
+    <td><%= link_to 'New', new_test_seq_step2_path, method: :get, class: "button" %></td>
+  </div>
+</header>
+<table class="collection-data" aria-labelledby="page-title">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Message Name</th>
+      <th></th>
+      <th></th>
+      <th>Package Group Name</th>
+      <th>ESB URL</th>
+      <th>Harness URL</th>
+    </tr>
+    <tbody>
+      <% @test.test_seq_step.each do |step| %>
+        <tr class="table__row"
+          role="link"
+          tabindex="0"
+          >
+          <td><%= step.test_seq_step_id %></td>
+          <td><%= step.message.name %></td>
+          <td><%= link_to(
+          t("actions.edit"),
+          [:edit, step],
+          class: "action-edit",
+        ) %></td>
+          <td><%= link_to 'Destroy', test_seq_step_path(step),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+          <td><%= step.message.package_group.name %></td>
+          <td><%= step.esb_url %></td>
+          <td><%= step.harness_url %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

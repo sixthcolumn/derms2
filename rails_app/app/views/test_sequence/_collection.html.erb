@@ -1,0 +1,35 @@
+<table class="collection-data" aria-labelledby="page-title">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Created by</th>
+      <th>Type</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tbody>
+      <% tests.each do |test| %>
+        <tr class="table__row"
+          role="link"
+          tabindex="0"
+          >
+          <td><%= test.id %></td>
+          <td><%= test.name %></td>
+          <td><%= test.user_name %> </td>
+          <td><%= test.type %></td>
+          <td><%= test.description %></td>
+          <td><%= link_to(
+          t("actions.edit"),
+          [:edit, test],
+          class: "action-edit",
+        ) %></td>
+          <td><%= link_to 'Destroy', test_sequence_path(test),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</table>

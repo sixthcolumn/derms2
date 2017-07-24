@@ -1,0 +1,59 @@
+<h1>New Test Sequence Step</h1>
+
+<%= form_for :test_seq_step, url: test_seq_step_index_path do |f| %>
+
+<%= f.hidden_field :test_sequence_id, value: @test_sequence_id %>
+
+<div class="field-unit field-unit--string">
+	<div class="field-unit__label">
+ 		<%= f.label :message%>
+ 	</div>
+ 	<div class="field-unit__field">
+      <%= f.select :in_message_id, Message.all.collect {|x| [ x.name, x.id]}, {}%>
+    </div>
+</div>
+
+<div class="field-unit field-unit--string">
+	<div class="field-unit__label">
+    	<%= f.label :esb_url%>
+    </div>
+ 	<div class="field-unit__field">
+    <%= f.text_field :esb_url%>
+  </div>
+</div>
+
+<div class="field-unit field-unit--string">
+	<div class="field-unit__label">
+    	<%= f.label :harness_url%>
+    </div>
+ 	<div class="field-unit__field">
+    <%= f.text_field :harness_url%>
+  </div>
+</div>
+
+<div class="field-unit field-unit--string">
+  <div class="field-unit__label">
+      <%= f.label "Swap Correlation ID" %><br>
+  </div>
+  <div class="field-unit__field">
+    <%= f.select(:swap_corrid_flag) do %>
+        <% [['Yes', 1], ['No', 0]].each do |c| -%>
+          <%= content_tag(:option, c.first, value: c.last) %>
+        <% end %>
+    <% end %>
+  </div>
+</div>
+
+<div class="field-unit field-unit--string">
+	<div class="field-unit__label">
+ 		<%#= f.label :next_step_id, :class => "field-unit__label" %>
+ 	</div>
+ 	<div class="field-unit__field">
+      <%#= f.select :next_step_id, TestSeqStep.where(test_sequence_id: @step.test_sequence_id).collect {|x| [ x.id, x.id]}, {}, :class => "field-unit__field"%>
+    </div>
+</div>
+  
+<div class="form-actions">
+    <%= f.submit %>
+</div>
+<% end %>

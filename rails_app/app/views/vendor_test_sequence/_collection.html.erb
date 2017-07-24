@@ -1,0 +1,36 @@
+<table class="collection-data" aria-labelledby="page-title">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Comment</th>
+      <th>Type</th>
+      <th>Async</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tbody>
+      <% tests.each do |test| %>
+        <tr class="table__row"
+          role="link"
+          tabindex="0"
+          >
+          <td><%= test.id %></td>
+          <td><%= test.test_sequence.name %></td>
+          <td><%= truncate(test.test_sequence.description, :length => 50)%></td>
+          <td><%= truncate(test.comment, :length => 25)%></td>
+          <td><%= test.test_sequence.type %></td>
+          <td><%= test.asynch_flag %></td>
+          <td><%= link_to(
+          t("edit"),
+          [:edit, test],
+          class: "action-edit",
+        ) %>
+            <td><%= link_to 'Destroy', vendor_test_sequence_path(test),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>

@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+  <head>
+    <title>EPRI</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <%#= stylesheet_link_tag :all %>
+    <%#= javascript_include_tag :defaults %>
+    <%#= csrf_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <!-- bjg splash html -->
+  <body>
+    <form id="form_epri" class="wrapper_outer" method="get" action="">
+      <div class="header">
+        <h1 class="site_title">
+          <%= link_to image_tag("header.jpg"), {:controller => 'home', :action => 'index'} %>
+        </h1>
+        <p class="salutation">
+        </p>
+        <div class="nav_pre nav">
+          <!--            <ul>
+                <li><a title="Utility Link" href="#">Utility Link</a></li>
+                <li><a title="Utility Link" href="#">Utility Link</a></li>
+                <li><a title="Utility Link" href="#">Utility Link</a></li>
+            </ul> -->
+        </div>
+        <h2 class="site_subtitle">EPRI InterOp</h2>
+        <hr />
+      </div>
+      <div class="wrapper_content">
+        <%= yield %>
+      </div>
+      <div class="footer">
+        <hr />
+        <div class="nav_post nav">
+          <ul>
+            <li><a title="Careers" href="http://my.epri.com/portal/server.pt?open=512&objID=327&mode=2">Careers</a></li>
+            <li><a title="Contact EPRI" href="http://my.epri.com/portal/server.pt?open=512&objID=213&PageID=265&mode=2">Contact EPRI</a></li>
+            <li><a title="Copyright Policy" href="http://my.epri.com/portal/server.pt?open=512&objID=213&PageID=265&mode=2">Copyright Policy</a></li>
+            <li><a title="Privacy Statement" href="http://mydocs.epri.com/Docs/Webmgmt/Privacy_Statement.htm">Privacy Statement</a></li>
+            <li><a title="Terms of Use" href="http://mydocs.epri.com/Docs/Webmgmt/Terms_of_Use.htm">Terms of Use</a></li>
+          </ul>
+        </div>
+        <p>800.313.3774 or 650.855.2121</p>
+        <address>EPRI 3420 Hillview Avenue, Palo Alto, California 94304</address>
+        <p>© Electric Power Research Institute, Inc. 2001-2010 All rights reserved</p>
+      </div>
+    </form>
+  </body>
+</html>

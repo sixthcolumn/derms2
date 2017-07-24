@@ -1,0 +1,36 @@
+<h1><%= @page_title %></h1>
+<header class="header">
+  <h1 class="header__heading" id="page-title"><%= content_for(:title) %></h1>
+  <div class="header__actions">
+    <td><%= link_to 'Back', :back, class: "button" %></td>
+  </div>
+</header>
+<%= form_for @step do |f| %>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label 'Default ESB URL' %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.text_field :esb_url, value: @step.test_seq_step.esb_url, :readonly => true %>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label 'Default Harness URL (ro)' %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.text_field :harness_url, value: @step.test_seq_step.harness_url, :readonly => true %>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label 'Other Vendor URL' %>
+    </div>
+    <div class="field-unit__field test_seq_step_field-unit__field">
+      <%= f.text_field :out_url %>
+    </div>
+  </div>
+  <div class="form-actions">
+    <%= f.submit %>
+  </div>
+<% end %>

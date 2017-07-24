@@ -1,0 +1,41 @@
+<h1>Edit Test Sequence</h1>
+<header class="header">
+  <h1 class="header__heading" id="page-title"><%= content_for(:title) %></h1>
+  <div class="header__actions">
+    <td><%= link_to 'Back', :back, class: "button" %></td>
+  </div>
+</header>
+<%= form_for @test do |f| %>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label :name %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.text_field :name %>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label :description %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.text_field :description %>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label "Type" %><br>
+    </div>
+    <div class="field-unit__field">
+      <%= f.select(:type) do %>
+        <% [['standalone', 'standalone'], ['proxy', 'proxy']].each do |c| -%>
+          <%= content_tag(:option, c.first, value: c.last) %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+  <div class="form-actions">
+    <%= f.submit %>
+  </div>
+  <%= render "edit_collection",  test: @test %>
+<% end %>

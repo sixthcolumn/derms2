@@ -1,0 +1,38 @@
+<table class="collection-data" aria-labelledby="page-title">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Message</th>
+      <th>Description</th>
+      <th>URL</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tbody>
+      <% messages.each do |m| %>
+        <tr class="table__row"
+          role="link"
+          tabindex="0"
+          >
+          <td><%= m.id %></td>
+          <td><%= m.message.name %></td>
+          <td><%= m.description %></td>
+          <td><%= m.sent_to_url %></td>
+          <td><%= link_to(
+          t("edit"),
+          [:edit, m],
+          class: "action-edit",
+        ) %></td>
+          <td><%= link_to(
+          t("send"),
+          [:sendRequest, m],
+                    class: "action-sendRequest",
+        ) %></td>
+          <td><%= link_to 'Destroy', vendor_request_message_path(m),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

@@ -1,0 +1,139 @@
+<h1><%= @page_title %></h1>
+<header class="header">
+  <h1 class="header__heading" id="page-title"><%= content_for(:title) %></h1>
+  <div class="header__actions">
+    <%= link_to 'Back', :back, class: "button" %>
+    <%= link_to 'Destroy', message_log_path(@log.message_log_id), class: "button",
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+  </div>
+</header>
+<h3>Message</h3>
+<div class="field-unit field-unit--string">
+  <div class="field-unit__label">
+    <label for="response_code">ID : </label>
+  </div>
+  <div class="field-unit__field">
+    <%= @log.message_log_id %>
+  </div>
+</div>
+<div class="field-unit field-unit--string">
+  <div class="field-unit__label">
+    <label for="response_code">Message Name : </label>
+  </div>
+  <div class="field-unit__field">
+    <%= @log.message.name %>
+  </div>
+</div>
+<div class="field-unit field-unit--string">
+  <div class="field-unit__label">
+    <label for="response_code">Create Date : </label>
+  </div>
+  <div class="field-unit__field">
+    <%= @log.create_date %>
+  </div>
+</div>
+<div class="field-unit field-unit--string">
+  <div class="field-unit__label">
+    <label for="response_code">Stage : </label>
+  </div>
+  <div class="field-unit__field">
+    <%= @log.stage %>
+  </div>
+</div>
+<div class="field-unit field-unit--string">
+  <div class="field-unit__label">
+    <label for="response_code">Result Code : </label>
+  </div>
+  <div class="field-unit__field">
+    <%= @log.resultCode %>
+  </div>
+</div>
+<div class="field-unit field-unit--string">
+  <div class="field-unit__label">
+    <label for="response_code">Message ID : </label>
+  </div>
+  <div class="field-unit__field">
+    <%= @log.messageId %>
+  </div>
+</div>
+<div class="field-unit field-unit--string">
+  <div class="field-unit__label">
+    <label for="response_code">Correlation ID : </label>
+  </div>
+  <div class="field-unit__field">
+    <%= @log.correlationID %>
+  </div>
+</div>
+<div class="field-unit field-unit--string">
+  <div class="field-unit__label">
+    <label for="response_code">Address : </label>
+  </div>
+  <div class="field-unit__field">
+    <%= @log.address %>
+  </div>
+</div>
+<div class="field-unit field-unit--string">
+  <div class="field-unit__label">
+    <label for="response_code">Content Type : </label>
+  </div>
+  <div class="field-unit__field">
+    <%= @log.contentType %>
+  </div>
+</div>
+<div class="field-unit field-unit--string">
+  <div class="field-unit__label">
+    <label for="response_code">Fault Code : </label>
+  </div>
+  <div class="field-unit__field">
+    <%= @log.faultCode %>
+  </div>
+</div>
+<div class="field-unit field-unit--string">
+  <div class="field-unit__label">
+    <label for="response_code">Encoding : </label>
+  </div>
+  <div class="field-unit__field">
+    <%= @log.encoding %>
+  </div>
+</div>
+<div class="field-unit field-unit--string">
+  <div class="field-unit__label">
+    <label for="response_code">httpMethod : </label>
+  </div>
+  <div class="field-unit__field">
+    <%= @log.httpMethod %>
+  </div>
+</div>
+<div class="field-unit field-unit--string">
+  <div class="field-unit__label">
+    <label for="response_code">Response Code : </label>
+  </div>
+  <div class="field-unit__field">
+    <%= @log.responseCode %>
+  </div>
+</div>
+<div class="field-unit field-unit--string">
+  <div class="field-unit__label">
+    <label for="response_code">Result Code : </label>
+  </div>
+  <div class="field-unit__field">
+    <%= @log.resultCode %>
+  </div>
+</div>
+<div class="field-unit field-unit--string">
+  <div class="field-unit__label">
+    <label for="response_code">Operation : </label>
+  </div>
+  <div class="field-unit__field">
+    <%= @log.operation %>
+  </div>
+</div>
+<div class="field-unit field-unit--string">
+  <div class="field-unit__label">
+    <label for="response_code">Payload : </label>
+  </div>
+  <div class="field-unit__field">
+    <pre class="pre_message"><%= formatXML(@log.payload) %></pre>
+  </div>
+</div>

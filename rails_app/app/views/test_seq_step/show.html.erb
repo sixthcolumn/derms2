@@ -1,0 +1,21 @@
+<div class="collection-data">
+  <table>
+    <tr>
+      <td><strong>ID:</strong></td>
+      <td><%= @ts.test_sequence_id%></td>
+    </tr>
+    <tr>
+      <td><strong>Name:</strong></td>
+      <td><%= @ts.name %></td>
+    </tr>
+    <tr>
+      <td><strong>Description:</strong></td>
+      <td><%= @ts.description %></td>
+    </tr>
+
+    </table>
+
+    <%= render "show_collection",  ts: @ts %>
+
+
+</div>

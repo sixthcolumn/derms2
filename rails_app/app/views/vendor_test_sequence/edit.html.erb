@@ -1,0 +1,61 @@
+<h1>Edit Vendor Test Sequence</h1>
+<header class="header">
+  <h1 class="header__heading" id="page-title"><%= content_for(:title) %></h1>
+  <div class="header__actions">
+    <td><%= link_to 'Back', vendor_test_sequence_index_path(), class: "button" %></td>
+  </div>
+</header>
+<%= form_for @test do |f| %>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label 'Name' %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.text_field :name, value: @test.test_sequence.name, :readonly => true %>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label 'Description' %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.text_field :description, value: @test.test_sequence.description, :readonly => true %>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label 'Comment' %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.text_field :comment, value: @test.comment %>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label 'Type' %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.text_area :type, value: @test.test_sequence.type%>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label :user_id%>
+    </div>
+    <div class="field-unit__field test_seq_step_field-unit__field">
+      <%= f.select :user_id, User.where(vendor_id: @user.vendor_id).collect {|x| [ x.name, x.id ]} %>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label 'Asynch' %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.check_box :asynch_flag %>
+    </div>
+  </div>
+  <div class="form-actions">
+    <%= f.submit %>
+  </div>
+  <%= render "edit_collection",  test: @test %>
+<% end %>

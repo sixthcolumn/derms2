@@ -1,0 +1,37 @@
+<%#
+# Application Layout
+
+This view template is used as the layout
+for every page that Administrate generates.
+
+By default, it renders:
+- Sidebar for navigation
+- Content for a search bar
+  (if provided by a `content_for` block in a nested page)
+- Flashes
+- Links to stylesheets and Javascripts
+%>
+<table class="collection-data" aria-labelledby="page-title">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Message ID</th>
+      <th>Message</th>
+      <th>Create Date</th>
+      <th></th>
+    </tr>
+    <tbody>
+      <% @logs.each do |log| %>
+        <tr class="table__row"
+          role="link"
+          tabindex="0"
+          >
+          <td><%= log.request_log_id %></td>
+          <td><%= log.message_id %></td>
+          <td class="request_log_message"><%= log.message %></td>
+          <td><%= log.create_date %> </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</table>

@@ -1,0 +1,9 @@
+<h1>Vendor Request Message</h1>
+<header class="header">
+  <h1 class="header__heading" id="page-title"><%= content_for(:title) %></h1>
+  <div class="header__actions">
+    <td><%= link_to 'New', new_vendor_test_sequence_path, method: :get, class: "button" %></td>
+  </div>
+</header>
+
+<%= render "collection",  tests: @tests %>

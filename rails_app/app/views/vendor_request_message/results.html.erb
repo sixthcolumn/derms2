@@ -1,0 +1,27 @@
+<h1><%= @page_title %></h1>
+<header class="header">
+  <h1 class="header__heading" id="page-title"><%= content_for(:title) %></h1>
+  <div class="header__actions">
+    <td><%= link_to 'Back', :back, class: "button" %></td>
+  </div>
+</header>
+<div class="field-unit field-unit--string">
+  <div class="field-unit__label">
+    <label for="response_code">Response Code : </label>
+  </div>
+  <div class="field-unit__field">
+    <%= @response.code %>
+  </div>
+</div>
+<div class="field-unit field-unit--string">
+  <div class="field-unit__label">
+    <label for="message">SOAP Message :</label>
+  </div>
+  <pre class="pre_message"><%= formatXML(@response.message) %></pre>
+</div>
+<div class="field-unit field-unit--string">
+  <div class="field-unit__label">
+    <label for="response_code">SOAP Response :</label>
+  </div>
+  <pre class="pre_message"><%= formatXML(@response.body) %></pre>
+</div>

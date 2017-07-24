@@ -1,0 +1,27 @@
+<table class="collection-data" aria-labelledby="page-title">
+ 
+ <table>
+  <tr>
+    <th>ID</th>
+    <th>Message Name</th>
+    <th>Package Group Name</th>
+    <th>ESB URL</th>
+    <th>Harness URL</th>
+    <th></th>
+  </tr>
+
+  <tbody>
+    <% @ts.test_seq_step.each do |step| %>
+      <tr class="table__row"
+          role="link"
+          tabindex="0"
+          >
+        <td><%= step.test_seq_step_id %></td>
+        <td><%= step.message.name %></td>
+        <td><%= step.message.package_group.name %></td>
+        <td><%= step.esb_url %></td>
+        <td><%= step.harness_url %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

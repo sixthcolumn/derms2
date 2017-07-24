@@ -1,0 +1,30 @@
+<h1>New Vendor</h1>
+<%= form_for :vendor, url: vendors_path do |f| %>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label :name, :class => "field-unit__label" %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.text_field :name, :class => "field-unit__field" %>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label :default_url, :class => "field-unit__label" %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.text_field :default_url, :class => "field-unit__field" %>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label "Packages", :class => "field-unit__label" %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.select :package_ids, Package.all.collect {|x| [ x.name, x.id]}, {} , :multiple => true, :class => "field-unit__field"%>
+    </div>
+  </div>
+  <div class="form-actions">
+    <%= f.submit %>
+  </div>
+<% end %>

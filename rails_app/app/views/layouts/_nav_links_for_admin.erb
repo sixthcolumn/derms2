@@ -1,0 +1,5 @@
+<% if user_signed_in? %>
+  <% if current_user.try(:admin?) || current_user.try(:super?) %>
+    <li class='admin_nav'><%= link_to 'Users', '/admin' %></li>
+  <% end %>
+<% end %>

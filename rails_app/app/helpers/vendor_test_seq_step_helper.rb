@@ -1,0 +1,2 @@
+module VendorTestSeqStepHelper
+end

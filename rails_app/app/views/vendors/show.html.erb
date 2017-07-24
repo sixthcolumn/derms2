@@ -1,0 +1,22 @@
+
+<div class="collection-data">
+	<table>
+		<tr>
+  		<td><strong>ID:</strong></td>
+  		<td><%= @vendor.id%></td>
+  	</tr>
+  	<tr>
+  		<td><strong>Name:</strong></td>
+  		<td><%= @vendor.name %></td>
+  	</tr>
+
+  	<tr>
+  		<td><strong>Packages:</strong></td>
+  		<td><%= @vendor.packages.map { |p| p.name }.join(", ") %></td>
+  	</tr>
+  	</table>
+
+
+</div>
+
+ 

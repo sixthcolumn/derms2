@@ -1,0 +1,46 @@
+<%#
+# Application Layout
+
+This view template is used as the layout
+for every page that Administrate generates.
+
+By default, it renders:
+- Sidebar for navigation
+- Content for a search bar
+  (if provided by a `content_for` block in a nested page)
+- Flashes
+- Links to stylesheets and Javascripts
+%>
+<table class="collection-data" aria-labelledby="page-title">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Create Date</th>
+      <th>Stage</th>
+      <th>Result</th>
+      <th>Message ID</th>
+      <th>Correlation ID</th>
+      <th></th>
+    </tr>
+    <tbody>
+      <% @logs.each do |log| %>
+        <tr class="table__row"
+          role="link"
+          tabindex="0"
+          >
+          <td><%= log.message_log_id %></td>
+          <td><%= link_to log.message.name, message_log_path(log) %>.</td>
+          <td><%= log.create_date %> </td>
+          <td><%= log.stage %> </td>
+          <td><%= log.resultCode %></td>
+          <td><%= log.messageId %></td>
+          <td><%= log.correlationID %></td>
+          <td><%= link_to 'Destroy', message_log_path(log),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</table>

@@ -1,0 +1,38 @@
+<table class="collection-data" aria-labelledby="page-title">
+ 
+ <table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Default URL</th>
+    <th>Packages</th>
+    <th>URL</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <tbody>
+    <% vendors.each do |vendor| %>
+      <tr class="table__row"
+          role="link"
+          tabindex="0"
+          >
+        <td><%= vendor.id %></td>
+        <td><%= vendor.name %></td>
+         <td><%= vendor.default_url %></td>
+        <td><%= vendor.packages.map { |p| p.name }.join(", ") %></td>
+        <td><%= vendor.default_url %></td>
+
+        <td><%= link_to(
+          t("actions.edit"),
+          [:edit, vendor],
+          class: "action-edit",
+        ) %></td>
+
+        <td><%= link_to 'Destroy', vendor_path(vendor),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
