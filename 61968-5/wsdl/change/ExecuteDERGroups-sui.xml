@@ -1250,7 +1250,7 @@
          <der:Payload>
             <der1:DERGroups>
                <der1:EndDeviceGroup>
-                  <der1:mRID>1234</der1:mRID>
+                  <der1:mRID> </der1:mRID>
                   <der1:description>sixc test</der1:description>
                   <der1:DERFunction>
                      <der1:connectDisconnect>true</der1:connectDisconnect>

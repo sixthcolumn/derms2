@@ -1,0 +1,48 @@
+<%#
+# Application Layout
+
+This view template is used as the layout
+for every page that Administrate generates.
+
+By default, it renders:
+- Sidebar for navigation
+- Content for a search bar
+  (if provided by a `content_for` block in a nested page)
+- Flashes
+- Links to stylesheets and Javascripts
+%>
+<table class="collection-data" aria-labelledby="page-title">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Package</th>
+      <th>Default Message</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tbody>
+      <% @messages.each do |message| %>
+        <tr class="table__row"
+          role="link"
+          tabindex="0"
+          >
+          <td><%= message.message_id %></td>
+          <td><%= message.name %></td>
+          <td><%= message.package_group.name %></td>
+          <td><%= message.selected_message.description unless message.selected_message.nil? %></td>
+          <td><%= link_to(
+          t("edit"),
+          [:edit, message],
+          class: "action-edit",
+        ) %></td>
+          <td></td>
+          <td></td>
+          <td><%= link_to 'Destroy', message_path(message),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</table>

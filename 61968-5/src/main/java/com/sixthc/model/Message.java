@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -26,6 +27,10 @@ public class Message {
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="package_group_id")
 	private PkgGroup pkgGroup;
+	
+	@OneToOne(fetch=FetchType.LAZY)
+	@JoinColumn(name="message_reply_id", nullable=true)
+	private MessageReply msgReply;
 	
 	
 	public int getId() {
@@ -59,5 +64,12 @@ public class Message {
 	public void setPkgGroup(PkgGroup pkgGroup) {
 		this.pkgGroup = pkgGroup;
 	}
+	public MessageReply getMsgReply() {
+		return msgReply;
+	}
+	public void setMsgReply(MessageReply msgReply) {
+		this.msgReply = msgReply;
+	}
 
+	
 }

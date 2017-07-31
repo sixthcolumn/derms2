@@ -16,8 +16,8 @@
 		<property name="verb" value="create" />
 		<property name="noun" value="DERGroups" />
 		<property name="Timestamp" value="#{now.XMLGregorianDate}" />
-		<property name="MessageID" value="#message_id#" />
-		<property name="CorrelationID" value="#correlation_id#" />
+		<property name="MessageID" value="#{ T(java.util.UUID).randomUUID().toString() }"/>
+
 	</bean>
 
 	<!-- This should be part of create_receiveDERGroupForecasts_Reply, when I figure 

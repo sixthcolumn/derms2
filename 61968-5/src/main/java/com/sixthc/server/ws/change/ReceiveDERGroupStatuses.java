@@ -29,10 +29,14 @@ public class ReceiveDERGroupStatuses implements DERGroupStatusesPort,
 			Holder<DERGroupStatusesPayloadType> payload, Holder<ReplyType> reply)
 			throws FaultMessage {
 
-		// default header, will be replaced (probably) during out intercept handler final phase
+		// give them their own messageID back as correlation id
+		String messageID = header.value.getMessageID();
+		
 		header.value = appContext.getBean("change_receiveDERGroupStatuses_header",
 				HeaderType.class);
 
+		header.value.setCorrelationID(messageID);
+		
 		// default reply, also replaced
 		ErrorType et = appContext.getBean("change_receiveDERGroupStatuses_error",
 				ErrorType.class);

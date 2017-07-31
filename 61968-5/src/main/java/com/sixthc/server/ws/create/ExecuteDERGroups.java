@@ -23,10 +23,14 @@ public class ExecuteDERGroups implements DERGroupsPort, ApplicationContextAware 
 			Holder<DERGroupsPayloadType> payload, Holder<ReplyType> reply)
 			throws FaultMessage {
 		
-		// default header, will be replaced (probably) during out intercept handler final phase
+		// give them their own messageID back as correlation id
+		String messageID = header.value.getMessageID();
+
 		header.value = appContext.getBean("create_executeDERGroups_header",
 				HeaderType.class);
-
+				
+		header.value.setCorrelationID(messageID);
+				
 		// default reply, also replaced
 		ErrorType et = appContext.getBean("create_executeDERGroups_error", ErrorType.class);
 		reply.value = appContext.getBean("create_executeDERGroups_reply",
@@ -35,11 +39,6 @@ public class ExecuteDERGroups implements DERGroupsPort, ApplicationContextAware 
 		
 		payload.value = null;
 
-//		// cxf requires a single (in this case empty) EndDevicegroup
-//		EndDeviceGroup group = appContext.getBean(
-//				"create_executeDERGroups_endDeviceGroup", EndDeviceGroup.class);
-//		payload.value.getDERGroups().getEndDeviceGroup().clear();
-//		payload.value.getDERGroups().getEndDeviceGroup().add(group);
 
 
 	}

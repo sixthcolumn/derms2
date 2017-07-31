@@ -29,10 +29,15 @@ public class ReceiveDERGroupsOperationSet implements DERGroupsOperationSetPort, 
 	public void executedDERGroupsOperationSet(Holder<HeaderType> header,
 			Holder<DERGroupsPayloadType> payload, Holder<ReplyType> reply)
 			throws FaultMessage {
-
-		// default header, will be replaced (probably) during out intercept handler final phase
+		
+		// give them their own messageID back as correlation id
+		String messageID = header.value.getMessageID();
+		
 		header.value = appContext.getBean("change_receiveDERGroupsOperationSet_header",
 				HeaderType.class);
+		
+		header.value.setCorrelationID(messageID);
+
 		
 		// default reply, also replaced
 		ErrorType et = appContext.getBean("change_receiveDERGroupsOperationSet_error", ErrorType.class);

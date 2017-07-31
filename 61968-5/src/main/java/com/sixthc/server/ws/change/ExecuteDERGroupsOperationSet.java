@@ -23,11 +23,11 @@ import com.sixthc.part5.change.ExecuteDERGroupsOperationSet.OperationType;
 import com.sixthc.part5.change.ExecuteDERGroupsOperationSet.ReplyType;
 import com.sixthc.part5.change.ExecuteDERGroupsOperationSet.RequestType;
 
-
-public class ExecuteDERGroupsOperationSet implements DERGroupsOperationSetPort, ApplicationContextAware {
+public class ExecuteDERGroupsOperationSet implements DERGroupsOperationSetPort,
+		ApplicationContextAware {
 
 	ApplicationContext appContext;
-	
+
 	@Override
 	public void setApplicationContext(ApplicationContext arg0)
 			throws BeansException {
@@ -39,17 +39,22 @@ public class ExecuteDERGroupsOperationSet implements DERGroupsOperationSetPort, 
 			RequestType request, Holder<DERGroupsPayloadType> payload,
 			Holder<ReplyType> reply) throws FaultMessage {
 
+		// give them their own messageID back as correlation id
+		String messageID = header.value.getMessageID();
 
 		// default header, will be replaced (probably) during out intercept handler final phase
-		header.value = appContext.getBean("change_executeDERGroupsOperationSet_header",
-				HeaderType.class);
+		header.value = appContext.getBean(
+				"change_executeDERGroupsOperationSet_header", HeaderType.class);
+
+		header.value.setCorrelationID(messageID);
 		
 		// default reply, also replaced
-		ErrorType et = appContext.getBean("change_executeDERGroupsOperationSet_error", ErrorType.class);
-		reply.value = appContext.getBean("change_executeDERGroupsOperationSet_reply",
-				ReplyType.class);
+		ErrorType et = appContext.getBean(
+				"change_executeDERGroupsOperationSet_error", ErrorType.class);
+		reply.value = appContext.getBean(
+				"change_executeDERGroupsOperationSet_reply", ReplyType.class);
 		reply.value.getError().add(et);
-				
+
 		payload.value = new DERGroupsPayloadType();
 
 	}

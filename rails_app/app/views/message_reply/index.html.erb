@@ -1,0 +1,51 @@
+<%#
+# Application Layout
+
+This view template is used as the layout
+for every page that Administrate generates.
+
+By default, it renders:
+- Sidebar for navigation
+- Content for a search bar
+  (if provided by a `content_for` block in a nested page)
+- Flashes
+- Links to stylesheets and Javascripts
+%>
+<header class="header">
+  <h1 class="header__heading" id="page-title"><%= content_for(:title) %></h1>
+  <div class="header__actions">
+    <td><%= link_to 'New', new_message_reply_path, method: :get, class: "button" %></td>
+  </div>
+</header>
+<table class="collection-data" aria-labelledby="page-title">
+  <table>
+    <tr>
+      <th>Message</th>
+      <th>Description</th>
+      <th>SOAP</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tbody>
+      <% @message_replys.each do |reply| %>
+        <tr class="table__row"
+          role="link"
+          tabindex="0"
+          style="table-layout:fixed"
+          >
+          <td style="padding-right:10px"><%= reply.message.name unless reply.message.nil? %></td>
+          <td style="padding-right:10px"><%= reply.description %></td>
+          <td style="word-wrap:break-word;white-space:normal"><pre style="width:500px;height:150px"><%= reply.message_text %></pre></td>
+          <td style="padding-right:10px"><%= link_to(
+          t("edit"),
+          [:edit, reply],
+          class: "action-edit",
+        ) %></td>
+          <td style="padding-right:10px;width=10%"><%= link_to 'Destroy', message_reply_path(reply),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</table>

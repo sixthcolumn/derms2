@@ -14,6 +14,8 @@ import org.apache.log4j.Logger;
 
 public abstract class MessageChangeInterceptor extends AbstractPhaseInterceptor<Message> {
 
+	String messageName;
+	
     public MessageChangeInterceptor() {
         super(Phase.PRE_STREAM);
         addBefore(SoapPreProtocolOutInterceptor.class.getName());
@@ -120,4 +122,14 @@ public abstract class MessageChangeInterceptor extends AbstractPhaseInterceptor<
         protected void onWrite() throws IOException {
         }
     }
+
+	public String getMessageName() {
+		return messageName;
+	}
+
+	public void setMessageName(String messageName) {
+		this.messageName = messageName;
+	}
+    
+    
 }

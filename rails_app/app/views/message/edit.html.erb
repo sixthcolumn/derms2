@@ -1,0 +1,44 @@
+<h1>Edit Message</h1>
+<header class="header">
+  <h1 class="header__heading" id="page-title"><%= content_for(:title) %></h1>
+  <div class="header__actions">
+    <td><%= link_to 'Back', message_index_path, class: "button" %></td>
+  </div>
+</header>
+<%= form_for @message do |f| %>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label :name %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.text_field :name %>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label :package_group%>
+    </div>
+    <div class="field-unit__field message_field-unit__field">
+      <%= f.select :package_group_id, PackageGroup.where(package_group_id: @message.package_group_id).collect {|x| [ x.name, x.package_group_id ]} %>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label :message_reply%>
+    </div>
+    <div class="field-unit__field message_field-unit__field">
+      <%= f.select :message_reply_id, MessageReply.where(message_id: @message.message_id).collect {|x| [ x.description, x.message_reply_id ]}, {:include_blank => 'None'} %>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label :default_message_txt %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.text_area :default_message_txt %>
+    </div>
+  </div>
+  <div class="form-actions">
+    <%= f.submit %>
+  </div>
+<% end %>

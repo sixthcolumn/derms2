@@ -22,10 +22,16 @@ public class ReceiveDERGroups implements DERGroupsPort, ApplicationContextAware 
 			Holder<DERGroupsPayloadType> payload, Holder<ReplyType> reply)
 			throws FaultMessage {
 
+		
+		// give them their own messageID back as correlation id
+		String messageID = header.value.getMessageID();
+
 		// default header, will be replaced (probably) during out intercept handler final phase
 		header.value = appContext.getBean(
 				"change_receiveDERGroups_header", HeaderType.class);
-
+		
+		header.value.setCorrelationID(messageID);
+		
 		// default reply, also replaced
 		ErrorType et = appContext.getBean(
 				"change_receiveDERGroups_error", ErrorType.class);

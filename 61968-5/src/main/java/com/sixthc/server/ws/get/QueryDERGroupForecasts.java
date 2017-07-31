@@ -31,9 +31,15 @@ public class QueryDERGroupForecasts implements QueryDERGroupForecastsPort,
 		
 		DERGroupForecastQueriesResponseMessageType msg = new DERGroupForecastQueriesResponseMessageType();
 		
+		// give them their own messageID back as correlation id
+		String messageID = msg.getHeader().getMessageID();
+
 		HeaderType header = appContext.getBean(
 				"get_queryDERGroupForecasts_header", HeaderType.class);
 		msg.setHeader(header);
+		
+		header.setCorrelationID(messageID);
+		
 		
 		ReplyType reply = appContext.getBean(
 		"get_queryDERGroupForecasts_reply", ReplyType.class);

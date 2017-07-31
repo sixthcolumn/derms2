@@ -1,0 +1,38 @@
+<h1>Edit Message Reply</h1>
+<header class="header">
+  <h1 class="header__heading" id="page-title"><%= content_for(:title) %></h1>
+  <div class="header__actions">
+    <td><%= link_to 'Back', message_reply_index_path, class: "button" %></td>
+  </div>
+</header>
+<%= form_for @message_replys do |f| %>
+
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label :message%>
+    </div>
+    <div class="field-unit__field">
+      <%= f.select :message_id, Message.all.collect {|x| [ x.name, x.id]}, {},
+      :onChange => "javascript:setMessageText($(this).val())"%>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label :description%>
+    </div>
+    <div class="field-unit__field message_field-unit__field">
+      <%= f.text_field :description %>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label :message_text %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.text_area :message_text %>
+    </div>
+  </div>
+  <div class="form-actions">
+    <%= f.submit %>
+  </div>
+<% end %>

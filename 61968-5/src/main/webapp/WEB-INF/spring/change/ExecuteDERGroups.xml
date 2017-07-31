@@ -10,16 +10,13 @@
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
-	<import resource="../DateTimeBean.xml" />
-
 
 	<bean id="change_executeDERGroups_header" name="change_executeDERGroups_header"
 		class="com.sixthc.part5.change.ExecuteDERGroups.HeaderType">
 		<property name="verb" value="change" />
 		<property name="noun" value="DERGroups" />
 		<property name="Timestamp" value="#{now.XMLGregorianDate}" />
-		<property name="MessageID" value="#message_id#" />
-		<property name="CorrelationID" value="#correlation_id#" />
+		<property name="MessageID" value="#{ T(java.util.UUID).randomUUID().toString() }"/>
 	</bean>
 
 	<!-- This should be part of Change_ExecuteDERGroups_Reply, when I figure 
@@ -47,24 +44,30 @@
 			<bean class="com.sixthc.interceptor.CIMLoggingInInterceptor">
 				<property name="packageName" value="CIM DER" />
 				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="messageName" value="CIM_DER(changeExecuteDERGroups)" />
 				<property name="resultCode" value="success" />
 				<property name="stage" value="serviceIn" />
 			</bean>
-			<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor" />
-		</jaxws:inInterceptors>
+			<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor">
+				<property name="messageName" value="CIM_DER(changeExecuteDERGroups)" />
+			</bean>		</jaxws:inInterceptors>
 		<jaxws:outInterceptors>
 			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
 				<property name="packageName" value="CIM DER" />
 				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="messageName" value="CIM_DER(changeExecuteDERGroups)" />
 				<property name="resultCode" value="success" />
 				<property name="stage" value="serviceOut" />
 			</bean>
-			<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor" />
+			<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor">
+				<property name="messageName" value="CIM_DER(changeExecuteDERGroups)" />
+			</bean>
 		</jaxws:outInterceptors>
 		<jaxws:outFaultInterceptors>
 			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
 				<property name="packageName" value="CIM DER" />
 				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="messageName" value="CIM_DER(changeExecuteDERGroups)" />
 				<property name="resultCode" value="fail" />
 				<property name="stage" value="serviceOutFault" />
 			</bean>
@@ -73,6 +76,7 @@
 			<bean class="com.sixthc.interceptor.CIMLoggingInInterceptor">
 				<property name="packageName" value="CIM DER" />
 				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="messageName" value="CIM_DER(changeExecuteDERGroups)" />
 				<property name="resultCode" value="fail" />
 				<property name="stage" value="serviceInFault" />
 			</bean>

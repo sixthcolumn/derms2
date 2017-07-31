@@ -1,0 +1,1012 @@
+3899 [localhost-startStop-1] DEBUG com.sixthc.hbm.Crew  - setId : null
+14217 [http-bio-8080-exec-1] ERROR com.sixthc.dao.impl.EpriLogDaoImpl  - findbyName for Meter OnDemand failed
+14248 [http-bio-8080-exec-1] DEBUG com.sixthc.dao.Sequence  - calling get message id sequence
+14287 [http-bio-8080-exec-1] DEBUG com.sixthc.interceptor.LoggingInInterceptor  - retrieved sequence message_id => 0
+14367 [http-bio-8080-exec-1] DEBUG com.sixthc.interceptor.LoggingInInterceptor  - DBLog id log = 952
+14820 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1222
+14820 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.OrganizationNames.setName : names name
+14820 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : name type name
+14820 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : name type
+14820 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setName : name type name
+14820 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setDescription : name type auth
+14833 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1222
+14847 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Organization  - setID : 124
+14851 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.NameTypeAuthority  - setId : 94
+14852 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : name type
+14852 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : name type name
+14854 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Asset  - setId : 108
+14856 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.OrganizationNames  - setId : 79
+14866 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1255
+14866 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.OrganizationNames.setName : org1
+14867 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : orgn51
+14867 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : orgnt
+14867 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setName : orgnt3
+14867 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setDescription : orgnt2
+14867 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setAreacode : 231
+14867 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCitycode : 122
+14867 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCountrycode : 011
+14868 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setExtension : 375
+14868 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setLocalNumber : 271833
+14868 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+14868 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : na
+14868 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 12
+14868 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : Est
+14869 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : Nt
+14869 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 102
+14869 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+14869 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : North
+14869 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+14869 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : Cary
+14869 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : 234
+14870 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : ?
+14871 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setBlock : null
+14871 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCoordSystem : null
+14871 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCounty : null
+14871 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setDirections : null
+14871 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setLot : null
+14871 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress1 : null
+14871 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress2 : null
+14872 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+14872 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : na
+14872 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 12
+14872 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : Nt
+14872 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : Est
+14872 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 102
+14872 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdType : null
+14873 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Attachment  - setSdWithinTownLimitsFlag : 0
+14873 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSubdivision : null
+14873 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : North
+14873 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+14873 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : Cary
+14873 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPobox : null
+14873 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPostalCode : null
+14873 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdRegion : null
+14874 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : ?
+14874 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdStateProvince : null
+14874 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTimeZone : null
+14874 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTownshipName : null
+14889 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setAreacode : 231
+14889 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCitycode : 122
+14889 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCountrycode : 011
+14890 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setExtension : 375
+14890 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setLocalNumber : 271833
+14890 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setPhoneType : null
+14890 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Phone  - setPiorityOrder : null
+14892 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Phone  - setId : 44
+14892 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1255
+14894 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Organization  - setID : 125
+14896 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.NameTypeAuthority  - setId : 95
+14896 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : orgnt
+14896 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : orgn51
+14898 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Asset  - setId : 109
+14900 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.OrganizationNames  - setId : 80
+14903 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setMrid : 7777
+14903 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setCreatedBy : WMS
+14904 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setKind : construction
+14904 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setWorkOrderName : NOT SET
+14904 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatus : TBD
+14904 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrderNames.setName : work name
+14905 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : work name type name
+14905 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : work name type desc
+14905 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setName : work name
+14905 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setDescription : work name type auth desc
+14905 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrder  - setPriorityRank : 1
+14906 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setPriorityJustification : na
+14906 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setPriorityType : business
+14913 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrder  - setRequestDatetime : 2011-03-03 12:07:56.59
+14913 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatusKind : approved
+14914 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatus : TBD
+14914 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Hazards.setHazardName : f
+14914 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Hazards.setHazardName : g
+14914 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCoordSystem : urn1
+14914 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : EagleNest
+14915 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : cd1
+14915 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 101
+14915 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : West
+14915 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : North
+14915 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 101
+14915 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : EagleNest
+14915 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : cd
+14916 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+14916 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : USA
+14916 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : A
+14916 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : NC
+14916 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setZposition : 102
+14916 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setXposition : 709
+14917 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setYposition : 443
+14917 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setZposition : 104
+14917 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setXposition : 102
+14917 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setYposition : 103
+14918 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setBlock : null
+14918 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCoordSystem : urn1
+14919 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCounty : null
+14919 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setDirections : null
+14919 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setLot : null
+14919 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress1 : null
+14919 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress2 : null
+14919 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : EagleNest
+14919 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : cd1
+14919 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 101
+14919 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : North
+14920 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : West
+14920 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 101
+14920 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdType : null
+14920 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Attachment  - setSdWithinTownLimitsFlag : 0
+14920 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSubdivision : null
+14920 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : cd
+14920 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+14920 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : USA
+14921 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPobox : null
+14921 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPostalCode : null
+14921 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdRegion : null
+14921 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : NC
+14921 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdStateProvince : null
+14921 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTimeZone : null
+14921 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTownshipName : null
+14937 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setComments : null
+14937 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setCreatedBy : WMS
+14937 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setDescription : null
+14937 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setInternalBuildingName : null
+14938 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setInternalBuildingNum : null
+14938 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setInternalFloor : null
+14938 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setInternalRoomNum : null
+14938 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setKind : construction
+14938 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setLocationComment : null
+14938 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setMrid : 7777
+14938 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setPriorityJustification : na
+14938 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrder  - setPriorityRank : 1
+14938 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setPriorityType : business
+14938 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrder  - setRequestDatetime : 2011-03-03 12:07:56.59
+14939 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatus : TBD
+14939 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatusKind : approved
+14939 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setTitle : null
+14939 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrder  - setUpdatedAt : not set
+14939 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setUpdatedBy : null
+14939 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setWorkOrderName : NOT SET
+14944 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Hazards.setHazardName : g
+14946 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Hazards  - setId : 30
+14948 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrderHazards  - setId : 29
+14949 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Hazards.setHazardName : f
+14950 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Hazards  - setId : 31
+14952 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrderHazards  - setId : 30
+14981 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.NameTypeAuthority  - setId : 96
+14982 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : work name type desc
+14982 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : work name type name
+14983 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Asset  - setId : 110
+14986 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setId : 9
+14987 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setId : 10
+15068 [http-bio-8080-exec-1] DEBUG com.sixthc.interceptor.LoggingOutInterceptor  - onClose
+15079 [http-bio-8080-exec-1] ERROR com.sixthc.dao.impl.EpriLogDaoImpl  - findbyName for Meter OnDemand failed
+3893 [localhost-startStop-1] DEBUG com.sixthc.hbm.Crew  - setId : null
+14018 [http-bio-8080-exec-1] ERROR com.sixthc.dao.impl.EpriLogDaoImpl  - findbyName for Meter OnDemand failed
+14039 [http-bio-8080-exec-1] DEBUG com.sixthc.dao.Sequence  - calling get message id sequence
+14070 [http-bio-8080-exec-1] DEBUG com.sixthc.interceptor.LoggingInInterceptor  - retrieved sequence message_id => 0
+14141 [http-bio-8080-exec-1] DEBUG com.sixthc.interceptor.LoggingInInterceptor  - DBLog id log = 954
+14556 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1222
+14556 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.OrganizationNames.setName : names name
+14556 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : name type name
+14556 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : name type
+14557 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setName : name type name
+14557 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setDescription : name type auth
+14568 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1222
+14583 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Organization  - setID : 126
+14587 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.NameTypeAuthority  - setId : 97
+14588 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : name type
+14588 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : name type name
+14590 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Asset  - setId : 111
+14592 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.OrganizationNames  - setId : 81
+14601 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1255
+14601 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.OrganizationNames.setName : org1
+14601 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : orgn51
+14601 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : orgnt
+14601 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setName : orgnt3
+14601 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setDescription : orgnt2
+14602 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setAreacode : 231
+14602 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCitycode : 122
+14602 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCountrycode : 011
+14602 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setExtension : 375
+14602 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setLocalNumber : 271833
+14603 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+14603 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : na
+14603 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 12
+14603 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : Est
+14603 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : Nt
+14603 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 102
+14604 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+14604 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : North
+14604 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+14604 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : Cary
+14604 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : 234
+14604 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : ?
+14606 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setBlock : null
+14606 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCoordSystem : null
+14606 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCounty : null
+14606 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setDirections : null
+14607 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setLot : null
+14607 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress1 : null
+14607 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress2 : null
+14607 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+14607 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : na
+14607 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 12
+14607 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : Nt
+14607 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : Est
+14608 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 102
+14608 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdType : null
+14608 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Attachment  - setSdWithinTownLimitsFlag : 0
+14608 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSubdivision : null
+14608 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : North
+14608 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+14609 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : Cary
+14609 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPobox : null
+14609 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPostalCode : null
+14609 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdRegion : null
+14609 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : ?
+14609 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdStateProvince : null
+14609 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTimeZone : null
+14609 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTownshipName : null
+14625 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setAreacode : 231
+14625 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCitycode : 122
+14626 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCountrycode : 011
+14626 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setExtension : 375
+14626 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setLocalNumber : 271833
+14626 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setPhoneType : null
+14626 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Phone  - setPiorityOrder : null
+14628 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Phone  - setId : 45
+14628 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1255
+14630 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Organization  - setID : 127
+14631 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.NameTypeAuthority  - setId : 98
+14632 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : orgnt
+14632 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : orgn51
+14633 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Asset  - setId : 112
+14635 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.OrganizationNames  - setId : 82
+14637 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setMrid : 7777
+14638 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setCreatedBy : WMS
+14638 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setKind : construction
+14638 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setWorkOrderName : NOT SET
+14638 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatus : TBD
+14638 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrderNames.setName : work name
+14638 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : work name type name
+14638 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : work name type desc
+14638 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setName : work name
+14638 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setDescription : work name type auth desc
+14639 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrder  - setPriorityRank : 1
+14639 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setPriorityJustification : na
+14639 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setPriorityType : business
+14643 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrder  - setRequestDatetime : 2011-03-03 12:07:56.59
+14644 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatusKind : approved
+14644 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatus : TBD
+14644 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Hazards.setHazardName : f
+14644 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Hazards.setHazardName : g
+14644 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCoordSystem : urn1
+14644 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : EagleNest
+14644 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : cd1
+14644 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 101
+14645 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : West
+14645 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : North
+14645 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 101
+14645 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : EagleNest
+14645 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : cd
+14645 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+14645 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : USA
+14645 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : A
+14645 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : NC
+14646 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setZposition : 102
+14646 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setXposition : 709
+14646 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setYposition : 443
+14646 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setZposition : 104
+14646 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setXposition : 102
+14646 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setYposition : 103
+14647 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setBlock : null
+14647 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCoordSystem : urn1
+14647 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCounty : null
+14647 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setDirections : null
+14647 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setLot : null
+14648 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress1 : null
+14648 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress2 : null
+14648 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : EagleNest
+14648 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : cd1
+14648 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 101
+14648 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : North
+14648 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : West
+14648 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 101
+14648 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdType : null
+14648 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Attachment  - setSdWithinTownLimitsFlag : 0
+14648 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSubdivision : null
+14648 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : cd
+14648 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+14649 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : USA
+14649 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPobox : null
+14649 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPostalCode : null
+14649 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdRegion : null
+14649 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : NC
+14649 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdStateProvince : null
+14649 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTimeZone : null
+14649 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTownshipName : null
+14662 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setComments : null
+14662 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setCreatedBy : WMS
+14663 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setDescription : null
+14663 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setInternalBuildingName : null
+14663 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setInternalBuildingNum : null
+14663 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setInternalFloor : null
+14663 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setInternalRoomNum : null
+14663 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setKind : construction
+14663 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setLocationComment : null
+14663 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setMrid : 7777
+14663 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setPriorityJustification : na
+14664 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrder  - setPriorityRank : 1
+14664 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setPriorityType : business
+14664 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrder  - setRequestDatetime : 2011-03-03 12:07:56.59
+14664 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatus : TBD
+14664 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatusKind : approved
+14664 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setTitle : null
+14664 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrder  - setUpdatedAt : not set
+14664 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setUpdatedBy : null
+14664 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setWorkOrderName : NOT SET
+14668 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Hazards.setHazardName : f
+14669 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Hazards  - setId : 32
+14671 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrderHazards  - setId : 31
+14671 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Hazards.setHazardName : g
+14672 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Hazards  - setId : 33
+14673 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrderHazards  - setId : 32
+14675 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.NameTypeAuthority  - setId : 99
+14675 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : work name type desc
+14675 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : work name type name
+14677 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Asset  - setId : 113
+14679 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setId : 11
+14681 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setId : 12
+14762 [http-bio-8080-exec-1] DEBUG com.sixthc.interceptor.LoggingOutInterceptor  - onClose
+14774 [http-bio-8080-exec-1] ERROR com.sixthc.dao.impl.EpriLogDaoImpl  - findbyName for Meter OnDemand failed
+89014 [http-bio-8080-exec-3] ERROR com.sixthc.dao.impl.EpriLogDaoImpl  - findbyName for Meter OnDemand failed
+89025 [http-bio-8080-exec-3] DEBUG com.sixthc.dao.Sequence  - calling get message id sequence
+89028 [http-bio-8080-exec-3] DEBUG com.sixthc.interceptor.LoggingInInterceptor  - retrieved sequence message_id => 0
+89044 [http-bio-8080-exec-3] DEBUG com.sixthc.interceptor.LoggingInInterceptor  - DBLog id log = 956
+89064 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1222
+89064 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.OrganizationNames.setName : names name
+89064 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : name type name
+89064 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : name type
+89064 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setName : name type name
+89065 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setDescription : name type auth
+121234 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1222
+121247 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.Organization  - setID : 128
+121250 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.NameTypeAuthority  - setId : 100
+121252 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : name type
+121252 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : name type name
+121253 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.Asset  - setId : 114
+121254 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.OrganizationNames  - setId : 83
+121256 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1255
+121256 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.OrganizationNames.setName : org1
+121256 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : orgn51
+121256 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : orgnt
+121256 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setName : orgnt3
+121256 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setDescription : orgnt2
+124640 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setAreacode : 231
+124640 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCitycode : 122
+124640 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCountrycode : 011
+124640 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setExtension : 375
+124640 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setLocalNumber : 271833
+124640 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+124640 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : na
+124640 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 12
+124640 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : Est
+124640 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : Nt
+124640 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 102
+124640 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+124641 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : North
+124641 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+124641 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : Cary
+124641 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : 234
+124641 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : ?
+124643 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setBlock : null
+124643 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCoordSystem : null
+124643 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCounty : null
+124644 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setDirections : null
+124644 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setLot : null
+124644 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress1 : null
+124644 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress2 : null
+124644 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+124644 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : na
+124644 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 12
+124645 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : Nt
+124645 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : Est
+124645 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 102
+124645 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdType : null
+124645 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.Attachment  - setSdWithinTownLimitsFlag : 0
+124645 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSubdivision : null
+124645 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : North
+124645 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+124646 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : Cary
+124646 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPobox : null
+124646 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPostalCode : null
+124646 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdRegion : null
+124646 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : ?
+124646 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdStateProvince : null
+124646 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTimeZone : null
+124646 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTownshipName : null
+124660 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setAreacode : 231
+124660 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCitycode : 122
+124660 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCountrycode : 011
+124660 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setExtension : 375
+124660 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setLocalNumber : 271833
+124660 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setPhoneType : null
+124661 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.Phone  - setPiorityOrder : null
+124662 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.Phone  - setId : 46
+124663 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1255
+124673 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.Organization  - setID : 129
+124675 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.NameTypeAuthority  - setId : 101
+124675 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : orgnt
+124675 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : orgn51
+124677 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.Asset  - setId : 115
+124679 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.OrganizationNames  - setId : 84
+124682 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setMrid : 7777
+124682 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setCreatedBy : WMS
+124682 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setKind : construction
+124682 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setWorkOrderName : NOT SET
+124682 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatus : TBD
+124682 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrderNames.setName : work name
+124682 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : work name type name
+124682 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : work name type desc
+124682 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setName : work name
+124682 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setDescription : work name type auth desc
+124682 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.WorkOrder  - setPriorityRank : 1
+124682 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setPriorityJustification : na
+124683 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setPriorityType : business
+124683 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.WorkOrder  - setRequestDatetime : 2011-03-03 12:07:56.59
+124683 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatusKind : approved
+124683 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatus : TBD
+127607 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Hazards.setHazardName : f
+127607 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Hazards.setHazardName : g
+127608 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCoordSystem : urn1
+127608 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : EagleNest
+127608 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : cd1
+127608 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 101
+127608 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : West
+127608 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : North
+127608 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 101
+127608 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : EagleNest
+127608 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : cd
+127608 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+127608 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : USA
+127608 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : A
+127608 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : NC
+131851 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.WorkPositionPoints  - setZposition : 102
+131851 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.WorkPositionPoints  - setXposition : 709
+131851 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.WorkPositionPoints  - setYposition : 443
+133110 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.WorkPositionPoints  - setZposition : 104
+133111 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.WorkPositionPoints  - setXposition : 102
+133111 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.WorkPositionPoints  - setYposition : 103
+142964 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setBlock : null
+142964 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCoordSystem : urn1
+142964 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCounty : null
+142965 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setDirections : null
+142965 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setLot : null
+142965 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress1 : null
+142965 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress2 : null
+142965 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : EagleNest
+142965 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : cd1
+142965 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 101
+142965 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : North
+142965 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : West
+142965 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 101
+142966 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdType : null
+142966 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.Attachment  - setSdWithinTownLimitsFlag : 0
+142966 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSubdivision : null
+142966 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : cd
+142966 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+142966 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : USA
+142966 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPobox : null
+142966 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPostalCode : null
+142966 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdRegion : null
+142966 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : NC
+142966 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdStateProvince : null
+142966 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTimeZone : null
+142967 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTownshipName : null
+142979 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setComments : null
+142979 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setCreatedBy : WMS
+142979 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setDescription : null
+142979 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setInternalBuildingName : null
+142979 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setInternalBuildingNum : null
+142979 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setInternalFloor : null
+142980 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setInternalRoomNum : null
+142980 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setKind : construction
+142980 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setLocationComment : null
+142980 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setMrid : 7777
+142980 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setPriorityJustification : na
+142980 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.WorkOrder  - setPriorityRank : 1
+142980 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setPriorityType : business
+142980 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.WorkOrder  - setRequestDatetime : 2011-03-03 12:07:56.59
+142980 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatus : TBD
+142980 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatusKind : approved
+142980 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setTitle : null
+142980 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.WorkOrder  - setUpdatedAt : not set
+142980 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setUpdatedBy : null
+142981 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setWorkOrderName : NOT SET
+142983 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Hazards.setHazardName : g
+142984 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.Hazards  - setId : 34
+142985 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.WorkOrderHazards  - setId : 33
+142985 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Hazards.setHazardName : f
+142986 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.Hazards  - setId : 35
+142988 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.WorkOrderHazards  - setId : 34
+142990 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.NameTypeAuthority  - setId : 102
+142991 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : work name type desc
+142991 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : work name type name
+142992 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.Asset  - setId : 116
+143261 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.WorkPositionPoints  - setId : 13
+143262 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.WorkPositionPoints  - setId : 14
+143277 [http-bio-8080-exec-3] DEBUG com.sixthc.interceptor.LoggingOutInterceptor  - onClose
+143290 [http-bio-8080-exec-3] ERROR com.sixthc.dao.impl.EpriLogDaoImpl  - findbyName for Meter OnDemand failed
+186348 [http-bio-8080-exec-5] ERROR com.sixthc.dao.impl.EpriLogDaoImpl  - findbyName for Meter OnDemand failed
+186355 [http-bio-8080-exec-5] DEBUG com.sixthc.dao.Sequence  - calling get message id sequence
+186357 [http-bio-8080-exec-5] DEBUG com.sixthc.interceptor.LoggingInInterceptor  - retrieved sequence message_id => 0
+186367 [http-bio-8080-exec-5] DEBUG com.sixthc.interceptor.LoggingInInterceptor  - DBLog id log = 958
+186381 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1222
+186382 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.OrganizationNames.setName : names name
+186382 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : name type name
+186382 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : name type
+186382 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setName : name type name
+186382 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setDescription : name type auth
+192173 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1222
+192184 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.Organization  - setID : 130
+192185 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.NameTypeAuthority  - setId : 103
+192185 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : name type
+192185 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : name type name
+192186 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.Asset  - setId : 117
+192187 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.OrganizationNames  - setId : 85
+192188 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1255
+192188 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.OrganizationNames.setName : org1
+192188 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : orgn51
+192188 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : orgnt
+192188 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setName : orgnt3
+192188 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setDescription : orgnt2
+192188 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setAreacode : 231
+192189 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCitycode : 122
+192189 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCountrycode : 011
+192189 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setExtension : 375
+192189 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setLocalNumber : 271833
+192189 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+192189 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : na
+192189 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 12
+192189 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : Est
+192189 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : Nt
+192189 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 102
+192189 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+192189 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : North
+192189 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+192189 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : Cary
+192189 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : 234
+192189 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : ?
+192190 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setBlock : null
+192190 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCoordSystem : null
+192190 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCounty : null
+192190 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setDirections : null
+192190 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setLot : null
+192190 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress1 : null
+192191 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress2 : null
+192191 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+192191 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : na
+192191 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 12
+192191 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : Nt
+192191 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : Est
+192191 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 102
+192191 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdType : null
+192191 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.Attachment  - setSdWithinTownLimitsFlag : 0
+192191 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSubdivision : null
+192191 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : North
+192191 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+192191 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : Cary
+192191 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPobox : null
+192192 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPostalCode : null
+192192 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdRegion : null
+192192 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : ?
+192192 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdStateProvince : null
+192192 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTimeZone : null
+192192 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTownshipName : null
+192202 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setAreacode : 231
+192202 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCitycode : 122
+192202 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCountrycode : 011
+192202 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setExtension : 375
+192202 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setLocalNumber : 271833
+192202 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setPhoneType : null
+192203 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.Phone  - setPiorityOrder : null
+192204 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.Phone  - setId : 47
+192204 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1255
+192205 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.Organization  - setID : 131
+192207 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.NameTypeAuthority  - setId : 104
+192207 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : orgnt
+192207 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : orgn51
+192208 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.Asset  - setId : 118
+192210 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.OrganizationNames  - setId : 86
+192213 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setMrid : 7777
+192213 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setCreatedBy : WMS
+192214 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setKind : construction
+192214 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setWorkOrderName : NOT SET
+192214 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatus : TBD
+192214 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrderNames.setName : work name
+192214 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : work name type name
+192214 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : work name type desc
+192214 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setName : work name
+192214 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setDescription : work name type auth desc
+192214 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.WorkOrder  - setPriorityRank : 1
+192214 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setPriorityJustification : na
+192214 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setPriorityType : business
+192215 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.WorkOrder  - setRequestDatetime : 2011-03-03 12:07:56.59
+192215 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatusKind : approved
+192215 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatus : TBD
+200582 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Hazards.setHazardName : f
+204856 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Hazards.setHazardName : g
+214583 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCoordSystem : urn1
+214583 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : EagleNest
+214583 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : cd1
+214583 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 101
+214583 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : West
+214583 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : North
+214583 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 101
+214583 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : EagleNest
+214583 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : cd
+214584 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+214584 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : USA
+214584 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : A
+214584 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : NC
+229982 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.WorkPositionPoints  - setZposition : 102
+229982 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.WorkPositionPoints  - setXposition : 709
+229982 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.WorkPositionPoints  - setYposition : 443
+231356 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.WorkPositionPoints  - setZposition : 104
+231357 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.WorkPositionPoints  - setXposition : 102
+231357 [http-bio-8080-exec-5] DEBUG com.sixthc.hbm.WorkPositionPoints  - setYposition : 103
+4526 [localhost-startStop-1] DEBUG com.sixthc.hbm.Crew  - setId : null
+18515 [http-bio-8080-exec-1] ERROR com.sixthc.dao.impl.EpriLogDaoImpl  - findbyName for Meter OnDemand failed
+18539 [http-bio-8080-exec-1] DEBUG com.sixthc.dao.Sequence  - calling get message id sequence
+18573 [http-bio-8080-exec-1] DEBUG com.sixthc.interceptor.LoggingInInterceptor  - retrieved sequence message_id => 0
+18690 [http-bio-8080-exec-1] DEBUG com.sixthc.interceptor.LoggingInInterceptor  - DBLog id log = 959
+19324 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1222
+19324 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.OrganizationNames.setName : names name
+19324 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : name type name
+19324 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : name type
+19325 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setName : name type name
+19325 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setDescription : name type auth
+19341 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1222
+19359 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Organization  - setID : 132
+19364 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.NameTypeAuthority  - setId : 105
+19365 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : name type
+19365 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : name type name
+19368 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Asset  - setId : 119
+19373 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.OrganizationNames  - setId : 87
+19385 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1255
+19386 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.OrganizationNames.setName : org1
+19386 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : orgn51
+19386 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : orgnt
+19386 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setName : orgnt3
+19386 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setDescription : orgnt2
+19386 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setAreacode : 231
+19386 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCitycode : 122
+19387 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCountrycode : 011
+19387 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setExtension : 375
+19387 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setLocalNumber : 271833
+19387 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+19387 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : na
+19387 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 12
+19388 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : Est
+19388 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : Nt
+19388 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 102
+19388 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+19388 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : North
+19388 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+19388 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : Cary
+19388 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : 234
+19388 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : ?
+19390 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setBlock : null
+19390 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCoordSystem : null
+19390 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCounty : null
+19390 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setDirections : null
+19390 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setLot : null
+19391 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress1 : null
+19391 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress2 : null
+19391 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+19391 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : na
+19391 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 12
+19391 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : Nt
+19391 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : Est
+19391 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 102
+19392 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdType : null
+19392 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Attachment  - setSdWithinTownLimitsFlag : 0
+19392 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSubdivision : null
+19392 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : North
+19392 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+19392 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : Cary
+19392 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPobox : null
+19392 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPostalCode : null
+19392 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdRegion : null
+19392 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : ?
+19392 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdStateProvince : null
+19393 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTimeZone : null
+19393 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTownshipName : null
+19416 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setAreacode : 231
+19416 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCitycode : 122
+19416 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCountrycode : 011
+19417 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setExtension : 375
+19417 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setLocalNumber : 271833
+19417 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setPhoneType : null
+19417 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Phone  - setPiorityOrder : null
+19419 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Phone  - setId : 48
+19420 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1255
+19421 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Organization  - setID : 133
+19423 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.NameTypeAuthority  - setId : 106
+19424 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : orgnt
+19424 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : orgn51
+19428 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Asset  - setId : 120
+19430 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.OrganizationNames  - setId : 88
+19433 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setMrid : 7777
+19433 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setCreatedBy : WMS
+19433 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setKind : construction
+19433 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setWorkOrderName : NOT SET
+19433 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatus : TBD
+19434 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrderNames.setName : work name
+19434 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : work name type name
+19434 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : work name type desc
+19434 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setName : work name
+19434 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setDescription : work name type auth desc
+19434 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrder  - setPriorityRank : 1
+19435 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setPriorityJustification : na
+19435 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setPriorityType : business
+19441 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrder  - setRequestDatetime : 2011-03-03 12:07:56.59
+19441 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatusKind : approved
+19441 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatus : TBD
+19441 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Hazards.setHazardName : f
+19441 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Hazards.setHazardName : g
+19441 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCoordSystem : urn1
+19442 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : EagleNest
+19442 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : cd1
+19442 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 101
+19442 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : West
+19442 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : North
+19442 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 101
+19442 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : EagleNest
+19442 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : cd
+19442 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+19442 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : USA
+19443 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : A
+19443 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : NC
+19443 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setZposition : 102
+19443 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setXposition : 709
+19443 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setYposition : 443
+19443 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setZposition : 104
+19443 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setXposition : 102
+19443 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setYposition : 103
+19444 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setBlock : null
+19444 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCoordSystem : urn1
+19445 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCounty : null
+19445 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setDirections : null
+19445 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setLot : null
+19445 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress1 : null
+19445 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress2 : null
+19445 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : EagleNest
+19445 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : cd1
+19445 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 101
+19445 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : North
+19445 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : West
+19445 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 101
+19446 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdType : null
+19446 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Attachment  - setSdWithinTownLimitsFlag : 0
+19446 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSubdivision : null
+19446 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : cd
+19446 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+19446 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : USA
+19446 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPobox : null
+19446 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPostalCode : null
+19446 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdRegion : null
+19446 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : NC
+19446 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdStateProvince : null
+19446 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTimeZone : null
+19446 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTownshipName : null
+19465 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setComments : null
+19465 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setCreatedBy : WMS
+19465 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setDescription : null
+19465 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setInternalBuildingName : null
+19465 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setInternalBuildingNum : null
+19466 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setInternalFloor : null
+19466 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setInternalRoomNum : null
+19466 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setKind : construction
+19466 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setLocationComment : null
+19466 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setMrid : 7777
+19466 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setPriorityJustification : na
+19466 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrder  - setPriorityRank : 1
+19466 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setPriorityType : business
+19466 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrder  - setRequestDatetime : 2011-03-03 12:07:56.59
+19466 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatus : TBD
+19466 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatusKind : approved
+19466 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setTitle : null
+19467 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrder  - setUpdatedAt : not set
+19467 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setUpdatedBy : null
+19467 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setWorkOrderName : NOT SET
+19471 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Hazards.setHazardName : g
+19473 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Hazards  - setId : 36
+19476 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrderHazards  - setId : 35
+19476 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Hazards.setHazardName : f
+19477 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Hazards  - setId : 37
+19479 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkOrderHazards  - setId : 36
+19483 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.NameTypeAuthority  - setId : 107
+19483 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : work name type desc
+19483 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : work name type name
+19486 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Asset  - setId : 121
+19491 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setId : 15
+19493 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.WorkPositionPoints  - setId : 16
+19612 [http-bio-8080-exec-1] DEBUG com.sixthc.interceptor.LoggingOutInterceptor  - onClose
+19630 [http-bio-8080-exec-1] ERROR com.sixthc.dao.impl.EpriLogDaoImpl  - findbyName for Meter OnDemand failed
+42186 [http-bio-8080-exec-3] ERROR com.sixthc.dao.impl.EpriLogDaoImpl  - findbyName for Meter OnDemand failed
+42197 [http-bio-8080-exec-3] DEBUG com.sixthc.dao.Sequence  - calling get message id sequence
+42200 [http-bio-8080-exec-3] DEBUG com.sixthc.interceptor.LoggingInInterceptor  - retrieved sequence message_id => 0
+42216 [http-bio-8080-exec-3] DEBUG com.sixthc.interceptor.LoggingInInterceptor  - DBLog id log = 961
+42237 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1222
+42237 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.OrganizationNames.setName : names name
+42238 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : name type name
+42238 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : name type
+42238 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setName : name type name
+42238 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setDescription : name type auth
+42238 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1222
+42251 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.Organization  - setID : 134
+42254 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.NameTypeAuthority  - setId : 108
+42256 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : name type
+42256 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : name type name
+42258 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.Asset  - setId : 122
+42259 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.OrganizationNames  - setId : 89
+42261 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1255
+42261 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.OrganizationNames.setName : org1
+42261 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : orgn51
+42261 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : orgnt
+42261 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setName : orgnt3
+42262 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setDescription : orgnt2
+42262 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setAreacode : 231
+42262 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCitycode : 122
+42262 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCountrycode : 011
+42262 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setExtension : 375
+42262 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setLocalNumber : 271833
+42262 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+42262 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : na
+42262 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 12
+42262 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : Est
+42262 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : Nt
+42262 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 102
+42262 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+42262 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : North
+42263 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+42263 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : Cary
+42263 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : 234
+42263 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : ?
+42264 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setBlock : null
+42264 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCoordSystem : null
+42264 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCounty : null
+42264 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setDirections : null
+42264 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setLot : null
+42264 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress1 : null
+42264 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress2 : null
+42264 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+42264 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : na
+42265 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 12
+42265 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : Nt
+42265 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : Est
+42265 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 102
+42265 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdType : null
+42265 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.Attachment  - setSdWithinTownLimitsFlag : 0
+42265 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSubdivision : null
+42265 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : North
+42265 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+42265 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : Cary
+42266 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPobox : null
+42266 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPostalCode : null
+42266 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdRegion : null
+42266 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : ?
+42266 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdStateProvince : null
+42266 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTimeZone : null
+42266 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTownshipName : null
+42278 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setAreacode : 231
+42278 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCitycode : 122
+42278 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCountrycode : 011
+42278 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setExtension : 375
+42278 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setLocalNumber : 271833
+42278 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setPhoneType : null
+42278 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.Phone  - setPiorityOrder : null
+42280 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.Phone  - setId : 49
+42280 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1255
+42283 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.Organization  - setID : 135
+42286 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.NameTypeAuthority  - setId : 109
+42286 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : orgnt
+42286 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : orgn51
+42287 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.Asset  - setId : 123
+42289 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.OrganizationNames  - setId : 90
+42292 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setMrid : 7777
+42292 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setCreatedBy : WMS
+42293 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setKind : construction
+42293 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setWorkOrderName : NOT SET
+42293 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatus : TBD
+47018 [http-bio-8080-exec-3] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrderNames.setName : work name
+3816 [localhost-startStop-1] DEBUG com.sixthc.hbm.Crew  - setId : null
+20837 [http-bio-8080-exec-1] ERROR com.sixthc.dao.impl.EpriLogDaoImpl  - findbyName for Meter OnDemand failed
+20865 [http-bio-8080-exec-1] DEBUG com.sixthc.dao.Sequence  - calling get message id sequence
+20909 [http-bio-8080-exec-1] DEBUG com.sixthc.interceptor.LoggingInInterceptor  - retrieved sequence message_id => 0
+21000 [http-bio-8080-exec-1] DEBUG com.sixthc.interceptor.LoggingInInterceptor  - DBLog id log = 962
+21505 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1222
+21505 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.OrganizationNames.setName : names name
+21505 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : name type name
+21505 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : name type
+21505 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setName : name type name
+21505 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setDescription : name type auth
+21518 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1222
+21533 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Organization  - setID : 136
+21537 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.NameTypeAuthority  - setId : 110
+21538 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : name type
+21538 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : name type name
+21541 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Asset  - setId : 124
+21543 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.OrganizationNames  - setId : 91
+21553 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1255
+21553 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.OrganizationNames.setName : org1
+21553 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : orgn51
+21553 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : orgnt
+21553 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setName : orgnt3
+21554 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setDescription : orgnt2
+21554 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setAreacode : 231
+21554 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCitycode : 122
+21554 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCountrycode : 011
+21554 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setExtension : 375
+21554 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setLocalNumber : 271833
+21554 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+21554 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : na
+21554 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 12
+21555 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : Est
+21555 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : Nt
+21555 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 102
+21555 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+21555 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : North
+21555 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+21555 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : Cary
+21555 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : 234
+21555 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : ?
+21556 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setBlock : null
+21556 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCoordSystem : null
+21556 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setCounty : null
+21556 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setDirections : null
+21556 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setLot : null
+21557 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress1 : null
+21557 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdAddress2 : null
+21557 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdBuildingName : Lannister
+21557 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdCode : na
+21557 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdNumber : 12
+21557 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdPrefix : Nt
+21557 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuffix : Est
+21557 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdSuiteNumber : 102
+21557 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSdType : null
+21557 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Attachment  - setSdWithinTownLimitsFlag : 0
+21557 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setSubdivision : null
+21557 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCode : North
+21557 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdCountry : US
+21558 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdName : Cary
+21558 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPobox : null
+21558 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdPostalCode : null
+21558 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdRegion : null
+21558 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdSection : ?
+21558 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTdStateProvince : null
+21558 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTimeZone : null
+21558 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Address.setTownshipName : null
+21573 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setAreacode : 231
+21573 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCitycode : 122
+21573 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setCountrycode : 011
+21573 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setExtension : 375
+21573 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setLocalNumber : 271833
+21573 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Phone.setPhoneType : null
+21573 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Phone  - setPiorityOrder : null
+21575 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Phone  - setId : 50
+21576 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Organization.setMrid : 1255
+21577 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Organization  - setID : 137
+21578 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.NameTypeAuthority  - setId : 111
+21578 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : orgnt
+21578 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : orgn51
+21579 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.Asset  - setId : 125
+21626 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.OrganizationNames  - setId : 92
+21631 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setMrid : 7777
+21631 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setCreatedBy : WMS
+21631 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setKind : construction
+21631 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setWorkOrderName : NOT SET
+21631 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrder.setStatus : TBD
+25358 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.WorkOrderNames.setName : work name
+36318 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setName : work name type name
+36319 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.Nametype.setDescription : work name type desc
+36319 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setName : work name
+36319 [http-bio-8080-exec-1] DEBUG com.sixthc.hbm.MaterialItemNames  - com.sixthc.hbm.NameTypeAuthority.setDescription : work name type auth desc

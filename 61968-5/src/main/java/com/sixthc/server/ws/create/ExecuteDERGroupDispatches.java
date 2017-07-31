@@ -27,39 +27,42 @@ public class ExecuteDERGroupDispatches implements DERGroupDispatchesPort,
 			RequestType request, Holder<DERGroupDispatchesPayloadType> payload,
 			Holder<ReplyType> reply) throws FaultMessage {
 
-		// default header, will be replaced (probably) during out intercept handler final phase
+		// give them their own messageID back as correlation id
+		String messageID = header.value.getMessageID();
+
 		header.value = appContext.getBean(
 				"create_executeDERGroupDispatches_header", HeaderType.class);
-
+		
+		header.value.setCorrelationID(messageID);
+		
 		// default reply, also replaced
 		ErrorType et = appContext.getBean(
 				"create_executeDERGroupDispatches_error", ErrorType.class);
 		reply.value = appContext.getBean(
 				"create_executeDERGroupDispatches_reply", ReplyType.class);
 		reply.value.getError().add(et);
-		
+
 		payload.value = null;
 
-//		DERGroupDispatch dispatch = appContext.getBean(
-//				"create_executeDERGroupDispatch", DERGroupDispatch.class);
-//		
-//
-//
-//		//payload.value = new DERGroupDispatchesPayloadType();
-//		payload.value.getDERGroupDispatches().getDERGroupDispatch().clear();
-//		payload.value.getDERGroupDispatches().getDERGroupDispatch()
-//				.add(dispatch);
-//
-//		DispatchSchedule ds = appContext.getBean("dispatchSchedule",
-//				DispatchSchedule.class);
-//		dispatch.getEndDeviceGroup().getDERMonitorableParameter()
-//		.getDispatchSchedule().add(ds);
-//
-//		DERCurveData dcd = appContext.getBean("DERCurveData",
-//				DERCurveData.class);
-//
-//		ds.getDERCurveData().add(dcd);
-
+		//		DERGroupDispatch dispatch = appContext.getBean(
+		//				"create_executeDERGroupDispatch", DERGroupDispatch.class);
+		//		
+		//
+		//
+		//		//payload.value = new DERGroupDispatchesPayloadType();
+		//		payload.value.getDERGroupDispatches().getDERGroupDispatch().clear();
+		//		payload.value.getDERGroupDispatches().getDERGroupDispatch()
+		//				.add(dispatch);
+		//
+		//		DispatchSchedule ds = appContext.getBean("dispatchSchedule",
+		//				DispatchSchedule.class);
+		//		dispatch.getEndDeviceGroup().getDERMonitorableParameter()
+		//		.getDispatchSchedule().add(ds);
+		//
+		//		DERCurveData dcd = appContext.getBean("DERCurveData",
+		//				DERCurveData.class);
+		//
+		//		ds.getDERCurveData().add(dcd);
 
 	}
 
