@@ -41,7 +41,7 @@
 	<bean id="changereceiveDERGroupsBean" class="com.sixthc.server.ws.change.ReceiveDERGroups" />
 
 	<jaxws:endpoint id="change_receiveDERGroupsBean"
-		implementor="#changereceiveDERGroupsBean" address="/61968-5/change/receiveDERGroups">
+		implementor="#changereceiveDERGroupsBean" address="/change/receiveDERGroups">
 		<jaxws:inInterceptors>
 			<bean class="com.sixthc.interceptor.CIMLoggingInInterceptor">
 				<property name="packageName" value="CIM DER" />

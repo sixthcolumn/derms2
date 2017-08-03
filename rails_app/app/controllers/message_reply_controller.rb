@@ -4,7 +4,7 @@ class MessageReplyController < ApplicationController
 
   def index
     puts "===== iii"
-    @message_replys = MessageReply.order(message_id: :desc)
+    @message_replys = MessageReply.includes(:message).order("message.name desc")
   end
 
   def create

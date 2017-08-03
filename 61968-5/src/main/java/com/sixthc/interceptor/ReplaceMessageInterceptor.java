@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.sixthc.dao.MessageDao;
 import com.sixthc.model.Message;
+import com.sixthc.util.DOMParser;
 
 public class ReplaceMessageInterceptor extends MessageChangeInterceptor {
 
@@ -27,9 +28,21 @@ public class ReplaceMessageInterceptor extends MessageChangeInterceptor {
 		// currentEnvelope = currentEnvelope.replaceAll("#correlation_id#", "1234-ab994");
 		
 		Message msg = messageDao.findByName(messageName);
-		if( msg.getMsgReply() != null && msg.getMsgReply().getMessageText() != null )
-			return msg.getMsgReply().getMessageText();
-		
+		if( msg.getMsgReply() != null && msg.getMsgReply().getMessageText() != null ) {
+			String newMsg = msg.getMsgReply().getMessageText();
+			
+			DOMParser dp = new DOMParser(currentEnvelope, newMsg);
+			if( dp.isValid() ) {
+				try {
+					newMsg = dp.getSOAPModifiedText();					
+				} catch (Exception e) {
+					log.error(e);;
+				}
+
+			}
+			
+			return newMsg;
+		}
 		return currentEnvelope;
 	}
 

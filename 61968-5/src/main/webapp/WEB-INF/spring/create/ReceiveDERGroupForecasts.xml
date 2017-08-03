@@ -35,7 +35,7 @@
 	<bean id="createreceiveDERGroupForecastsBean" class="com.sixthc.server.ws.create.ReceiveDERGroupForecasts" />
 
 	<jaxws:endpoint id="create_receiveDERGroupForecastsBean"
-		implementor="#createreceiveDERGroupForecastsBean" address="/61968-5/create/receiveDERGroupForecasts">
+		implementor="#createreceiveDERGroupForecastsBean" address="/create/receiveDERGroupForecasts">
 		<jaxws:inInterceptors>
 			<bean class="com.sixthc.interceptor.CIMLoggingInInterceptor">
 				<property name="packageName" value="CIM DER" />

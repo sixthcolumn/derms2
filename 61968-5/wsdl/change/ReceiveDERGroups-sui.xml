@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default" name="61968-5/change/ReceiveDERGroups" resourceRoot="${projectDir}" soapui-version="4.5.2" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="DERGroups_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/ReceiveDERGroups}DERGroups_Binding" soapVersion="1_1" anonymous="optional" definition="ReceiveDERGroups.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'change%20or%20delete'/ReceiveDERGroups.wsdl"><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'change%20or%20delete'/ReceiveDERGroups.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ReceiveDERGroups" targetNamespace="http://iec.ch/TC57/2017/ReceiveDERGroups" xmlns:tns="http://iec.ch/TC57/2017/ReceiveDERGroups" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupsMessage">
+<con:soapui-project activeEnvironment="Default" name="61968-5/change/ReceiveDERGroups" resourceRoot="${projectDir}" soapui-version="4.5.2" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="DERGroups_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/ReceiveDERGroups}DERGroups_Binding" soapVersion="1_1" anonymous="optional" definition="ReceiveDERGroups.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'change%20or%20delete'/ReceiveDERGroups.wsdl"><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'change%20or%20delete'/ReceiveDERGroups.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ReceiveDERGroups" targetNamespace="http://iec.ch/TC57/2017/ReceiveDERGroups" xmlns:tns="http://iec.ch/TC57/2017/ReceiveDERGroups" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupsMessage">
   <wsdl:types>
     <xs:schema targetNamespace="http://iec.ch/TC57/2017/ReceiveDERGroups" elementFormDefault="qualified">
       <xs:import namespace="http://iec.ch/TC57/2017/DERGroupsMessage" schemaLocation="xsd/DERGroupsMessage.xsd"/>
@@ -917,7 +917,7 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroups</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroups/ChangedDERGroups" name="ChangedDERGroups" bindingOperationName="ChangedDERGroups" type="Request-Response" outputName="ChangedDERGroupsResponse" inputName="ChangedDERGroupsEvent" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/61968-5/change/receiveDERGroups</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroups/ChangedDERGroups" name="ChangedDERGroups" bindingOperationName="ChangedDERGroups" type="Request-Response" outputName="ChangedDERGroupsResponse" inputName="ChangedDERGroupsEvent" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/61968-5/change/receiveDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
    <soapenv:Header/>
    <soapenv:Body>
       <der:ChangedDERGroups>
@@ -1059,7 +1059,7 @@
          </der:Payload>
       </der:ChangedDERGroups>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroups/ChangedDERGroups"/></con:call></con:operation><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroups/DeletedDERGroups" name="DeletedDERGroups" bindingOperationName="DeletedDERGroups" type="Request-Response" outputName="DeletedDERGroupsResponse" inputName="DeletedDERGroupsEvent" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroups/ChangedDERGroups"/></con:call></con:operation><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroups/DeletedDERGroups" name="DeletedDERGroups" bindingOperationName="DeletedDERGroups" type="Request-Response" outputName="DeletedDERGroupsResponse" inputName="DeletedDERGroupsEvent" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/61968-5/change/receiveDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
    <soapenv:Header/>
    <soapenv:Body>
       <der:DeletedDERGroups>
@@ -1201,149 +1201,37 @@
          </der:Payload>
       </der:DeletedDERGroups>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroups/DeletedDERGroups"/></con:call></con:operation></con:interface><con:testSuite name="DERGroups_Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ChangedDERGroups TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="ChangedDERGroups"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroups_Binding</con:interface><con:operation>ChangedDERGroups</con:operation><con:request name="ChangedDERGroups"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroups/DeletedDERGroups"/></con:call></con:operation></con:interface><con:testSuite name="DERGroups_Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ChangedDERGroups TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="ChangedDERGroups"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroups_Binding</con:interface><con:operation>ChangedDERGroups</con:operation><con:request name="ChangedDERGroups"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/61968-5/change/receiveDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
    <soapenv:Header/>
    <soapenv:Body>
       <der:ChangedDERGroups>
          <der:Header>
-            <mes:Verb>?</mes:Verb>
-            <mes:Noun>?</mes:Noun>
-            <!--Optional:-->
-            <mes:Revision>?</mes:Revision>
-            <!--Optional:-->
-            <mes:ReplayDetection>
-               <mes:Nonce>?</mes:Nonce>
-               <mes:Created>?</mes:Created>
-            </mes:ReplayDetection>
-            <!--Optional:-->
-            <mes:Context>?</mes:Context>
-            <!--Optional:-->
-            <mes:Timestamp>?</mes:Timestamp>
-            <!--Optional:-->
-            <mes:Source>?</mes:Source>
-            <!--Optional:-->
-            <mes:AsyncReplyFlag>?</mes:AsyncReplyFlag>
-            <!--Optional:-->
-            <mes:ReplyAddress>?</mes:ReplyAddress>
-            <!--Optional:-->
-            <mes:AckRequired>?</mes:AckRequired>
-            <!--Optional:-->
-            <mes:User>
-               <mes:UserID>?</mes:UserID>
-               <!--Optional:-->
-               <mes:Organization>?</mes:Organization>
-            </mes:User>
-            <!--Optional:-->
-            <mes:MessageID>?</mes:MessageID>
-            <!--Optional:-->
-            <mes:CorrelationID>?</mes:CorrelationID>
-            <!--Optional:-->
-            <mes:Comment>?</mes:Comment>
-            <!--Zero or more repetitions:-->
-            <mes:Property>
-               <mes:Name>?</mes:Name>
-               <!--Optional:-->
-               <mes:Value>?</mes:Value>
-            </mes:Property>
-            <!--You may enter ANY elements at this point-->
+            <mes:Verb>Change</mes:Verb>
+            <mes:Noun>DERGroup</mes:Noun>
+            <mes:Timestamp>2017-05-26T10:54:03-06:00</mes:Timestamp>
+            <mes:MessageID>93b32316-c752-4092-9969-69ece85105b8</mes:MessageID>
          </der:Header>
          <!--Optional:-->
          <der:Payload>
             <der1:DERGroups>
-               <!--1 or more repetitions:-->
                <der1:EndDeviceGroup>
-                  <!--Optional:-->
-                  <der1:mRID>?</der1:mRID>
-                  <!--Optional:-->
-                  <der1:description>?</der1:description>
-                  <!--Optional:-->
                   <der1:DERFunction>
-                     <der1:connectDisconnect>?</der1:connectDisconnect>
-                     <der1:frequencyWattCurveFunction>?</der1:frequencyWattCurveFunction>
-                     <der1:maxRealPowerLimiting>?</der1:maxRealPowerLimiting>
-                     <der1:rampRateControl>?</der1:rampRateControl>
-                     <der1:reactivePowerDispatch>?</der1:reactivePowerDispatch>
-                     <der1:realPowerDispatch>?</der1:realPowerDispatch>
-                     <der1:voltageRegulation>?</der1:voltageRegulation>
-                     <der1:voltVarCurveFunction>?</der1:voltVarCurveFunction>
-                     <der1:voltWattCurveFunction>?</der1:voltWattCurveFunction>
-                  </der1:DERFunction>
-                  <!--Zero or more repetitions:-->
-                  <der1:EndDevices>
-                     <!--Optional:-->
-                     <der1:mRID>?</der1:mRID>
-                     <!--Zero or more repetitions:-->
-                     <der1:Names>
-                        <der1:name>?</der1:name>
-                        <!--Optional:-->
-                        <der1:NameType>
-                           <!--Optional:-->
-                           <der1:description>?</der1:description>
-                           <der1:name>?</der1:name>
-                           <!--Optional:-->
-                           <der1:NameTypeAuthority>
-                              <!--Optional:-->
-                              <der1:description>?</der1:description>
-                              <der1:name>?</der1:name>
-                           </der1:NameTypeAuthority>
-                        </der1:NameType>
-                     </der1:Names>
-                  </der1:EndDevices>
-                  <!--Zero or more repetitions:-->
-                  <der1:Names>
-                     <der1:name>?</der1:name>
-                     <!--Optional:-->
-                     <der1:NameType>
-                        <!--Optional:-->
-                        <der1:description>?</der1:description>
-                        <der1:name>?</der1:name>
-                        <!--Optional:-->
-                        <der1:NameTypeAuthority>
-                           <!--Optional:-->
-                           <der1:description>?</der1:description>
-                           <der1:name>?</der1:name>
-                        </der1:NameTypeAuthority>
-                     </der1:NameType>
-                  </der1:Names>
-                  <!--Optional:-->
-                  <der1:version>
-                     <!--Optional:-->
-                     <der1:date>?</der1:date>
-                     <!--Optional:-->
-                     <der1:major>?</der1:major>
-                     <!--Optional:-->
-                     <der1:minor>?</der1:minor>
-                     <!--Optional:-->
-                     <der1:revision>?</der1:revision>
-                  </der1:version>
+                     <der1:connectDisconnect>true</der1:connectDisconnect>
+                     <der1:frequencyWattCurveFunction>false</der1:frequencyWattCurveFunction>
+                     <der1:maxRealPowerLimiting>false</der1:maxRealPowerLimiting>
+                     <der1:rampRateControl>false</der1:rampRateControl>
+                     <der1:reactivePowerDispatch>false</der1:reactivePowerDispatch>
+                     <der1:realPowerDispatch>false</der1:realPowerDispatch>
+                     <der1:voltageRegulation>false</der1:voltageRegulation>
+                     <der1:voltVarCurveFunction>false</der1:voltVarCurveFunction>
+                     <der1:voltWattCurveFunction>false</der1:voltWattCurveFunction>
+                  </der1:DERFunction>                 
                </der1:EndDeviceGroup>
             </der1:DERGroups>
-            <!--Optional:-->
-            <der:OperationSet>
-               <!--Optional:-->
-               <mes:enforceMsgSequence>?</mes:enforceMsgSequence>
-               <!--Optional:-->
-               <mes:enforceTransactionalIntegrity>?</mes:enforceTransactionalIntegrity>
-               <!--Zero or more repetitions:-->
-               <mes:Operation>
-                  <mes:operationId>?</mes:operationId>
-                  <!--Optional:-->
-                  <mes:noun>?</mes:noun>
-                  <!--Optional:-->
-                  <mes:verb>?</mes:verb>
-                  <!--Optional:-->
-                  <mes:elementOperation>false</mes:elementOperation>
-                  <!--You may enter ANY elements at this point-->
-               </mes:Operation>
-            </der:OperationSet>
-            <!--Optional:-->
-            <der:Compressed>?</der:Compressed>
-            <!--Optional:-->
-            <der:Format>?</der:Format>
          </der:Payload>
       </der:ChangedDERGroups>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroups/ChangedDERGroups"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="DeletedDERGroups TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="DeletedDERGroups"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroups_Binding</con:interface><con:operation>DeletedDERGroups</con:operation><con:request name="DeletedDERGroups"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ReceiveDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroups/ChangedDERGroups" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="DeletedDERGroups TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="DeletedDERGroups"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroups_Binding</con:interface><con:operation>DeletedDERGroups</con:operation><con:request name="DeletedDERGroups"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/61968-5/change/receiveDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
    <soapenv:Header/>
    <soapenv:Body>
       <der:DeletedDERGroups>
@@ -1485,4 +1373,206 @@
          </der:Payload>
       </der:DeletedDERGroups>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroups/DeletedDERGroups"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroups/DeletedDERGroups"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService port="8080" path="/" host="benjamins-Mac-mini-3.local" name="MockService 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:mockOperation name="ChangedDERGroups" interface="DERGroups_Binding" operation="ChangedDERGroups"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <der:DERGroupsResponseMessage>
+         <der:Header>
+            <mes:Verb>?</mes:Verb>
+            <mes:Noun>?</mes:Noun>
+            <!--Optional:-->
+            <mes:Revision>?</mes:Revision>
+            <!--Optional:-->
+            <mes:ReplayDetection>
+               <mes:Nonce>?</mes:Nonce>
+               <mes:Created>?</mes:Created>
+            </mes:ReplayDetection>
+            <!--Optional:-->
+            <mes:Context>?</mes:Context>
+            <!--Optional:-->
+            <mes:Timestamp>?</mes:Timestamp>
+            <!--Optional:-->
+            <mes:Source>?</mes:Source>
+            <!--Optional:-->
+            <mes:AsyncReplyFlag>?</mes:AsyncReplyFlag>
+            <!--Optional:-->
+            <mes:ReplyAddress>?</mes:ReplyAddress>
+            <!--Optional:-->
+            <mes:AckRequired>?</mes:AckRequired>
+            <!--Optional:-->
+            <mes:User>
+               <mes:UserID>?</mes:UserID>
+               <!--Optional:-->
+               <mes:Organization>?</mes:Organization>
+            </mes:User>
+            <!--Optional:-->
+            <mes:MessageID>?</mes:MessageID>
+            <!--Optional:-->
+            <mes:CorrelationID>?</mes:CorrelationID>
+            <!--Optional:-->
+            <mes:Comment>?</mes:Comment>
+            <!--Zero or more repetitions:-->
+            <mes:Property>
+               <mes:Name>?</mes:Name>
+               <!--Optional:-->
+               <mes:Value>?</mes:Value>
+            </mes:Property>
+            <!--You may enter ANY elements at this point-->
+         </der:Header>
+         <der:Reply>
+            <mes:Result>?</mes:Result>
+            <!--Zero or more repetitions:-->
+            <mes:Error>
+               <mes:code>?</mes:code>
+               <!--Optional:-->
+               <mes:level>?</mes:level>
+               <!--Optional:-->
+               <mes:reason>?</mes:reason>
+               <!--Optional:-->
+               <mes:details>?</mes:details>
+               <!--Optional:-->
+               <mes:xpath>?</mes:xpath>
+               <!--Optional:-->
+               <mes:stackTrace>?</mes:stackTrace>
+               <!--Optional:-->
+               <mes:Location>
+                  <!--Optional:-->
+                  <mes:node>?</mes:node>
+                  <!--Optional:-->
+                  <mes:pipeline>?</mes:pipeline>
+                  <!--Optional:-->
+                  <mes:stage>?</mes:stage>
+               </mes:Location>
+               <!--Optional:-->
+               <mes:ID idType="?" idAuthority="?" kind="?" objectType="?">?</mes:ID>
+               <!--Optional:-->
+               <mes:relatedID idType="?" idAuthority="?" kind="?" objectType="?">?</mes:relatedID>
+               <!--Optional:-->
+               <mes:object>
+                  <!--Optional:-->
+                  <mes:mRID>?</mes:mRID>
+                  <!--Zero or more repetitions:-->
+                  <mes:Name>
+                     <mes:name>?</mes:name>
+                     <!--Optional:-->
+                     <mes:NameType>
+                        <mes:name>?</mes:name>
+                        <!--Optional:-->
+                        <mes:description>?</mes:description>
+                        <!--Optional:-->
+                        <mes:NameTypeAuthority>
+                           <mes:name>?</mes:name>
+                           <!--Optional:-->
+                           <mes:description>?</mes:description>
+                        </mes:NameTypeAuthority>
+                     </mes:NameType>
+                  </mes:Name>
+                  <!--Optional:-->
+                  <mes:objectType>?</mes:objectType>
+               </mes:object>
+               <!--Optional:-->
+               <mes:operationId>?</mes:operationId>
+            </mes:Error>
+            <!--Zero or more repetitions:-->
+            <mes:ID idType="?" idAuthority="?" kind="?" objectType="?">?</mes:ID>
+            <!--You may enter ANY elements at this point-->
+            <!--Optional:-->
+            <mes:operationId>?</mes:operationId>
+         </der:Reply>
+         <!--Optional:-->
+         <der:Payload>
+            <der1:DERGroups>
+               <!--1 or more repetitions:-->
+               <der1:EndDeviceGroup>
+                  <!--Optional:-->
+                  <der1:mRID>?</der1:mRID>
+                  <!--Optional:-->
+                  <der1:description>?</der1:description>
+                  <!--Optional:-->
+                  <der1:DERFunction>
+                     <der1:connectDisconnect>?</der1:connectDisconnect>
+                     <der1:frequencyWattCurveFunction>?</der1:frequencyWattCurveFunction>
+                     <der1:maxRealPowerLimiting>?</der1:maxRealPowerLimiting>
+                     <der1:rampRateControl>?</der1:rampRateControl>
+                     <der1:reactivePowerDispatch>?</der1:reactivePowerDispatch>
+                     <der1:realPowerDispatch>?</der1:realPowerDispatch>
+                     <der1:voltageRegulation>?</der1:voltageRegulation>
+                     <der1:voltVarCurveFunction>?</der1:voltVarCurveFunction>
+                     <der1:voltWattCurveFunction>?</der1:voltWattCurveFunction>
+                  </der1:DERFunction>
+                  <!--Zero or more repetitions:-->
+                  <der1:EndDevices>
+                     <!--Optional:-->
+                     <der1:mRID>?</der1:mRID>
+                     <!--Zero or more repetitions:-->
+                     <der1:Names>
+                        <der1:name>?</der1:name>
+                        <!--Optional:-->
+                        <der1:NameType>
+                           <!--Optional:-->
+                           <der1:description>?</der1:description>
+                           <der1:name>?</der1:name>
+                           <!--Optional:-->
+                           <der1:NameTypeAuthority>
+                              <!--Optional:-->
+                              <der1:description>?</der1:description>
+                              <der1:name>?</der1:name>
+                           </der1:NameTypeAuthority>
+                        </der1:NameType>
+                     </der1:Names>
+                  </der1:EndDevices>
+                  <!--Zero or more repetitions:-->
+                  <der1:Names>
+                     <der1:name>?</der1:name>
+                     <!--Optional:-->
+                     <der1:NameType>
+                        <!--Optional:-->
+                        <der1:description>?</der1:description>
+                        <der1:name>?</der1:name>
+                        <!--Optional:-->
+                        <der1:NameTypeAuthority>
+                           <!--Optional:-->
+                           <der1:description>?</der1:description>
+                           <der1:name>?</der1:name>
+                        </der1:NameTypeAuthority>
+                     </der1:NameType>
+                  </der1:Names>
+                  <!--Optional:-->
+                  <der1:version>
+                     <!--Optional:-->
+                     <der1:date>?</der1:date>
+                     <!--Optional:-->
+                     <der1:major>?</der1:major>
+                     <!--Optional:-->
+                     <der1:minor>?</der1:minor>
+                     <!--Optional:-->
+                     <der1:revision>?</der1:revision>
+                  </der1:version>
+               </der1:EndDeviceGroup>
+            </der1:DERGroups>
+            <!--Optional:-->
+            <der:OperationSet>
+               <!--Optional:-->
+               <mes:enforceMsgSequence>?</mes:enforceMsgSequence>
+               <!--Optional:-->
+               <mes:enforceTransactionalIntegrity>?</mes:enforceTransactionalIntegrity>
+               <!--Zero or more repetitions:-->
+               <mes:Operation>
+                  <mes:operationId>?</mes:operationId>
+                  <!--Optional:-->
+                  <mes:noun>?</mes:noun>
+                  <!--Optional:-->
+                  <mes:verb>?</mes:verb>
+                  <!--Optional:-->
+                  <mes:elementOperation>false</mes:elementOperation>
+                  <!--You may enter ANY elements at this point-->
+               </mes:Operation>
+            </der:OperationSet>
+            <!--Optional:-->
+            <der:Compressed>?</der:Compressed>
+            <!--Optional:-->
+            <der:Format>?</der:Format>
+         </der:Payload>
+      </der:DERGroupsResponseMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroups/ChangedDERGroups"/></con:response><con:dispatchConfig/></con:mockOperation><con:properties/></con:mockService><con:properties/><con:wssContainer/><con:sensitiveInformation/></con:soapui-project>

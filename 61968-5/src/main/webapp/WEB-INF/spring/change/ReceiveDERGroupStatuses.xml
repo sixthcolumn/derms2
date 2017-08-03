@@ -37,7 +37,7 @@
 		class="com.sixthc.server.ws.change.ReceiveDERGroupStatuses" />
 
 	<jaxws:endpoint id="change_receiveDERGroupStatusesBean"
-		implementor="#changereceiveDERGroupStatusesBean" address="/61968-5/change/receiveDERGroupStatuses">
+		implementor="#changereceiveDERGroupStatusesBean" address="/change/receiveDERGroupStatuses">
 		<jaxws:inInterceptors>
 			<bean class="com.sixthc.interceptor.CIMLoggingInInterceptor">
 				<property name="packageName" value="CIM DER" />

@@ -55,7 +55,7 @@
 	<bean id="createExecuteDERGroupsBean" class="com.sixthc.server.ws.create.ExecuteDERGroups" />
 
 	<jaxws:endpoint id="create_executeDERGroupsBean"
-		implementor="#createExecuteDERGroupsBean" address="/61968-5/create/executeDERGroups">
+		implementor="#createExecuteDERGroupsBean" address="/create/executeDERGroups">
 		<jaxws:inInterceptors>
 			<bean class="com.sixthc.interceptor.CIMLoggingInInterceptor">
 				<property name="packageName" value="CIM DER" />

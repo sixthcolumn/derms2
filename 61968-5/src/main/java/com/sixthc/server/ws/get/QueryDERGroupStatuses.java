@@ -31,7 +31,7 @@ public class QueryDERGroupStatuses implements QueryDERGroupStatusesPort,
 		DERGroupStatusQueriesResponseMessageType msg = new DERGroupStatusQueriesResponseMessageType();
 
 		// give them their own messageID back as correlation id
-		String messageID = msg.getHeader().getMessageID();
+		String messageID = queryDERGroupStatusesRequestMessage.getHeader().getMessageID();
 
 		HeaderType header = appContext.getBean(
 				"get_queryDERGroupStatuses_header", HeaderType.class);
