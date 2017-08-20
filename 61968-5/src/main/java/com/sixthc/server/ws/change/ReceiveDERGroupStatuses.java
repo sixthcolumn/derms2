@@ -42,6 +42,7 @@ public class ReceiveDERGroupStatuses implements DERGroupStatusesPort,
 				ErrorType.class);
 		reply.value = appContext.getBean("change_receiveDERGroupStatuses_reply",
 				ReplyType.class);
+		reply.value.getError().clear();
 		reply.value.getError().add(et);
 		
 		payload.value = null;

@@ -15,7 +15,9 @@
 	<import resource="spring/DataSource.xml" />
 	<import resource="spring/Hibernate.xml" />
 
-	<import resource="spring/cim-der.xml" />
-	<import resource="spring/dataBeans.xml" />
-
+	<import resource="spring/DateTimeBean.xml" />
+	
+	<import resource="spring/create/ExecuteEndDeviceControls.xml" />
+	<import resource="spring/create/ReceiveEndDeviceEvents.xml" />
+	
 </beans>

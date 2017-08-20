@@ -44,6 +44,7 @@ public class ExecuteDERGroups implements DERGroupsPort, ApplicationContextAware 
 				ErrorType.class);
 		reply.value = appContext.getBean("change_executeDERGroups_reply",
 				ReplyType.class);
+		reply.value.getError().clear();
 		reply.value.getError().add(et);
 
 		payload.value = null;

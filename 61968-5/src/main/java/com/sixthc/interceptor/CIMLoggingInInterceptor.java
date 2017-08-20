@@ -9,7 +9,7 @@ import com.sixthc.dao.MessageLogDao;
 import com.sixthc.dao.VendorDao;
 import com.sixthc.model.MessageLog;
 import com.sixthc.model.Vendor;
-import com.sixthc.util.XmlStringParser;
+import com.sixthc.util.XMLUtil;
 
 public class CIMLoggingInInterceptor extends LoggingInInterceptor {
 
@@ -23,7 +23,7 @@ public class CIMLoggingInInterceptor extends LoggingInInterceptor {
 	private VendorDao vendorDao;
 
 	@Override
-	public void processPayload(XmlStringParser payload, MessageLog messageLog)
+	public void processPayload(XMLUtil payload, MessageLog messageLog)
 			throws Fault {
 
 		/*

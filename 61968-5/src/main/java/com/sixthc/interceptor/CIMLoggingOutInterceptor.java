@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.sixthc.dao.MessageLogDao;
 import com.sixthc.model.MessageLog;
-import com.sixthc.util.XmlStringParser;
+import com.sixthc.util.XMLUtil;
 
 public class CIMLoggingOutInterceptor extends LoggingOutInterceptor {
 
@@ -18,7 +18,7 @@ public class CIMLoggingOutInterceptor extends LoggingOutInterceptor {
 			.getLogger(CIMLoggingOutInterceptor.class);
 
 	@Override
-	public void processPayload(XmlStringParser payload, MessageLog messageLog)
+	public void processPayload(XMLUtil payload, MessageLog messageLog)
 			throws Fault {
 
 		/*

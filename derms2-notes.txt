@@ -6,3 +6,52 @@ rails console
 user = User.where(email: 'benj.goodwin@gmail.com').first
 user.password = 'Secret01'; user.save
 
+Replacing XML messages from database :
+
+Description :
+  replace the default message from the SOAP server with a pre-recorded message in the db
+  overwrite the timestamp, messageid, correlationid in the pre-recorded message
+  validate the pre-recorded message against xsd file
+
+1. 
+
+table message -> message_reply_id : points to message_reply (new table), which contains text of SOAP message to substitute
+table message_reply : contains SOAP message to be substituted (Rails App can edit/create these rows)
+
+2. 
+
+Spring file : src/main/webapp/WEB-INF/spring/change/ExecuteDERGroups.xml (example file used by the rest of this example)
+
+Find outInterceptor :
+			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
+
+Within that bean find :
+
+			<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor">
+				<property name="messageName" value="CIM_DER(changeExecuteDERGroups)" />
+				<property name="xsdFile"
+					value="/resources/wsdl/create/xsd/DERGroupsMessage.xsd" />
+				<property name="message" value="DERGroupsResponseMessage" />
+			</bean>
+
+messageName = message.name (from database)
+xsdFile = the xsdFile to apply to the DER message associated with message.message_reply_id
+the xsd files are in the war file : /resources/wsdl/[create|change|get]/xsd/...
+
+3.
+
+Work Flow :
+
+a. interceptor calls the CIMLoggingOutInterceptor (first)
+b. interceptor calls ReplaceMessageInterceptor java code (which implements MessageChangeInterceptor)
+c. changeOutbound message is called (see MessageChangeInterceptor) with FINAL outbound SOAP message as a string
+d. Message row is loaded from db, messageName was passed via springfile above
+e. get the replacement message from db : msg.getMsgreply().getMessageText()
+f. Use XMLUtil package to load the replacement xml into DOM object
+g. get the node from the soap message : see spring file, message property from ReplaceMessageInterceptor bean
+h. validate the DER message against xsdFile, xsdFile attritube in spring file
+i. call MSHeader.CopyPaste substituting Timestamp, MessageID, CorrelationID from original message to substitute message
+j. if ANY of the above steps fail due to bad xml, etc... the default tomcat message is returned, and the error is logged
+
+Kind of complicated...
+

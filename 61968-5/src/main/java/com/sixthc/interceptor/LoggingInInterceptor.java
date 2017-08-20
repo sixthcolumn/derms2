@@ -37,7 +37,7 @@ import org.xml.sax.SAXException;
 import com.sixthc.dao.MessageLogDao;
 import com.sixthc.dao.VendorDao;
 import com.sixthc.model.MessageLog;
-import com.sixthc.util.XmlStringParser;
+import com.sixthc.util.XMLUtil;
 
 /**
  * A simple logging handler which outputs the bytes of the message to the
@@ -158,7 +158,7 @@ public class LoggingInInterceptor extends AbstractLoggingInterceptor {
 				messageLog.setPayload(payloadString);
 
 				// call parsing for specific type, MS, CIM, ...
-				processPayload(new XmlStringParser(payloadString), messageLog);
+				processPayload(new XMLUtil(payloadString), messageLog);
 
 				bos.close();
 			} catch (SAXException se) {
@@ -202,7 +202,7 @@ public class LoggingInInterceptor extends AbstractLoggingInterceptor {
 	 * @param payload
 	 * @throws Fault
 	 */
-	public void processPayload(XmlStringParser payload, MessageLog messageLog)
+	public void processPayload(XMLUtil payload, MessageLog messageLog)
 			throws Fault {
 
 	}

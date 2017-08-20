@@ -16,7 +16,8 @@
 		<property name="verb" value="change" />
 		<property name="noun" value="DERGroups" />
 		<property name="Timestamp" value="#{now.XMLGregorianDate}" />
-		<property name="MessageID" value="#{ T(java.util.UUID).randomUUID().toString() }"/>
+		<property name="MessageID"
+			value="#{ T(java.util.UUID).randomUUID().toString() }" />
 	</bean>
 
 	<!-- This should be part of Change_ExecuteDERGroups_Reply, when I figure 
@@ -50,7 +51,8 @@
 			</bean>
 			<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor">
 				<property name="messageName" value="CIM_DER(changeExecuteDERGroups)" />
-			</bean>		</jaxws:inInterceptors>
+			</bean>
+		</jaxws:inInterceptors>
 		<jaxws:outInterceptors>
 			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
 				<property name="packageName" value="CIM DER" />
@@ -61,6 +63,9 @@
 			</bean>
 			<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor">
 				<property name="messageName" value="CIM_DER(changeExecuteDERGroups)" />
+				<property name="xsdFile"
+					value="/resources/wsdl/create/xsd/DERGroupsMessage.xsd" />
+				<property name="message" value="DERGroupsResponseMessage" />
 			</bean>
 		</jaxws:outInterceptors>
 		<jaxws:outFaultInterceptors>

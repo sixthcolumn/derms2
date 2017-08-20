@@ -18,7 +18,8 @@
 		<property name="verb" value="change" />
 		<property name="noun" value="DERGroups" />
 		<property name="Timestamp" value="#{now.XMLGregorianDate}" />
-		<property name="MessageID" value="#{ T(java.util.UUID).randomUUID().toString() }"/>
+		<property name="MessageID"
+			value="#{ T(java.util.UUID).randomUUID().toString() }" />
 	</bean>
 
 	<!-- This should be part of Change_receiveDERGroups_Reply, when I figure 
@@ -54,14 +55,22 @@
 			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
 				<property name="packageName" value="CIM DER" />
 				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="messageName" value="CIM_DER(changeReceiveDERGroups)" />
 				<property name="resultCode" value="success" />
 				<property name="stage" value="serviceOut" />
+			</bean>
+			<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor">
+				<property name="messageName" value="CIM_DER(changeReceiveDERGroups)" />
+				<property name="xsdFile"
+					value="/resources/wsdl/change/xsd/DERGroupsMessage.xsd" />
+				<property name="message" value="DERGroupsResponseMessage" />
 			</bean>
 		</jaxws:outInterceptors>
 		<jaxws:outFaultInterceptors>
 			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
 				<property name="packageName" value="CIM DER" />
 				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="messageName" value="CIM_DER(changeReceiveDERGroups)" />
 				<property name="resultCode" value="fail" />
 				<property name="stage" value="serviceOutFault" />
 			</bean>
@@ -70,6 +79,7 @@
 			<bean class="com.sixthc.interceptor.CIMLoggingInInterceptor">
 				<property name="packageName" value="CIM DER" />
 				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="messageName" value="CIM_DER(changeReceiveDERGroups)" />
 				<property name="resultCode" value="fail" />
 				<property name="stage" value="serviceInFault" />
 			</bean>

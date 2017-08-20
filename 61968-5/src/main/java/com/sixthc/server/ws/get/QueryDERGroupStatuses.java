@@ -44,6 +44,7 @@ public class QueryDERGroupStatuses implements QueryDERGroupStatusesPort,
 		
 		ErrorType error =  appContext.getBean(
 				"get_queryDERGroupStatuses_error", ErrorType.class);
+		reply.getError().clear();
 		reply.getError().add(error);
 		
 		msg.setReply(reply);

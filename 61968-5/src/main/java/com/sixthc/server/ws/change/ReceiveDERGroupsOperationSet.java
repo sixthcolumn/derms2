@@ -43,6 +43,7 @@ public class ReceiveDERGroupsOperationSet implements DERGroupsOperationSetPort, 
 		ErrorType et = appContext.getBean("change_receiveDERGroupsOperationSet_error", ErrorType.class);
 		reply.value = appContext.getBean("change_receiveDERGroupsOperationSet_reply",
 				ReplyType.class);
+		reply.value.getError().clear();
 		reply.value.getError().add(et);
 				
 		payload.value = null;

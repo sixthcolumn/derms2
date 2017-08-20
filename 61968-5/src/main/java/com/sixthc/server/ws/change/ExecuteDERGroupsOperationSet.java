@@ -53,6 +53,7 @@ public class ExecuteDERGroupsOperationSet implements DERGroupsOperationSetPort,
 				"change_executeDERGroupsOperationSet_error", ErrorType.class);
 		reply.value = appContext.getBean(
 				"change_executeDERGroupsOperationSet_reply", ReplyType.class);
+		reply.value.getError().clear();
 		reply.value.getError().add(et);
 
 		payload.value = new DERGroupsPayloadType();

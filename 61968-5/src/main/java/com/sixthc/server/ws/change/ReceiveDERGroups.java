@@ -37,6 +37,7 @@ public class ReceiveDERGroups implements DERGroupsPort, ApplicationContextAware 
 				"change_receiveDERGroups_error", ErrorType.class);
 		reply.value = appContext.getBean(
 				"change_receiveDERGroups_reply", ReplyType.class);
+		reply.value.getError().clear();
 		reply.value.getError().add(et);
 
 		payload.value = null;
@@ -57,6 +58,7 @@ public class ReceiveDERGroups implements DERGroupsPort, ApplicationContextAware 
 				"change_receiveDERGroups_error", ErrorType.class);
 		reply.value = appContext.getBean(
 				"change_receiveDERGroups_reply", ReplyType.class);
+		reply.value.getError().clear();
 		reply.value.getError().add(et);
 
 		payload.value = null;

@@ -16,12 +16,13 @@
 		<property name="verb" value="create" />
 		<property name="noun" value="DERGroups" />
 		<property name="Timestamp" value="#{now.XMLGregorianDate}" />
-		<property name="MessageID" value="#{ T(java.util.UUID).randomUUID().toString() }"/>
+		<property name="MessageID"
+			value="#{ T(java.util.UUID).randomUUID().toString() }" />
 
 	</bean>
 
-	<!-- This should be part of create_receiveDERGroupForecasts_Reply, when I figure 
-		out how to do an array -->
+	<!-- This should be part of create_receiveDERGroupForecasts_Reply, when 
+		I figure out how to do an array -->
 	<bean id="create_receiveDERGroupForecasts_error" name="create_receiveDERGroupForecasts_error"
 		class="com.sixthc.part5.create.ReceiveDERGroupForecasts.ErrorType">
 		<property name="code" value="0.0" />
@@ -40,6 +41,7 @@
 			<bean class="com.sixthc.interceptor.CIMLoggingInInterceptor">
 				<property name="packageName" value="CIM DER" />
 				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="messageName" value="CIM_DER(createReceiveDERGroupForecasts)" />
 				<property name="resultCode" value="success" />
 				<property name="stage" value="serviceIn" />
 			</bean>
@@ -48,14 +50,22 @@
 			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
 				<property name="packageName" value="CIM DER" />
 				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="messageName" value="CIM_DER(createReceiveDERGroupForecasts)" />
 				<property name="resultCode" value="success" />
 				<property name="stage" value="serviceOut" />
+			</bean>
+						<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor">
+				<property name="messageName" value="CIM_DER(createReceiveDERGroupForecasts) />
+				<property name="xsdFile"
+					value="/resources/wsdl/create/xsd/DERGroupForecastsMessage.xsd" />
+				<property name="message" value="DERGroupForecastsResponseMessage" />
 			</bean>
 		</jaxws:outInterceptors>
 		<jaxws:outFaultInterceptors>
 			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
 				<property name="packageName" value="CIM DER" />
 				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="messageName" value="CIM_DER(createReceiveDERGroupForecasts)" />
 				<property name="resultCode" value="fail" />
 				<property name="stage" value="serviceOutFault" />
 			</bean>
@@ -64,6 +74,7 @@
 			<bean class="com.sixthc.interceptor.CIMLoggingInInterceptor">
 				<property name="packageName" value="CIM DER" />
 				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="messageName" value="CIM_DER(createReceiveDERGroupForecasts)" />
 				<property name="resultCode" value="fail" />
 				<property name="stage" value="serviceInFault" />
 			</bean>

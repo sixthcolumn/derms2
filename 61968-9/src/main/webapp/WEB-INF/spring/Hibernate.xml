@@ -36,6 +36,7 @@
 				<value>com.sixthc.model.Pkg</value>
 				<value>com.sixthc.model.PkgGroup</value>
 				<value>com.sixthc.model.Vendor</value>
+				<value>com.sixthc.model.MessageReply</value>
 			</list>
 		</property>
 	</bean>

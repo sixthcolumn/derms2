@@ -40,6 +40,7 @@ public class ExecuteDERGroupDispatches implements DERGroupDispatchesPort,
 				"create_executeDERGroupDispatches_error", ErrorType.class);
 		reply.value = appContext.getBean(
 				"create_executeDERGroupDispatches_reply", ReplyType.class);
+		reply.value.getError().clear();
 		reply.value.getError().add(et);
 
 		payload.value = null;

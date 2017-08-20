@@ -19,28 +19,64 @@ import org.w3c.dom.Node;
 import org.xml.sax.InputSource;
 
 /**
- * Given two XML strings, this turns them into DOMs so that values
- * from the 'to' can be injected into the 'from'
+ * Executes functions on Multispeak Headers
  * 
  * @author BenGoodwin
  *
  */
-public class DOMParser {
-	Document fromDoc; // old doc (from)
-	Document toDoc; // replacement doc (to)
-	Boolean isValid = false; // when false, initalization failed
+public class MSHeader {
+	private Document fromDoc;
+	private Document toDoc; 
+	private Boolean isValid = false;
 
 	private static org.apache.log4j.Logger log = Logger
-			.getLogger(DOMParser.class);
+			.getLogger(MSHeader.class);
+
+	/**
+	 * Copies tag values from one header to another
+	 * 
+	 * @param fromXML
+	 * @param toXML
+	 * @return
+	 * @throws TransformerException
+	 * @throws MSHeaderException
+	 */
+	public static String CopyPaste(String fromXML, String toXML, String tagName[])
+			throws TransformerException, MSHeaderException {
+
+		// parse xml strings
+		MSHeader header = new MSHeader(fromXML, toXML);
+
+		// throw exception if parsing failed, bad XML
+		if (header.isValid == false)
+			throw new MSHeaderException(
+					"cannot get soap test, initial xml was invalid");
+		
+		// copy paste
+		for( String key : tagName )
+			header.replaceKey(key);
+
+		// build transformer to re-translate DOM to string, and return modified XML
+		TransformerFactory tf = TransformerFactory.newInstance();
+		Transformer transformer = tf.newTransformer();
+		transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
+		StringWriter writer = new StringWriter();
+		transformer.transform(new DOMSource(header.toDoc), new StreamResult(
+				writer));
+
+		return writer.getBuffer().toString();
+	}
 
 	/**
 	 * given two XML strings, loads them into DOM objects for
 	 * processing.
 	 * 
-	 * @param fromXML	injecter
-	 * @param toXML		injectee
+	 * @param fromXML
+	 *            injecter
+	 * @param toXML
+	 *            injectee
 	 */
-	public DOMParser(String fromXML, String toXML) {
+	private MSHeader(String fromXML, String toXML) {
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		dbFactory.setNamespaceAware(true);
 		DocumentBuilder dBuilder;
@@ -48,17 +84,15 @@ public class DOMParser {
 		try {
 			dBuilder = dbFactory.newDocumentBuilder();
 
+			// parse the from XML
 			StringReader sr1 = new StringReader(fromXML);
 			InputSource is1 = new InputSource(sr1);
 			fromDoc = dBuilder.parse(is1);
 
+			// parse the to XML
 			StringReader sr2 = new StringReader(toXML);
 			InputSource is2 = new InputSource(sr2);
 			toDoc = dBuilder.parse(is2);
-
-			replaceKey("MessageID");
-			replaceKey("CorrelationID");
-			replaceKey("Timestamp");
 
 			isValid = true;
 		} catch (Exception e) {
@@ -68,96 +102,72 @@ public class DOMParser {
 	}
 
 	/**
-	 * get the toDoc, return as a string
-	 * 
-	 * @return
-	 * @throws TransformerException
-	 * @throws DOMParserException
-	 */
-	public String getSOAPModifiedText() throws TransformerException,
-			DOMParserException {
-		if (isValid == false)
-			throw new DOMParserException(
-					"cannot get soap test, initial xml was invalid");
-
-		TransformerFactory tf = TransformerFactory.newInstance();
-		Transformer transformer = tf.newTransformer();
-		transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
-		StringWriter writer = new StringWriter();
-		transformer.transform(new DOMSource(toDoc), new StreamResult(writer));
-		return writer.getBuffer().toString();
-	}
-
-	/**
 	 * gets the header element from the SOAP document
 	 * 
 	 * @param doc
 	 * @return header Element
-	 * @throws DOMParserException
+	 * @throws MSHeaderException
 	 *             if REQUIRED header not found
 	 */
-	private Element getHeaderElement(Document doc) throws DOMParserException {
+	private Element getHeaderElement(Document doc)
+			throws MSHeaderException {
 		final String headerKey = "Header";
 		if (doc.getElementsByTagNameNS("*", headerKey).getLength() > 0) {
 			Element header = (Element) doc.getElementsByTagNameNS("*",
 					headerKey).item(0);
 			return header;
 		} else
-			throw new DOMParserException("Header not found in doc : "
+			throw new MSHeaderException("Header not found in doc : "
 					+ doc.toString());
 
 	}
 
 	/**
-	 * Gets node (so we can inject into it) based on tag name
+	 * Gets node of MS header by tag name, throws exception if can't find tag
 	 * 
 	 * @param e
 	 *            parent element
-	 * @param key
+	 * @param tagName
 	 *            tag name
 	 * @return
-	 * @throws DOMParserException
+	 * @throws MSHeaderException
 	 *             thrown if node not found
 	 */
-	private Node getNode(Element e, String key) throws DOMParserException {
-		if (e.getElementsByTagNameNS("*", key).getLength() > 0)
-			return e.getElementsByTagName(key).item(0);
+	private Node getNode(Element e, String tagName)
+			throws MSHeaderException {
+		if (e.getElementsByTagNameNS("*", tagName).getLength() > 0)
+			return e.getElementsByTagName(tagName).item(0);
 		else
-			throw new DOMParserException("Key " + key
+			throw new MSHeaderException("Key " + tagName
 					+ " not found in element : " + e.toString());
 
 	}
 
 	/**
-	 * replace element of toDoc with element of fromDoc
+	 * copies pastes element value fromXML to toXML
 	 * 
-	 * @param key
-	 * @throws DOMParserException
+	 * @param tagName
+	 * @throws MSHeaderException
 	 */
-	private void replaceKey(String key) throws DOMParserException {
+	private void replaceKey(String tagName) throws MSHeaderException {
 
 		try {
 			Element fromElement = getHeaderElement(fromDoc);
 			Element toElement = getHeaderElement(toDoc);
 
 			// get the node value form the 'from' item
-			String value = getNode(fromElement, key).getTextContent();
+			String value = getNode(fromElement, tagName).getTextContent();
 			log.debug("get value ("
 					+ value
 					+ ") for tag ("
-					+ key
+					+ tagName
 					+ ") in original SOAP message, injecting into replacement SOAP message");
 
 			// set the node value of the 'to' item
-			getNode(toElement, key).setTextContent(value);
+			getNode(toElement, tagName).setTextContent(value);
 
 		} catch (Exception e) {
 			log.error(e);
 		}
 	}
-
-	public Boolean isValid() {
-		return isValid;
-	}
-
 }

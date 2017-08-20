@@ -3,17 +3,17 @@ package com.sixthc.util;
 import javax.xml.ws.WebFault;
 
 @WebFault(name = "DOMParserException")  
-public class DOMParserException extends Exception {
+public class MSHeaderException extends Exception {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public DOMParserException(String s)  {
+	public MSHeaderException(String s)  {
 		super(s);
 	}
 	
-	public DOMParserException(String s, Exception e) {
+	public MSHeaderException(String s, Exception e) {
 		super(s, e);
 	}	
 }

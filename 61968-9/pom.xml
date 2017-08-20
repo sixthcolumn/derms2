@@ -10,10 +10,10 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 	<groupId>com.sixthc</groupId>
-	<artifactId>61968-6</artifactId>
+	<artifactId>61968-9</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>61968-6</name>
+	<name>61968-9</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
@@ -21,7 +21,7 @@
 
 	<!-- Plugin configuration -->
 	<build>
-		<finalName>61968-6</finalName>
+		<finalName>61968-9</finalName>
 		<!-- Feel free to change maven-compiler-plugin configuration -->
 		<plugins>
 			<plugin>
@@ -95,29 +95,26 @@
 						<configuration>
 							<wsdlOptions>
 								<wsdlOption>
-									<wsdl>${basedir}/wsdl/ExecuteDERGroupDispatches.wsdl</wsdl>
+									<!-- Due to namespace and method collisions between the various 
+										wsdls, I've specified a package for each set of gen'd code -->
+									<!-- CREATE WSDLs -->
+									<wsdl>${basedir}/wsdl/create/ExecuteEndDeviceControls.wsdl</wsdl>
 									<extraargs>
 										<extraarg>-client</extraarg>
+										<extraarg>-p</extraarg>
+										<extraarg>com.sixthc.part5.create.executeEndDeviceControls</extraarg>
+										<extraarg>-autoNameResolution</extraarg>
 									</extraargs>
 								</wsdlOption>
 								<wsdlOption>
-									<wsdl>${basedir}/wsdl/ExecuteDERGroupForecasts.wsdl</wsdl>
+									<wsdl>${basedir}/wsdl/create/ReceiveEndDeviceEvents.wsdl</wsdl>
 									<extraargs>
 										<extraarg>-client</extraarg>
+										<extraarg>-p</extraarg>
+										<extraarg>com.sixthc.part5.create.receiveEndDeviceEvents</extraarg>
+										<extraarg>-autoNameResolution</extraarg>
 									</extraargs>
-								</wsdlOption>
-								<wsdlOption>
-									<wsdl>${basedir}/wsdl/ExecuteDERGroups.wsdl</wsdl>
-									<extraargs>
-										<extraarg>-client</extraarg>
-									</extraargs>
-								</wsdlOption>
-								<wsdlOption>
-									<wsdl>${basedir}/wsdl/GetDERGroupStatuses.wsdl</wsdl>
-									<extraargs>
-										<extraarg>-client</extraarg>
-									</extraargs>
-								</wsdlOption>
+								</wsdlOption>							
 							</wsdlOptions>
 						</configuration>
 						<goals>
@@ -208,6 +205,12 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>3.4</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-io -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.3.2</version>
 		</dependency>
 		<dependency>
 			<groupId>xerces</groupId>

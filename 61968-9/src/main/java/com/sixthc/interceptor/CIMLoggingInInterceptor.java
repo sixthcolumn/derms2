@@ -9,7 +9,7 @@ import com.sixthc.dao.MessageLogDao;
 import com.sixthc.dao.VendorDao;
 import com.sixthc.model.MessageLog;
 import com.sixthc.model.Vendor;
-import com.sixthc.util.XmlStringParser;
+import com.sixthc.util.XMLUtil;
 
 public class CIMLoggingInInterceptor extends LoggingInInterceptor {
 
@@ -23,7 +23,7 @@ public class CIMLoggingInInterceptor extends LoggingInInterceptor {
 	private VendorDao vendorDao;
 
 	@Override
-	public void processPayload(XmlStringParser payload, MessageLog messageLog)
+	public void processPayload(XMLUtil payload, MessageLog messageLog)
 			throws Fault {
 
 		/*
@@ -59,7 +59,8 @@ public class CIMLoggingInInterceptor extends LoggingInInterceptor {
 		String messageID;
 		try {
 			messageID = payload.getTagValue(
-					"http://www.iec.ch/TC57/2011/schema/message", "MessageID");
+					"http://iec.ch/TC57/2011/schema/message", "MessageID");
+
 		} catch (Exception e) {
 			Fault fault = new Fault(e);
 			throw fault;
@@ -73,7 +74,8 @@ public class CIMLoggingInInterceptor extends LoggingInInterceptor {
 			Fault fault = new Fault(new Exception(
 					"CIM header.MessageID required"));
 			throw fault;
-		} else if (isStrict() == true && !messageLogDao.messageIDIsUnique(messageID)) {
+		} else if (isStrict() == true
+				&& !messageLogDao.messageIDIsUnique(messageID)) {
 			log.error("header.MessageID must be unique");
 			Fault fault = new Fault(new Exception(
 					"CIM header.MessageID is not unique"));
@@ -86,32 +88,12 @@ public class CIMLoggingInInterceptor extends LoggingInInterceptor {
 	public String inferMessage(String action) {
 		String interfaceName = "unknownInterface";
 
-		if (action.toLowerCase().contains("changeddergroupstatuses"))
-			interfaceName = "CIM_DER(changedDERGroupStatus)";
-		else if (action.toLowerCase().contains("changeddergroupforecast"))
-			interfaceName = "CIM_DER(createDERGroupForecast)";
-		else if (action.toLowerCase().contains("createdergroupdispatch"))
-			interfaceName = "CIM_DER(createDERGroupDispatch)";
-		else if (action.toLowerCase().contains("changedergroup"))
-			interfaceName = "CIM_DER(changedDERGroup)";
-		else if (action.toLowerCase().contains("createdergroupcapability"))
-			interfaceName = "CIM_DER(createDERGroupCapabilities)";
-		else if (action.toLowerCase().contains("createderforecast"))
-			interfaceName = "CIM_DER(createDERGroupForecast)";
-		else if (action.toLowerCase().contains("createdergroupforecast"))
-			interfaceName = "CIM_DER(createDERGroupForecast)";
-		else if (action.toLowerCase().contains("createdergroup"))
-			interfaceName = "CIM_DER(createDERGroup)";
-		else if (action.toLowerCase().contains("deletedergroup"))
-			interfaceName = "CIM_DER(deleteDERGroup)";
-		else if (action.toLowerCase().contains("getdergroupcapability"))
-			interfaceName = "CIM_DER(getDERGroupCapabilities)";
-		else if (action.toLowerCase().contains("getdercapability"))
-			interfaceName = "CIM_DER(getDERGroupCapabilities)";
-		else if (action.toLowerCase().contains("getdergroupstatus"))
-			interfaceName = "CIM_DER(getDERGroupStatus)";
-		else if (action.toLowerCase().contains("getdergroup"))
-			interfaceName = "CIM_DER(getDERGroup)";
+		//change actions
+		if (action.toLowerCase().contains("executeEndDeviceControls"))
+			interfaceName = "CIM_DER(executeEndDeviceControls)";
+		else if (action.toLowerCase().contains("receiveEndDeviceEvents"))
+			interfaceName = "CIM_DER(receiveEndDerviceEvents)";		
+		// action not found
 		else
 			log.warn("Interface name for " + action + " not found");
 

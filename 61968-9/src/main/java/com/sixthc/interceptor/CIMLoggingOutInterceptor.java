@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.sixthc.dao.MessageLogDao;
 import com.sixthc.model.MessageLog;
-import com.sixthc.util.XmlStringParser;
+import com.sixthc.util.XMLUtil;
 
 public class CIMLoggingOutInterceptor extends LoggingOutInterceptor {
 
@@ -18,7 +18,7 @@ public class CIMLoggingOutInterceptor extends LoggingOutInterceptor {
 			.getLogger(CIMLoggingOutInterceptor.class);
 
 	@Override
-	public void processPayload(XmlStringParser payload, MessageLog messageLog)
+	public void processPayload(XMLUtil payload, MessageLog messageLog)
 			throws Fault {
 
 		/*
@@ -28,7 +28,7 @@ public class CIMLoggingOutInterceptor extends LoggingOutInterceptor {
 		String correlationID;
 		try {
 			correlationID = payload.getTagValue(
-					"http://www.iec.ch/TC57/2011/schema/message",
+					"http://iec.ch/TC57/2011/schema/message",
 					"CorrelationID");
 		} catch (Exception e) {
 			Fault fault = new Fault(e);
@@ -66,7 +66,8 @@ public class CIMLoggingOutInterceptor extends LoggingOutInterceptor {
 		String messageID;
 		try {
 			messageID = payload.getTagValue(
-					"http://www.iec.ch/TC57/2011/schema/message", "MessageID");
+					"http://iec.ch/TC57/2011/schema/message", "MessageID");
+
 		} catch (Exception e) {
 			Fault fault = new Fault(e);
 			throw fault;
@@ -80,7 +81,8 @@ public class CIMLoggingOutInterceptor extends LoggingOutInterceptor {
 			Fault fault = new Fault(new Exception(
 					"CIM header.MessageID required"));
 			throw fault;
-		} else if (isStrict() == true && !messageLogDao.messageIDIsUnique(messageID)) {
+		} else if (isStrict() == true
+				&& !messageLogDao.messageIDIsUnique(messageID)) {
 			log.error("header.MessageID must be unique");
 			Fault fault = new Fault(new Exception(
 					"CIM header.MessageID is not unique"));
@@ -93,34 +95,32 @@ public class CIMLoggingOutInterceptor extends LoggingOutInterceptor {
 	public String inferMessage(String action) {
 		String interfaceName = "unknownInterface";
 
-		// due to overlap of some items (ie: changeDerGroup) order
-		// is important!
-		if (action.toLowerCase().contains("changeddergroupstatuses"))
-			interfaceName = "CIM_DER(changedDERGroupStatus)";
-		else if (action.toLowerCase().contains("changeddergroupforecast"))
-			interfaceName = "CIM_DER(createDERGroupForecast)";
-		else if (action.toLowerCase().contains("createdergroupdispatch"))
-			interfaceName = "CIM_DER(createDERGroupDispatch)";
-		else if (action.toLowerCase().contains("changedergroup"))
-			interfaceName = "CIM_DER(changedDERGroup)";
-		else if (action.toLowerCase().contains("createdergroupcapability"))
-			interfaceName = "CIM_DER(createDERGroupCapabilities)";
-		else if (action.toLowerCase().contains("createderforecast"))
-			interfaceName = "CIM_DER(createDERGroupForecast)";
-		else if (action.toLowerCase().contains("createdergroupforecast"))
-			interfaceName = "CIM_DER(createDERGroupForecast)";
-		else if (action.toLowerCase().contains("createdergroup"))
-			interfaceName = "CIM_DER(createDERGroup)";
-		else if (action.toLowerCase().contains("deletedergroup"))
-			interfaceName = "CIM_DER(deleteDERGroup)";
-		else if (action.toLowerCase().contains("getdercapability"))
-			interfaceName = "CIM_DER(getDERGroupCapabilities)";
-		else if (action.toLowerCase().contains("getdergroupcapability"))
-			interfaceName = "CIM_DER(getDERGroupCapabilities)";
-		else if (action.toLowerCase().contains("getdergroupstatus"))
-			interfaceName = "CIM_DER(getDERGroupStatus)";
-		else if (action.toLowerCase().contains("getdergroup"))
-			interfaceName = "CIM_DER(getDERGroup)";
+		//change actions
+		if (action.toLowerCase().contains("changedergroups"))
+			interfaceName = "CIM_DER(changeExecuteDERGroups";
+		else if (action.toLowerCase().contains("executedergroupsoperationset"))
+			interfaceName = "CIM_DER(changeExecuteDERGroupsOperationSet)";
+		else if (action.toLowerCase().contains("executeddergroupsoperationset"))
+			interfaceName = "CIM_DER(changeExecuteDERGroupsOperationSet";
+		else if (action.toLowerCase().contains("changeddergroupstatuses"))
+			interfaceName = "CIM_DER(changeReceiveDERGroupStatuses)";
+		// create actions
+		else if (action.toLowerCase().contains("createdergroupdispatches"))
+			interfaceName = "CIM_DER(createExecuteDERGroupDispatches)";
+		else if (action.toLowerCase().contains("createdergroups"))
+			interfaceName = "CIM_DER(createExecuteDERGroups)";
+		else if (action.toLowerCase().contains("createddergroupforecasts"))
+			interfaceName = "CIM_DER(createReceiveDERGroupForecasts)";
+		else if (action.toLowerCase().contains("createddergroups"))
+			interfaceName = "CIM_DER(createReceiveDERGroups)";
+		// get actions
+		else if (action.toLowerCase().contains("querydergroupforecasts"))
+			interfaceName = "CIM_DER(getQueryDERGroupForecasts)";
+		else if (action.toLowerCase().contains("querydergroups"))
+			interfaceName = "CIM_DER(getQueryDERGroups)";
+		else if (action.toLowerCase().contains("querydergroupstatuses"))
+			interfaceName = "CIM_DER(getQueryDERGroupStatuses)";
+		// action not found
 		else
 			log.warn("Interface name for " + action + " not found");
 

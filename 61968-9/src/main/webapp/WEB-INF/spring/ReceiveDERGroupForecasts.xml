@@ -10,11 +10,33 @@
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
-	
-	<bean id="changeExecuteDERGroupsBean" class="com.sixthc.server.ws.change.ExecuteDERGroups" />
-	
-	<jaxws:endpoint id="change_ExecuteDERGroupsBean"
-		implementor="#changeExecuteDERGroupsBean" address="/61968-5/change/executeDERGroups">
+
+	<bean id="create_receiveDERGroupForecasts_header" name="create_receiveDERGroupForecasts_header"
+		class="com.sixthc.part5.create.ReceiveDERGroupForecasts.HeaderType">
+		<property name="verb" value="create" />
+		<property name="noun" value="DERGroupsForecasts" />
+		<property name="Timestamp" value="#{now.XMLGregorianDate}" />
+		<property name="MessageID" value="#message_id#" />
+		<property name="CorrelationID" value="#correlation_id#" />
+	</bean>
+
+	<!-- This should be part of create_receiveDERGroupForecasts_Reply, when I figure 
+		out how to do an array -->
+	<bean id="create_receiveDERGroupForecasts_error" name="create_receiveDERGroupForecasts_error"
+		class="com.sixthc.part5.create.ReceiveDERGroupForecasts.ErrorType">
+		<property name="code" value="0.0" />
+	</bean>
+
+	<bean id="create_receiveDERGroupForecasts_reply" name="create_receiveDERGroupForecasts_reply"
+		class="com.sixthc.part5.create.ReceiveDERGroupForecasts.ReplyType">
+		<property name="result" value="OK" />
+	</bean>
+
+
+	<bean id="createReceiveDERGroupForecastsBean" class="com.sixthc.part5.create.receiveDERGroupForecasts" />
+
+	<jaxws:endpoint id="create_receiveDERGroupForecastsBean"
+		implementor="#createReceiveDERGroupForecastsBean" address="/61968-5/create/receiveDERGroupForecasts">
 		<jaxws:inInterceptors>
 			<bean class="com.sixthc.interceptor.CIMLoggingInInterceptor">
 				<property name="packageName" value="CIM DER" />
@@ -54,5 +76,6 @@
 			</entry>
 		</jaxws:properties>
 	</jaxws:endpoint>
+
 
 </beans>

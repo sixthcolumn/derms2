@@ -16,7 +16,8 @@
 		<property name="verb" value="create" />
 		<property name="noun" value="DERGroups" />
 		<property name="Timestamp" value="#{now.XMLGregorianDate}" />
-		<property name="MessageID" value="#{ T(java.util.UUID).randomUUID().toString() }"/>
+		<property name="MessageID"
+			value="#{ T(java.util.UUID).randomUUID().toString() }" />
 
 	</bean>
 
@@ -43,7 +44,7 @@
 						class="com.sixthc.part5.create.executeDERGroupDispatches.DERMonitorableParameter">
 						<property name="DERParameter" value="ACTIVE_POWER" />
 						<property name="yMultiplier" value="1.1" />
-						<property name="yUnit" value="A"/>
+						<property name="yUnit" value="A" />
 					</bean>
 				</property>
 			</bean>
@@ -55,7 +56,7 @@
 		<property name="curveStyleKind" value="CONSTANT_Y_VALUE" />
 		<property name="startTime" value="#{now.XMLGregorianDate}" />
 		<property name="timeIntervalDuration" value="10" />
-		<property name="timeIntervalUnit" value="D"/>
+		<property name="timeIntervalUnit" value="D" />
 	</bean>
 
 	<bean name="DERCurveData"
@@ -77,6 +78,7 @@
 			<bean class="com.sixthc.interceptor.CIMLoggingInInterceptor">
 				<property name="packageName" value="CIM DER" />
 				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="messageName" value="CIM_DER(createExecuteDERGroupDispatches)" />
 				<property name="resultCode" value="success" />
 				<property name="stage" value="serviceIn" />
 			</bean>
@@ -85,14 +87,22 @@
 			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
 				<property name="packageName" value="CIM DER" />
 				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="messageName" value="CIM_DER(createExecuteDERGroupDispatches)" />
 				<property name="resultCode" value="success" />
 				<property name="stage" value="serviceOut" />
+			</bean>
+			<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor">
+				<property name="messageName" value="CIM_DER(createExecuteDERGroupDispatches)" />
+				<property name="xsdFile"
+					value="/resources/wsdl/create/xsd/DERGroupDispatchesMessage.xsd" />
+				<property name="message" value="DERGroupDispatchesResponseMessage" />
 			</bean>
 		</jaxws:outInterceptors>
 		<jaxws:outFaultInterceptors>
 			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
 				<property name="packageName" value="CIM DER" />
 				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="messageName" value="CIM_DER(createExecuteDERGroupDispatches)" />
 				<property name="resultCode" value="fail" />
 				<property name="stage" value="serviceOutFault" />
 			</bean>
@@ -101,6 +111,7 @@
 			<bean class="com.sixthc.interceptor.CIMLoggingInInterceptor">
 				<property name="packageName" value="CIM DER" />
 				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="messageName" value="CIM_DER(createExecuteDERGroupDispatches)" />
 				<property name="resultCode" value="fail" />
 				<property name="stage" value="serviceInFault" />
 			</bean>

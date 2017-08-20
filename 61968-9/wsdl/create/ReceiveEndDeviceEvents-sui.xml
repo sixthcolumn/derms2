@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default" name="61968-9/create/ReceiveEndDeviceEvents" resourceRoot="${projectDir}" soapui-version="4.5.2" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="EndDeviceEvents_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/ReceiveEndDeviceEvents}EndDeviceEvents_Binding" soapVersion="1_1" anonymous="optional" definition="ReceiveEndDeviceEvents.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/05-%20IEC%2061968-9%20Strongly-typed%20Messages%20and%20WSDLs/'create'/ReceiveEndDeviceEvents.wsdl"><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/05-%20IEC%2061968-9%20Strongly-typed%20Messages%20and%20WSDLs/'create'/ReceiveEndDeviceEvents.wsdl</con:url><con:content><![CDATA[<!--edited with XMLSpy v2015 rel. 4 sp1 (x64) (http://www.altova.com) by Christopher Kardos (private)-->
+<con:soapui-project activeEnvironment="Default" name="61968-9/create/ReceiveEndDeviceEvents" resourceRoot="${projectDir}" soapui-version="4.5.2" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="EndDeviceEvents_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/ReceiveEndDeviceEvents}EndDeviceEvents_Binding" soapVersion="1_1" anonymous="optional" definition="ReceiveEndDeviceEvents.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/git/derms2/61968-9/wsdl/create/ReceiveEndDeviceEvents.wsdl"><con:part><con:url>file:/Users/BenGoodwin/git/derms2/61968-9/wsdl/create/ReceiveEndDeviceEvents.wsdl</con:url><con:content><![CDATA[<!--edited with XMLSpy v2015 rel. 4 sp1 (x64) (http://www.altova.com) by Christopher Kardos (private)-->
 <wsdl:definitions name="ReceiveEndDeviceEvents" targetNamespace="http://iec.ch/TC57/2017/ReceiveEndDeviceEvents" xmlns:tns="http://iec.ch/TC57/2017/ReceiveEndDeviceEvents" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/EndDeviceEventsMessage">
   <wsdl:types>
     <xs:schema targetNamespace="http://iec.ch/TC57/2017/ReceiveEndDeviceEvents" elementFormDefault="qualified">
@@ -42,7 +42,7 @@
       <soap:address location="http://iec.ch/TC57/2017/ReceiveEndDeviceEvents"/>
     </wsdl:port>
   </wsdl:service>
-</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/05-%20IEC%2061968-9%20Strongly-typed%20Messages%20and%20WSDLs/'create'/xsd/EndDeviceEventsMessage.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://iec.ch/TC57/2017/EndDeviceEventsMessage" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.0" xmlns:tns="http://iec.ch/TC57/2017/EndDeviceEventsMessage" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:obj="http://iec.ch/TC57/2011/EndDeviceEvents#">
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>file:/Users/BenGoodwin/git/derms2/61968-9/wsdl/create/xsd/EndDeviceEventsMessage.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://iec.ch/TC57/2017/EndDeviceEventsMessage" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.0" xmlns:tns="http://iec.ch/TC57/2017/EndDeviceEventsMessage" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:obj="http://iec.ch/TC57/2011/EndDeviceEvents#">
   <!--Base Message Definitions-->
   <xs:import namespace="http://iec.ch/TC57/2011/schema/message" schemaLocation="Message.xsd"/>
   <!--CIM Information Object Definition-->
@@ -106,7 +106,7 @@
   <xs:element name="DeletedEndDeviceEvents" type="tns:EndDeviceEventsEventMessageType"/>
   <xs:element name="EndDeviceEventsResponseMessage" type="tns:EndDeviceEventsResponseMessageType"/>
   <xs:element name="EndDeviceEventsFaultMessage" type="tns:EndDeviceEventsFaultMessageType"/>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/05-%20IEC%2061968-9%20Strongly-typed%20Messages%20and%20WSDLs/'create'/xsd/Message.xsd</con:url><con:content><![CDATA[<!--Common Message Specification for IEC 61968-->
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:/Users/BenGoodwin/git/derms2/61968-9/wsdl/create/xsd/Message.xsd</con:url><con:content><![CDATA[<!--Common Message Specification for IEC 61968-->
 <!--Change Log-->
 <!--2010/12/15 Added OperationSet to Payload-->
 <!--2011/03/09 Corrected FaultMessageType-->
@@ -716,7 +716,7 @@
     <xs:attribute name="kind" type="IDKindType"/>
     <xs:attribute name="objectType" type="xs:string"/>
   </xs:attributeGroup>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/05-%20IEC%2061968-9%20Strongly-typed%20Messages%20and%20WSDLs/'create'/xsd/EndDeviceEvents.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://iec.ch/TC57/2011/EndDeviceEvents#" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:a="http://langdale.com.au/2005/Message#" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns="http://langdale.com.au/2005/Message#" xmlns:m="http://iec.ch/TC57/2011/EndDeviceEvents#">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part><con:part><con:url>file:/Users/BenGoodwin/git/derms2/61968-9/wsdl/create/xsd/EndDeviceEvents.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://iec.ch/TC57/2011/EndDeviceEvents#" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:a="http://langdale.com.au/2005/Message#" xmlns:sawsdl="http://www.w3.org/ns/sawsdl" xmlns="http://langdale.com.au/2005/Message#" xmlns:m="http://iec.ch/TC57/2011/EndDeviceEvents#">
   <xs:annotation/>
   <xs:element name="EndDeviceEvents" type="m:EndDeviceEvents"/>
   <xs:complexType name="EndDeviceEvents">
@@ -987,10 +987,54 @@
     </xs:annotation>
     <xs:restriction base="xs:string"/>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/ReceiveEndDeviceEvents</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/EndDeviceEvents/CreatedEndDeviceEvents" name="CreatedEndDeviceEvents" bindingOperationName="CreatedEndDeviceEvents" type="Request-Response" outputName="CreatedEndDeviceEventsResponse" inputName="CreatedEndDeviceEventsEvent" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ReceiveEndDeviceEvents</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:end="http://iec.ch/TC57/2017/EndDeviceEventsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:end1="http://iec.ch/TC57/2011/EndDeviceEvents#">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/ReceiveEndDeviceEvents</con:endpoint><con:endpoint>http://localhost:8080/61968-9/create/receiveEndDeviceEvents</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/EndDeviceEvents/CreatedEndDeviceEvents" name="CreatedEndDeviceEvents" bindingOperationName="CreatedEndDeviceEvents" type="Request-Response" outputName="CreatedEndDeviceEventsResponse" inputName="CreatedEndDeviceEventsEvent" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/61968-9/create/receiveEndDeviceEvents</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:end="http://iec.ch/TC57/2017/EndDeviceEventsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:end1="http://iec.ch/TC57/2011/EndDeviceEvents#">
    <soapenv:Header/>
    <soapenv:Body>
       <end:CreatedEndDeviceEvents>
+         <end:Header>
+            <mes:Verb>created</mes:Verb>
+            <mes:Noun>EndDeviceEvents</mes:Noun>
+            <mes:Timestamp>2017-05-26T10:54:03-06:00</mes:Timestamp>
+            <mes:MessageID>93b32316-c752-4092-9969-69ece85105b8</mes:MessageID>
+         </end:Header>
+         <!--Optional:-->
+         <end:Payload>
+            <end1:EndDeviceEvents>
+               <!--Zero or more repetitions:-->
+               <end1:EndDeviceEvent>
+                  <!--Optional:-->
+                  <end1:mRID>1745b-11983</end1:mRID>
+                  <end1:createdDateTime>2017-05-26T10:54:03-06:00</end1:createdDateTime>
+               </end1:EndDeviceEvent> 
+            </end1:EndDeviceEvents>
+         </end:Payload>
+      </end:CreatedEndDeviceEvents>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/EndDeviceEvents/CreatedEndDeviceEvents"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite name="EndDeviceEvents_Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CreatedEndDeviceEvents TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="CreatedEndDeviceEvents"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EndDeviceEvents_Binding</con:interface><con:operation>CreatedEndDeviceEvents</con:operation><con:request name="CreatedEndDeviceEvents"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/61968-9/create/receiveEndDeviceEvents</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:end="http://iec.ch/TC57/2017/EndDeviceEventsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:end1="http://iec.ch/TC57/2011/EndDeviceEvents#">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <end:CreatedEndDeviceEvents>
+         <end:Header>
+            <mes:Verb>created</mes:Verb>
+            <mes:Noun>EndDeviceEvents</mes:Noun>
+            <mes:Timestamp>2017-05-26T10:54:03-06:00</mes:Timestamp>
+            <mes:MessageID>93b32316-c752-4092-9969-69ece85105b8</mes:MessageID>
+         </end:Header>
+         <end:Payload>
+            <end1:EndDeviceEvents>
+               <end1:EndDeviceEvent>
+                  <end1:mRID>89172-abf83</end1:mRID>
+                  <end1:createdDateTime>2017-05-26T10:54:03-06:00</end1:createdDateTime>
+                  <end1:EndDeviceEventType ref="1a7"/>
+               </end1:EndDeviceEvent>
+            </end1:EndDeviceEvents>
+         </end:Payload>
+      </end:CreatedEndDeviceEvents>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/EndDeviceEvents/CreatedEndDeviceEvents" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService port="8080" path="/" host="benjamins-Mac-mini-3.local" name="MockService 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:mockOperation name="CreatedEndDeviceEvents" interface="EndDeviceEvents_Binding" operation="CreatedEndDeviceEvents"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:end="http://iec.ch/TC57/2017/EndDeviceEventsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:end1="http://iec.ch/TC57/2011/EndDeviceEvents#">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <end:EndDeviceEventsResponseMessage>
          <end:Header>
             <mes:Verb>?</mes:Verb>
             <mes:Noun>?</mes:Noun>
@@ -1033,6 +1077,66 @@
             </mes:Property>
             <!--You may enter ANY elements at this point-->
          </end:Header>
+         <end:Reply>
+            <mes:Result>?</mes:Result>
+            <!--Zero or more repetitions:-->
+            <mes:Error>
+               <mes:code>?</mes:code>
+               <!--Optional:-->
+               <mes:level>?</mes:level>
+               <!--Optional:-->
+               <mes:reason>?</mes:reason>
+               <!--Optional:-->
+               <mes:details>?</mes:details>
+               <!--Optional:-->
+               <mes:xpath>?</mes:xpath>
+               <!--Optional:-->
+               <mes:stackTrace>?</mes:stackTrace>
+               <!--Optional:-->
+               <mes:Location>
+                  <!--Optional:-->
+                  <mes:node>?</mes:node>
+                  <!--Optional:-->
+                  <mes:pipeline>?</mes:pipeline>
+                  <!--Optional:-->
+                  <mes:stage>?</mes:stage>
+               </mes:Location>
+               <!--Optional:-->
+               <mes:ID idType="?" idAuthority="?" kind="?" objectType="?">?</mes:ID>
+               <!--Optional:-->
+               <mes:relatedID idType="?" idAuthority="?" kind="?" objectType="?">?</mes:relatedID>
+               <!--Optional:-->
+               <mes:object>
+                  <!--Optional:-->
+                  <mes:mRID>?</mes:mRID>
+                  <!--Zero or more repetitions:-->
+                  <mes:Name>
+                     <mes:name>?</mes:name>
+                     <!--Optional:-->
+                     <mes:NameType>
+                        <mes:name>?</mes:name>
+                        <!--Optional:-->
+                        <mes:description>?</mes:description>
+                        <!--Optional:-->
+                        <mes:NameTypeAuthority>
+                           <mes:name>?</mes:name>
+                           <!--Optional:-->
+                           <mes:description>?</mes:description>
+                        </mes:NameTypeAuthority>
+                     </mes:NameType>
+                  </mes:Name>
+                  <!--Optional:-->
+                  <mes:objectType>?</mes:objectType>
+               </mes:object>
+               <!--Optional:-->
+               <mes:operationId>?</mes:operationId>
+            </mes:Error>
+            <!--Zero or more repetitions:-->
+            <mes:ID idType="?" idAuthority="?" kind="?" objectType="?">?</mes:ID>
+            <!--You may enter ANY elements at this point-->
+            <!--Optional:-->
+            <mes:operationId>?</mes:operationId>
+         </end:Reply>
          <!--Optional:-->
          <end:Payload>
             <end1:EndDeviceEvents>
@@ -1181,202 +1285,6 @@
             <!--Optional:-->
             <end:Format>?</end:Format>
          </end:Payload>
-      </end:CreatedEndDeviceEvents>
+      </end:EndDeviceEventsResponseMessage>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/EndDeviceEvents/CreatedEndDeviceEvents"/></con:call></con:operation></con:interface><con:testSuite name="EndDeviceEvents_Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CreatedEndDeviceEvents TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="CreatedEndDeviceEvents"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EndDeviceEvents_Binding</con:interface><con:operation>CreatedEndDeviceEvents</con:operation><con:request name="CreatedEndDeviceEvents"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ReceiveEndDeviceEvents</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:end="http://iec.ch/TC57/2017/EndDeviceEventsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:end1="http://iec.ch/TC57/2011/EndDeviceEvents#">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <end:CreatedEndDeviceEvents>
-         <end:Header>
-            <mes:Verb>?</mes:Verb>
-            <mes:Noun>?</mes:Noun>
-            <!--Optional:-->
-            <mes:Revision>?</mes:Revision>
-            <!--Optional:-->
-            <mes:ReplayDetection>
-               <mes:Nonce>?</mes:Nonce>
-               <mes:Created>?</mes:Created>
-            </mes:ReplayDetection>
-            <!--Optional:-->
-            <mes:Context>?</mes:Context>
-            <!--Optional:-->
-            <mes:Timestamp>?</mes:Timestamp>
-            <!--Optional:-->
-            <mes:Source>?</mes:Source>
-            <!--Optional:-->
-            <mes:AsyncReplyFlag>?</mes:AsyncReplyFlag>
-            <!--Optional:-->
-            <mes:ReplyAddress>?</mes:ReplyAddress>
-            <!--Optional:-->
-            <mes:AckRequired>?</mes:AckRequired>
-            <!--Optional:-->
-            <mes:User>
-               <mes:UserID>?</mes:UserID>
-               <!--Optional:-->
-               <mes:Organization>?</mes:Organization>
-            </mes:User>
-            <!--Optional:-->
-            <mes:MessageID>?</mes:MessageID>
-            <!--Optional:-->
-            <mes:CorrelationID>?</mes:CorrelationID>
-            <!--Optional:-->
-            <mes:Comment>?</mes:Comment>
-            <!--Zero or more repetitions:-->
-            <mes:Property>
-               <mes:Name>?</mes:Name>
-               <!--Optional:-->
-               <mes:Value>?</mes:Value>
-            </mes:Property>
-            <!--You may enter ANY elements at this point-->
-         </end:Header>
-         <!--Optional:-->
-         <end:Payload>
-            <end1:EndDeviceEvents>
-               <!--Zero or more repetitions:-->
-               <end1:EndDeviceEvent>
-                  <!--Optional:-->
-                  <end1:mRID>?</end1:mRID>
-                  <end1:createdDateTime>?</end1:createdDateTime>
-                  <!--Optional:-->
-                  <end1:issuerID>?</end1:issuerID>
-                  <!--Optional:-->
-                  <end1:issuerTrackingID>?</end1:issuerTrackingID>
-                  <!--Optional:-->
-                  <end1:reason>?</end1:reason>
-                  <!--Optional:-->
-                  <end1:severity>?</end1:severity>
-                  <!--Optional:-->
-                  <end1:userID>?</end1:userID>
-                  <!--Optional:-->
-                  <end1:Assets>
-                     <!--Optional:-->
-                     <end1:mRID>?</end1:mRID>
-                     <!--Zero or more repetitions:-->
-                     <end1:Names>
-                        <end1:name>?</end1:name>
-                        <!--Optional:-->
-                        <end1:NameType>
-                           <!--Optional:-->
-                           <end1:description>?</end1:description>
-                           <end1:name>?</end1:name>
-                           <!--Optional:-->
-                           <end1:NameTypeAuthority>
-                              <!--Optional:-->
-                              <end1:description>?</end1:description>
-                              <end1:name>?</end1:name>
-                           </end1:NameTypeAuthority>
-                        </end1:NameType>
-                     </end1:Names>
-                  </end1:Assets>
-                  <!--Zero or more repetitions:-->
-                  <end1:EndDeviceEventDetails>
-                     <end1:name>?</end1:name>
-                     <!--Optional:-->
-                     <end1:value>?</end1:value>
-                  </end1:EndDeviceEventDetails>
-                  <end1:EndDeviceEventType ref="?"/>
-                  <!--Zero or more repetitions:-->
-                  <end1:Names>
-                     <end1:name>?</end1:name>
-                     <!--Optional:-->
-                     <end1:NameType>
-                        <!--Optional:-->
-                        <end1:description>?</end1:description>
-                        <end1:name>?</end1:name>
-                        <!--Optional:-->
-                        <end1:NameTypeAuthority>
-                           <!--Optional:-->
-                           <end1:description>?</end1:description>
-                           <end1:name>?</end1:name>
-                        </end1:NameTypeAuthority>
-                     </end1:NameType>
-                  </end1:Names>
-                  <!--Optional:-->
-                  <end1:status>
-                     <!--Optional:-->
-                     <end1:dateTime>?</end1:dateTime>
-                     <!--Optional:-->
-                     <end1:reason>?</end1:reason>
-                     <!--Optional:-->
-                     <end1:remark>?</end1:remark>
-                     <!--Optional:-->
-                     <end1:value>?</end1:value>
-                  </end1:status>
-                  <!--Optional:-->
-                  <end1:UsagePoint>
-                     <!--Optional:-->
-                     <end1:mRID>?</end1:mRID>
-                     <!--Zero or more repetitions:-->
-                     <end1:Names>
-                        <end1:name>?</end1:name>
-                        <!--Optional:-->
-                        <end1:NameType>
-                           <!--Optional:-->
-                           <end1:description>?</end1:description>
-                           <end1:name>?</end1:name>
-                           <!--Optional:-->
-                           <end1:NameTypeAuthority>
-                              <!--Optional:-->
-                              <end1:description>?</end1:description>
-                              <end1:name>?</end1:name>
-                           </end1:NameTypeAuthority>
-                        </end1:NameType>
-                     </end1:Names>
-                  </end1:UsagePoint>
-               </end1:EndDeviceEvent>
-               <!--Zero or more repetitions:-->
-               <end1:EndDeviceEventType>
-                  <!--Optional:-->
-                  <end1:mRID>?</end1:mRID>
-                  <!--Optional:-->
-                  <end1:domain>?</end1:domain>
-                  <!--Optional:-->
-                  <end1:eventOrAction>?</end1:eventOrAction>
-                  <!--Optional:-->
-                  <end1:subDomain>?</end1:subDomain>
-                  <!--Optional:-->
-                  <end1:type>?</end1:type>
-                  <!--1 or more repetitions:-->
-                  <end1:Names>
-                     <end1:name>?</end1:name>
-                     <!--Optional:-->
-                     <end1:NameType>
-                        <!--Optional:-->
-                        <end1:description>?</end1:description>
-                        <end1:name>?</end1:name>
-                        <!--Optional:-->
-                        <end1:NameTypeAuthority>
-                           <!--Optional:-->
-                           <end1:description>?</end1:description>
-                           <end1:name>?</end1:name>
-                        </end1:NameTypeAuthority>
-                     </end1:NameType>
-                  </end1:Names>
-               </end1:EndDeviceEventType>
-            </end1:EndDeviceEvents>
-            <!--Optional:-->
-            <end:OperationSet>
-               <!--Optional:-->
-               <mes:enforceMsgSequence>?</mes:enforceMsgSequence>
-               <!--Optional:-->
-               <mes:enforceTransactionalIntegrity>?</mes:enforceTransactionalIntegrity>
-               <!--Zero or more repetitions:-->
-               <mes:Operation>
-                  <mes:operationId>?</mes:operationId>
-                  <!--Optional:-->
-                  <mes:noun>?</mes:noun>
-                  <!--Optional:-->
-                  <mes:verb>?</mes:verb>
-                  <!--Optional:-->
-                  <mes:elementOperation>false</mes:elementOperation>
-                  <!--You may enter ANY elements at this point-->
-               </mes:Operation>
-            </end:OperationSet>
-            <!--Optional:-->
-            <end:Compressed>?</end:Compressed>
-            <!--Optional:-->
-            <end:Format>?</end:Format>
-         </end:Payload>
-      </end:CreatedEndDeviceEvents>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:wsaConfig action="http://iec.ch/TC57/2017/EndDeviceEvents/CreatedEndDeviceEvents"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/EndDeviceEvents/CreatedEndDeviceEvents"/></con:response><con:dispatchConfig/></con:mockOperation><con:properties/></con:mockService><con:properties/><con:wssContainer/></con:soapui-project>

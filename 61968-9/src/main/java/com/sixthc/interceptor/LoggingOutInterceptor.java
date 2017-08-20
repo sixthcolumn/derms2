@@ -40,7 +40,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.sixthc.dao.MessageLogDao;
 import com.sixthc.dao.VendorDao;
 import com.sixthc.model.MessageLog;
-import com.sixthc.util.XmlStringParser;
+import com.sixthc.util.XMLUtil;
 
 /**
  * 
@@ -52,6 +52,8 @@ public class LoggingOutInterceptor extends AbstractLoggingInterceptor {
 	private String packageGroupName = null;
 	private String resultCode = null;
 	private String stage = null;
+	private String xsdFile = null;
+	private String message;
 	private boolean strict = false;
 	private static final Logger LOG = LogUtils
 			.getLogger(LoggingOutInterceptor.class);
@@ -195,7 +197,7 @@ public class LoggingOutInterceptor extends AbstractLoggingInterceptor {
 				messageLog.setPayload(payloadString);
 
 				// special processing for each message type, CIM, MS...
-				processPayload(new XmlStringParser(payloadString), messageLog);
+				processPayload(new XMLUtil(payloadString), messageLog);
 
 				/*
 				 * we require the header to contain User/Organization, and for
@@ -283,7 +285,7 @@ public class LoggingOutInterceptor extends AbstractLoggingInterceptor {
 	 * @param payload
 	 * @throws Fault
 	 */
-	public void processPayload(XmlStringParser payload, MessageLog messageLog)
+	public void processPayload(XMLUtil payload, MessageLog messageLog)
 			throws Fault {
 	}
 
@@ -310,6 +312,22 @@ public class LoggingOutInterceptor extends AbstractLoggingInterceptor {
 
 	public boolean isStrict() {
 		return this.strict;
+	}
+
+	public String getXsdFile() {
+		return xsdFile;
+	}
+
+	public void setXsdFile(String xsdFile) {
+		this.xsdFile = xsdFile;
+	}
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 }

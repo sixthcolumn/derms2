@@ -10,17 +10,40 @@
 	<import resource="classpath:META-INF/cxf/cxf.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
-	
-	<bean id="changeExecuteDERGroupsBean" class="com.sixthc.server.ws.change.ExecuteDERGroups" />
-	
-	<jaxws:endpoint id="change_ExecuteDERGroupsBean"
-		implementor="#changeExecuteDERGroupsBean" address="/61968-5/change/executeDERGroups">
+
+	<bean id="create_executeEndDeviceControls_header" name="create_executeEndDeviceControls_header"
+		class="com.sixthc.part5.create.executeEndDeviceControls.HeaderType">
+		<property name="verb" value="create" />
+		<property name="noun" value="DERGroups" />
+		<property name="Timestamp" value="#{now.XMLGregorianDate}" />
+		<property name="MessageID"
+			value="#{ T(java.util.UUID).randomUUID().toString() }" />
+
+	</bean>
+
+	<!-- This should be part of create_executeEndDeviceControls_Reply, when 
+		I figure out how to do an array -->
+	<bean id="create_executeEndDeviceControls_error" name="create_executeEndDeviceControls_error"
+		class="com.sixthc.part5.create.executeEndDeviceControls.ErrorType">
+		<property name="code" value="0.0" />
+	</bean>
+
+	<bean id="create_executeEndDeviceControls_reply" name="create_executeEndDeviceControls_reply"
+		class="com.sixthc.part5.create.executeEndDeviceControls.ReplyType">
+		<property name="result" value="OK" />
+	</bean>
+
+	<bean id="createExecuteEndDeviceControlsBean" class="com.sixthc.server.ws.create.ExecuteEndDeviceControls" />
+
+	<jaxws:endpoint id="create_executeEndDeviceControlsBean"
+		implementor="#createExecuteEndDeviceControlsBean" address="/create/executeEndDeviceControls">
 		<jaxws:inInterceptors>
 			<bean class="com.sixthc.interceptor.CIMLoggingInInterceptor">
 				<property name="packageName" value="CIM DER" />
 				<property name="packageGroupName" value="CIM DER Control" />
 				<property name="resultCode" value="success" />
 				<property name="stage" value="serviceIn" />
+				<property name="messageName" value="CIM_DER(executeEndDeviceControls)" />
 			</bean>
 		</jaxws:inInterceptors>
 		<jaxws:outInterceptors>
@@ -29,6 +52,13 @@
 				<property name="packageGroupName" value="CIM DER Control" />
 				<property name="resultCode" value="success" />
 				<property name="stage" value="serviceOut" />
+				<property name="messageName" value="CIM_DER(executeEndDeviceControls)" />
+			</bean>
+			<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor">
+				<property name="messageName" value="CIM_DER(executeEndDeviceControls)" />
+				<property name="xsdFile"
+					value="/resources/wsdl/create/xsd/EndDeviceControlsMessage.xsd" />
+				<property name="message" value="EndDeviceControlsResponseMessage" />
 			</bean>
 		</jaxws:outInterceptors>
 		<jaxws:outFaultInterceptors>
@@ -37,6 +67,8 @@
 				<property name="packageGroupName" value="CIM DER Control" />
 				<property name="resultCode" value="fail" />
 				<property name="stage" value="serviceOutFault" />
+				<property name="messageName" value="CIM_DER(executeEndDeviceControls)" />
+
 			</bean>
 		</jaxws:outFaultInterceptors>
 		<jaxws:inFaultInterceptors>
@@ -54,5 +86,6 @@
 			</entry>
 		</jaxws:properties>
 	</jaxws:endpoint>
+
 
 </beans>

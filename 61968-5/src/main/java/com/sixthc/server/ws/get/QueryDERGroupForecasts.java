@@ -46,6 +46,7 @@ public class QueryDERGroupForecasts implements QueryDERGroupForecastsPort,
 		
 		ErrorType error =  appContext.getBean(
 				"get_queryDERGroupForecasts_error", ErrorType.class);
+		reply.getError().clear();
 		reply.getError().add(error);
 		
 		msg.setReply(reply);

@@ -1,0 +1,19 @@
+<jaxb:bindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.0">
+	<jaxb:bindings schemaLocation="../../../wsdl/create/xsd/DERGroupDispatches.xsd"
+		node="/xsd:schema">
+		<jaxb:schemaBindings>
+			<jaxb:package name="com.sixthc.part5.create"></jaxb:package>
+		</jaxb:schemaBindings>
+		<jaxb:bindings node="//xsd:complexType[@name='NameType']">
+			<jaxb:class name="DispatchesNameType2" />
+		</jaxb:bindings>
+		<jaxb:bindings node="//xsd:complexType[@name='Name']">
+			<jaxb:class name="DispatchesName2" />
+		</jaxb:bindings>
+		<jaxb:bindings node="//xsd:complexType[@name='NameTypeAuthority']">
+			<jaxb:class name="DispatchesNameTypeAuthority2" />
+		</jaxb:bindings>
+	</jaxb:bindings>
+</jaxb:bindings>
+</jaxb:bindings>

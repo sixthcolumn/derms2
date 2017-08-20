@@ -2,6 +2,8 @@ package com.sixthc.util;
 
 import java.io.IOException;
 import java.io.StringReader;
+import java.io.StringWriter;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -11,6 +13,18 @@ import javax.xml.namespace.NamespaceContext;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.TransformerFactoryConfigurationError;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import javax.xml.validation.Validator;
 import javax.xml.xpath.XPath;
 import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
@@ -25,13 +39,13 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-public class XmlStringParser {
+public class XMLUtil {
 	private Document payloadDoc;
-	private UniversalNamespaceResolver2 unr;
+	private NSResolver unr;
 	private static org.apache.log4j.Logger log = Logger
-			.getLogger(XmlStringParser.class);
+			.getLogger(XMLUtil.class);
 
-	public XmlStringParser(String xmlString)
+	public XMLUtil(String xmlString)
 			throws ParserConfigurationException, SAXException, IOException {
 		DocumentBuilderFactory builderFactory = DocumentBuilderFactory
 				.newInstance();
@@ -40,32 +54,15 @@ public class XmlStringParser {
 
 		InputSource inputSource = new InputSource(new StringReader(xmlString));
 		payloadDoc = builder.parse(inputSource);
-		unr = new UniversalNamespaceResolver2(payloadDoc, false);
+		unr = new NSResolver(payloadDoc, false);
 
 	}
 
-	//	public String getTagValue(String tag, String namespace)
-	//			throws ParserConfigurationException, IOException, SAXException {
-	//		String prefix = unr.getPrefix(namespace);
-	//
-	//		XPath xpath = XPathFactory.newInstance().newXPath();
-	//		xpath.setNamespaceContext(unr);
-	//
-	//		try {
-	//			String xpathString = "//" + prefix + ":" + tag + "/text()";
-	//			System.out.println("xpath : " + xpathString);
-	//			NodeList nodes = (NodeList) xpath.evaluate(xpathString, payloadDoc,
-	//					XPathConstants.NODESET);
-	//			if (nodes.getLength() > 0) {
-	//				org.w3c.dom.Node n = nodes.item(0);
-	//				return n.getNodeValue();
-	//			}
-	//		} catch (XPathExpressionException e) {
-	//			// TODO Auto-generated catch block
-	//			log.error(e);
-	//		}
-	//		return "";
-	//	}
+	public String GetSOAPBodyPayload() throws ParserConfigurationException,
+			IOException, SAXException {
+		return this.getTagValue("http://schemas.xmlsoap.org/soap/envelope/",
+				"Body");
+	}
 
 	public String getTagValue(String namespace, String... tags)
 			throws ParserConfigurationException, IOException, SAXException {
@@ -78,7 +75,8 @@ public class XmlStringParser {
 		try {
 			String xpathString = "//";
 			for (String tag : tags) {
-				xpathString += prefix + ":" + tag + "/";
+				xpathString += (prefix == null ? "*:" : prefix + ":") + tag
+						+ "/";
 			}
 			xpathString += "text()";
 
@@ -90,10 +88,92 @@ public class XmlStringParser {
 				return n.getNodeValue();
 			}
 		} catch (XPathExpressionException e) {
-			// TODO Auto-generated catch block
 			log.error(e);
 		}
 		return "";
+	}
+
+	/**
+	 * Given an xsd file, it validates it against the node
+	 * passed
+	 * 
+	 * @param xsdFile
+	 * @param payload
+	 * @return
+	 */
+	public boolean isXMLValid(String xsdFile, Node payload) {
+		log.debug("validating xsd file : " + xsdFile);
+		ClassLoader classLoader = Thread.currentThread()
+				.getContextClassLoader();
+		URL schemaFile = classLoader.getResource(xsdFile);
+
+		SchemaFactory schemaFactory = SchemaFactory
+				.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+
+		DOMSource source = new DOMSource(payload);
+		Schema schema;
+		try {
+			schema = schemaFactory.newSchema(schemaFile);
+			Validator validator = schema.newValidator();
+			validator.validate(source);
+			return true;
+		} catch (Exception e) {
+			log.error(e);
+		}
+
+		return false;
+	}
+
+	/**
+	 * Searches the DOM for a particular node
+	 * 
+	 * @param namespace
+	 * @param element
+	 * @param validate
+	 * @return
+	 * @throws Exception
+	 */
+	public Node getNode(String namespace, String element) throws Exception {
+		log.debug("getNode on namespace " + namespace + ", for element "
+				+ element);
+
+		NodeList body = payloadDoc.getElementsByTagNameNS(namespace, element);
+		if (body.getLength() > 0) {
+			Node node = body.item(0);
+			StreamResult xmlOutput = new StreamResult(new StringWriter());
+			Transformer transformer = TransformerFactory.newInstance()
+					.newTransformer();
+			transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION,
+					"yes");
+			transformer.transform(new DOMSource(node), xmlOutput);
+			String nodeAsAString = xmlOutput.getWriter().toString();
+			System.out.println("parsed node for " + element + " : "
+					+ nodeAsAString);
+			return node;
+		}
+
+		return null;
+	}
+
+	/**
+	 * Transforms a DOM node to a string
+	 * 
+	 * @param node
+	 * @return
+	 * @throws TransformerFactoryConfigurationError
+	 * @throws TransformerException
+	 */
+	public String nodeToString(Node node)
+			throws TransformerFactoryConfigurationError, TransformerException {
+
+		StreamResult xmlOutput = new StreamResult(new StringWriter());
+		Transformer transformer = TransformerFactory.newInstance()
+				.newTransformer();
+		transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
+		transformer.transform(new DOMSource(node), xmlOutput);
+		String nodeAsAString = xmlOutput.getWriter().toString();
+
+		return nodeAsAString;
 	}
 
 	public String getHeaderValueWC(String... tags)
@@ -118,61 +198,54 @@ public class XmlStringParser {
 				return n.getNodeValue();
 			}
 		} catch (XPathExpressionException e) {
-			// TODO Auto-generated catch block
 			log.error(e);
 		}
 		return "";
 	}
 
-	private static class UniversalNamespaceResolver implements NamespaceContext {
-		// the delegate
-		private Document sourceDocument;
+	/**
+	 * throws an exception if the SOAP message does not properly validate
+	 * against the xsd
+	 * 
+	 * @param xsdFile
+	 * @param msg
+	 * @throws SAXException
+	 * @throws IOException
+	 */
+	public static void validateXML(String xsdFile, String msg) throws Exception {
 
-		/**
-		 * This constructor stores the source document to search the namespaces
-		 * in
-		 * it.
-		 * 
-		 * @param document
-		 *            source document
-		 */
-		public UniversalNamespaceResolver(Document document) {
-			sourceDocument = document;
-		}
+		ClassLoader classLoader = Thread.currentThread()
+				.getContextClassLoader();
+		URL schemaFile = classLoader.getResource(xsdFile);
 
-		/**
-		 * The lookup for the namespace uris is delegated to the stored
-		 * document.
-		 * 
-		 * @param prefix
-		 *            to search for
-		 * @return uri
-		 */
-		public String getNamespaceURI(String prefix) {
-			if (prefix.equals(XMLConstants.DEFAULT_NS_PREFIX)) {
-				return sourceDocument.lookupNamespaceURI(null);
-			} else {
-				return sourceDocument.lookupNamespaceURI(prefix);
-			}
-		}
+		SchemaFactory schemaFactory = SchemaFactory
+				.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
 
-		/**
-		 * This method is not needed in this context, but can be implemented in
-		 * a
-		 * similar way.
-		 */
-		public String getPrefix(String namespaceURI) {
-			return sourceDocument.lookupPrefix(namespaceURI);
-		}
+		XMLUtil xmlParser = new XMLUtil(msg);
+		String payload = xmlParser.GetSOAPBodyPayload();
+		Source src = new StreamSource(new java.io.StringReader(payload));
 
-		public Iterator getPrefixes(String namespaceURI) {
-			// not implemented yet
-			return null;
-		}
-
+		Schema schema = schemaFactory.newSchema(schemaFile);
+		Validator validator = schema.newValidator();
+		validator.validate(src);
 	}
 
-	private static class UniversalNamespaceResolver2 implements
+	public static void validateXML(String xsdFile, Node payload)
+			throws Exception {
+		ClassLoader classLoader = Thread.currentThread()
+				.getContextClassLoader();
+		URL schemaFile = classLoader.getResource(xsdFile);
+
+		SchemaFactory schemaFactory = SchemaFactory
+				.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+
+		DOMSource source = new DOMSource(payload);
+		Schema schema = schemaFactory.newSchema(schemaFile);
+		Validator validator = schema.newValidator();
+		validator.validate(source);
+	}
+
+	private static class NSResolver implements
 			NamespaceContext {
 		private static final String DEFAULT_NS = "DEFAULT";
 		private Map<String, String> prefix2Uri = new HashMap<String, String>();
@@ -187,7 +260,7 @@ public class XmlStringParser {
 		 * @param toplevelOnly
 		 *            restriction of the search to enhance performance
 		 */
-		public UniversalNamespaceResolver2(Document document,
+		public NSResolver(Document document,
 				boolean toplevelOnly) {
 			examineNode(document.getFirstChild(), toplevelOnly);
 			log.debug("The list of the cached namespaces:");
@@ -279,6 +352,7 @@ public class XmlStringParser {
 			return uri2Prefix.get(namespaceURI);
 		}
 
+		@SuppressWarnings("rawtypes")
 		public Iterator getPrefixes(String namespaceURI) {
 			// Not implemented
 			return null;

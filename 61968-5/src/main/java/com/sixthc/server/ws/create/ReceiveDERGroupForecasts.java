@@ -42,6 +42,7 @@ public class ReceiveDERGroupForecasts implements DERGroupForecastsPort,
 				"create_receiveDERGroupForecasts_error", ErrorType.class);
 		reply.value = appContext.getBean(
 				"create_receiveDERGroupForecasts_reply", ReplyType.class);
+		reply.value.getError().clear();
 		reply.value.getError().add(et);
 
 		payload.value = null;
