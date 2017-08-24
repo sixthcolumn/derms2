@@ -217,11 +217,13 @@
 			<artifactId>xercesImpl</artifactId>
 			<version>2.11.0</version>
 		</dependency>
+<!--
 		<dependency>
 			<groupId>com.sixthc</groupId>
 			<artifactId>common</artifactId>
 			<version>0.1</version>
 		</dependency>
+-->
 		<dependency>
 			<groupId>com.sun.jersey</groupId>
 			<artifactId>jersey-client</artifactId>
