@@ -59,7 +59,7 @@
 				<property name="messageName" value="CIM_DER(changeReceiveDERGroupStatuses)" />
 				<property name="xsdFile"
 					value="/resources/wsdl/change/xsd/DERGroupStatusesMessage.xsd" />
-				<property name="message" value="DERGroupStatusesResponseMessage" />
+				<property name="messageToValidate" value="DERGroupStatusesResponseMessage" />
 			</bean>
 		</jaxws:outInterceptors>
 		<jaxws:outFaultInterceptors>

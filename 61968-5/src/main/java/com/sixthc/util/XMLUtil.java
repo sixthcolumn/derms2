@@ -45,8 +45,8 @@ public class XMLUtil {
 	private static org.apache.log4j.Logger log = Logger
 			.getLogger(XMLUtil.class);
 
-	public XMLUtil(String xmlString)
-			throws ParserConfigurationException, SAXException, IOException {
+	public XMLUtil(String xmlString) throws ParserConfigurationException,
+			SAXException, IOException {
 		DocumentBuilderFactory builderFactory = DocumentBuilderFactory
 				.newInstance();
 		builderFactory.setNamespaceAware(true);
@@ -106,6 +106,11 @@ public class XMLUtil {
 		ClassLoader classLoader = Thread.currentThread()
 				.getContextClassLoader();
 		URL schemaFile = classLoader.getResource(xsdFile);
+
+		if (schemaFile == null) {
+			log.error("schema file not found : " + xsdFile);
+			return false;
+		}
 
 		SchemaFactory schemaFactory = SchemaFactory
 				.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
@@ -245,8 +250,7 @@ public class XMLUtil {
 		validator.validate(source);
 	}
 
-	private static class NSResolver implements
-			NamespaceContext {
+	private static class NSResolver implements NamespaceContext {
 		private static final String DEFAULT_NS = "DEFAULT";
 		private Map<String, String> prefix2Uri = new HashMap<String, String>();
 		private Map<String, String> uri2Prefix = new HashMap<String, String>();
@@ -260,8 +264,7 @@ public class XMLUtil {
 		 * @param toplevelOnly
 		 *            restriction of the search to enhance performance
 		 */
-		public NSResolver(Document document,
-				boolean toplevelOnly) {
+		public NSResolver(Document document, boolean toplevelOnly) {
 			examineNode(document.getFirstChild(), toplevelOnly);
 			log.debug("The list of the cached namespaces:");
 			for (String key : prefix2Uri.keySet()) {

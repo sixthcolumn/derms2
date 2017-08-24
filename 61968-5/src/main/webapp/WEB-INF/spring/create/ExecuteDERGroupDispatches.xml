@@ -95,7 +95,7 @@
 				<property name="messageName" value="CIM_DER(createExecuteDERGroupDispatches)" />
 				<property name="xsdFile"
 					value="/resources/wsdl/create/xsd/DERGroupDispatchesMessage.xsd" />
-				<property name="message" value="DERGroupDispatchesResponseMessage" />
+				<property name="messageToValidate" value="DERGroupDispatchesResponseMessage" />
 			</bean>
 		</jaxws:outInterceptors>
 		<jaxws:outFaultInterceptors>

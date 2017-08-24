@@ -54,11 +54,11 @@
 				<property name="resultCode" value="success" />
 				<property name="stage" value="serviceOut" />
 			</bean>
-						<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor">
-				<property name="messageName" value="CIM_DER(createReceiveDERGroupForecasts) />
+			<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor">
+				<property name="messageName" value="CIM_DER(createReceiveDERGroupForecasts)" />
 				<property name="xsdFile"
 					value="/resources/wsdl/create/xsd/DERGroupForecastsMessage.xsd" />
-				<property name="message" value="DERGroupForecastsResponseMessage" />
+				<property name="messageToValidate" value="DERGroupForecastsResponseMessage" />
 			</bean>
 		</jaxws:outInterceptors>
 		<jaxws:outFaultInterceptors>

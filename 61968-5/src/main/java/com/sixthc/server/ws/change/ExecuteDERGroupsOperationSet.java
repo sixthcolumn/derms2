@@ -1,25 +1,16 @@
 package com.sixthc.server.ws.change;
 
-import java.math.BigInteger;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.ws.Holder;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 
 import com.sixthc.part5.change.ExecuteDERGroupsOperationSet.DERGroupsOperationSetPort;
 import com.sixthc.part5.change.ExecuteDERGroupsOperationSet.DERGroupsPayloadType;
 import com.sixthc.part5.change.ExecuteDERGroupsOperationSet.ErrorType;
 import com.sixthc.part5.change.ExecuteDERGroupsOperationSet.FaultMessage;
 import com.sixthc.part5.change.ExecuteDERGroupsOperationSet.HeaderType;
-import com.sixthc.part5.change.ExecuteDERGroupsOperationSet.OperationSet;
-import com.sixthc.part5.change.ExecuteDERGroupsOperationSet.OperationType;
 import com.sixthc.part5.change.ExecuteDERGroupsOperationSet.ReplyType;
 import com.sixthc.part5.change.ExecuteDERGroupsOperationSet.RequestType;
 

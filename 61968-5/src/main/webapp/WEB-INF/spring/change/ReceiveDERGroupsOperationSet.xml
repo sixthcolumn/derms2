@@ -61,8 +61,8 @@
 			<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor">
 				<property name="messageName" value="CIM_DER(changeReceiveDERGroupsOperationSet)" />
 				<property name="xsdFile"
-					value="/resources/wsdl/change/xsd/DERGroupsMessage.xsd" />
-				<property name="message" value="DERGroupsOperationSetResponseMessage" />
+					value="/resources/wsdl/change/xsd/DERGroupsOperationSetMessage.xsd" />
+				<property name="messageToValidate" value="DERGroupsOperationSetResponseMessage" />
 			</bean>
 		</jaxws:outInterceptors>
 		<jaxws:outFaultInterceptors>

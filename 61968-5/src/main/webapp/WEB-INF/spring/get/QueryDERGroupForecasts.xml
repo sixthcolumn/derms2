@@ -60,7 +60,7 @@
 				<property name="messageName" value="CIM_DER(getQueryDERGroupForecasts)" />
 				<property name="xsdFile"
 					value="/resources/wsdl/get/xsd/DERGroupForecastQueriesMessage.xsd" />
-				<property name="message" value="DERGroupForecastQueriesResponseMessage" />
+				<property name="messageToValidate" value="DERGroupForecastQueriesResponseMessage" />
 			</bean>
 		</jaxws:outInterceptors>
 		<jaxws:outFaultInterceptors>
