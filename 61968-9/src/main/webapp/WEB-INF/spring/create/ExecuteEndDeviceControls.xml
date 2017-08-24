@@ -58,7 +58,7 @@
 				<property name="messageName" value="CIM_DER(executeEndDeviceControls)" />
 				<property name="xsdFile"
 					value="/resources/wsdl/create/xsd/EndDeviceControlsMessage.xsd" />
-				<property name="message" value="EndDeviceControlsResponseMessage" />
+				<property name="messageToValidate" value="EndDeviceControlsResponseMessage" />
 			</bean>
 		</jaxws:outInterceptors>
 		<jaxws:outFaultInterceptors>

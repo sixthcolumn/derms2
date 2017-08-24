@@ -31,7 +31,7 @@ Within that bean find :
 				<property name="messageName" value="CIM_DER(changeExecuteDERGroups)" />
 				<property name="xsdFile"
 					value="/resources/wsdl/create/xsd/DERGroupsMessage.xsd" />
-				<property name="message" value="DERGroupsResponseMessage" />
+				<property name="messageToValidate" value="DERGroupsResponseMessage" />
 			</bean>
 
 messageName = message.name (from database)
@@ -55,3 +55,14 @@ j. if ANY of the above steps fail due to bad xml, etc... the default tomcat mess
 
 Kind of complicated...
 
+
+Database set up :
+
+1. file sql/derms2_full.sql
+2. load into user derms2, password derms2
+
+Running Rails :
+
+1. cd rails_app
+2. rails server
+3. note new menu item : message_reply, it sets the message to replace for default messages

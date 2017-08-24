@@ -17,7 +17,7 @@ public class ReplaceMessageInterceptor extends MessageChangeInterceptor {
 	// lookup message.name from database
 	private String messageName;
 	private String xsdFile;
-	private String message;
+	private String messageToValidate;
 
 	@Autowired
 	private MessageDao messageDao;
@@ -50,7 +50,7 @@ public class ReplaceMessageInterceptor extends MessageChangeInterceptor {
 			// try to replace  MessageID, CorrelationID, Timestamp
 			try {
 				XMLUtil soap = new XMLUtil(newMsg);
-				Node n = soap.getNode("*", message);
+				Node n = soap.getNode("*", messageToValidate);
 				// validate the xml
 				if (soap.isXMLValid(xsdFile, n)) {
 					return MSHeader.CopyPaste(currentEnvelope, newMsg,
@@ -88,12 +88,12 @@ public class ReplaceMessageInterceptor extends MessageChangeInterceptor {
 		this.xsdFile = xsdFile;
 	}
 
-	public String getMessage() {
-		return message;
+	public String getMessageToValidate() {
+		return messageToValidate;
 	}
 
-	public void setMessage(String message) {
-		this.message = message;
+	public void setMessageToValidate(String messageToValidate) {
+		this.messageToValidate = messageToValidate;
 	}
 
 }

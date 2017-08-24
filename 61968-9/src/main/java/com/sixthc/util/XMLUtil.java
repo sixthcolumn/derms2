@@ -106,6 +106,11 @@ public class XMLUtil {
 		ClassLoader classLoader = Thread.currentThread()
 				.getContextClassLoader();
 		URL schemaFile = classLoader.getResource(xsdFile);
+		
+		if( schemaFile == null ) {
+			log.error("schema file not found : " + xsdFile);
+			return false;
+		}
 
 		SchemaFactory schemaFactory = SchemaFactory
 				.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
