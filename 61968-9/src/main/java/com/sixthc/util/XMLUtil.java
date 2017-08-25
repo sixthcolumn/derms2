@@ -286,6 +286,11 @@ public class XMLUtil {
 		 */
 		private void examineNode(Node node, boolean attributesOnly) {
 			NamedNodeMap attributes = node.getAttributes();
+			if( attributes == null ) {
+				log.error("examineNode returned null NS attributes");
+				return;
+			}
+			
 			for (int i = 0; i < attributes.getLength(); i++) {
 				Node attribute = attributes.item(i);
 				storeAttribute((Attr) attribute);

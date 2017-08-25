@@ -72,7 +72,7 @@ public class LoggingInInterceptor extends AbstractLoggingInterceptor {
 	protected void logging(Message message) throws Fault {
 
 		if (message.containsKey(LoggingMessage.ID_KEY)) {
-			log.info("returning from logging becuase message has ID");
+			log.info("returning from logging because message has ID");
 			return;
 		}
 
