@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default" name="61968-5/create/ExecuteDERGroups" resourceRoot="${projectDir}" soapui-version="4.5.2" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="DERGroups_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/ExecuteDERGroups}DERGroups_Binding" soapVersion="1_1" anonymous="optional" definition="ExecuteDERGroups.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'create'/ExecuteDERGroups.wsdl"><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'create'/ExecuteDERGroups.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ExecuteDERGroups" targetNamespace="http://iec.ch/TC57/2017/ExecuteDERGroups" xmlns:tns="http://iec.ch/TC57/2017/ExecuteDERGroups" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupsMessage">
+<con:soapui-project activeEnvironment="Default" name="61968-5/create/ExecuteDERGroups" resourceRoot="${projectDir}" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" id="886ecc66-d58b-45b7-8798-fe5176a89ae1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="DERGroups_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/ExecuteDERGroups}DERGroups_Binding" soapVersion="1_1" anonymous="optional" definition="ExecuteDERGroups.wsdl" id="52762828-d5fd-404e-b6c9-80d73858d5ba" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'create'/ExecuteDERGroups.wsdl"><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'create'/ExecuteDERGroups.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ExecuteDERGroups" targetNamespace="http://iec.ch/TC57/2017/ExecuteDERGroups" xmlns:tns="http://iec.ch/TC57/2017/ExecuteDERGroups" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupsMessage">
   <wsdl:types>
     <xs:schema targetNamespace="http://iec.ch/TC57/2017/ExecuteDERGroups" elementFormDefault="qualified">
       <xs:import namespace="http://iec.ch/TC57/2017/DERGroupsMessage" schemaLocation="xsd/DERGroupsMessage.xsd"/>
@@ -901,7 +901,7 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/ExecuteDERGroups</con:endpoint><con:endpoint>http://52.91.91.57:8080/61968-5/create/executeDERGroups</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroups/CreateDERGroups" name="CreateDERGroups" bindingOperationName="CreateDERGroups" type="Request-Response" outputName="CreateDERGroupsResponse" inputName="CreateDERGroupsRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ExecuteDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/ExecuteDERGroups</con:endpoint><con:endpoint>http://localhost:8080/61968-5/61968-5/create/executeDERGroups</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroups/CreateDERGroups" name="CreateDERGroups" bindingOperationName="CreateDERGroups" type="Request-Response" outputName="CreateDERGroupsResponse" inputName="CreateDERGroupsRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="51a013c9-3a29-4767-993f-08522e2aa687"><con:settings/><con:call name="Request 1" id="816d725e-f917-4b80-bdc3-25618d645169"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ExecuteDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
    <soapenv:Header/>
    <soapenv:Body>
       <der:CreateDERGroups>
@@ -1058,38 +1058,290 @@
          </der:Payload>
       </der:CreateDERGroups>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroups/CreateDERGroups"/></con:call></con:operation></con:interface><con:testSuite name="DERGroups_Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CreateDERGroups TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="CreateDERGroups"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroups_Binding</con:interface><con:operation>CreateDERGroups</con:operation><con:request name="CreateDERGroups"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/create/executeDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroups/CreateDERGroups"/></con:call></con:operation></con:interface><con:testSuite name="DERGroups_Binding TestSuite" id="68f09a0b-dc82-4603-81d2-2866b0740e13"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CreateDERGroups TestCase" searchProperties="true" id="5aadb2ee-292a-4875-9a0a-44840326eee0"><con:settings/><con:testStep type="request" name="DERG-1A" id="b0dea61d-cab9-44c7-b9a1-0bb6df9a1577"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroups_Binding</con:interface><con:operation>CreateDERGroups</con:operation><con:request name="DERG-1A" id="ca504c2f-fc2f-4d37-b2f6-a423398fe706"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/create/executeDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
    <soapenv:Header/>
    <soapenv:Body>
-      <der:CreateDERGroups>
-         <der:Header>
-            <mes:Verb>create</mes:Verb>
-            <mes:Noun>DERGroups</mes:Noun>
-            <mes:Timestamp>2017-07-18T10:28:27-06:00</mes:Timestamp>
-            <mes:MessageID>64cc945c-7a23-437e-89af-34c31cfded8c</mes:MessageID>
-         </der:Header>
-         <der:Payload>
-            <der1:DERGroups>
-               <der1:EndDeviceGroup>
-                  <der1:mRID>1234</der1:mRID>
-                  <der1:description>sixc test</der1:description>
-                  <der1:DERFunction>
-                     <der1:connectDisconnect>false</der1:connectDisconnect>
-                     <der1:frequencyWattCurveFunction>false</der1:frequencyWattCurveFunction>
-                     <der1:maxRealPowerLimiting>false</der1:maxRealPowerLimiting>
-                     <der1:rampRateControl>false</der1:rampRateControl>
-                     <der1:reactivePowerDispatch>false</der1:reactivePowerDispatch>
-                     <der1:realPowerDispatch>true</der1:realPowerDispatch>
-                     <der1:voltageRegulation>true</der1:voltageRegulation>
-                     <der1:voltVarCurveFunction>false</der1:voltVarCurveFunction>
-                     <der1:voltWattCurveFunction>false</der1:voltWattCurveFunction>
-                  </der1:DERFunction>
-               </der1:EndDeviceGroup>
-            </der1:DERGroups>           
-         </der:Payload>
-      </der:CreateDERGroups>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroups/CreateDERGroups" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="CreateDERGroups Default"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroups_Binding</con:interface><con:operation>CreateDERGroups</con:operation><con:request name="CreateDERGroups Default"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ExecuteDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
+<tns:CreateDERGroups>
+     <tns:Header>
+		<msg:Verb>create</msg:Verb>
+		<msg:Noun>DERGroups</msg:Noun>
+		<msg:Timestamp>2017-06-02T11:20:42-06:00</msg:Timestamp>
+		<msg:MessageID>d83c8b6a-91df-441d-9bda-4ceb19066a15</msg:MessageID>
+		<msg:CorrelationID>ddce82e7-c3a3-48d9-816e-6cc6a3cfe619</msg:CorrelationID>
+	</tns:Header>
+	<tns:Payload>
+		<der1:DERGroups>
+			<der1:EndDeviceGroup>
+				<der1:DERFunction>
+					<der1:connectDisconnect>true</der1:connectDisconnect>
+					<der1:frequencyWattCurveFunction>false</der1:frequencyWattCurveFunction>
+					<der1:maxRealPowerLimiting>false</der1:maxRealPowerLimiting>
+					<der1:rampRateControl>false</der1:rampRateControl>
+					<der1:reactivePowerDispatch>true</der1:reactivePowerDispatch>
+					<der1:realPowerDispatch>true</der1:realPowerDispatch>
+					<der1:voltageRegulation>false</der1:voltageRegulation>
+					<der1:voltVarCurveFunction>false</der1:voltVarCurveFunction>
+					<der1:voltWattCurveFunction>false</der1:voltWattCurveFunction>
+				</der1:DERFunction>
+				<der1:EndDevices>
+					<der1:mRID>e8a2f05b-aca9-46dc-971b-be22fcedc00b</der1:mRID>
+				</der1:EndDevices>
+				<der1:Names>
+					<der1:name>DG6</der1:name>
+				</der1:Names>
+				<der1:version>
+					<der1:date>2017-06-02T11:20:28-06:00</der1:date>
+					<der1:major>1</der1:major>
+					<der1:minor>0</der1:minor>
+					<der1:revision>0</der1:revision>
+				</der1:version>
+			</der1:EndDeviceGroup>
+		</der1:DERGroups>
+	</tns:Payload>
+</tns:CreateDERGroups>
+</soapenv:Body>
+</soapenv:Envelope>
+]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroups/CreateDERGroups" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERG-1B" id="1615f3fb-e33b-4c60-b445-381d1c6ebf78"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroups_Binding</con:interface><con:operation>CreateDERGroups</con:operation><con:request name="DERG-1B" id="ca504c2f-fc2f-4d37-b2f6-a423398fe706"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/create/executeDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
+   <soapenv:Header/>
+   <soapenv:Body>
+<tns:CreateDERGroups>
+	<tns:Header>
+		<msg:Verb>create</msg:Verb>
+		<msg:Noun>DERGroups</msg:Noun>
+		<msg:Timestamp>2017-05-31T14:37:02-06:00</msg:Timestamp>
+		<msg:MessageID>d6ad7d26-21f5-4b3a-8646-29dd2bd07c0d</msg:MessageID>
+		<msg:CorrelationID>ab2841cf-4388-435b-b3f6-4ee8144fbf79</msg:CorrelationID>
+	</tns:Header>
+	<tns:Payload>
+		<der1:DERGroups>
+			<der1:EndDeviceGroup>
+				<der1:mRID>a20c559c-dda3-41e5-98b7-41afeb63ae5b</der1:mRID>
+				<der1:description>DER Group 1</der1:description>
+				<der1:DERFunction>
+					<der1:connectDisconnect>false</der1:connectDisconnect>
+					<der1:frequencyWattCurveFunction>false</der1:frequencyWattCurveFunction>
+					<der1:maxRealPowerLimiting>false</der1:maxRealPowerLimiting>
+					<der1:rampRateControl>false</der1:rampRateControl>
+					<der1:reactivePowerDispatch>false</der1:reactivePowerDispatch>
+					<der1:realPowerDispatch>true</der1:realPowerDispatch>
+					<der1:voltageRegulation>false</der1:voltageRegulation>
+					<der1:voltVarCurveFunction>false</der1:voltVarCurveFunction>
+					<der1:voltWattCurveFunction>false</der1:voltWattCurveFunction>
+				</der1:DERFunction>
+				<der1:EndDevices>
+					<der1:mRID>646bd360-9519-4c60-8c1f-c4d225e806f7</der1:mRID>
+				</der1:EndDevices>
+				<der1:EndDevices>
+					<der1:mRID>8b0e2733-0c5d-4d69-be89-c8ed1d8564b7</der1:mRID>
+				</der1:EndDevices>
+				<der1:Names>
+					<der1:name>DG1</der1:name>
+				</der1:Names>
+				<der1:version>
+					<der1:date>2017-05-31T13:36:33-06:00</der1:date>
+					<der1:major>1</der1:major>
+					<der1:minor>0</der1:minor>
+					<der1:revision>0</der1:revision>
+				</der1:version>
+			</der1:EndDeviceGroup>
+		</der1:DERGroups>
+	</tns:Payload>
+</tns:CreateDERGroups>
+</soapenv:Body>
+</soapenv:Envelope>
+]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroups/CreateDERGroups" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERG-1C" id="0510e292-c3ee-4239-a7b5-3511812f4041"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroups_Binding</con:interface><con:operation>CreateDERGroups</con:operation><con:request name="DERG-1C" id="ca504c2f-fc2f-4d37-b2f6-a423398fe706"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/create/executeDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
+   <soapenv:Header/>
+   <soapenv:Body>
+   <tns:CreateDERGroups>
+	<tns:Header>
+		<msg:Verb>create</msg:Verb>
+		<msg:Noun>DERGroups</msg:Noun>
+		<msg:Timestamp>2017-06-02T10:04:29-06:00</msg:Timestamp>
+		<msg:MessageID>1c6c3e7e-8a67-48cf-8d7c-af9164863baa</msg:MessageID>
+		<msg:CorrelationID>d151d469-d8b2-492c-b352-4a175e73f8cf</msg:CorrelationID>
+	</tns:Header>
+	<tns:Payload>
+		<der1:DERGroups>
+			<der1:EndDeviceGroup>
+				<der1:mRID>228650bf-7f77-44fa-9576-db4bbce8a07f</der1:mRID>
+				<der1:description>DER Group 2</der1:description>
+				<der1:DERFunction>
+					<der1:connectDisconnect>true</der1:connectDisconnect>
+					<der1:frequencyWattCurveFunction>false</der1:frequencyWattCurveFunction>
+					<der1:maxRealPowerLimiting>false</der1:maxRealPowerLimiting>
+					<der1:rampRateControl>false</der1:rampRateControl>
+					<der1:reactivePowerDispatch>false</der1:reactivePowerDispatch>
+					<der1:realPowerDispatch>true</der1:realPowerDispatch>
+					<der1:voltageRegulation>false</der1:voltageRegulation>
+					<der1:voltVarCurveFunction>false</der1:voltVarCurveFunction>
+					<der1:voltWattCurveFunction>false</der1:voltWattCurveFunction>
+				</der1:DERFunction>
+				<der1:EndDevices>
+					<der1:mRID>46029b51-8d94-4a06-b242-74d4a3fc2390</der1:mRID>
+				</der1:EndDevices>
+				<der1:EndDevices>
+					<der1:mRID>13a801e1-b45d-4dbe-960f-84f04ef39fcb</der1:mRID>
+				</der1:EndDevices>
+				<der1:Names>
+					<der1:name>DG2</der1:name>
+				</der1:Names>
+				<der1:version>
+					<der1:date>2017-06-02T10:04:10-06:00</der1:date>
+					<der1:major>1</der1:major>
+					<der1:minor>0</der1:minor>
+					<der1:revision>0</der1:revision>
+				</der1:version>
+			</der1:EndDeviceGroup>
+			<der1:EndDeviceGroup>
+				<der1:mRID>6b3241b8-a0f1-429b-b163-459122b5672e</der1:mRID>
+				<der1:description>String</der1:description>
+				<der1:DERFunction>
+					<der1:connectDisconnect>true</der1:connectDisconnect>
+					<der1:frequencyWattCurveFunction>false</der1:frequencyWattCurveFunction>
+					<der1:maxRealPowerLimiting>false</der1:maxRealPowerLimiting>
+					<der1:rampRateControl>false</der1:rampRateControl>
+					<der1:reactivePowerDispatch>true</der1:reactivePowerDispatch>
+					<der1:realPowerDispatch>true</der1:realPowerDispatch>
+					<der1:voltageRegulation>false</der1:voltageRegulation>
+					<der1:voltVarCurveFunction>false</der1:voltVarCurveFunction>
+					<der1:voltWattCurveFunction>false</der1:voltWattCurveFunction>
+				</der1:DERFunction>
+				<der1:EndDevices>
+					<der1:mRID>c3af4062-e6a9-4a05-bbac-e0215875fda2</der1:mRID>
+				</der1:EndDevices>
+				<der1:EndDevices>
+					<der1:mRID>7195c25f-4b54-4714-a90e-710dd7b1bcdd</der1:mRID>
+				</der1:EndDevices>
+				<der1:EndDevices>
+					<der1:mRID>9d6b55b4-e320-45d5-8ff8-6f947afa4b02</der1:mRID>
+				</der1:EndDevices>
+				<der1:EndDevices>
+					<der1:mRID>d1062c85-a938-4d11-af45-9ba97d444d5e</der1:mRID>
+				</der1:EndDevices>
+				<der1:Names>
+					<der1:name>DG3</der1:name>
+				</der1:Names>
+				<der1:version>
+					<der1:date>2017-06-02T10:04:12-06:00</der1:date>
+					<der1:major>1</der1:major>
+					<der1:minor>0</der1:minor>
+					<der1:revision>0</der1:revision>
+				</der1:version>
+			</der1:EndDeviceGroup>
+		</der1:DERGroups>
+	</tns:Payload>
+</tns:CreateDERGroups>
+</soapenv:Body>
+</soapenv:Envelope>
+]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroups/CreateDERGroups" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERG-1D" id="a83bd442-1d8a-4f6d-959d-a2dbe9b994a2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroups_Binding</con:interface><con:operation>CreateDERGroups</con:operation><con:request name="DERG-1D" id="ca504c2f-fc2f-4d37-b2f6-a423398fe706"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/create/executeDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
+   <soapenv:Header/>
+   <soapenv:Body>
+<tns:CreateDERGroups>
+	<tns:Header>
+		<msg:Verb>create</msg:Verb>
+		<msg:Noun>DERGroups</msg:Noun>
+		<msg:Timestamp>2017-06-02T10:52:50-06:00</msg:Timestamp>
+		<msg:MessageID>221aa996-3c96-4729-a845-54bec6892089</msg:MessageID>
+		<msg:CorrelationID>01943d53-c111-4924-8e92-e487296c88b0</msg:CorrelationID>
+	</tns:Header>
+	<tns:Payload>
+		<der1:DERGroups>
+			<der1:EndDeviceGroup>
+				<der1:DERFunction>
+					<der1:connectDisconnect>true</der1:connectDisconnect>
+					<der1:frequencyWattCurveFunction>false</der1:frequencyWattCurveFunction>
+					<der1:maxRealPowerLimiting>false</der1:maxRealPowerLimiting>
+					<der1:rampRateControl>false</der1:rampRateControl>
+					<der1:reactivePowerDispatch>false</der1:reactivePowerDispatch>
+					<der1:realPowerDispatch>true</der1:realPowerDispatch>
+					<der1:voltageRegulation>true</der1:voltageRegulation>
+					<der1:voltVarCurveFunction>false</der1:voltVarCurveFunction>
+					<der1:voltWattCurveFunction>false</der1:voltWattCurveFunction>
+				</der1:DERFunction>
+				<der1:EndDevices>
+					<der1:mRID>c378df3a-294c-4743-ad78-65f970231b5b</der1:mRID>
+				</der1:EndDevices>
+				<der1:EndDevices>
+					<der1:mRID>6de3d770-6087-45bc-a5c8-6fca25f5a318</der1:mRID>
+				</der1:EndDevices>
+				<der1:Names>
+					<der1:name>DG4</der1:name>
+				</der1:Names>
+				<der1:version>
+					<der1:date>2017-06-02T10:52:31-06:00</der1:date>
+					<der1:major>1</der1:major>
+					<der1:minor>0</der1:minor>
+					<der1:revision>0</der1:revision>
+				</der1:version>
+			</der1:EndDeviceGroup>
+			<der1:EndDeviceGroup>
+				<der1:DERFunction>
+					<der1:connectDisconnect>true</der1:connectDisconnect>
+					<der1:frequencyWattCurveFunction>false</der1:frequencyWattCurveFunction>
+					<der1:maxRealPowerLimiting>false</der1:maxRealPowerLimiting>
+					<der1:rampRateControl>false</der1:rampRateControl>
+					<der1:reactivePowerDispatch>true</der1:reactivePowerDispatch>
+					<der1:realPowerDispatch>true</der1:realPowerDispatch>
+					<der1:voltageRegulation>true</der1:voltageRegulation>
+					<der1:voltVarCurveFunction>false</der1:voltVarCurveFunction>
+					<der1:voltWattCurveFunction>false</der1:voltWattCurveFunction>
+				</der1:DERFunction>
+				<der1:EndDevices>
+					<der1:mRID>8e5439f8-e95a-43ca-8b95-7bc176fa8a35</der1:mRID>
+				</der1:EndDevices>
+				<der1:Names>
+					<der1:name>DG5</der1:name>
+				</der1:Names>
+			</der1:EndDeviceGroup>
+		</der1:DERGroups>
+	</tns:Payload>
+</tns:CreateDERGroups>
+</soapenv:Body>
+</soapenv:Envelope>
+]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroups/CreateDERGroups" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERG-1E" id="df2facdb-48d3-4976-a9f7-40f483faf2be"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroups_Binding</con:interface><con:operation>CreateDERGroups</con:operation><con:request name="DERG-1E" id="ca504c2f-fc2f-4d37-b2f6-a423398fe706"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/create/executeDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
+   <soapenv:Header/>
+   <soapenv:Body>
+<tns:CreateDERGroups>
+	<tns:Header>
+		<msg:Verb>create</msg:Verb>
+		<msg:Noun>DERGroups</msg:Noun>
+		<msg:Timestamp>2017-06-02T11:20:42-06:00</msg:Timestamp>
+		<msg:MessageID>d83c8b6a-91df-441d-9bda-4ceb19066a15</msg:MessageID>
+		<msg:CorrelationID>ddce82e7-c3a3-48d9-816e-6cc6a3cfe619</msg:CorrelationID>
+	</tns:Header>
+	<tns:Payload>
+		<der1:DERGroups>
+			<der1:EndDeviceGroup>
+				<der1:DERFunction>
+					<der1:connectDisconnect>true</der1:connectDisconnect>
+					<der1:frequencyWattCurveFunction>false</der1:frequencyWattCurveFunction>
+					<der1:maxRealPowerLimiting>false</der1:maxRealPowerLimiting>
+					<der1:rampRateControl>false</der1:rampRateControl>
+					<der1:reactivePowerDispatch>true</der1:reactivePowerDispatch>
+					<der1:realPowerDispatch>true</der1:realPowerDispatch>
+					<der1:voltageRegulation>false</der1:voltageRegulation>
+					<der1:voltVarCurveFunction>false</der1:voltVarCurveFunction>
+					<der1:voltWattCurveFunction>false</der1:voltWattCurveFunction>
+				</der1:DERFunction>
+				<der1:EndDevices>
+					<der1:mRID>e8a2f05b-aca9-46dc-971b-be22fcedc00b</der1:mRID>
+				</der1:EndDevices>
+				<der1:Names>
+					<der1:name>DG6</der1:name>
+				</der1:Names>
+				<der1:version>
+					<der1:date>2017-06-02T11:20:28-06:00</der1:date>
+					<der1:major>1</der1:major>
+					<der1:minor>0</der1:minor>
+					<der1:revision>0</der1:revision>
+				</der1:version>
+			</der1:EndDeviceGroup>
+		</der1:DERGroups>
+	</tns:Payload>
+</tns:CreateDERGroups>
+</soapenv:Body>
+</soapenv:Envelope>
+]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroups/CreateDERGroups" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="CreateDERGroups Default" id="b6428f9a-7dc8-467e-8eb9-fa32564e8a85"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroups_Binding</con:interface><con:operation>CreateDERGroups</con:operation><con:request name="CreateDERGroups Default" id="17bedf1e-cfd6-4554-8aad-c48cf024a013"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ExecuteDERGroups</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
    <soapenv:Header/>
    <soapenv:Body>
       <der:CreateDERGroups>
@@ -1246,7 +1498,7 @@
          </der:Payload>
       </der:CreateDERGroups>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response"/><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService port="8080" path="/" host="benjamins-Mac-mini-3.local" name="MockService 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:mockOperation name="CreateDERGroups" interface="DERGroups_Binding" operation="CreateDERGroups"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="ba6319d1-3eab-4edc-b88e-6fa9f837948c"/><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService port="8080" path="/" host="benjamins-Mac-mini-3.local" name="MockService 1" id="801b4620-bc6d-4c5e-a69e-86d59003e127"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:mockOperation name="CreateDERGroups" interface="DERGroups_Binding" operation="CreateDERGroups" id="22550591-3e62-4847-9ca0-9feea45fdf6e"><con:settings/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:defaultResponse>Response 1</con:defaultResponse><con:response name="Response 1" encoding="UTF-8" id="eab55638-fd03-4d32-9711-07a847d17452" httpResponseStatus="200"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroups#">
    <soapenv:Header/>
    <soapenv:Body>
       <der:DERGroupsResponseMessage>
@@ -1447,4 +1699,4 @@
          </der:Payload>
       </der:DERGroupsResponseMessage>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroups/CreateDERGroups"/></con:response><con:dispatchConfig/></con:mockOperation><con:properties/></con:mockService><con:properties/><con:wssContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroups/CreateDERGroups"/></con:response><con:dispatchConfig/></con:mockOperation><con:properties/></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

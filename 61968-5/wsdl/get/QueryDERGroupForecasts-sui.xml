@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default" name="61968-5/get/QueryDERGroupForecasts" resourceRoot="${projectDir}" soapui-version="4.5.2" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="QueryDERGroupForecasts_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/QueryDERGroupForecasts}QueryDERGroupForecasts_Binding" soapVersion="1_1" anonymous="optional" definition="QueryDERGroupForecasts.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'get'/QueryDERGroupForecasts.wsdl"><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'get'/QueryDERGroupForecasts.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="QueryDERGroupForecasts" targetNamespace="http://iec.ch/TC57/2017/QueryDERGroupForecasts" xmlns:tns="http://iec.ch/TC57/2017/QueryDERGroupForecasts" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" xmlns:ns="http://iec.ch/TC57/2011/schema/message" xmlns:ns1="http://iec.ch/TC57/2017/DERGroupForecastQueries#" xmlns:ns2="http://iec.ch/TC57/2017/DERGroupForecastQueries#" xmlns:ns3="http://iec.ch/TC57/2017/DERGroupForecastQueries">
+<con:soapui-project activeEnvironment="Default" name="61968-5/get/QueryDERGroupForecasts" resourceRoot="${projectDir}" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" id="69fbb12e-2334-4150-9451-a9d17abedcab" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="QueryDERGroupForecasts_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/QueryDERGroupForecasts}QueryDERGroupForecasts_Binding" soapVersion="1_1" anonymous="optional" definition="QueryDERGroupForecasts.wsdl" id="f467e807-d8b3-44f1-b011-6ffa9ae37256" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'get'/QueryDERGroupForecasts.wsdl"><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'get'/QueryDERGroupForecasts.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="QueryDERGroupForecasts" targetNamespace="http://iec.ch/TC57/2017/QueryDERGroupForecasts" xmlns:tns="http://iec.ch/TC57/2017/QueryDERGroupForecasts" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" xmlns:ns="http://iec.ch/TC57/2011/schema/message" xmlns:ns1="http://iec.ch/TC57/2017/DERGroupForecastQueries#" xmlns:ns2="http://iec.ch/TC57/2017/DERGroupForecastQueries#" xmlns:ns3="http://iec.ch/TC57/2017/DERGroupForecastQueries">
   <wsdl:types>
     <xs:schema targetNamespace="http://iec.ch/TC57/2017/QueryDERGroupForecasts" elementFormDefault="qualified">
       <xs:import namespace="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" schemaLocation="xsd/DERGroupForecastQueriesMessage.xsd"/>
@@ -1769,7 +1769,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/QueryDERGroupForecasts</con:endpoint><con:endpoint>http://localhost:8080/61968-5/get/queryDERGroupForecasts</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroupForecasts/QueryDERGroupForecasts" name="QueryDERGroupForecasts" bindingOperationName="QueryDERGroupForecasts" type="Request-Response" outputName="QueryDERGroupForecastsResponse" inputName="QueryDERGroupForecastsRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/QueryDERGroupForecasts</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupForecastQueries#">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/QueryDERGroupForecasts</con:endpoint><con:endpoint>http://localhost:8080/61968-5/get/queryDERGroupForecasts</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroupForecasts/QueryDERGroupForecasts" name="QueryDERGroupForecasts" bindingOperationName="QueryDERGroupForecasts" type="Request-Response" outputName="QueryDERGroupForecastsResponse" inputName="QueryDERGroupForecastsRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="e53bd209-3fd7-44c9-b63e-9f066baad54f"><con:settings/><con:call name="Request 1" id="f6ad3ff3-e9d9-4382-96b0-332792afe273"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/QueryDERGroupForecasts</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupForecastQueries#">
    <soapenv:Header/>
    <soapenv:Body>
       <der:DERGroupForecastQueriesRequestMessage>
@@ -1870,35 +1870,173 @@
          </der:Request>
       </der:DERGroupForecastQueriesRequestMessage>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroupForecasts/QueryDERGroupForecasts"/></con:call></con:operation></con:interface><con:testSuite name="QueryDERGroupForecasts_Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="QueryDERGroupForecasts TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="QueryDERGroupForecasts"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>QueryDERGroupForecasts_Binding</con:interface><con:operation>QueryDERGroupForecasts</con:operation><con:request name="QueryDERGroupForecasts"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/61968-5/get/queryDERGroupForecasts</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupForecastQueries#">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroupForecasts/QueryDERGroupForecasts"/></con:call></con:operation></con:interface><con:testSuite name="QueryDERGroupForecasts_Binding TestSuite" id="1cae95a5-1fe5-417d-ac22-65f0e06c56f1"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="QueryDERGroupForecasts TestCase" searchProperties="true" id="f8f03ea3-8227-45e3-a82b-32fe15217667"><con:settings/><con:testStep type="request" name="QueryDERGroupForecasts" id="4d61f1cf-ab74-45f4-9a3e-b8213c9279df"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>QueryDERGroupForecasts_Binding</con:interface><con:operation>QueryDERGroupForecasts</con:operation><con:request name="QueryDERGroupForecasts" id="32a46667-bfcb-4036-8698-f8fa24cf9423"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/get/queryDERGroupForecasts</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupForecastQueries#">
    <soapenv:Header/>
    <soapenv:Body>
-      <der:DERGroupForecastQueriesRequestMessage>
-         <der:Header>
-            <mes:Verb>get</mes:Verb>
-            <mes:Noun>DERGroupsForecasts</mes:Noun>
-            <mes:Timestamp>2017-05-26T10:54:03-06:00</mes:Timestamp>
-            <mes:MessageID>93b32316-c752-4092-9969-69ece85105b8</mes:MessageID>
-         </der:Header>
-         <der:Request>
-            <der:StartTime>2017-05-26T10:54:03-06:00</der:StartTime>
-            <der:EndTime>2017-05-26T10:54:03-06:00</der:EndTime>
-            <der1:DERGroupForecastQueries>
-               <der1:DERMonitorableParameter>
-                  <der1:DERParameter>activePower</der1:DERParameter>
-               </der1:DERMonitorableParameter>
-               <der1:DispatchSchedule>
-                  <der1:curveStyleKind>constantYValue</der1:curveStyleKind>
-                  <der1:numberOfIntervals>3</der1:numberOfIntervals>
-                  <der1:startTime>2017-07-18T10:28:27-06:00</der1:startTime>
-                  <der1:timeIntervalDuration>10</der1:timeIntervalDuration>
-                  <der1:timeIntervalUnit>D</der1:timeIntervalUnit>
-               </der1:DispatchSchedule>
-               <der1:EndDeviceGroup>
-                  <der1:mRID>1279</der1:mRID>
-               </der1:EndDeviceGroup>
-            </der1:DERGroupForecastQueries>
-         </der:Request>
-      </der:DERGroupForecastQueriesRequestMessage>
+<tns:DERGroupForecastQueriesRequestMessage>
+	<tns:Header>
+		<msg:Verb>get</msg:Verb>
+		<msg:Noun>DEGroupForecasts</msg:Noun>
+		<msg:Timestamp>2017-06-14T13:03:09-06:00</msg:Timestamp>
+		<msg:MessageID>8e13f6fe-27a8-4686-bcaa-5176ce460486</msg:MessageID>
+		<msg:CorrelationID>12668dce-4005-4acf-bcc0-d81194a5d3f1</msg:CorrelationID>
+	</tns:Header>
+	<tns:Request>
+		<der1:DERGroupForecastQueries>
+			<der1:DERMonitorableParameter>
+				<der1:DERParameter>activePower</der1:DERParameter>
+			</der1:DERMonitorableParameter>
+			<der1:DispatchSchedule>
+				<der1:curveStyleKind>straightLineYValues</der1:curveStyleKind>
+				<der1:numberOfIntervals>4</der1:numberOfIntervals>
+				<der1:startTime>2017-06-15T15:00:00-06:00</der1:startTime>
+				<der1:timeIntervalDuration>15</der1:timeIntervalDuration>
+				<der1:timeIntervalUnit>m</der1:timeIntervalUnit>
+			</der1:DispatchSchedule>
+			<der1:EndDeviceGroup>
+				<der1:mRID>228650bf-7f77-44fa-9576-db4bbce8a07f</der1:mRID>
+			</der1:EndDeviceGroup>
+		</der1:DERGroupForecastQueries>
+	</tns:Request>
+</tns:DERGroupForecastQueriesRequestMessage>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupForecasts/QueryDERGroupForecasts" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupForecasts/QueryDERGroupForecasts" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERGF-1A" id="773e1432-57eb-498e-bdeb-907668ed78f6"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>QueryDERGroupForecasts_Binding</con:interface><con:operation>QueryDERGroupForecasts</con:operation><con:request name="DERGF-1A" id="32a46667-bfcb-4036-8698-f8fa24cf9423"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/get/queryDERGroupForecasts</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupForecastQueries#">
+   <soapenv:Header/>
+   <soapenv:Body>
+<tns:DERGroupForecastQueriesRequestMessage>
+	<tns:Header>
+		<msg:Verb>get</msg:Verb>
+		<msg:Noun>DEGroupForecasts</msg:Noun>
+		<msg:Timestamp>2017-06-14T13:03:09-06:00</msg:Timestamp>
+		<msg:MessageID>8e13f6fe-27a8-4686-bcaa-5176ce460486</msg:MessageID>
+		<msg:CorrelationID>12668dce-4005-4acf-bcc0-d81194a5d3f1</msg:CorrelationID>
+	</tns:Header>
+	<tns:Request>
+		<der1:DERGroupForecastQueries>
+			<der1:DERMonitorableParameter>
+				<der1:DERParameter>activePower</der1:DERParameter>
+			</der1:DERMonitorableParameter>
+			<der1:DispatchSchedule>
+				<der1:curveStyleKind>straightLineYValues</der1:curveStyleKind>
+				<der1:numberOfIntervals>4</der1:numberOfIntervals>
+				<der1:startTime>2017-06-15T15:00:00-06:00</der1:startTime>
+				<der1:timeIntervalDuration>15</der1:timeIntervalDuration>
+				<der1:timeIntervalUnit>m</der1:timeIntervalUnit>
+			</der1:DispatchSchedule>
+			<der1:EndDeviceGroup>
+				<der1:mRID>228650bf-7f77-44fa-9576-db4bbce8a07f</der1:mRID>
+			</der1:EndDeviceGroup>
+		</der1:DERGroupForecastQueries>
+	</tns:Request>
+</tns:DERGroupForecastQueriesRequestMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupForecasts/QueryDERGroupForecasts" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERGF-1B" id="13b1b8b1-ce76-40f4-8c5e-c7b578a2ab92"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>QueryDERGroupForecasts_Binding</con:interface><con:operation>QueryDERGroupForecasts</con:operation><con:request name="DERGF-1B" id="32a46667-bfcb-4036-8698-f8fa24cf9423"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/get/queryDERGroupForecasts</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupForecastQueries#">
+   <soapenv:Header/>
+   <soapenv:Body>
+<tns:DERGroupForecastQueriesRequestMessage>
+	<tns:Header>
+		<msg:Verb>get</msg:Verb>
+		<msg:Noun>DEGroupForecasts</msg:Noun>
+		<msg:Timestamp>2017-06-14T14:20:01-06:00</msg:Timestamp>
+		<msg:MessageID>b7aff1b9-2ca7-4251-a2d9-91485211cc21</msg:MessageID>
+		<msg:CorrelationID>1f237f4f-661b-42ad-8483-19330a3d7d88</msg:CorrelationID>
+	</tns:Header>
+	<tns:Request>
+		<der1:DERGroupForecastQueries>
+			<der1:DERMonitorableParameter>
+				<der1:DERParameter>activePower</der1:DERParameter>
+			</der1:DERMonitorableParameter>
+			<der1:DispatchSchedule>
+				<der1:curveStyleKind>straightLineYValues</der1:curveStyleKind>
+				<der1:numberOfIntervals>4</der1:numberOfIntervals>
+				<der1:startTime>2017-06-15T13:00:00-06:00</der1:startTime>
+				<der1:timeIntervalDuration>1</der1:timeIntervalDuration>
+				<der1:timeIntervalUnit>h</der1:timeIntervalUnit>
+			</der1:DispatchSchedule>
+			<der1:EndDeviceGroup>
+				<der1:Names>
+					<der1:name>DG1</der1:name>
+				</der1:Names>
+			</der1:EndDeviceGroup>
+		</der1:DERGroupForecastQueries>
+	</tns:Request>
+</tns:DERGroupForecastQueriesRequestMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupForecasts/QueryDERGroupForecasts" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERGF-1C" id="f536d18b-0f88-435f-99d5-bddadde09b0e"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>QueryDERGroupForecasts_Binding</con:interface><con:operation>QueryDERGroupForecasts</con:operation><con:request name="DERGF-1C" id="32a46667-bfcb-4036-8698-f8fa24cf9423"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/get/queryDERGroupForecasts</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupForecastQueries#">
+   <soapenv:Header/>
+   <soapenv:Body>
+<tns:DERGroupForecastQueriesRequestMessage>
+	<tns:Header>
+		<msg:Verb>get</msg:Verb>
+		<msg:Noun>DEGroupForecasts</msg:Noun>
+		<msg:Timestamp>2017-06-14T15:45:00-06:00</msg:Timestamp>
+		<msg:MessageID>18b0ed39-34fd-4c31-9ace-7d56d57beb81</msg:MessageID>
+		<msg:CorrelationID>977cbce0-53c5-4587-9306-ebb57d3b8b1a</msg:CorrelationID>
+	</tns:Header>
+	<tns:Request>
+		<der1:DERGroupForecastQueries>
+			<der1:DERMonitorableParameter>
+				<der1:DERParameter>activePower</der1:DERParameter>
+			</der1:DERMonitorableParameter>
+			<der1:DERMonitorableParameter>
+				<der1:DERParameter>voltage</der1:DERParameter>
+			</der1:DERMonitorableParameter>
+			<der1:DispatchSchedule>
+				<der1:curveStyleKind>straightLineYValues</der1:curveStyleKind>
+				<der1:numberOfIntervals>4</der1:numberOfIntervals>
+				<der1:startTime>2017-06-15T08:00:00-06:00</der1:startTime>
+				<der1:timeIntervalDuration>1</der1:timeIntervalDuration>
+				<der1:timeIntervalUnit>h</der1:timeIntervalUnit>
+			</der1:DispatchSchedule>
+			<der1:EndDeviceGroup>
+				<der1:Names>
+					<der1:name>DG3</der1:name>
+				</der1:Names>
+			</der1:EndDeviceGroup>
+			<der1:EndDeviceGroup>
+				<der1:Names>
+					<der1:name>DG4</der1:name>
+				</der1:Names>
+			</der1:EndDeviceGroup>
+		</der1:DERGroupForecastQueries>
+	</tns:Request>
+</tns:DERGroupForecastQueriesRequestMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupForecasts/QueryDERGroupForecasts" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERGF-1D" id="282b7f94-1c90-44a1-ba51-31aa3c4e7e75"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>QueryDERGroupForecasts_Binding</con:interface><con:operation>QueryDERGroupForecasts</con:operation><con:request name="DERGF-1D" id="32a46667-bfcb-4036-8698-f8fa24cf9423"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/get/queryDERGroupForecasts</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/DERGroupForecastQueriesMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupForecastQueries#">
+   <soapenv:Header/>
+   <soapenv:Body>
+<tns:DERGroupForecastQueriesRequestMessage>
+	<tns:Header>
+		<msg:Verb>get</msg:Verb>
+		<msg:Noun>DEGroupForecasts</msg:Noun>
+		<msg:Timestamp>2017-06-14T16:43:18-06:00</msg:Timestamp>
+		<msg:MessageID>3972b6f0-ff1e-45ae-b5c5-ca64ee807249</msg:MessageID>
+		<msg:CorrelationID>bdb8fadf-73e6-471f-9cdd-dce3f9e254b0</msg:CorrelationID>
+	</tns:Header>
+	<tns:Request>
+		<der1:DERGroupForecastQueries>
+			<der1:DERMonitorableParameter>
+				<der1:DERParameter>reactivePower</der1:DERParameter>
+			</der1:DERMonitorableParameter>
+			<der1:DispatchSchedule>
+				<der1:curveStyleKind>constantYValue</der1:curveStyleKind>
+				<der1:numberOfIntervals>2</der1:numberOfIntervals>
+				<der1:startTime>2017-06-16T12:00:00-06:00</der1:startTime>
+				<der1:timeIntervalDuration>1</der1:timeIntervalDuration>
+				<der1:timeIntervalUnit>h</der1:timeIntervalUnit>
+			</der1:DispatchSchedule>
+			<der1:EndDeviceGroup>
+				<der1:Names>
+					<der1:name>DG6</der1:name>
+				</der1:Names>
+			</der1:EndDeviceGroup>
+			<der1:EndDeviceGroup>
+				<der1:Names>
+					<der1:name>DG7</der1:name>
+				</der1:Names>
+			</der1:EndDeviceGroup>
+		</der1:DERGroupForecastQueries>
+	</tns:Request>
+</tns:DERGroupForecastQueriesRequestMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupForecasts/QueryDERGroupForecasts" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

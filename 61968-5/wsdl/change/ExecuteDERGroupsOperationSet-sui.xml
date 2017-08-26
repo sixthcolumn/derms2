@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default" name="61968-5/change/ExecuteDERGroupsOperationSet" resourceRoot="${projectDir}" soapui-version="4.5.2" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="DERGroupsOperationSet_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/ExecuteDERGroupsOperationSet}DERGroupsOperationSet_Binding" soapVersion="1_1" anonymous="optional" definition="ExecuteDERGroupsOperationSet.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'change%20or%20delete'/ExecuteDERGroupsOperationSet.wsdl"><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'change%20or%20delete'/ExecuteDERGroupsOperationSet.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ExecuteDERGroupsOperationSet" targetNamespace="http://iec.ch/TC57/2017/ExecuteDERGroupsOperationSet" xmlns:tns="http://iec.ch/TC57/2017/ExecuteDERGroupsOperationSet" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupsOperationSetMessage" xmlns:ns="http://iec.ch/TC57/2011/schema/message" xmlns:ns1="http://iec.ch/TC57/2017/DERGroups#">
+<con:soapui-project activeEnvironment="Default" name="61968-5/change/ExecuteDERGroupsOperationSet" resourceRoot="${projectDir}" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" id="f1d75cc8-b5c1-4620-a2d3-fde9534c91b0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="DERGroupsOperationSet_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/ExecuteDERGroupsOperationSet}DERGroupsOperationSet_Binding" soapVersion="1_1" anonymous="optional" definition="ExecuteDERGroupsOperationSet.wsdl" id="92a11358-e599-4b56-b43f-2a573cac77f5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'change%20or%20delete'/ExecuteDERGroupsOperationSet.wsdl"><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'change%20or%20delete'/ExecuteDERGroupsOperationSet.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ExecuteDERGroupsOperationSet" targetNamespace="http://iec.ch/TC57/2017/ExecuteDERGroupsOperationSet" xmlns:tns="http://iec.ch/TC57/2017/ExecuteDERGroupsOperationSet" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupsOperationSetMessage" xmlns:ns="http://iec.ch/TC57/2011/schema/message" xmlns:ns1="http://iec.ch/TC57/2017/DERGroups#">
   <wsdl:types>
     <xs:schema targetNamespace="http://iec.ch/TC57/2017/ExecuteDERGroupsOperationSet" elementFormDefault="qualified">
       <xs:import namespace="http://iec.ch/TC57/2017/DERGroupsOperationSetMessage" schemaLocation="xsd/DERGroupsOperationSetMessage.xsd"/>
@@ -892,7 +892,7 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/ExecuteDERGroupsOperationSet</con:endpoint><con:endpoint>http://localhost:8080/61968-5/change/executeDERGroupsOperationSet</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroupsOperationSet/ExecuteDERGroupsOperationSet" name="ExecuteDERGroupsOperationSet" bindingOperationName="ExecuteDERGroupsOperationSet" type="Request-Response" outputName="ExecuteDERGroupsOperationSetResponse" inputName="ExecuteDERGroupsOperationSetRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ExecuteDERGroupsOperationSet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsOperationSetMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/ExecuteDERGroupsOperationSet</con:endpoint><con:endpoint>http://localhost:8080/61968-5/change/executeDERGroupsOperationSet</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroupsOperationSet/ExecuteDERGroupsOperationSet" name="ExecuteDERGroupsOperationSet" bindingOperationName="ExecuteDERGroupsOperationSet" type="Request-Response" outputName="ExecuteDERGroupsOperationSetResponse" inputName="ExecuteDERGroupsOperationSetRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="f561d191-3041-462d-a31e-4740ae0f672d"><con:settings/><con:call name="Request 1" id="919f3b94-4a93-40d4-80a9-69843c7257d0"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ExecuteDERGroupsOperationSet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsOperationSetMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message">
    <soapenv:Header/>
    <soapenv:Body>
       <der:ExecuteDERGroupsOperationSet>
@@ -981,28 +981,37 @@
          </der:Payload>
       </der:ExecuteDERGroupsOperationSet>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroupsOperationSet/ExecuteDERGroupsOperationSet"/></con:call></con:operation></con:interface><con:testSuite name="DERGroupsOperationSet_Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ExecuteDERGroupsOperationSet TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="ExecuteDERGroupsOperationSet"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroupsOperationSet_Binding</con:interface><con:operation>ExecuteDERGroupsOperationSet</con:operation><con:request name="ExecuteDERGroupsOperationSet"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/61968-5/change/executeDERGroupsOperationSet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupsOperationSetMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroupsOperationSet/ExecuteDERGroupsOperationSet"/></con:call></con:operation></con:interface><con:testSuite name="DERGroupsOperationSet_Binding TestSuite" id="ff98a520-3e98-4b60-bc52-f72cbacbc898"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ExecuteDERGroupsOperationSet TestCase" searchProperties="true" id="d0e3a2e7-3751-49c8-b25e-61c7a7e7d1b9"><con:settings/><con:testStep type="request" name="DERG-3" id="ecdebb2c-22f4-48f9-8f1d-cfa95cc00d13"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroupsOperationSet_Binding</con:interface><con:operation>ExecuteDERGroupsOperationSet</con:operation><con:request name="DERG-3" id="59aa1086-7e63-4f12-a4d5-b5d465ec365b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/change/executeDERGroupsOperationSet</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/DERGroupsOperationSetMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message">
    <soapenv:Header/>
    <soapenv:Body>
-      <der:ExecuteDERGroupsOperationSet>
-        <der:Header>
-            <mes:Verb>change</mes:Verb>
-            <mes:Noun>DERGroupsOperationSet</mes:Noun>
-            <mes:Timestamp>2017-05-26T10:54:03-06:00</mes:Timestamp>
-            <mes:MessageID>93b32316-c752-4092-9969-69ece85105b8</mes:MessageID>
-         </der:Header>
-         <der:Payload>
-            <der:OperationSet>
-               <mes:enforceMsgSequence>false</mes:enforceMsgSequence>
-               <mes:enforceTransactionalIntegrity>false</mes:enforceTransactionalIntegrity>
-               <mes:Operation>
-                  <mes:operationId>1234</mes:operationId>
-                  <mes:noun>OperationSet</mes:noun>
-                  <mes:verb>change</mes:verb>
-                  <mes:elementOperation>false</mes:elementOperation>
-               </mes:Operation>
-            </der:OperationSet>
-         </der:Payload>
-      </der:ExecuteDERGroupsOperationSet>
+      <tns:ExecuteDERGroupsOperationSet>
+	<tns:Header>
+		<msg:Verb>execute</msg:Verb>
+		<msg:Noun>OperationSet</msg:Noun>
+		<msg:Timestamp>2017-06-02T12:42:19-06:00</msg:Timestamp>
+		<msg:MessageID>958e7f6e-f0e5-490f-922b-3e51ef8eed7b</msg:MessageID>
+		<msg:CorrelationID>bde49d7f-e87e-4496-b98b-2ed4785dfdbc</msg:CorrelationID>
+	</tns:Header>
+	<tns:Payload>
+		<tns:OperationSet>
+			<msg:Operation>
+				<msg:operationId>1</msg:operationId>
+				<msg:noun>DERGroups</msg:noun>
+				<msg:verb>delete</msg:verb>
+				<msg:elementOperation>true</msg:elementOperation>
+				<DERGroups xmlns="http://iec.ch/TC57/2017/DERGroups#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://iec.ch/TC57/2017/DERGroups# DERGroups.xsd">
+					<EndDeviceGroup>
+						<EndDevices>
+							<mRID>7195c25f-4b54-4714-a90e-710dd7b1bcdd</mRID>
+						</EndDevices>
+						<Names>
+							<name>DG3</name>
+						</Names>
+					</EndDeviceGroup>
+				</DERGroups>
+			</msg:Operation>
+		</tns:OperationSet>
+	</tns:Payload>
+</tns:ExecuteDERGroupsOperationSet>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupsOperationSet/ExecuteDERGroupsOperationSet" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupsOperationSet/ExecuteDERGroupsOperationSet" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>

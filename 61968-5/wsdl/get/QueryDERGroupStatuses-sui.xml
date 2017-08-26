@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default" name="61968-5/get/QueryDERGroupStatuses" resourceRoot="${projectDir}" soapui-version="4.5.2" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="QueryDERGroupStatuses_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/QueryDERGroupStatuses}QueryDERGroupStatuses_Binding" soapVersion="1_1" anonymous="optional" definition="QueryDERGroupStatuses.wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'get'/QueryDERGroupStatuses.wsdl"><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'get'/QueryDERGroupStatuses.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="QueryDERGroupStatuses" targetNamespace="http://iec.ch/TC57/2017/QueryDERGroupStatuses" xmlns:tns="http://iec.ch/TC57/2017/QueryDERGroupStatuses" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupStatusQueriesMessage" xmlns:ns="http://iec.ch/TC57/2011/schema/message" xmlns:ns1="http://iec.ch/TC57/2017/DERGroupStatusQueries#" xmlns:ns2="http://iec.ch/TC57/2017/DERGroupStatusQueries#" xmlns:ns3="http://iec.ch/TC57/2017/DERGroupStatusQueries">
+<con:soapui-project activeEnvironment="Default" name="61968-5/get/QueryDERGroupStatuses" resourceRoot="${projectDir}" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" id="1446f756-8631-4ca2-882a-e9aae98a1c83" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="QueryDERGroupStatuses_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/QueryDERGroupStatuses}QueryDERGroupStatuses_Binding" soapVersion="1_1" anonymous="optional" definition="QueryDERGroupStatuses.wsdl" id="736bc6b9-3af8-4d1a-a3ff-b41d1a1c9f09" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'get'/QueryDERGroupStatuses.wsdl"><con:part><con:url>file:/Users/BenGoodwin/sixth-column/epri-summer-2017/IEC%2061968-5%20(DER)%20XSDs,%20WSDLs%20and%20Sample%20XML_6-20-2017/03-%20IEC%2061968-5%20Strongly-typed%20Messages%20and%20WSDLs/'get'/QueryDERGroupStatuses.wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="QueryDERGroupStatuses" targetNamespace="http://iec.ch/TC57/2017/QueryDERGroupStatuses" xmlns:tns="http://iec.ch/TC57/2017/QueryDERGroupStatuses" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/DERGroupStatusQueriesMessage" xmlns:ns="http://iec.ch/TC57/2011/schema/message" xmlns:ns1="http://iec.ch/TC57/2017/DERGroupStatusQueries#" xmlns:ns2="http://iec.ch/TC57/2017/DERGroupStatusQueries#" xmlns:ns3="http://iec.ch/TC57/2017/DERGroupStatusQueries">
   <wsdl:types>
     <xs:schema targetNamespace="http://iec.ch/TC57/2017/QueryDERGroupStatuses" elementFormDefault="qualified">
       <xs:import namespace="http://iec.ch/TC57/2017/DERGroupStatusQueriesMessage" schemaLocation="xsd/DERGroupStatusQueriesMessage.xsd"/>
@@ -1428,7 +1428,7 @@
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/QueryDERGroupStatuses</con:endpoint><con:endpoint>http://localhost:8080/61968-5/get/queryDERGroupStatuses</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroupStatuses/QueryDERGroupStatuses" name="QueryDERGroupStatuses" bindingOperationName="QueryDERGroupStatuses" type="Request-Response" outputName="QueryDERGroupStatusesResponse" inputName="QueryDERGroupStatusesRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/QueryDERGroupStatuses</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupStatusQueriesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupStatusQueries#">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/QueryDERGroupStatuses</con:endpoint><con:endpoint>http://localhost:8080/61968-5/get/queryDERGroupStatuses</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroupStatuses/QueryDERGroupStatuses" name="QueryDERGroupStatuses" bindingOperationName="QueryDERGroupStatuses" type="Request-Response" outputName="QueryDERGroupStatusesResponse" inputName="QueryDERGroupStatusesRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="a76d6f6d-975c-44d3-9720-4704dc63e014"><con:settings/><con:call name="Request 1" id="bd1006da-28bb-4041-83af-47a838c12466"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/QueryDERGroupStatuses</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupStatusQueriesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupStatusQueries#">
    <soapenv:Header/>
    <soapenv:Body>
       <der:DERGroupStatusQueriesRequestMessage>
@@ -1515,7 +1515,7 @@
          </der:Request>
       </der:DERGroupStatusQueriesRequestMessage>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroupStatuses/QueryDERGroupStatuses"/></con:call></con:operation></con:interface><con:testSuite name="QueryDERGroupStatuses_Binding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="QueryDERGroupStatuses TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="QueryDERGroupStatuses"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>QueryDERGroupStatuses_Binding</con:interface><con:operation>QueryDERGroupStatuses</con:operation><con:request name="QueryDERGroupStatuses"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/61968-5/get/queryDERGroupStatuses</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupStatusQueriesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupStatusQueries#">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://iec.ch/TC57/2017/DERGroupStatuses/QueryDERGroupStatuses"/></con:call></con:operation></con:interface><con:testSuite name="QueryDERGroupStatuses_Binding TestSuite" id="0e561040-d4eb-48b2-8398-b60503f10ebc"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="QueryDERGroupStatuses TestCase" searchProperties="true" id="6b21c16b-82e3-4f32-a690-79e57eabc065"><con:settings/><con:testStep type="request" name="QueryDERGroupStatuses" id="20c6491e-571c-4b9a-a699-bd799ca27f0e"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>QueryDERGroupStatuses_Binding</con:interface><con:operation>QueryDERGroupStatuses</con:operation><con:request name="QueryDERGroupStatuses" id="57f5baf2-d89f-49c8-b2e2-53fafe8661b9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/61968-5/get/queryDERGroupStatuses</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupStatusQueriesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupStatusQueries#">
    <soapenv:Header/>
    <soapenv:Body>
       <der:DERGroupStatusQueriesRequestMessage>
@@ -1534,4 +1534,102 @@
          </der:Request>
       </der:DERGroupStatusQueriesRequestMessage>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupStatuses/QueryDERGroupStatuses" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:sensitiveInformation/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupStatuses/QueryDERGroupStatuses" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERGS-1A" id="a6e243ba-7da1-4866-8305-ef89f616b94d"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>QueryDERGroupStatuses_Binding</con:interface><con:operation>QueryDERGroupStatuses</con:operation><con:request name="DERGS-1A" id="57f5baf2-d89f-49c8-b2e2-53fafe8661b9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/get/queryDERGroupStatuses</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/DERGroupStatusQueriesMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupStatusQueries#">
+   <soapenv:Header/>
+   <soapenv:Body>
+ <tns:DERGroupStatusQueriesRequestMessage>
+	<tns:Header>
+		<msg:Verb>get</msg:Verb>
+		<msg:Noun>DERGroupStatuses</msg:Noun>
+		<msg:Timestamp>2017-06-12T15:54:29-06:00</msg:Timestamp>
+		<msg:MessageID>9e78323f-7ae5-4aee-aaa7-53130f5da8dd</msg:MessageID>
+		<msg:CorrelationID>125981da-6a49-4e14-9f9c-c4aa3bafaf08</msg:CorrelationID>
+	</tns:Header>
+	<tns:Request>
+		<der1:DERGroupStatusQueries>
+			<der1:EndDeviceGroup>
+				<der1:Names>
+					<der1:name>DG2</der1:name>
+				</der1:Names>
+			</der1:EndDeviceGroup>
+		</der1:DERGroupStatusQueries>
+	</tns:Request>
+</tns:DERGroupStatusQueriesRequestMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupStatuses/QueryDERGroupStatuses" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERGS-1B" id="d917321d-9600-4122-bdc4-fad91c2b57ad"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>QueryDERGroupStatuses_Binding</con:interface><con:operation>QueryDERGroupStatuses</con:operation><con:request name="DERGS-1B" id="57f5baf2-d89f-49c8-b2e2-53fafe8661b9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/get/queryDERGroupStatuses</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/DERGroupStatusQueriesMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupStatusQueries#">
+   <soapenv:Header/>
+   <soapenv:Body>
+<tns:DERGroupStatusQueriesRequestMessage>
+	<tns:Header>
+		<msg:Verb>get</msg:Verb>
+		<msg:Noun>DERGroupStatuses</msg:Noun>
+		<msg:Timestamp>2017-06-12T16:25:20-06:00</msg:Timestamp>
+		<msg:MessageID>9f45c50a-6a81-4319-89db-55e484f93e32</msg:MessageID>
+		<msg:CorrelationID>a7dad3bd-5d2a-48a7-9500-ad40acc0713f</msg:CorrelationID>
+	</tns:Header>
+	<tns:Request>
+		<der1:DERGroupStatusQueries>
+			<der1:EndDeviceGroup>
+				<der1:Names>
+					<der1:name>DG1</der1:name>
+				</der1:Names>
+			</der1:EndDeviceGroup>
+		</der1:DERGroupStatusQueries>
+	</tns:Request>
+</tns:DERGroupStatusQueriesRequestMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupStatuses/QueryDERGroupStatuses" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERGS-1C" id="854a7d6a-896a-43f5-9049-b17785ac8555"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>QueryDERGroupStatuses_Binding</con:interface><con:operation>QueryDERGroupStatuses</con:operation><con:request name="DERGS-1C" id="57f5baf2-d89f-49c8-b2e2-53fafe8661b9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/get/queryDERGroupStatuses</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/DERGroupStatusQueriesMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupStatusQueries#">
+   <soapenv:Header/>
+   <soapenv:Body>
+<tns:DERGroupStatusQueriesRequestMessage>
+	<tns:Header>
+		<msg:Verb>get</msg:Verb>
+		<msg:Noun>DERGroupStatuses</msg:Noun>
+		<msg:Timestamp>2017-06-12T16:34:54-06:00</msg:Timestamp>
+		<msg:MessageID>21b6f9bd-49fd-4a28-9e5b-f541924d81c9</msg:MessageID>
+		<msg:CorrelationID>4bf02e07-6cdd-430d-a318-965838d58b9d</msg:CorrelationID>
+	</tns:Header>
+	<tns:Request>
+		<der1:DERGroupStatusQueries>
+			<der1:EndDeviceGroup>
+				<der1:Names>
+					<der1:name>DG3</der1:name>
+				</der1:Names>
+			</der1:EndDeviceGroup>
+			<der1:EndDeviceGroup>
+				<der1:Names>
+					<der1:name>DG4</der1:name>
+				</der1:Names>
+			</der1:EndDeviceGroup>
+		</der1:DERGroupStatusQueries>
+	</tns:Request>
+</tns:DERGroupStatusQueriesRequestMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupStatuses/QueryDERGroupStatuses" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERGS-1D" id="c6a78939-4c61-46c0-a11c-9f63cf1273d2"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>QueryDERGroupStatuses_Binding</con:interface><con:operation>QueryDERGroupStatuses</con:operation><con:request name="DERGS-1D" id="57f5baf2-d89f-49c8-b2e2-53fafe8661b9"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/get/queryDERGroupStatuses</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/DERGroupStatusQueriesMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupStatusQueries#">
+   <soapenv:Header/>
+   <soapenv:Body>
+<tns:DERGroupStatusQueriesRequestMessage>
+	<tns:Header>
+		<msg:Verb>get</msg:Verb>
+		<msg:Noun>DERGroupStatuses</msg:Noun>
+		<msg:Timestamp>2017-06-12T16:56:21-06:00</msg:Timestamp>
+		<msg:MessageID>c3b0823f-8fcd-4f2f-a37d-b91adf711498</msg:MessageID>
+		<msg:CorrelationID>9debb17b-d579-4917-8c5e-7f386c68ea40</msg:CorrelationID>
+	</tns:Header>
+	<tns:Request>
+		<der1:DERGroupStatusQueries>
+			<der1:EndDeviceGroup>
+				<der1:Names>
+					<der1:name>DG6</der1:name>
+				</der1:Names>
+			</der1:EndDeviceGroup>
+			<der1:EndDeviceGroup>
+				<der1:Names>
+					<der1:name>DG7</der1:name>
+				</der1:Names>
+			</der1:EndDeviceGroup>
+		</der1:DERGroupStatusQueries>
+	</tns:Request>
+</tns:DERGroupStatusQueriesRequestMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupStatuses/QueryDERGroupStatuses" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

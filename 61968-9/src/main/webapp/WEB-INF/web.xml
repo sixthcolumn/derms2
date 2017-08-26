@@ -9,7 +9,7 @@
 	<!-- Set up logging -->
 	<context-param>
 		<param-name>webAppRootKey</param-name>
-		<param-value>webapp.epri</param-value>
+		<param-value>webapp.epri.61968-9</param-value>
 	</context-param>
 
 	<context-param>
