@@ -1950,7 +1950,7 @@
             <mes:Verb>create</mes:Verb>
             <mes:Noun>EndDeviceControls</mes:Noun>
             <mes:Timestamp>2017-05-26T10:54:03-06:00</mes:Timestamp>
-            <mes:MessageID>93b32316-c752-4092-9969-69ece85105b8</mes:MessageID>        
+            <mes:MessageID>93b32316-c752-4092-9969-69ece8510bjg</mes:MessageID>        
          </end:Header>
          <end:Payload>
             <end1:EndDeviceControls>

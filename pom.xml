@@ -102,8 +102,8 @@
 
 
 	<modules>
-		<module>common</module>
 		<module>61968</module>
 		<module>DER</module>
+		<module>derms2</module>
 	</modules>
 </project>

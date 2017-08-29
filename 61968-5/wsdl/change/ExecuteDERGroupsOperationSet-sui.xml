@@ -989,7 +989,7 @@
             <mes:Verb>change</mes:Verb>
             <mes:Noun>DERGroupsOperationSet</mes:Noun>
             <mes:Timestamp>2017-05-26T10:54:03-06:00</mes:Timestamp>
-            <mes:MessageID>93b32316-c752-4092-9969-69ece85105b8</mes:MessageID>
+            <mes:MessageID>93b32316-c752-4092-9969-69ece8510bjg2</mes:MessageID>
          </der:Header>
          <der:Payload>
             <der:OperationSet>
