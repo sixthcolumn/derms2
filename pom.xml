@@ -83,11 +83,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.oracle</groupId>
-			<artifactId>ojdbc14</artifactId>
-			<version>10.0.2.0.0</version>
-		</dependency>
-		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>1.6.1</version>
@@ -102,8 +97,13 @@
 
 
 	<modules>
+<<<<<<< HEAD
 		<module>61968</module>
 		<module>DER</module>
 		<module>derms2</module>
+=======
+		<module>61968-5</module>
+		<module>61968-9</module>
+>>>>>>> fad9092828643d00d4ed82823dacba1aff1150b3
 	</modules>
 </project>
