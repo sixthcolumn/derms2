@@ -1,4 +1,0 @@
-jdbc.driverClassName=com.mysql.jdbc.Driver
-jdbc.url=jdbc:mysql://localhost/opendms
-jdbc.username=derms2
-jdbc.password=derms2
