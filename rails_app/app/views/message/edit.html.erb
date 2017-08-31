@@ -38,6 +38,22 @@
       <%= f.text_area :default_message_txt %>
     </div>
   </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label :xsd_file %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.text_field :xsd_file %>
+    </div>
+  </div>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <%= f.label :root_element %>
+    </div>
+    <div class="field-unit__field">
+      <%= f.text_field :root_element %>
+    </div>
+  </div>
   <div class="form-actions">
     <%= f.submit %>
   </div>

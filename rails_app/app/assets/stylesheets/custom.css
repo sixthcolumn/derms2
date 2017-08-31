@@ -16,6 +16,10 @@ form {
     margin: 0;
 }
 
+.pre_wrap {
+    white-space: pre-wrap;
+}
+
 sup,
 sub {
     position: relative;

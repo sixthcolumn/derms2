@@ -42,7 +42,7 @@ class MessageController < ApplicationController
   #end
 
   def message_params
-    params.require(:message).permit(:name, :package_group, :default_message_txt, :message_reply_id)
+    params.require(:message).permit(:name, :package_group, :default_message_txt, :message_reply_id, :xsd_file, :root_element)
   end
 
   def flashes

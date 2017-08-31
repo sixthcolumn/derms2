@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://iec.ch/TC57/2017/DERGroupsMessage" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:obj="http://iec.ch/TC57/2017/DERGroups#" targetNamespace="http://iec.ch/TC57/2017/DERGroupsMessage" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0.0">
+	<!-- Base Message Definitions -->
+	<xs:import namespace="http://iec.ch/TC57/2011/schema/message" schemaLocation="Message.xsd"/>
+	<!-- CIM Information Object Definition -->
+	<xs:import namespace="http://iec.ch/TC57/2017/DERGroups#" schemaLocation="DERGroups.xsd"/>
+	<!-- PayloadType Definition -->
+	<xs:complexType name="DERGroupsPayloadType">
+		<xs:sequence>
+			<xs:element ref="obj:DERGroups"/>
+			<xs:element name="OperationSet" type="msg:OperationSet" minOccurs="0"/>
+			<xs:element name="Compressed" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>For compressed and/or binary, uuencoded payloads</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Format" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Hint as to format of payload, e.g. XML, RDF, SVF, BINARY, PDF, ...</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Message Types -->
+	<!-- RequestMessageType -->
+	<xs:complexType name="DERGroupsRequestMessageType">
+		<xs:sequence>
+			<xs:element name="Header" type="msg:HeaderType"/>
+			<xs:element name="Request" type="msg:RequestType" minOccurs="0"/>
+			<xs:element name="Payload" type="tns:DERGroupsPayloadType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ResponseMessageType -->
+	<xs:complexType name="DERGroupsResponseMessageType">
+		<xs:sequence>
+			<xs:element name="Header" type="msg:HeaderType"/>
+			<xs:element name="Reply" type="msg:ReplyType"/>
+			<xs:element name="Payload" type="tns:DERGroupsPayloadType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- EventMessageType -->
+	<xs:complexType name="DERGroupsEventMessageType">
+		<xs:sequence>
+			<xs:element name="Header" type="msg:HeaderType"/>
+			<xs:element name="Payload" type="tns:DERGroupsPayloadType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- FaultMessageType -->
+	<xs:complexType name="DERGroupsFaultMessageType">
+		<xs:sequence>
+			<xs:element name="Reply" type="msg:ReplyType"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="CreateDERGroups" type="tns:DERGroupsRequestMessageType"/>
+	<xs:element name="ChangeDERGroups" type="tns:DERGroupsRequestMessageType"/>
+	<xs:element name="CancelDERGroups" type="tns:DERGroupsRequestMessageType"/>
+	<xs:element name="CloseDERGroups" type="tns:DERGroupsRequestMessageType"/>
+	<xs:element name="DeleteDERGroups" type="tns:DERGroupsRequestMessageType"/>
+	<xs:element name="CreatedDERGroups" type="tns:DERGroupsEventMessageType"/>
+	<xs:element name="ChangedDERGroups" type="tns:DERGroupsEventMessageType"/>
+	<xs:element name="CanceledDERGroups" type="tns:DERGroupsEventMessageType"/>
+	<xs:element name="ClosedDERGroups" type="tns:DERGroupsEventMessageType"/>
+	<xs:element name="DeletedDERGroups" type="tns:DERGroupsEventMessageType"/>
+	<xs:element name="DERGroupsResponseMessage" type="tns:DERGroupsResponseMessageType"/>
+	<xs:element name="DERGroupsFaultMessage" type="tns:DERGroupsFaultMessageType"/>
+</xs:schema>

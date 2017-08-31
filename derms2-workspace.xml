@@ -3,7 +3,7 @@
   <con:settings/>
   <con:project status="CLOSED" name="61968-5/create/ExecuteDERGroupDispatches">/Users/BenGoodwin/git/derms2/61968-5/wsdl/create/ExecuteDERGroupDispatches-sui.xml</con:project>
   <con:project name="61968-5/change/ExecuteDERGroups">/Users/BenGoodwin/git/derms2/61968-5/wsdl/change/ExecuteDERGroups-sui.xml</con:project>
-  <con:project status="CLOSED" name="61968-5/create/ExecuteDERGroups">/Users/BenGoodwin/git/derms2/61968-5/wsdl/create/ExecuteDERGroups-sui.xml</con:project>
+  <con:project name="61968-5/create/ExecuteDERGroups">/Users/BenGoodwin/git/derms2/61968-5/wsdl/create/ExecuteDERGroups-sui.xml</con:project>
   <con:project name="61968-5/change/ExecuteDERGroupsOperationSet">/Users/BenGoodwin/git/derms2/61968-5/wsdl/change/ExecuteDERGroupsOperationSet-sui.xml</con:project>
   <con:project status="CLOSED" name="61968-5/create/ReceiveDERGroupForecasts">/Users/BenGoodwin/git/derms2/61968-5/wsdl/create/ReceiveDERGroupForecasts-sui.xml</con:project>
   <con:project status="CLOSED" name="61968-5/create/ReceiveDERGroups">/Users/BenGoodwin/git/derms2/61968-5/wsdl/create/ReceiveDERGroups-sui.xml</con:project>

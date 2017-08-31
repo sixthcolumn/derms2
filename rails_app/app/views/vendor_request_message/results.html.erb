@@ -13,15 +13,28 @@
     <%= @response.code %>
   </div>
 </div>
+
+<% if @response.xml_validation_errors %>
+  <div class="field-unit field-unit--string">
+    <div class="field-unit__label">
+      <label for="message">Validation Errors :</label>
+    </div>
+    <pre class="pre_message pre_wrap"><%= @response.xml_validation_errors %></pre>
+</div>
+<% end %>
+
 <div class="field-unit field-unit--string">
   <div class="field-unit__label">
     <label for="message">SOAP Message :</label>
   </div>
   <pre class="pre_message"><%= formatXML(@response.message) %></pre>
 </div>
+
+<% unless @response.xml_validation_errors %>
 <div class="field-unit field-unit--string">
   <div class="field-unit__label">
     <label for="response_code">SOAP Response :</label>
   </div>
   <pre class="pre_message"><%= formatXML(@response.body) %></pre>
 </div>
+<% end %>
