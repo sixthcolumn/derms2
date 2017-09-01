@@ -16,6 +16,10 @@
 		<hibernate.version>3.5.4-Final</hibernate.version>
 	</properties>
 
+	<build>
+		<defaultGoal>package</defaultGoal>
+	</build>
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -97,13 +101,8 @@
 
 
 	<modules>
-<<<<<<< HEAD
-		<module>61968</module>
-		<module>DER</module>
-		<module>derms2</module>
-=======
+		<module>common</module>
 		<module>61968-5</module>
 		<module>61968-9</module>
->>>>>>> fad9092828643d00d4ed82823dacba1aff1150b3
 	</modules>
 </project>

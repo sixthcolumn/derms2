@@ -20,6 +20,7 @@
 	<!-- Plugin configuration -->
 	<build>
 		<finalName>common</finalName>
+		<defaultGoal>clean install</defaultGoal>
 		<!-- Feel free to change maven-compiler-plugin configuration -->
 		<plugins>
 			<plugin>
