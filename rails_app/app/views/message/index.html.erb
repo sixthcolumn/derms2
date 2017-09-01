@@ -14,12 +14,9 @@ By default, it renders:
 <table class="collection-data" aria-labelledby="page-title">
   <table>
     <tr>
-      <th>ID</th>
       <th>Name</th>
       <th>Package</th>
       <th>Default Message</th>
-      <th>XSD File</th>
-      <th>Root Element</th>
       <th></th>
       <th></th>
     </tr>
@@ -29,12 +26,9 @@ By default, it renders:
           role="link"
           tabindex="0"
           >
-          <td><%= message.message_id %></td>
           <td><%= message.name %></td>
           <td><%= message.package_group.name %></td>
           <td><%= message.selected_message.description unless message.selected_message.nil? %></td>
-          <td><%= message.xsd_file %></td>
-          <td><%= message.root_element %></td>
           <td><%= link_to(
           t("edit"),
           [:edit, message],

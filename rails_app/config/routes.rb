@@ -28,6 +28,8 @@ Rails.application.routes.draw do
 	get 'test_seq_step/new/:id' => 'test_seq_step#new', as: 'new_test_seq_step2'
 
 	get "home/index" => 'home'
+	get "home/download_soapui"
+	get "home/help" => 'help'
 
 	root to: 'home#splash'
 end
