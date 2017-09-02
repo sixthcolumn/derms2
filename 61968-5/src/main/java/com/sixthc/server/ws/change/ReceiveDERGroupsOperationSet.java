@@ -12,6 +12,7 @@ import com.sixthc.part5.change.ReceiveDERGroupsOperationSet.ErrorType;
 import com.sixthc.part5.change.ReceiveDERGroupsOperationSet.FaultMessage;
 import com.sixthc.part5.change.ReceiveDERGroupsOperationSet.HeaderType;
 import com.sixthc.part5.change.ReceiveDERGroupsOperationSet.ReplyType;
+import com.sixthc.util.XMLUtil;
 
 
 
@@ -35,7 +36,7 @@ public class ReceiveDERGroupsOperationSet implements DERGroupsOperationSetPort, 
 		
 		header.value = appContext.getBean("change_receiveDERGroupsOperationSet_header",
 				HeaderType.class);
-		
+		header.value.setTimestamp(XMLUtil.XMLGregorianNow());
 		header.value.setCorrelationID(messageID);
 
 		

@@ -1,5 +1,9 @@
 package com.sixthc.server.ws.change;
 
+import java.util.GregorianCalendar;
+
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
 import javax.xml.ws.Holder;
 
 import org.springframework.beans.BeansException;
@@ -8,12 +12,13 @@ import org.springframework.context.ApplicationContextAware;
 
 import com.sixthc.part5.change.ExecuteDERGroups.DERGroupsPayloadType;
 import com.sixthc.part5.change.ExecuteDERGroups.DERGroupsPort;
+import com.sixthc.part5.change.ExecuteDERGroups.EndDeviceGroup;
+import com.sixthc.part5.change.ExecuteDERGroups.ErrorType;
 import com.sixthc.part5.change.ExecuteDERGroups.FaultMessage;
 import com.sixthc.part5.change.ExecuteDERGroups.HeaderType;
 import com.sixthc.part5.change.ExecuteDERGroups.ReplyType;
 import com.sixthc.part5.change.ExecuteDERGroups.RequestType;
-import com.sixthc.part5.change.ExecuteDERGroups.EndDeviceGroup;
-import com.sixthc.part5.change.ExecuteDERGroups.ErrorType;
+import com.sixthc.util.XMLUtil;
 
 public class ExecuteDERGroups implements DERGroupsPort, ApplicationContextAware {
 
@@ -36,7 +41,8 @@ public class ExecuteDERGroups implements DERGroupsPort, ApplicationContextAware 
 		// default header, will be replaced (probably) during out intercept handler final phase
 		header.value = appContext.getBean("change_executeDERGroups_header",
 				HeaderType.class);
-
+		
+		header.value.setTimestamp(XMLUtil.XMLGregorianNow());
 		header.value.setCorrelationID(messageID);
 
 		// default reply, also replaced

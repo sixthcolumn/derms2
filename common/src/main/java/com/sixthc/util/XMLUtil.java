@@ -4,11 +4,15 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.net.URL;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 
 import javax.xml.XMLConstants;
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
 import javax.xml.namespace.NamespaceContext;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -55,6 +59,17 @@ public class XMLUtil {
 		InputSource inputSource = new InputSource(new StringReader(xmlString));
 		payloadDoc = builder.parse(inputSource);
 		unr = new NSResolver(payloadDoc, false);
+
+	}
+
+	public static XMLGregorianCalendar XMLGregorianNow() {
+		try {
+			return DatatypeFactory.newInstance().newXMLGregorianCalendar(
+					(GregorianCalendar) GregorianCalendar.getInstance());
+		} catch (DatatypeConfigurationException e) {
+			log.error(e);
+			return null;
+		}
 
 	}
 
@@ -284,11 +299,11 @@ public class XMLUtil {
 		 */
 		private void examineNode(Node node, boolean attributesOnly) {
 			NamedNodeMap attributes = node.getAttributes();
-			if( attributes == null ) {
+			if (attributes == null) {
 				log.error("examineNode returned null NS attributes");
 				return;
 			}
-			
+
 			for (int i = 0; i < attributes.getLength(); i++) {
 				Node attribute = attributes.item(i);
 				storeAttribute((Attr) attribute);

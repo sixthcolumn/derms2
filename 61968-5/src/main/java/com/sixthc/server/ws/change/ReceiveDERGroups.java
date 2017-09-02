@@ -12,6 +12,7 @@ import com.sixthc.part5.change.ReceiveDERGroups.FaultMessage;
 import com.sixthc.part5.change.ReceiveDERGroups.HeaderType;
 import com.sixthc.part5.change.ReceiveDERGroups.ReplyType;
 import com.sixthc.part5.change.ReceiveDERGroups.ErrorType;
+import com.sixthc.util.XMLUtil;
 
 public class ReceiveDERGroups implements DERGroupsPort, ApplicationContextAware {
 
@@ -30,6 +31,7 @@ public class ReceiveDERGroups implements DERGroupsPort, ApplicationContextAware 
 		header.value = appContext.getBean(
 				"change_receiveDERGroups_header", HeaderType.class);
 		
+		header.value.setTimestamp(XMLUtil.XMLGregorianNow());
 		header.value.setCorrelationID(messageID);
 		
 		// default reply, also replaced

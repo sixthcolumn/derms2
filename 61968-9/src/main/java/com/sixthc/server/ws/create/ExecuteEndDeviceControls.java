@@ -13,6 +13,7 @@ import com.sixthc.part5.create.executeEndDeviceControls.FaultMessage;
 import com.sixthc.part5.create.executeEndDeviceControls.HeaderType;
 import com.sixthc.part5.create.executeEndDeviceControls.ReplyType;
 import com.sixthc.part5.create.executeEndDeviceControls.RequestType;
+import com.sixthc.util.XMLUtil;
 
 public class ExecuteEndDeviceControls implements EndDeviceControlsPort,
 ApplicationContextAware {
@@ -37,7 +38,7 @@ ApplicationContextAware {
 
 		header.value = appContext.getBean(
 				"create_executeEndDeviceControls_header", HeaderType.class);
-		
+		header.value.setTimestamp(XMLUtil.XMLGregorianNow());
 		header.value.setCorrelationID(messageID);
 		
 		// default reply, also replaced

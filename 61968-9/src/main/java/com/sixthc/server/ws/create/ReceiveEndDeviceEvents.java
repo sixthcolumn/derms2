@@ -12,6 +12,7 @@ import com.sixthc.part5.create.receiveEndDeviceEvents.ErrorType;
 import com.sixthc.part5.create.receiveEndDeviceEvents.FaultMessage;
 import com.sixthc.part5.create.receiveEndDeviceEvents.HeaderType;
 import com.sixthc.part5.create.receiveEndDeviceEvents.ReplyType;
+import com.sixthc.util.XMLUtil;
 
 public class ReceiveEndDeviceEvents implements EndDeviceEventsPort,
 ApplicationContextAware  {
@@ -34,7 +35,7 @@ ApplicationContextAware  {
 
 		header.value = appContext.getBean(
 				"create_receiveEndDeviceEvents_header", HeaderType.class);
-		
+		header.value.setTimestamp(XMLUtil.XMLGregorianNow());
 		header.value.setCorrelationID(messageID);
 		
 		// default reply, also replaced

@@ -12,6 +12,7 @@ import com.sixthc.part5.change.ReceiveDERGroupStatuses.ErrorType;
 import com.sixthc.part5.change.ReceiveDERGroupStatuses.FaultMessage;
 import com.sixthc.part5.change.ReceiveDERGroupStatuses.HeaderType;
 import com.sixthc.part5.change.ReceiveDERGroupStatuses.ReplyType;
+import com.sixthc.util.XMLUtil;
 
 public class ReceiveDERGroupStatuses implements DERGroupStatusesPort,
 		ApplicationContextAware {
@@ -34,7 +35,7 @@ public class ReceiveDERGroupStatuses implements DERGroupStatusesPort,
 		
 		header.value = appContext.getBean("change_receiveDERGroupStatuses_header",
 				HeaderType.class);
-
+		header.value.setTimestamp(XMLUtil.XMLGregorianNow());
 		header.value.setCorrelationID(messageID);
 		
 		// default reply, also replaced

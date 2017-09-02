@@ -13,6 +13,7 @@ import com.sixthc.part5.change.ExecuteDERGroupsOperationSet.FaultMessage;
 import com.sixthc.part5.change.ExecuteDERGroupsOperationSet.HeaderType;
 import com.sixthc.part5.change.ExecuteDERGroupsOperationSet.ReplyType;
 import com.sixthc.part5.change.ExecuteDERGroupsOperationSet.RequestType;
+import com.sixthc.util.XMLUtil;
 
 public class ExecuteDERGroupsOperationSet implements DERGroupsOperationSetPort,
 		ApplicationContextAware {
@@ -37,8 +38,9 @@ public class ExecuteDERGroupsOperationSet implements DERGroupsOperationSetPort,
 		header.value = appContext.getBean(
 				"change_executeDERGroupsOperationSet_header", HeaderType.class);
 
+		header.value.setTimestamp(XMLUtil.XMLGregorianNow());
 		header.value.setCorrelationID(messageID);
-		
+
 		// default reply, also replaced
 		ErrorType et = appContext.getBean(
 				"change_executeDERGroupsOperationSet_error", ErrorType.class);

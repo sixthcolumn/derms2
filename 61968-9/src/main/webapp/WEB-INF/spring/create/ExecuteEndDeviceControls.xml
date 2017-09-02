@@ -15,7 +15,6 @@
 		class="com.sixthc.part5.create.executeEndDeviceControls.HeaderType">
 		<property name="verb" value="create" />
 		<property name="noun" value="DERGroups" />
-		<property name="Timestamp" value="#{now.XMLGregorianDate}" />
 		<property name="MessageID"
 			value="#{ T(java.util.UUID).randomUUID().toString() }" />
 

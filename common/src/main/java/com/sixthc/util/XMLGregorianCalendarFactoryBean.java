@@ -90,6 +90,6 @@ public class XMLGregorianCalendarFactoryBean implements
 
 	@Override
 	public boolean isSingleton() {
-		return true;
+		return false;
 	}
 }
