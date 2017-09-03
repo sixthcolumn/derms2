@@ -3,8 +3,9 @@ class MessageLogController < ApplicationController
   layout "message_log"
 
   def index
-    puts "===== iii"
-    @logs = filter_by_vendor
+    #@logs = filter_by_vendor
+    @search = MessageLogSearch.new(params[:search])
+    @logs = @search.scope
   end
 
   def show

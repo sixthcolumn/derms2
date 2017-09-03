@@ -11,6 +11,16 @@ By default, it renders:
 - Flashes
 - Links to stylesheets and Javascripts
 %>
+<div class="row">
+  <div class="pull-right date-query">
+    <%= form_tag message_log_index_path, method: :get do %>
+      <%= text_field_tag 'search[date_from]', @search.date_from %>
+      <%= text_field_tag 'search[date_to]', @search.date_to %>
+      <%= submit_tag 'Search', class: 'btn search-btn' %>
+    <% end %>
+  </div>
+</div>
+
 <table class="collection-data" aria-labelledby="page-title">
   <table>
     <tr>
@@ -30,7 +40,7 @@ By default, it renders:
           tabindex="0"
           >
           <td><%= log.message_log_id %></td>
-          <td><%= link_to log.message.name, message_log_path(log) %>.</td>
+          <td><%= link_to log.message.name, message_log_path(log) if log.message %>.</td>
           <td><%= log.create_date %> </td>
           <td><%= log.stage %> </td>
           <td><%= log.resultCode %></td>
