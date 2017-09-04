@@ -4,6 +4,7 @@ class VendorRequestMessageController < ApplicationController
 
   require "rexml/document"
   require 'ostruct'
+  require 'net/http'
 
   def index
     @messages = VendorRequestMessage.where(vendor_id: same_vendor)
@@ -70,6 +71,11 @@ class VendorRequestMessageController < ApplicationController
     puts "schema_path : #{schema_path}"
     puts "root : #{root}"
 
+    if ! defined? schema_path || ! defined? root then
+      response.flash_error_message = 'message not properly defined : xsd_file, root_element'
+      return false
+    end
+
     # open schema file, and create doc from xml string
     xsd = Nokogiri::XML::Schema(File.open(schema_path))
     doc = Nokogiri::XML(xml)
@@ -114,8 +120,16 @@ class VendorRequestMessageController < ApplicationController
     @response = OpenStruct.new
     @response.message = @message.message_txt
 
+    if @message.message.xsd_file.nil?
+      raise "xsd_file not defined in message"
+    end
 
-    if validate(@message.message_txt, Rails.root + @message.message.xsd_file, '//*[local-name() = \'' + @message.message.root_element + '\']', @response)
+    if @message.message.root_element.nil?
+      raise "root element not defined in message"
+    end
+
+
+    if validate(@message.message_txt, Rails.root + @message.message.xsd_file,  '//*[local-name() = \'' + @message.message.root_element + '\']', @response)
       uri = URI.parse @message.sent_to_url
 
       http = Net::HTTP.new(uri.host, uri.port)
@@ -140,7 +154,7 @@ class VendorRequestMessageController < ApplicationController
 
     end
   rescue => e
-    puts "rescue"
+    puts e
     flash.now[:error] = "Request failed : " + e.message
     @response.code = "No Results"
     @response.body = "No Results"

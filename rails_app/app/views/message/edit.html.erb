@@ -32,18 +32,14 @@
   </div>
 
   <%= f.fields_for :selected_message do |selected_message| %>
-<div class="field-unit field-unit--string">
-  <div class="field-unit__label">
-    <label for="response_code">Payload : </label>
-  </div>
-  <div class="field-unit__field">
-    <%= selected_message.text_area :message_text, disabled: 'disabled', class: 'pre_message' %>
-  </div>
-</div>
-
-
-
-
+    <div class="field-unit field-unit--string">
+      <div class="field-unit__label">
+        <label for="response_code">Payload : </label>
+      </div>
+      <div class="field-unit__field">
+        <%= selected_message.text_area :message_text, disabled: 'disabled', class: 'pre_message' %>
+      </div>
+    </div>
   <% end %>
  
   <div class="field-unit field-unit--string">
