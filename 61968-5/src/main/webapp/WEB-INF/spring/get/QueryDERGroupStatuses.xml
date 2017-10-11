@@ -48,6 +48,12 @@
 			</bean>
 		</jaxws:inInterceptors>
 		<jaxws:outInterceptors>
+					<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor">
+				<property name="messageName" value="CIM_DER(changeExecuteDERGroups)" />
+				<property name="xsdFile"
+					value="/resources/wsdl/get/xsd/DERGroupStatusQueriesMessage.xsd" />
+				<property name="messageToValidate" value="DERGroupStatusQueriesResponseMessage" />
+			</bean>
 			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
 				<property name="packageName" value="CIM DER" />
 				<property name="packageGroupName" value="CIM DER Control" />
@@ -55,12 +61,7 @@
 				<property name="resultCode" value="success" />
 				<property name="stage" value="serviceOut" />
 			</bean>
-			<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor">
-				<property name="messageName" value="CIM_DER(changeExecuteDERGroups)" />
-				<property name="xsdFile"
-					value="/resources/wsdl/get/xsd/DERGroupStatusQueriesMessage.xsd" />
-				<property name="messageToValidate" value="DERGroupStatusQueriesResponseMessage" />
-			</bean>
+
 		</jaxws:outInterceptors>
 		<jaxws:outFaultInterceptors>
 			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
@@ -70,6 +71,7 @@
 				<property name="resultCode" value="fail" />
 				<property name="stage" value="serviceOutFault" />
 			</bean>
+			
 		</jaxws:outFaultInterceptors>
 		<jaxws:inFaultInterceptors>
 			<bean class="com.sixthc.interceptor.CIMLoggingInInterceptor">

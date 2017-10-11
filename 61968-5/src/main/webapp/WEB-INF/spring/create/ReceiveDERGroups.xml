@@ -15,7 +15,6 @@
 		class="com.sixthc.part5.create.ReceiveDERGroups.HeaderType">
 		<property name="verb" value="create" />
 		<property name="noun" value="DERGroups" />
-		<property name="Timestamp" value="#{now.XMLGregorianDate}" />
 		<property name="MessageID"
 			value="#{ T(java.util.UUID).randomUUID().toString() }" />
 
@@ -45,14 +44,15 @@
 				<property name="resultCode" value="success" />
 				<property name="stage" value="serviceIn" />
 			</bean>
-			<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor">
+
+		</jaxws:inInterceptors>
+		<jaxws:outInterceptors>
+					<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor">
 				<property name="messageName" value="CIM_DER(createReceiveDERGroups)" />
 				<property name="xsdFile"
 					value="/resources/wsdl/create/xsd/DERGroupForecastsMessage.xsd" />
 				<property name="messageToValidate" value="DERGroupForecastsResponseMessage" />
 			</bean>
-		</jaxws:inInterceptors>
-		<jaxws:outInterceptors>
 			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
 				<property name="packageName" value="CIM DER" />
 				<property name="packageGroupName" value="CIM DER Control" />
