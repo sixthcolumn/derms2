@@ -11,6 +11,7 @@ import com.sixthc.part5.get.QueryDERGroupForecasts.HeaderType;
 import com.sixthc.part5.get.QueryDERGroupForecasts.QueryDERGroupForecastsFaultMessage;
 import com.sixthc.part5.get.QueryDERGroupForecasts.QueryDERGroupForecastsPort;
 import com.sixthc.part5.get.QueryDERGroupForecasts.ReplyType;
+import com.sixthc.util.XMLUtil;
 
 public class QueryDERGroupForecasts implements QueryDERGroupForecastsPort,
 		ApplicationContextAware {
@@ -39,6 +40,7 @@ public class QueryDERGroupForecasts implements QueryDERGroupForecastsPort,
 		msg.setHeader(header);
 		
 		header.setCorrelationID(messageID);
+		header.setTimestamp(XMLUtil.XMLGregorianNow());
 		
 		
 		ReplyType reply = appContext.getBean(

@@ -16,6 +16,7 @@ import com.sixthc.part5.create.executeDERGroupDispatches.FaultMessage;
 import com.sixthc.part5.create.executeDERGroupDispatches.HeaderType;
 import com.sixthc.part5.create.executeDERGroupDispatches.ReplyType;
 import com.sixthc.part5.create.executeDERGroupDispatches.RequestType;
+import com.sixthc.util.XMLUtil;
 
 public class ExecuteDERGroupDispatches implements DERGroupDispatchesPort,
 		ApplicationContextAware {
@@ -33,6 +34,7 @@ public class ExecuteDERGroupDispatches implements DERGroupDispatchesPort,
 		header.value = appContext.getBean(
 				"create_executeDERGroupDispatches_header", HeaderType.class);
 		
+		header.value.setTimestamp(XMLUtil.XMLGregorianNow());
 		header.value.setCorrelationID(messageID);
 		
 		// default reply, also replaced

@@ -11,6 +11,7 @@ import com.sixthc.part5.get.QueryDERGroupStatuses.HeaderType;
 import com.sixthc.part5.get.QueryDERGroupStatuses.QueryDERGroupStatusesFaultMessage;
 import com.sixthc.part5.get.QueryDERGroupStatuses.QueryDERGroupStatusesPort;
 import com.sixthc.part5.get.QueryDERGroupStatuses.ReplyType;
+import com.sixthc.util.XMLUtil;
 
 public class QueryDERGroupStatuses implements QueryDERGroupStatusesPort,
 		ApplicationContextAware {
@@ -38,6 +39,7 @@ public class QueryDERGroupStatuses implements QueryDERGroupStatusesPort,
 		msg.setHeader(header);
 		
 		header.setCorrelationID(messageID);
+		header.setTimestamp(XMLUtil.XMLGregorianNow());
 				
 		ReplyType reply = appContext.getBean(
 		"get_queryDERGroupStatuses_reply", ReplyType.class);
