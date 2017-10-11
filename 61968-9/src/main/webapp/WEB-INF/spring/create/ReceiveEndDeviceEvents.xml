@@ -46,6 +46,12 @@
 			</bean>
 		</jaxws:inInterceptors>
 		<jaxws:outInterceptors>
+					<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor">
+				<property name="messageName" value="CIM_DER(receiveEndDerviceEvents)" />
+				<property name="xsdFile"
+					value="/resources/wsdl/create/xsd/EndDeviceEventsMessage.xsd" />
+				<property name="messageToValidate" value="EndDeviceEventsResponseMessage" />
+			</bean>
 			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
 				<property name="packageName" value="CIM DER" />
 				<property name="packageGroupName" value="CIM DER Control" />
@@ -53,12 +59,7 @@
 				<property name="stage" value="serviceOut" />
 				<property name="messageName" value="CIM_DER(receiveEndDerviceEvents)" />
 			</bean>
-			<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor">
-				<property name="messageName" value="CIM_DER(receiveEndDerviceEvents)" />
-				<property name="xsdFile"
-					value="/resources/wsdl/create/xsd/EndDeviceEventsMessage.xsd" />
-				<property name="messageToValidate" value="EndDeviceEventsResponseMessage" />
-			</bean>
+
 		</jaxws:outInterceptors>
 		<jaxws:outFaultInterceptors>
 			<bean class="com.sixthc.interceptor.CIMLoggingOutInterceptor">
