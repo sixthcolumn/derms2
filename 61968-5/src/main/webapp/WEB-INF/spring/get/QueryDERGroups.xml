@@ -49,7 +49,7 @@
 		</jaxws:inInterceptors>
 		<jaxws:outInterceptors>
 					<bean class="com.sixthc.interceptor.ReplaceMessageInterceptor">
-				<property name="messageName" value="CIM_DER(changeExecuteDERGroups)" />
+				<property name="messageName" value="CIM_DER(getQueryDERGroups)" />
 				<property name="xsdFile"
 					value="/resources/wsdl/get/xsd/DERGroupQueriesMessage.xsd" />
 				<property name="messageToValidate" value="DERGroupQueriesResponseMessage" />
