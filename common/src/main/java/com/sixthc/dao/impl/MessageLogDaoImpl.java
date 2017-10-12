@@ -91,7 +91,7 @@ public class MessageLogDaoImpl extends CustomHibernateDaoSupport implements
 
 	@Override
 	public void save(MessageLog log) {
-		if (log.getCreateDate() == null)
+		//if (log.getCreateDate() == null)
 			log.setCreateDate(new Timestamp(System.currentTimeMillis()));
 
 		getHibernateTemplate().save(log);
