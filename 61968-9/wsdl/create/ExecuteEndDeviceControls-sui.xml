@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default" name="61968-9/create/ExecuteEndDeviceControls" resourceRoot="${projectDir}" soapui-version="4.5.2" abortOnError="false" runType="SEQUENTIAL" id="555e453e-a65f-4f92-b607-bb4b9d5b1089" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="EndDeviceControls_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/ExecuteEndDeviceControls}EndDeviceControls_Binding" soapVersion="1_1" anonymous="optional" definition="ExecuteEndDeviceControls.wsdl" id="89e09ccb-b8ab-407c-94b9-9bc7b1189689" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/git/derms2/61968-9/wsdl/'create'/ExecuteEndDeviceControls.wsdl"><con:part><con:url>file:/Users/BenGoodwin/git/derms2/61968-9/wsdl/'create'/ExecuteEndDeviceControls.wsdl</con:url><con:content><![CDATA[<!--edited with XMLSpy v2015 rel. 4 sp1 (x64) (http://www.altova.com) by Christopher Kardos (private)-->
+<con:soapui-project activeEnvironment="Default" name="61968-9/create/ExecuteEndDeviceControls" resourceRoot="${projectDir}" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" id="555e453e-a65f-4f92-b607-bb4b9d5b1089" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="EndDeviceControls_Binding" type="wsdl" bindingName="{http://iec.ch/TC57/2017/ExecuteEndDeviceControls}EndDeviceControls_Binding" soapVersion="1_1" anonymous="optional" definition="ExecuteEndDeviceControls.wsdl" id="89e09ccb-b8ab-407c-94b9-9bc7b1189689" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="file:/Users/BenGoodwin/git/derms2/61968-9/wsdl/'create'/ExecuteEndDeviceControls.wsdl"><con:part><con:url>file:/Users/BenGoodwin/git/derms2/61968-9/wsdl/'create'/ExecuteEndDeviceControls.wsdl</con:url><con:content><![CDATA[<!--edited with XMLSpy v2015 rel. 4 sp1 (x64) (http://www.altova.com) by Christopher Kardos (private)-->
 <wsdl:definitions name="ExecuteEndDeviceControls" targetNamespace="http://iec.ch/TC57/2017/ExecuteEndDeviceControls" xmlns:tns="http://iec.ch/TC57/2017/ExecuteEndDeviceControls" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:infoMessage="http://iec.ch/TC57/2017/EndDeviceControlsMessage">
   <wsdl:types>
     <xs:schema targetNamespace="http://iec.ch/TC57/2017/ExecuteEndDeviceControls" elementFormDefault="qualified">
@@ -1546,7 +1546,7 @@
     </xs:annotation>
     <xs:restriction base="xs:float"/>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/ExecuteEndDeviceControls</con:endpoint><con:endpoint>http://localhost:8080/61968-9/create/executeEndDeviceControls</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/EndDeviceControls/CreateEndDeviceControls" name="CreateEndDeviceControls" bindingOperationName="CreateEndDeviceControls" type="Request-Response" outputName="CreateEndDeviceControlsResponse" inputName="CreateEndDeviceControlsRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="1238e657-d992-428f-aa7e-040eacc13195"><con:settings/><con:call name="Request 1" id="26d9cb31-8e0a-4a1e-a036-a81b16505f46"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ExecuteEndDeviceControls</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:end="http://iec.ch/TC57/2017/EndDeviceControlsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:end1="http://iec.ch/TC57/2011/EndDeviceControls#">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://52.91.91.57:8080/61968-9/create/executeEndDeviceControls</con:endpoint><con:endpoint>http://iec.ch/TC57/2017/ExecuteEndDeviceControls</con:endpoint><con:endpoint>http://localhost:8080/61968-9/create/executeEndDeviceControls</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/EndDeviceControls/CreateEndDeviceControls" name="CreateEndDeviceControls" bindingOperationName="CreateEndDeviceControls" type="Request-Response" outputName="CreateEndDeviceControlsResponse" inputName="CreateEndDeviceControlsRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="1238e657-d992-428f-aa7e-040eacc13195"><con:settings/><con:call name="Request 1" id="26d9cb31-8e0a-4a1e-a036-a81b16505f46"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ExecuteEndDeviceControls</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:end="http://iec.ch/TC57/2017/EndDeviceControlsMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:end1="http://iec.ch/TC57/2011/EndDeviceControls#">
    <soapenv:Header/>
    <soapenv:Body>
       <end:CreateEndDeviceControls>
@@ -1974,7 +1974,7 @@
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/EndDeviceControls/CreateEndDeviceControls" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERGCD-1A" id="aabf9181-4e21-4980-a148-d1cb8c596984"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EndDeviceControls_Binding</con:interface><con:operation>CreateEndDeviceControls</con:operation><con:request name="DERGCD-1A" id="6a7c4b98-6a77-4665-8efa-d3721726539c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-9/create/executeEndDeviceControls</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/EndDeviceControlsMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:end1="http://iec.ch/TC57/2011/EndDeviceControls#">
    <soapenv:Header/>
    <soapenv:Body>
-<tns:CreateEndDeviceControls>
+<tns:CreateEndDeviceControls xmlns="http://iec.ch/TC57/2011/EndDeviceControls#" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:n1="http://www.altova.com/samplexml/other-namespace" xmlns:tns="http://iec.ch/TC57/2017/EndDeviceControlsMessage" xsi:schemaLocation="http://iec.ch/TC57/2017/EndDeviceControlsMessage EndDeviceControlsMessage.xsd">
 	<tns:Header>
 		<msg:Verb>create</msg:Verb>
 		<msg:Noun>EndDeviceControls</msg:Noun>
@@ -1983,24 +1983,24 @@
 		<msg:CorrelationID>3a913c02-bc54-4a63-b82a-b255ffa0b7da</msg:CorrelationID>
 	</tns:Header>
 	<tns:Payload>
-		<end1:EndDeviceControls>
-			<end1:EndDeviceControl>
-				<end1:mRID>2b928834-b538-4244-9daf-6db54f700a76</end1:mRID>
-				<end1:EndDeviceControlType ref="2.31.0.18"/>
-				<end1:EndDeviceGroups>
-					<end1:Names>
-						<end1:name>DG2</end1:name>
-					</end1:Names>
-				</end1:EndDeviceGroups>
-			</end1:EndDeviceControl>
-		</end1:EndDeviceControls>
+		<EndDeviceControls>
+			<EndDeviceControl>
+				<mRID>2b928834-b538-4244-9daf-6db54f700a76</mRID>
+				<EndDeviceControlType ref="2.31.0.18"/>
+				<EndDeviceGroups>
+					<Names>
+						<name>DG2</name>
+					</Names>
+				</EndDeviceGroups>
+			</EndDeviceControl>
+		</EndDeviceControls>
 	</tns:Payload>
 </tns:CreateEndDeviceControls>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/EndDeviceControls/CreateEndDeviceControls" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERGCD-1B" id="bc79a82b-73eb-45f7-8e42-588f29020837"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EndDeviceControls_Binding</con:interface><con:operation>CreateEndDeviceControls</con:operation><con:request name="DERGCD-1B" id="6a7c4b98-6a77-4665-8efa-d3721726539c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-9/create/executeEndDeviceControls</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/EndDeviceControlsMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:end1="http://iec.ch/TC57/2011/EndDeviceControls#">
    <soapenv:Header/>
    <soapenv:Body>
-<tns:CreateEndDeviceControls>
+<tns:CreateEndDeviceControls xmlns="http://iec.ch/TC57/2011/EndDeviceControls#" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:n1="http://www.altova.com/samplexml/other-namespace" xmlns:tns="http://iec.ch/TC57/2017/EndDeviceControlsMessage" xsi:schemaLocation="http://iec.ch/TC57/2017/EndDeviceControlsMessage EndDeviceControlsMessage.xsd">
 	<tns:Header>
 		<msg:Verb>create</msg:Verb>
 		<msg:Noun>EndDeviceControls</msg:Noun>
@@ -2009,24 +2009,24 @@
 		<msg:CorrelationID>3b56562c-fc74-46ea-9b0b-97fde6055818</msg:CorrelationID>
 	</tns:Header>
 	<tns:Payload>
-		<end1:EndDeviceControls>
-			<end1:EndDeviceControl>
-				<end1:mRID>52d5d3e4-601b-4030-a9b8-7742bf019c88</end1:mRID>
-				<end1:EndDeviceControlType ref="2.31.0.18"/>
-				<end1:EndDeviceGroups>
-					<end1:Names>
-						<end1:name>DG1</end1:name>
-					</end1:Names>
-				</end1:EndDeviceGroups>
-			</end1:EndDeviceControl>
-		</end1:EndDeviceControls>
+		<EndDeviceControls>
+			<EndDeviceControl>
+				<mRID>52d5d3e4-601b-4030-a9b8-7742bf019c88</mRID>
+				<EndDeviceControlType ref="2.31.0.18"/>
+				<EndDeviceGroups>
+					<Names>
+						<name>DG1</name>
+					</Names>
+				</EndDeviceGroups>
+			</EndDeviceControl>
+		</EndDeviceControls>
 	</tns:Payload>
 </tns:CreateEndDeviceControls>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/EndDeviceControls/CreateEndDeviceControls" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERGCD-1C" id="dd438d2c-0441-4c14-b21f-653103f62371"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EndDeviceControls_Binding</con:interface><con:operation>CreateEndDeviceControls</con:operation><con:request name="DERGCD-1C" id="6a7c4b98-6a77-4665-8efa-d3721726539c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-9/create/executeEndDeviceControls</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/EndDeviceControlsMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:end1="http://iec.ch/TC57/2011/EndDeviceControls#">
    <soapenv:Header/>
    <soapenv:Body>
-<tns:CreateEndDeviceControls>
+<tns:CreateEndDeviceControls xmlns="http://iec.ch/TC57/2011/EndDeviceControls#" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:n1="http://www.altova.com/samplexml/other-namespace" xmlns:tns="http://iec.ch/TC57/2017/EndDeviceControlsMessage" xsi:schemaLocation="http://iec.ch/TC57/2017/EndDeviceControlsMessage EndDeviceControlsMessage.xsd">
 	<tns:Header>
 		<msg:Verb>create</msg:Verb>
 		<msg:Noun>EndDeviceControls</msg:Noun>
@@ -2035,24 +2035,24 @@
 		<msg:CorrelationID>381a99a9-86c3-4b09-9603-2ef0eb5ad584</msg:CorrelationID>
 	</tns:Header>
 	<tns:Payload>
-		<end1:EndDeviceControls>
-			<end1:EndDeviceControl>
-				<end1:mRID>2617cc93-b5da-4803-8974-5bd3dadd70db</end1:mRID>
-				<end1:EndDeviceControlType ref="2.31.0.18"/>
-				<end1:EndDeviceGroups>
-					<end1:Names>
-						<end1:name>DG4</end1:name>
-					</end1:Names>
-				</end1:EndDeviceGroups>
-			</end1:EndDeviceControl>
-		</end1:EndDeviceControls>
+		<EndDeviceControls>
+			<EndDeviceControl>
+				<mRID>2617cc93-b5da-4803-8974-5bd3dadd70db</mRID>
+				<EndDeviceControlType ref="2.31.0.18"/>
+				<EndDeviceGroups>
+					<Names>
+						<name>DG4</name>
+					</Names>
+				</EndDeviceGroups>
+			</EndDeviceControl>
+		</EndDeviceControls>
 	</tns:Payload>
 </tns:CreateEndDeviceControls>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/EndDeviceControls/CreateEndDeviceControls" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERGCD-1D" id="ec16af67-dd5f-4b79-a092-7d5105a1670f"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EndDeviceControls_Binding</con:interface><con:operation>CreateEndDeviceControls</con:operation><con:request name="DERGCD-1D" id="6a7c4b98-6a77-4665-8efa-d3721726539c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-9/create/executeEndDeviceControls</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/EndDeviceControlsMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:end1="http://iec.ch/TC57/2011/EndDeviceControls#">
    <soapenv:Header/>
    <soapenv:Body>
-<tns:CreateEndDeviceControls>
+<tns:CreateEndDeviceControls xmlns="http://iec.ch/TC57/2011/EndDeviceControls#" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:n1="http://www.altova.com/samplexml/other-namespace" xmlns:tns="http://iec.ch/TC57/2017/EndDeviceControlsMessage" xsi:schemaLocation="http://iec.ch/TC57/2017/EndDeviceControlsMessage EndDeviceControlsMessage.xsd">
 	<tns:Header>
 		<msg:Verb>create</msg:Verb>
 		<msg:Noun>EndDeviceControls</msg:Noun>
@@ -2061,22 +2061,22 @@
 		<msg:CorrelationID>76f191ae-478c-4f73-b4c0-e654eeeb4be8</msg:CorrelationID>
 	</tns:Header>
 	<tns:Payload>
-		<end1:EndDeviceControls>
-			<end1:EndDeviceControl>
-				<end1:mRID>b9c5767a-5536-44db-84db-fa73eadc2050</end1:mRID>
-				<end1:EndDeviceControlType ref="2.31.0.23"/>
-				<end1:EndDeviceGroups>
-					<end1:Names>
-						<end1:name>DG6</end1:name>
-					</end1:Names>
-				</end1:EndDeviceGroups>
-				<end1:EndDeviceGroups>
-					<end1:Names>
-						<end1:name>DG2</end1:name>
-					</end1:Names>
-				</end1:EndDeviceGroups>
-			</end1:EndDeviceControl>
-		</end1:EndDeviceControls>
+		<EndDeviceControls>
+			<EndDeviceControl>
+				<mRID>b9c5767a-5536-44db-84db-fa73eadc2050</mRID>
+				<EndDeviceControlType ref="2.31.0.23"/>
+				<EndDeviceGroups>
+					<Names>
+						<name>DG6</name>
+					</Names>
+				</EndDeviceGroups>
+				<EndDeviceGroups>
+					<Names>
+						<name>DG2</name>
+					</Names>
+				</EndDeviceGroups>
+			</EndDeviceControl>
+		</EndDeviceControls>
 	</tns:Payload>
 </tns:CreateEndDeviceControls>
    </soapenv:Body>

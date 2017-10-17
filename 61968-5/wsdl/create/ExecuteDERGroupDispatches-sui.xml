@@ -1370,7 +1370,7 @@
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
-</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://iec.ch/TC57/2017/ExecuteDERGroupDispatches</con:endpoint><con:endpoint>http://localhost:8080/61968-5/61968-5/create/executeDERGroupDispatches</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroupDispatches/CreateDERGroupDispatches" name="CreateDERGroupDispatches" bindingOperationName="CreateDERGroupDispatches" type="Request-Response" outputName="CreateDERGroupDispatchesResponse" inputName="CreateDERGroupDispatchesRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="c74f6950-8dce-4da0-a491-d8e2f8e0fa00"><con:settings/><con:call name="Request 1" id="addee085-5ea2-4069-a9a1-8ac63d3d2a81"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ExecuteDERGroupDispatches</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupDispatchesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupDispatches#">
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://52.91.91.57:8080/61968-5/create/executeDERGroupDispatches</con:endpoint><con:endpoint>http://iec.ch/TC57/2017/ExecuteDERGroupDispatches</con:endpoint><con:endpoint>http://localhost:8080/61968-5/61968-5/create/executeDERGroupDispatches</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://iec.ch/TC57/2017/DERGroupDispatches/CreateDERGroupDispatches" name="CreateDERGroupDispatches" bindingOperationName="CreateDERGroupDispatches" type="Request-Response" outputName="CreateDERGroupDispatchesResponse" inputName="CreateDERGroupDispatchesRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="c74f6950-8dce-4da0-a491-d8e2f8e0fa00"><con:settings/><con:call name="Request 1" id="addee085-5ea2-4069-a9a1-8ac63d3d2a81"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://iec.ch/TC57/2017/ExecuteDERGroupDispatches</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:der="http://iec.ch/TC57/2017/DERGroupDispatchesMessage" xmlns:mes="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupDispatches#">
    <soapenv:Header/>
    <soapenv:Body>
       <der:CreateDERGroupDispatches>
@@ -1558,294 +1558,302 @@
          </der:Payload>
       </der:CreateDERGroupDispatches>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupDispatches/CreateDERGroupDispatches" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERGD-1A" id="66cd9ab6-6039-4876-83be-6d052e79dcfe"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroupDispatches_Binding</con:interface><con:operation>CreateDERGroupDispatches</con:operation><con:request name="DERGD-1A" id="2ac38c68-4a50-48ef-b299-16c1e07c85f8"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/create/executeDERGroupDispatches</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/DERGroupDispatchesMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupDispatches#">
-   <soapenv:Header/>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupDispatches/CreateDERGroupDispatches" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERGD-1A" id="66cd9ab6-6039-4876-83be-6d052e79dcfe"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroupDispatches_Binding</con:interface><con:operation>CreateDERGroupDispatches</con:operation><con:request name="DERGD-1A" id="2ac38c68-4a50-48ef-b299-16c1e07c85f8"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/create/executeDERGroupDispatches</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" >
+<soapenv:Header/>
    <soapenv:Body>
-<tns:CreateDERGroupDispatches>
+<tns:CreateDERGroupDispatches xmlns="http://iec.ch/TC57/2011/schema/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://iec.ch/TC57/2017/DERGroupDispatches#" xmlns:n1="http://www.altova.com/samplexml/other-namespace" xmlns:tns="http://iec.ch/TC57/2017/DERGroupDispatchesMessage" xsi:schemaLocation="http://iec.ch/TC57/2017/DERGroupDispatchesMessage DERGroupDispatchesMessage.xsd">
 	<tns:Header>
-		<msg:Verb>create</msg:Verb>
-		<msg:Noun>DERGroupDispatches</msg:Noun>
-		<msg:Timestamp>2017-06-16T16:23:33-06:00</msg:Timestamp>
-		<msg:MessageID>d463ff88-7625-46f7-b8f4-64665b7484b2</msg:MessageID>
-		<msg:CorrelationID>5d0a1857-9e68-405a-afbe-9b5f6d3165d3</msg:CorrelationID>
+		<Verb>create</Verb>
+		<Noun>DERGroupDispatches</Noun>
+		<Timestamp>2017-06-16T16:23:33-06:00</Timestamp>
+		<MessageID>d463ff88-7625-46f7-b8f4-64665b7484b2</MessageID>
+		<CorrelationID>5d0a1857-9e68-405a-afbe-9b5f6d3165d3</CorrelationID>
 	</tns:Header>
 	<tns:Payload>
-		<der1:DERGroupDispatches>
-			<der1:DERGroupDispatch>
-				<der1:mRID>016cf0c9-4eb6-4e6c-b6d8-d50e5746f54e</der1:mRID>
-				<der1:EndDeviceGroup>
-					<der1:DERMonitorableParameter>
-						<der1:DERParameter>activePower</der1:DERParameter>
-						<der1:yMultiplier>k</der1:yMultiplier>
-						<der1:yUnit>W</der1:yUnit>
-						<der1:DispatchSchedule>
-							<der1:curveStyleKind>straightLineYValues</der1:curveStyleKind>
-							<der1:startTime>2017-06-16T17:00:00-06:00</der1:startTime>
-							<der1:timeIntervalDuration>15</der1:timeIntervalDuration>
-							<der1:timeIntervalUnit>m</der1:timeIntervalUnit>
-							<der1:DERCurveData>
-								<der1:intervalNumber>1</der1:intervalNumber>
-								<der1:nominalYValue>190.0</der1:nominalYValue>
-							</der1:DERCurveData>
-							<der1:DERCurveData>
-								<der1:intervalNumber>2</der1:intervalNumber>
-								<der1:nominalYValue>200.0</der1:nominalYValue>
-							</der1:DERCurveData>
-							<der1:DERCurveData>
-								<der1:intervalNumber>3</der1:intervalNumber>
-								<der1:nominalYValue>200.0</der1:nominalYValue>
-							</der1:DERCurveData>
-							<der1:DERCurveData>
-								<der1:intervalNumber>4</der1:intervalNumber>
-								<der1:nominalYValue>180.0</der1:nominalYValue>
-							</der1:DERCurveData>
-							<der1:DERCurveData>
-								<der1:intervalNumber>5</der1:intervalNumber>
-								<der1:nominalYValue>175.0</der1:nominalYValue>
-							</der1:DERCurveData>
-						</der1:DispatchSchedule>
-					</der1:DERMonitorableParameter>
-					<der1:Names>
-						<der1:name>GD-20170616-029</der1:name>
-					</der1:Names>
-				</der1:EndDeviceGroup>
-				<der1:Names>
-					<der1:name>DG2</der1:name>
-				</der1:Names>
-			</der1:DERGroupDispatch>
-		</der1:DERGroupDispatches>
+		<m:DERGroupDispatches>
+			<m:DERGroupDispatch>
+				<m:mRID>016cf0c9-4eb6-4e6c-b6d8-d50e5746f54e</m:mRID>
+				<m:EndDeviceGroup>
+					<m:DERMonitorableParameter>
+						<m:DERParameter>activePower</m:DERParameter>
+						<m:yMultiplier>k</m:yMultiplier>
+						<m:yUnit>W</m:yUnit>
+						<m:DispatchSchedule>
+							<m:curveStyleKind>straightLineYValues</m:curveStyleKind>
+							<m:startTime>2017-06-16T17:00:00-06:00</m:startTime>
+							<m:timeIntervalDuration>15</m:timeIntervalDuration>
+							<m:timeIntervalUnit>m</m:timeIntervalUnit>
+							<m:DERCurveData>
+								<m:intervalNumber>1</m:intervalNumber>
+								<m:nominalYValue>190.0</m:nominalYValue>
+							</m:DERCurveData>
+							<m:DERCurveData>
+								<m:intervalNumber>2</m:intervalNumber>
+								<m:nominalYValue>200.0</m:nominalYValue>
+							</m:DERCurveData>
+							<m:DERCurveData>
+								<m:intervalNumber>3</m:intervalNumber>
+								<m:nominalYValue>200.0</m:nominalYValue>
+							</m:DERCurveData>
+							<m:DERCurveData>
+								<m:intervalNumber>4</m:intervalNumber>
+								<m:nominalYValue>180.0</m:nominalYValue>
+							</m:DERCurveData>
+							<m:DERCurveData>
+								<m:intervalNumber>5</m:intervalNumber>
+								<m:nominalYValue>175.0</m:nominalYValue>
+							</m:DERCurveData>
+						</m:DispatchSchedule>
+					</m:DERMonitorableParameter>
+					<m:Names>
+						<m:name>DG2</m:name>
+					</m:Names>
+				</m:EndDeviceGroup>
+				<m:Names>
+					<m:name>GD-20170616-029</m:name>
+				</m:Names>
+			</m:DERGroupDispatch>
+		</m:DERGroupDispatches>
 	</tns:Payload>
 </tns:CreateDERGroupDispatches>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupDispatches/CreateDERGroupDispatches" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERGD-1B" id="a2a29cb9-a2ff-490d-8ce2-e75d71c69ae0"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroupDispatches_Binding</con:interface><con:operation>CreateDERGroupDispatches</con:operation><con:request name="DERGD-1B" id="2ac38c68-4a50-48ef-b299-16c1e07c85f8"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/create/executeDERGroupDispatches</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/DERGroupDispatchesMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupDispatches#">
    <soapenv:Header/>
    <soapenv:Body>
-<tns:CreateDERGroupDispatches>
+<tns:CreateDERGroupDispatches xmlns="http://iec.ch/TC57/2011/schema/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:obj="http://iec.ch/TC57/2017/DERGroupDispatches#" xmlns:n1="http://www.altova.com/samplexml/other-namespace" xmlns:tns="http://iec.ch/TC57/2017/DERGroupDispatchesMessage" xsi:schemaLocation="http://iec.ch/TC57/2017/DERGroupDispatchesMessage DERGroupDispatchesMessage.xsd">
 	<tns:Header>
-		<msg:Verb>create</msg:Verb>
-		<msg:Noun>DERGroupDispatches</msg:Noun>
-		<msg:Timestamp>2017-06-16T16:54:01-06:00</msg:Timestamp>
-		<msg:MessageID>ca716db7-da13-4b5d-889c-03fb1013d163</msg:MessageID>
-		<msg:CorrelationID>41cecb29-73f9-4e48-a907-e33e1848e366</msg:CorrelationID>
+		<Verb>create</Verb>
+		<Noun>DERGroupDispatches</Noun>
+		<Timestamp>2017-06-16T16:54:01-06:00</Timestamp>
+		<MessageID>ca716db7-da13-4b5d-889c-03fb1013d163</MessageID>
+		<CorrelationID>41cecb29-73f9-4e48-a907-e33e1848e366</CorrelationID>
 	</tns:Header>
 	<tns:Payload>
-		<der1:DERGroupDispatches>
-			<der1:DERGroupDispatch>
-				<der1:mRID>73cc9ce2-4b3c-4ba4-b3a9-8f757a9f7054</der1:mRID>
-				<der1:EndDeviceGroup>
-					<der1:DERMonitorableParameter>
-						<der1:DERParameter>activePower</der1:DERParameter>
-						<der1:yMultiplier>k</der1:yMultiplier>
-						<der1:yUnit>W</der1:yUnit>
-						<der1:DispatchSchedule>
-							<der1:curveStyleKind>constantYValue</der1:curveStyleKind>
-							<der1:startTime>2017-06-16T17:30:00-06:00</der1:startTime>
-							<der1:timeIntervalDuration>15</der1:timeIntervalDuration>
-							<der1:timeIntervalUnit>m</der1:timeIntervalUnit>
-							<der1:DERCurveData>
-								<der1:intervalNumber>1</der1:intervalNumber>
-								<der1:nominalYValue>35.5</der1:nominalYValue>
-							</der1:DERCurveData>
-							<der1:DERCurveData>
-								<der1:intervalNumber>2</der1:intervalNumber>
-								<der1:nominalYValue>38.6</der1:nominalYValue>
-							</der1:DERCurveData>
-						</der1:DispatchSchedule>
-					</der1:DERMonitorableParameter>
-				</der1:EndDeviceGroup>
-				<der1:Names>
-					<der1:name>DG1</der1:name>
-				</der1:Names>
-			</der1:DERGroupDispatch>
-		</der1:DERGroupDispatches>
+		<obj:DERGroupDispatches>
+			<obj:DERGroupDispatch>
+				<obj:mRID>73cc9ce2-4b3c-4ba4-b3a9-8f757a9f7054</obj:mRID>
+				<obj:EndDeviceGroup>
+					<obj:DERMonitorableParameter>
+						<obj:DERParameter>activePower</obj:DERParameter>
+						<obj:yMultiplier>k</obj:yMultiplier>
+						<obj:yUnit>W</obj:yUnit>
+						<obj:DispatchSchedule>
+							<obj:curveStyleKind>constantYValue</obj:curveStyleKind>
+							<obj:startTime>2017-06-16T17:30:00-06:00</obj:startTime>
+							<obj:timeIntervalDuration>15</obj:timeIntervalDuration>
+							<obj:timeIntervalUnit>m</obj:timeIntervalUnit>
+							<obj:DERCurveData>
+								<obj:intervalNumber>1</obj:intervalNumber>
+								<obj:nominalYValue>35.5</obj:nominalYValue>
+							</obj:DERCurveData>
+							<obj:DERCurveData>
+								<obj:intervalNumber>2</obj:intervalNumber>
+								<obj:nominalYValue>38.6</obj:nominalYValue>
+							</obj:DERCurveData>
+						</obj:DispatchSchedule>
+					</obj:DERMonitorableParameter>
+				</obj:EndDeviceGroup>
+				<obj:Names>
+					<obj:name>DG1</obj:name>
+				</obj:Names>
+			</obj:DERGroupDispatch>
+		</obj:DERGroupDispatches>
 	</tns:Payload>
 </tns:CreateDERGroupDispatches>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupDispatches/CreateDERGroupDispatches" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERGD-1C" id="cbcaf19b-d735-4e28-a4df-7871447e5f0c"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroupDispatches_Binding</con:interface><con:operation>CreateDERGroupDispatches</con:operation><con:request name="DERGD-1C" id="2ac38c68-4a50-48ef-b299-16c1e07c85f8"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/create/executeDERGroupDispatches</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/DERGroupDispatchesMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupDispatches#">
    <soapenv:Header/>
    <soapenv:Body>
-<tns:CreateDERGroupDispatches>
+<tns:CreateDERGroupDispatches xmlns="http://iec.ch/TC57/2011/schema/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://iec.ch/TC57/2017/DERGroupDispatches#" xmlns:n1="http://www.altova.com/samplexml/other-namespace" xmlns:tns="http://iec.ch/TC57/2017/DERGroupDispatchesMessage" xsi:schemaLocation="http://iec.ch/TC57/2017/DERGroupDispatchesMessage DERGroupDispatchesMessage.xsd">
 	<tns:Header>
-		<msg:Verb>create</msg:Verb>
-		<msg:Noun>DERGroupDispatches</msg:Noun>
-		<msg:Timestamp>2017-06-16T17:11:22-06:00</msg:Timestamp>
-		<msg:MessageID>993e3047-5bc4-4d50-b31e-8f5850d99be7</msg:MessageID>
-		<msg:CorrelationID>a613a3d1-c880-4f73-a90b-2c7d3f524ba1</msg:CorrelationID>
+		<Verb>create</Verb>
+		<Noun>DERGroupDispatches</Noun>
+		<Timestamp>2017-06-16T17:11:22-06:00</Timestamp>
+		<MessageID>993e3047-5bc4-4d50-b31e-8f5850d99be7</MessageID>
+		<CorrelationID>a613a3d1-c880-4f73-a90b-2c7d3f524ba1</CorrelationID>
 	</tns:Header>
 	<tns:Payload>
-		<der1:DERGroupDispatches>
-			<der1:DERGroupDispatch>
-				<der1:mRID>cf78aff3-afcf-4304-8e70-72de5ff98801</der1:mRID>
-				<der1:EndDeviceGroup>
-					<der1:DERMonitorableParameter>
-						<der1:DERParameter>reactivePower</der1:DERParameter>
-						<der1:yMultiplier>k</der1:yMultiplier>
-						<der1:yUnit>VAr</der1:yUnit>
-						<der1:DispatchSchedule>
-							<der1:curveStyleKind>straightLineYValues</der1:curveStyleKind>
-							<der1:startTime>2017-06-16T18:00:00-06:00</der1:startTime>
-							<der1:timeIntervalDuration>1</der1:timeIntervalDuration>
-							<der1:timeIntervalUnit>h</der1:timeIntervalUnit>
-							<der1:DERCurveData>
-								<der1:intervalNumber>1</der1:intervalNumber>
-								<der1:nominalYValue>415.7</der1:nominalYValue>
-							</der1:DERCurveData>
-							<der1:DERCurveData>
-								<der1:intervalNumber>2</der1:intervalNumber>
-								<der1:nominalYValue>439.5</der1:nominalYValue>
-							</der1:DERCurveData>
-						</der1:DispatchSchedule>
-					</der1:DERMonitorableParameter>
-				</der1:EndDeviceGroup>
-				<der1:Names>
-					<der1:name>DG3</der1:name>
-				</der1:Names>
-			</der1:DERGroupDispatch>
-			<der1:DERGroupDispatch>
-				<der1:mRID>c646bd5c-9ca1-4d31-8e8e-33aba6ee2ab4</der1:mRID>
-				<der1:EndDeviceGroup>
-					<der1:DERMonitorableParameter>
-						<der1:DERParameter>voltage</der1:DERParameter>
-						<der1:yMultiplier>k</der1:yMultiplier>
-						<der1:yUnit>V</der1:yUnit>
-						<der1:DispatchSchedule>
-							<der1:curveStyleKind>constantYValue</der1:curveStyleKind>
-							<der1:startTime>2017-06-16T18:00:00-06:00</der1:startTime>
-							<der1:timeIntervalDuration>1</der1:timeIntervalDuration>
-							<der1:timeIntervalUnit>h</der1:timeIntervalUnit>
-							<der1:DERCurveData>
-								<der1:intervalNumber>2</der1:intervalNumber>
-								<der1:nominalYValue>12.20</der1:nominalYValue>
-							</der1:DERCurveData>
-							<der1:DERCurveData>
-								<der1:intervalNumber>2</der1:intervalNumber>
-								<der1:nominalYValue>12.35</der1:nominalYValue>
-							</der1:DERCurveData>
-						</der1:DispatchSchedule>
-					</der1:DERMonitorableParameter>
-				</der1:EndDeviceGroup>
-				<der1:Names>
-					<der1:name>DG4</der1:name>
-				</der1:Names>
-			</der1:DERGroupDispatch>
-		</der1:DERGroupDispatches>
+		<m:DERGroupDispatches>
+			<m:DERGroupDispatch>
+				<m:mRID>cf78aff3-afcf-4304-8e70-72de5ff98801</m:mRID>
+				<m:EndDeviceGroup>
+					<m:DERMonitorableParameter>
+						<m:DERParameter>reactivePower</m:DERParameter>
+						<m:yMultiplier>k</m:yMultiplier>
+						<m:yUnit>VAr</m:yUnit>
+						<m:DispatchSchedule>
+							<m:curveStyleKind>straightLineYValues</m:curveStyleKind>
+							<m:startTime>2017-06-16T18:00:00-06:00</m:startTime>
+							<m:timeIntervalDuration>1</m:timeIntervalDuration>
+							<m:timeIntervalUnit>h</m:timeIntervalUnit>
+							<m:DERCurveData>
+								<m:intervalNumber>1</m:intervalNumber>
+								<m:nominalYValue>415.7</m:nominalYValue>
+							</m:DERCurveData>
+							<m:DERCurveData>
+								<m:intervalNumber>2</m:intervalNumber>
+								<m:nominalYValue>439.5</m:nominalYValue>
+							</m:DERCurveData>
+						</m:DispatchSchedule>
+					</m:DERMonitorableParameter>
+				<m:Names>
+					<m:name>DG3</m:name>
+				</m:Names>
+				</m:EndDeviceGroup>
+				<m:Names>
+					<m:name>DG3</m:name>
+				</m:Names>
+			</m:DERGroupDispatch>
+			<m:DERGroupDispatch>
+				<m:mRID>c646bd5c-9ca1-4d31-8e8e-33aba6ee2ab4</m:mRID>
+				<m:EndDeviceGroup>
+					<m:DERMonitorableParameter>
+						<m:DERParameter>voltage</m:DERParameter>
+						<m:yMultiplier>k</m:yMultiplier>
+						<m:yUnit>V</m:yUnit>
+						<m:DispatchSchedule>
+							<m:curveStyleKind>constantYValue</m:curveStyleKind>
+							<m:startTime>2017-06-16T18:00:00-06:00</m:startTime>
+							<m:timeIntervalDuration>1</m:timeIntervalDuration>
+							<m:timeIntervalUnit>h</m:timeIntervalUnit>
+							<m:DERCurveData>
+								<m:intervalNumber>2</m:intervalNumber>
+								<m:nominalYValue>12.20</m:nominalYValue>
+							</m:DERCurveData>
+							<m:DERCurveData>
+								<m:intervalNumber>2</m:intervalNumber>
+								<m:nominalYValue>12.35</m:nominalYValue>
+							</m:DERCurveData>
+						</m:DispatchSchedule>
+					</m:DERMonitorableParameter>
+				<m:Names>
+					<m:name>DG4</m:name>
+				</m:Names>
+				</m:EndDeviceGroup>
+
+			</m:DERGroupDispatch>
+		</m:DERGroupDispatches>
 	</tns:Payload>
 </tns:CreateDERGroupDispatches>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupDispatches/CreateDERGroupDispatches" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERGD-1D" id="33952523-1878-4cf9-b027-737a12d38c65"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroupDispatches_Binding</con:interface><con:operation>CreateDERGroupDispatches</con:operation><con:request name="DERGD-1D" id="2ac38c68-4a50-48ef-b299-16c1e07c85f8"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/create/executeDERGroupDispatches</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/DERGroupDispatchesMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupDispatches#">
    <soapenv:Header/>
    <soapenv:Body>
-<tns:CreateDERGroupDispatches>
+<tns:CreateDERGroupDispatches xmlns="http://iec.ch/TC57/2011/schema/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:obj="http://iec.ch/TC57/2017/DERGroupDispatches#" xmlns:n1="http://www.altova.com/samplexml/other-namespace" xmlns:tns="http://iec.ch/TC57/2017/DERGroupDispatchesMessage" xsi:schemaLocation="http://iec.ch/TC57/2017/DERGroupDispatchesMessage DERGroupDispatchesMessage.xsd">
 	<tns:Header>
-		<msg:Verb>create</msg:Verb>
-		<msg:Noun>DERGroupDispatches</msg:Noun>
-		<msg:Timestamp>2017-06-16T17:27:18-06:00</msg:Timestamp>
-		<msg:MessageID>352946bb-f19b-4480-abd4-ba56e479b5c3</msg:MessageID>
-		<msg:CorrelationID>fa172999-de6d-4264-bbed-1798458e3fda</msg:CorrelationID>
+		<Verb>create</Verb>
+		<Noun>DERGroupDispatches</Noun>
+		<Timestamp>2017-06-16T17:27:18-06:00</Timestamp>
+		<MessageID>352946bb-f19b-4480-abd4-ba56e479b5c3</MessageID>
+		<CorrelationID>fa172999-de6d-4264-bbed-1798458e3fda</CorrelationID>
 	</tns:Header>
 	<tns:Payload>
-		<der1:DERGroupDispatches>
-			<der1:DERGroupDispatch>
-				<der1:mRID>124d7edb-5e4b-4128-bf09-7647a6244fc1</der1:mRID>
-				<der1:EndDeviceGroup>
-					<der1:DERMonitorableParameter>
-						<der1:DERParameter>reactivePower</der1:DERParameter>
-						<der1:yMultiplier>k</der1:yMultiplier>
-						<der1:yUnit>VAr</der1:yUnit>
-						<der1:DispatchSchedule>
-							<der1:curveStyleKind>straightLineYValues</der1:curveStyleKind>
-							<der1:startTime>2017-06-16T17:30:00-06:00</der1:startTime>
-							<der1:timeIntervalDuration>10</der1:timeIntervalDuration>
-							<der1:timeIntervalUnit>m</der1:timeIntervalUnit>
-							<der1:DERCurveData>
-								<der1:intervalNumber>1</der1:intervalNumber>
-								<der1:nominalYValue>332.2</der1:nominalYValue>
-							</der1:DERCurveData>
-							<der1:DERCurveData>
-								<der1:intervalNumber>2</der1:intervalNumber>
-								<der1:nominalYValue>355.3</der1:nominalYValue>
-							</der1:DERCurveData>
-							<der1:DERCurveData>
-								<der1:intervalNumber>3</der1:intervalNumber>
-								<der1:nominalYValue>361.9</der1:nominalYValue>
-							</der1:DERCurveData>
-							<der1:DERCurveData>
-								<der1:intervalNumber>4</der1:intervalNumber>
-								<der1:nominalYValue>351.8</der1:nominalYValue>
-							</der1:DERCurveData>
-						</der1:DispatchSchedule>
-					</der1:DERMonitorableParameter>
-				</der1:EndDeviceGroup>
-				<der1:Names>
-					<der1:name>DG6</der1:name>
-				</der1:Names>
-			</der1:DERGroupDispatch>
-			<der1:DERGroupDispatch>
-				<der1:mRID>700c4f22-071a-4f8b-b633-ce867f2ffe4a</der1:mRID>
-				<der1:EndDeviceGroup>
-					<der1:DERMonitorableParameter>
-						<der1:DERParameter>activePower</der1:DERParameter>
-						<der1:yMultiplier>k</der1:yMultiplier>
-						<der1:yUnit>W</der1:yUnit>
-						<der1:DispatchSchedule>
-							<der1:curveStyleKind>constantYValue</der1:curveStyleKind>
-							<der1:startTime>2017-06-16T17:30:00-06:00</der1:startTime>
-							<der1:timeIntervalDuration>30</der1:timeIntervalDuration>
-							<der1:timeIntervalUnit>m</der1:timeIntervalUnit>
-							<der1:DERCurveData>
-								<der1:intervalNumber>1</der1:intervalNumber>
-								<der1:nominalYValue>14.1</der1:nominalYValue>
-							</der1:DERCurveData>
-						</der1:DispatchSchedule>
-					</der1:DERMonitorableParameter>
-				</der1:EndDeviceGroup>
-				<der1:Names>
-					<der1:name>DG7</der1:name>
-				</der1:Names>
-			</der1:DERGroupDispatch>
-		</der1:DERGroupDispatches>
+		<obj:DERGroupDispatches>
+			<obj:DERGroupDispatch>
+				<obj:mRID>124d7edb-5e4b-4128-bf09-7647a6244fc1</obj:mRID>
+				<obj:EndDeviceGroup>
+					<obj:DERMonitorableParameter>
+						<obj:DERParameter>reactivePower</obj:DERParameter>
+						<obj:yMultiplier>k</obj:yMultiplier>
+						<obj:yUnit>VAr</obj:yUnit>
+						<obj:DispatchSchedule>
+							<obj:curveStyleKind>straightLineYValues</obj:curveStyleKind>
+							<obj:startTime>2017-06-16T17:30:00-06:00</obj:startTime>
+							<obj:timeIntervalDuration>10</obj:timeIntervalDuration>
+							<obj:timeIntervalUnit>m</obj:timeIntervalUnit>
+							<obj:DERCurveData>
+								<obj:intervalNumber>1</obj:intervalNumber>
+								<obj:nominalYValue>332.2</obj:nominalYValue>
+							</obj:DERCurveData>
+							<obj:DERCurveData>
+								<obj:intervalNumber>2</obj:intervalNumber>
+								<obj:nominalYValue>355.3</obj:nominalYValue>
+							</obj:DERCurveData>
+							<obj:DERCurveData>
+								<obj:intervalNumber>3</obj:intervalNumber>
+								<obj:nominalYValue>361.9</obj:nominalYValue>
+							</obj:DERCurveData>
+							<obj:DERCurveData>
+								<obj:intervalNumber>4</obj:intervalNumber>
+								<obj:nominalYValue>351.8</obj:nominalYValue>
+							</obj:DERCurveData>
+						</obj:DispatchSchedule>
+					</obj:DERMonitorableParameter>
+					<obj:Names>
+					<obj:name>DG6</obj:name>
+				</obj:Names>
+				</obj:EndDeviceGroup>
+				<obj:Names>
+					<obj:name>DG6</obj:name>
+				</obj:Names>
+			</obj:DERGroupDispatch>
+			<obj:DERGroupDispatch>
+				<obj:mRID>700c4f22-071a-4f8b-b633-ce867f2ffe4a</obj:mRID>
+				<obj:EndDeviceGroup>
+					<obj:DERMonitorableParameter>
+						<obj:DERParameter>activePower</obj:DERParameter>
+						<obj:yMultiplier>k</obj:yMultiplier>
+						<obj:yUnit>W</obj:yUnit>
+						<obj:DispatchSchedule>
+							<obj:curveStyleKind>constantYValue</obj:curveStyleKind>
+							<obj:startTime>2017-06-16T17:30:00-06:00</obj:startTime>
+							<obj:timeIntervalDuration>30</obj:timeIntervalDuration>
+							<obj:timeIntervalUnit>m</obj:timeIntervalUnit>
+							<obj:DERCurveData>
+								<obj:intervalNumber>1</obj:intervalNumber>
+								<obj:nominalYValue>14.1</obj:nominalYValue>
+							</obj:DERCurveData>
+						</obj:DispatchSchedule>
+					</obj:DERMonitorableParameter>
+				<obj:Names>
+					<obj:name>DG7</obj:name>
+				</obj:Names>
+				</obj:EndDeviceGroup>
+
+			</obj:DERGroupDispatch>
+		</obj:DERGroupDispatches>
 	</tns:Payload>
 </tns:CreateDERGroupDispatches>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://iec.ch/TC57/2017/DERGroupDispatches/CreateDERGroupDispatches" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="DERGD-1E" id="6f3c0f9a-a781-4e5c-9bbb-a4112a5ced4c"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DERGroupDispatches_Binding</con:interface><con:operation>CreateDERGroupDispatches</con:operation><con:request name="DERGD-1E" id="2ac38c68-4a50-48ef-b299-16c1e07c85f8"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://52.91.91.57:8080/61968-5/create/executeDERGroupDispatches</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://iec.ch/TC57/2017/DERGroupDispatchesMessage" xmlns:msg="http://iec.ch/TC57/2011/schema/message" xmlns:der1="http://iec.ch/TC57/2017/DERGroupDispatches#">
    <soapenv:Header/>
    <soapenv:Body>
-<tns:CreateDERGroupDispatches>
+<tns:CreateDERGroupDispatches xmlns="http://iec.ch/TC57/2011/schema/message" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:m="http://iec.ch/TC57/2017/DERGroupDispatches#" xmlns:n1="http://www.altova.com/samplexml/other-namespace" xmlns:tns="http://iec.ch/TC57/2017/DERGroupDispatchesMessage" xsi:schemaLocation="http://iec.ch/TC57/2017/DERGroupDispatchesMessage DERGroupDispatchesMessage.xsd">
 	<tns:Header>
-		<msg:Verb>create</msg:Verb>
-		<msg:Noun>DERGroupDispatches</msg:Noun>
-		<msg:Timestamp>2017-06-16T17:56:28-06:00</msg:Timestamp>
-		<msg:MessageID>d39015d3-0862-4828-b924-aea7b163fed9</msg:MessageID>
-		<msg:CorrelationID>c7eada9d-b9c7-43b3-9911-f4edf5643471</msg:CorrelationID>
+		<Verb>create</Verb>
+		<Noun>DERGroupDispatches</Noun>
+		<Timestamp>2017-06-16T17:56:28-06:00</Timestamp>
+		<MessageID>d39015d3-0862-4828-b924-aea7b163fed9</MessageID>
+		<CorrelationID>c7eada9d-b9c7-43b3-9911-f4edf5643471</CorrelationID>
 	</tns:Header>
 	<tns:Payload>
-		<der1:DERGroupDispatches>
-			<der1:DERGroupDispatch>
-				<der1:EndDeviceGroup>
-					<der1:DERMonitorableParameter>
-						<der1:DERParameter>activePower</der1:DERParameter>
-						<der1:yMultiplier>k</der1:yMultiplier>
-						<der1:yUnit>W</der1:yUnit>
-						<der1:DispatchSchedule>
-							<der1:curveStyleKind>constantYValue</der1:curveStyleKind>
-							<der1:startTime>2017-06-16T18:00:00-06:00</der1:startTime>
-							<der1:timeIntervalDuration>30</der1:timeIntervalDuration>
-							<der1:timeIntervalUnit>m</der1:timeIntervalUnit>
-							<der1:DERCurveData>
-								<der1:intervalNumber>1</der1:intervalNumber>
-								<der1:nominalYValue>0.9</der1:nominalYValue>
-							</der1:DERCurveData>
-						</der1:DispatchSchedule>
-					</der1:DERMonitorableParameter>
-					<der1:Names>
-						<der1:name>DG8</der1:name>
-					</der1:Names>
-				</der1:EndDeviceGroup>
-				<der1:Names>
-					<der1:name>DER Dispatch Request 20170616_A543</der1:name>
-				</der1:Names>
-			</der1:DERGroupDispatch>
-		</der1:DERGroupDispatches>
+		<m:DERGroupDispatches>
+			<m:DERGroupDispatch>
+				<m:EndDeviceGroup>
+					<m:DERMonitorableParameter>
+						<m:DERParameter>activePower</m:DERParameter>
+						<m:yMultiplier>k</m:yMultiplier>
+						<m:yUnit>W</m:yUnit>
+						<m:DispatchSchedule>
+							<m:curveStyleKind>constantYValue</m:curveStyleKind>
+							<m:startTime>2017-06-16T18:00:00-06:00</m:startTime>
+							<m:timeIntervalDuration>30</m:timeIntervalDuration>
+							<m:timeIntervalUnit>m</m:timeIntervalUnit>
+							<m:DERCurveData>
+								<m:intervalNumber>1</m:intervalNumber>
+								<m:nominalYValue>0.9</m:nominalYValue>
+							</m:DERCurveData>
+						</m:DispatchSchedule>
+					</m:DERMonitorableParameter>
+					<m:Names>
+						<m:name>DG8</m:name>
+					</m:Names>
+				</m:EndDeviceGroup>
+				<m:Names>
+					<m:name>DER Dispatch Request 20170616_A543</m:name>
+				</m:Names>
+			</m:DERGroupDispatch>
+		</m:DERGroupDispatches>
 	</tns:Payload>
 </tns:CreateDERGroupDispatches>
    </soapenv:Body>

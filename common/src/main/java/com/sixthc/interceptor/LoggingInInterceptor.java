@@ -83,6 +83,10 @@ public class LoggingInInterceptor extends AbstractLoggingInterceptor {
 		messageLog.setMessageName(getMessageName());
 		messageLogDao.setMessage(messageLog);
 		messageLog.setStage(stage);
+		log.debug("pkgName: " + messageLog.getPackageName());
+		log.debug("pkgGrpName: " + messageLog.getPackageGroupName());
+		log.debug("messName: " + messageLog.getMessageName());
+		log.debug("msg: " + message);
 
 		String id = (String) message.getExchange().get(LoggingMessage.ID_KEY);
 		if (id == null) {

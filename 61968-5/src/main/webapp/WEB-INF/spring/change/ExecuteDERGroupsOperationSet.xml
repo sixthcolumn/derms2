@@ -42,6 +42,7 @@
 			<bean class="com.sixthc.interceptor.CIMLoggingInInterceptor">
 				<property name="packageName" value="CIM DER" />
 				<property name="packageGroupName" value="CIM DER Control" />
+				<property name="messageName" value="CIM_DER(changeExecuteDERGroupsOperationSet)" />
 				<property name="resultCode" value="success" />
 				<property name="stage" value="serviceIn" />
 			</bean>
