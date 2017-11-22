@@ -183,11 +183,11 @@
           <xs:documentation>TRUE if the verb is operating at the element level. In such a case, the verb is to be applied to the elements populated in the payload.operation.##other below. If omitted, assume FALSE.</xs:documentation>
         </xs:annotation>
       </xs:element>
-<!--       <xs:any namespace="##other" processContents="skip" minOccurs="0"> -->
-<!--         <xs:annotation> -->
-<!--           <xs:documentation>An XML payload which carries a CIM profile defined using an XSD in a profile-specific namespace. Individual payloads are used collectively to create a series of related operations. See the "enforce" boolean flags in the header for instructions on how to process these messages.</xs:documentation> -->
-<!--         </xs:annotation> -->
-<!--       </xs:any> -->
+       <xs:any namespace="##other" processContents="skip" minOccurs="0">
+         <xs:annotation>
+           <xs:documentation>An XML payload which carries a CIM profile defined using an XSD in a profile-specific namespace. Individual payloads are used collectively to create a series of related operations. See the "enforce" boolean flags in the header for instructions on how to process these messages.</xs:documentation>
+         </xs:annotation>
+       </xs:any>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="OperationSet">
