@@ -34,6 +34,7 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
@@ -53,7 +54,7 @@ public class XMLUtil {
 			SAXException, IOException {
 		DocumentBuilderFactory builderFactory = DocumentBuilderFactory
 				.newInstance();
-		builderFactory.setNamespaceAware(true);
+		builderFactory.setNamespaceAware(false);
 		DocumentBuilder builder = builderFactory.newDocumentBuilder();
 
 		InputSource inputSource = new InputSource(new StringReader(xmlString));
@@ -82,19 +83,24 @@ public class XMLUtil {
 	public String getTagValue(String namespace, String... tags)
 			throws ParserConfigurationException, IOException, SAXException {
 
-		String prefix = unr.getPrefix(namespace);
 
 		XPath xpath = XPathFactory.newInstance().newXPath();
 		xpath.setNamespaceContext(unr);
 
 		try {
 			String xpathString = "//";
-			for (String tag : tags) {
-				xpathString += (prefix == null ? "*:" : prefix + ":") + tag
-						+ "/";
-			}
-			xpathString += "text()";
+			String searchString = "";
 
+
+			for (String tag : tags) {
+				searchString += tag + "/";
+			}
+			searchString = StringUtils.chop(searchString);
+
+			
+			xpathString = "//*[local-name()='" + searchString + "']/text()";
+
+					
 			log.debug("xpath : " + xpathString);
 			NodeList nodes = (NodeList) xpath.evaluate(xpathString, payloadDoc,
 					XPathConstants.NODESET);
@@ -336,6 +342,7 @@ public class XMLUtil {
 						.equals(XMLConstants.XMLNS_ATTRIBUTE)) {
 					putInCache(DEFAULT_NS, attribute.getNodeValue());
 				} else {
+					log.debug("localName : " + attribute.getLocalName() + ", value : " + attribute.getNodeValue());
 					// The defined prefixes are stored here
 					putInCache(attribute.getLocalName(),
 							attribute.getNodeValue());
