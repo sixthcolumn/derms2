@@ -16,6 +16,7 @@ import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
 /**
@@ -44,6 +45,9 @@ public class MSHeader {
 	public static String CopyPaste(String fromXML, String toXML, String tagName[])
 			throws TransformerException, MSHeaderException {
 
+		//log.debug("fromXML = " + fromXML);
+		//log.debug("toXML = " + toXML);
+		
 		// parse xml strings
 		MSHeader header = new MSHeader(fromXML, toXML);
 
@@ -56,6 +60,7 @@ public class MSHeader {
 		for( String key : tagName )
 			header.replaceKey(key);
 
+		//log.debug("about to transform");
 		// build transformer to re-translate DOM to string, and return modified XML
 		TransformerFactory tf = TransformerFactory.newInstance();
 		Transformer transformer = tf.newTransformer();
@@ -63,6 +68,7 @@ public class MSHeader {
 		StringWriter writer = new StringWriter();
 		transformer.transform(new DOMSource(header.toDoc), new StreamResult(
 				writer));
+		//log.debug("transform done");
 
 		return writer.getBuffer().toString();
 	}
@@ -80,6 +86,8 @@ public class MSHeader {
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		dbFactory.setNamespaceAware(true);
 		DocumentBuilder dBuilder;
+		
+	//	log.debug("instantiating MSHeader : " + fromXML + ", " + toXML);
 
 		try {
 			dBuilder = dbFactory.newDocumentBuilder();
@@ -95,6 +103,7 @@ public class MSHeader {
 			toDoc = dBuilder.parse(is2);
 
 			isValid = true;
+		//	log.debug("isValid set true");
 		} catch (Exception e) {
 			log.error(e);
 			isValid = false;
@@ -111,6 +120,7 @@ public class MSHeader {
 	 */
 	private Element getHeaderElement(Document doc)
 			throws MSHeaderException {
+	//	log.debug("getHeaderElement : " + doc);
 		final String headerKey = "Header";
 		if (doc.getElementsByTagNameNS("*", headerKey).getLength() > 0) {
 			Element header = (Element) doc.getElementsByTagNameNS("*",
@@ -135,9 +145,15 @@ public class MSHeader {
 	 */
 	private Node getNode(Element e, String tagName)
 			throws MSHeaderException {
-		if (e.getElementsByTagNameNS("*", tagName).getLength() > 0)
-			return e.getElementsByTagName(tagName).item(0);
-		else
+		//log.debug("getNode : " + e + ", " + tagName);
+		
+		NodeList element = e.getElementsByTagNameNS("*", tagName);
+		//log.debug("element : " + element);
+
+		if (element.getLength() > 0) {
+		//	log.debug("will return element item now");
+			return element.item(0);
+		} else
 			throw new MSHeaderException("Key " + tagName
 					+ " not found in element : " + e.toString());
 
@@ -150,6 +166,7 @@ public class MSHeader {
 	 * @throws MSHeaderException
 	 */
 	private void replaceKey(String tagName) throws MSHeaderException {
+		log.debug("replaceKey tagName = " + tagName);
 
 		try {
 			Element fromElement = getHeaderElement(fromDoc);
@@ -165,6 +182,7 @@ public class MSHeader {
 
 			// set the node value of the 'to' item
 			getNode(toElement, tagName).setTextContent(value);
+		//	log.debug("replaceKey done");
 
 		} catch (Exception e) {
 			log.error(e);
